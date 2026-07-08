@@ -5,18 +5,25 @@
    those tokens and semantic aliases onto Zensical's modern theme.
 
    IMPORTANT: the modern Zensical variant paints .md-header, .md-footer, and
-   admonitions from --md-default-* (NOT from --md-primary-*/--md-footer-*, and
-   admonitions carry no border width). Those surfaces are therefore styled with
-   real rules below, not through theme variables.
+   admonitions from the default fg/bg variables (NOT from the primary or
+   footer variables, and admonitions carry no border width). Those surfaces
+   are therefore styled with real rules below, not through theme variables.
+
+   CAUTION: never write the two-character sequence star-slash inside a
+   comment (for example in a variable glob). It terminates the comment early
+   and the parser then silently swallows the next rule. This exact bug once
+   knocked out the entire light-scheme block on the live sites.
 
    Two schemes:
      [data-md-color-scheme="default"]  -> light "desert day" (sand + navy)
      [data-md-color-scheme="slate"]    -> dark  "Sonoran Nightfall" (navy + gold)
    ========================================================================== */
 
-/* Note: two dark-scheme-only colors are written as literals at their point of
-   use below (#6b5a1f muted highlight, #c06a52 lightened terracotta). They are
-   contrast-tuned adjustments for the night scheme, not design tokens, so they
+/* Note: a few colors are written as literals at their point of use below.
+   Dark scheme: #6b5a1f muted highlight, #c06a52 lightened terracotta.
+   Light scheme code: #6b6353 warm-gray comments (5.9:1 on white) and
+   #5f6c74 slate operators/punctuation (5.4:1 on white). They are
+   contrast-tuned adjustments for one scheme, not design tokens, so they
    intentionally live in this mapping layer rather than in colors.css. */
 
 /* 1. Light scheme (default) ---------------------------------------------- */
@@ -30,10 +37,27 @@
   --md-accent-fg-color: var(--canvas-blue);
   --md-accent-fg-color--transparent: color-mix(in srgb, var(--canvas-blue) 10%, transparent);
 
-  /* Warm "paper" page with navy body text and a hint of sand for code */
+  /* Warm "paper" page with navy body text */
   --md-default-bg-color: var(--surface-page);   /* sand 300 -- do not darken below this or links drop under AA */
   --md-typeset-color: var(--text-body);
-  --md-code-bg-color: var(--surface-raised);    /* sand 200 */
+
+  /* Navy-based foreground ramp so secondary text (nav, table of contents,
+     captions) reads as brand navy instead of the theme's washed-out gray.
+     The 78% step clears 5.5:1 on sand 300; the theme default was 4.6:1. */
+  --md-default-fg-color: var(--text-body);
+  --md-default-fg-color--light: color-mix(in srgb, var(--text-body) 78%, transparent);
+  --md-default-fg-color--lighter: color-mix(in srgb, var(--text-body) 45%, transparent);
+  --md-default-fg-color--lightest: color-mix(in srgb, var(--text-body) 8%, transparent);
+
+  /* Code sits on white cards (bordered below) so every syntax color clears
+     WCAG AA. Sand-on-sand had almost no separation from the page. */
+  --md-code-bg-color: var(--sand-100);
+  --md-code-fg-color: var(--text-body);
+  --md-code-hl-comment-color: #6b6353;      /* output comments must stay readable */
+  --md-code-hl-operator-color: #5f6c74;
+  --md-code-hl-punctuation-color: #5f6c74;
+  --md-code-hl-variable-color: #5f6c74;
+  --md-code-hl-generic-color: #5f6c74;
 
   /* Links use the authentic Canvas blue (4.58:1 on sand 300) */
   --md-typeset-a-color: var(--text-link);
@@ -72,13 +96,27 @@
 [data-md-color-scheme="slate"] .md-header {
   background-color: var(--navy-800);
 }
-/* Keep the header search field legible on navy */
-.md-header .md-search__input {
-  background-color: color-mix(in srgb, var(--text-on-dark-strong) 16%, transparent);
+
+/* Header search: the modern theme renders a button (the "Search" pill), and
+   by default paints it with page-foreground colors, which turn navy-on-navy
+   on our header. Style it for the navy header in both schemes, with a
+   Phoenix Gold outline and magnifier so it reads as an interactive control. */
+.md-header .md-search__button {
+  background-color: color-mix(in srgb, var(--text-on-dark-strong) 12%, transparent);
+  border: 0.05rem solid var(--phoenix-gold);         /* gold: 8.78:1 on navy */
   color: var(--text-on-dark-strong);
 }
-.md-header .md-search__input::placeholder {
-  color: color-mix(in srgb, var(--text-on-dark-strong) 75%, transparent);
+.md-header .md-search__button::before {
+  background-color: var(--phoenix-gold);             /* magnifier icon */
+}
+.md-header .md-search__button::after {
+  background-color: color-mix(in srgb, var(--text-on-dark-strong) 18%, transparent);
+  color: var(--text-on-dark-strong);                 /* keyboard-shortcut chip */
+}
+.md-header .md-search__button:hover,
+.md-header .md-search__button:focus {
+  background-color: color-mix(in srgb, var(--text-on-dark-strong) 24%, transparent);
+  color: var(--text-on-dark-strong);
 }
 
 /* 4. Footer -- two-tone navy in both schemes ----------------------------- */
@@ -128,7 +166,26 @@
   color: var(--navy-200);
 }
 
-/* 7. Admonitions --------------------------------------------------------- */
+/* 7. Code blocks and inline code (light scheme) --------------------------- */
+/* White cards need an edge on the sand page. The hairline matches the
+   theme's own 0.05rem border weight elsewhere. */
+[data-md-color-scheme="default"] .md-typeset pre > code {
+  border: 0.05rem solid var(--border-default);
+}
+[data-md-color-scheme="default"] .md-typeset .highlight span.filename {
+  border: 0.05rem solid var(--border-default);
+  border-bottom-color: var(--border-subtle);
+}
+[data-md-color-scheme="default"] .md-typeset .highlight span.filename + pre > code {
+  border-top: 0;
+}
+/* Inline code chips: same white card treatment at chip scale. Blocks keep
+   the stronger edge; the pre > code rule above wins on specificity. */
+[data-md-color-scheme="default"] .md-typeset code {
+  border: 0.05rem solid var(--border-subtle);
+}
+
+/* 8. Admonitions --------------------------------------------------------- */
 /* Modern admonitions have no border width and set a per-type background tint,
    so we add a left border AND override the tint. info/note -> Canvas blue,
    example -> canyon terracotta. */
@@ -164,21 +221,35 @@
 }
 [data-md-color-scheme="slate"] .md-typeset .admonition.example,
 [data-md-color-scheme="slate"] .md-typeset details.example {
-  border-left-color: #c06a52;   /* lightened terracotta, 4.52:1 on navy-900 */   /* 4.52:1 on navy 900 */
-}
-
-/* 8. Blockquote -- canyon left border (match the theme's [dir] specificity) */
-[dir="ltr"] .md-typeset blockquote {
-  border-left-color: var(--accent-canyon);
-}
-[dir="rtl"] .md-typeset blockquote {
-  border-right-color: var(--accent-canyon);
-}
-[data-md-color-scheme="slate"] .md-typeset blockquote {
   border-left-color: #c06a52;   /* lightened terracotta, 4.52:1 on navy-900 */
 }
 
-/* 9. Table headers -- subtle navy tint for scannable data tables --------- */
+/* 9. Blockquotes -- readable "example panel" treatment -------------------- */
+/* The theme dims blockquote text to its --light foreground. Our chapters put
+   whole worked examples in blockquotes, so they get full-contrast text, a
+   wider canyon border, and a faint canyon tint that matches the example
+   admonition family. */
+[dir="ltr"] .md-typeset blockquote {
+  border-left: 0.25rem solid var(--accent-canyon);
+}
+[dir="rtl"] .md-typeset blockquote {
+  border-right: 0.25rem solid var(--accent-canyon);
+}
+.md-typeset blockquote {
+  padding: 0.4rem 0.8rem;
+  border-radius: 0 0.2rem 0.2rem 0;
+}
+[data-md-color-scheme="default"] .md-typeset blockquote {
+  color: var(--text-body);
+  background-color: color-mix(in srgb, var(--accent-canyon) 5%, transparent);
+}
+[data-md-color-scheme="slate"] .md-typeset blockquote {
+  color: var(--text-on-dark);
+  background-color: color-mix(in srgb, #c06a52 10%, transparent);
+  border-left-color: #c06a52;   /* lightened terracotta, 4.52:1 on navy-900 */
+}
+
+/* 10. Table headers -- subtle navy tint for scannable data tables --------- */
 [data-md-color-scheme="default"] .md-typeset table:not([class]) th {
   background-color: var(--navy-100);
   color: var(--text-body);
@@ -188,7 +259,7 @@
   color: var(--text-on-dark-strong);
 }
 
-/* 10. Focus ring -- follows the accent (Canvas blue light / navy-300 dark),
+/* 11. Focus ring -- follows the accent (Canvas blue light / navy-300 dark),
    both of which clear the 3:1 non-text minimum on their scheme background. */
 :focus-visible {
   outline: 2px solid var(--md-accent-fg-color);
