@@ -1,0 +1,47 @@
+/* Flex playground stylesheet for Chapter 6. The announcement
+   board's rule is the experiment bench: the chapter's Try It
+   Yourself exercises add flex declarations to .announcement-board
+   one at a time and watch the four cards respond. Ship state on
+   purpose: the board rule carries no layout declarations yet. */
+
+/* Width means the visible box, the course baseline since
+   Chapter 5. */
+* {
+    box-sizing: border-box;
+}
+
+/* The club's own base: ink text on light sand, in the site's
+   body stack, so the playground feels like club work. */
+body {
+    background-color: #fac78d;  /* light sand */
+    color: #333333;             /* ink */
+    font-family: Verdana, Arial, sans-serif;
+    line-height: 1.5;
+}
+
+/* Deep teal headings pass on light sand (4.85 to 1) and on the
+   white cards (7.48 to 1), so one rule covers every heading. */
+h1, h2, h3 {
+    color: #1a5e5e;
+}
+
+/* THE BENCH. The chapter's exercises add their declarations
+   here. A sand panel and a deep teal frame keep the board's
+   edges visible, so you can see where items sit inside it. */
+.announcement-board {
+    background-color: #deb887;  /* sand: the board itself */
+    border: 2px solid #1a5e5e;
+    padding: 16px;
+}
+
+/* One announcement card. The 220px width is deliberate: four
+   cards plus the gaps the chapter adds outgrow common laptop
+   windows, so the wrapping experiments have something to wrap.
+   The cards carry no margins, which keeps the gap-versus-margin
+   experiment honest. */
+.announcement-card {
+    background-color: #ffffff;  /* white card on the sand board */
+    border: 3px solid #268080;  /* club teal frames each card */
+    padding: 12px;
+    width: 220px;
+}

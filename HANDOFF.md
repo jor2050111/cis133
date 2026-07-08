@@ -5,6 +5,98 @@
 **Live site:** https://jor2050111.github.io/cis133/
 **Task list:** cis133-fall26 (`export CLAUDE_CODE_TASK_LIST_ID=cis133-fall26`)
 
+## What Was Done (2026-07-08 Chapter 6 session, closes Part II)
+
+* Wrote and shipped `book/chapters/chapter-06.md` (Layout with
+  Flexbox): 4 content sections (the Flexbox model, controlling the
+  line, combinators and pseudo-classes, the navigation bar capstone),
+  5 Try It Yourself exercises, 4 Quick Checks, Skills Lab 6A, 367
+  sentences at 14.0 words average, zero at 35+. ~498 lines. Same
+  orchestrated pipeline as Chapters 4-5. PART II IS COMPLETE and the
+  full Part II nav block is live.
+* Consolidated Module 6's five draft MLOs into exactly 3 (the old
+  module-06 task file was a byte-duplicate of module-05, so Lab 6A
+  was designed fresh): MLO-6.1 (Apply) flex containers and line
+  control -> 6.1-6.2, MLO-6.2 (Analyze) differentiate by tree
+  relationship and interaction state -> 6.3, MLO-6.3 (Apply)
+  construct the accessible navigation bar -> 6.4. The pedagogy agent
+  downgraded MLO-6.3 from the outline's Create to Apply: the
+  taxonomy reference's own canonical Apply example IS "construct a
+  responsive menu bar using flexbox and the nav element." Rubric
+  byte-identical to chapter-01.md.
+* Built `assets/code/chapter-06/`: `starter-site/` (the Lab 5A model
+  solution, wart intact), `club-palette.txt`, `flex-playground.html`
+  + `.css` (four 220px announcement cards, gap 16, wrap threshold
+  near 980px, card TWO longest for cross-axis demos),
+  `skills-lab-6a-answers.txt`, README with the wart disclosure.
+* Lab 5A model solution key calls (in the starter's club-styles.css):
+  box-sizing border-box first, body margin 0 + Verdana/Arial/
+  sans-serif + 16px + line-height 1.5, header/nav/footer padding,
+  main max-width 640px centered with 24px 16px padding,
+  #meeting-times 4-value padding + club teal border-left, figure sand
+  borders, Oswald h1/h2 via the single-link form, img max-width 100%
+  (shipped ahead of Ch 8, README disclosed), .page-divider class.
+  Full rule list in the session facts sheet.
+* Lab 6A model solution (built and BROWSER-VERIFIED this session,
+  lives in the session scratchpad): header display flex + wrap +
+  align-items center + gap 16 (logo and h1 verified sharing line one,
+  h1 dead-centered, intro paragraphs each full-width), .drive-gallery
+  flex wrap gap 16 with 296px figures (verified two per line in the
+  640px column, third wrapping), footer a light sand, nav/footer
+  hover+focus states, full nav ul/nav a bar, .page-divider display
+  block + margin auto.
+* All validation executed (2026-07-08): Nu zero messages on all 4
+  pack HTML files, jigsaw 0 errors on both stylesheets, light sand
+  on deep teal computed 4.85:1 PASS (the footer fix), wart 1.26:1
+  FAIL recorded, all 5 Further Reading URLs 200. Layout claims
+  browser-executed via a local preview server (bounding-box measured).
+* Added 17 terms to `book/glossary.md`.
+* Ran the three review agents. Applied required fixes: MLO-6.3
+  Create->Apply with verb Construct, MLO-6.2 rewritten to one verb
+  (Differentiate), TIY 6.4's census leak closed (prose reach
+  explanation genericized, the two-links reveal removed from the
+  Predict), the palette file gained the LIGHT SAND on DEEP TEAL line
+  in all three chapter copies (byte-identical, cmp-verified), and
+  UPSTREAM: chapter-05.md's Lab 5A critique prompt broadened from
+  "spacing or typography" to "styling" so the footer-link wart is a
+  legitimate 3.B answer (Chapter 6's origin story depends on it).
+  Applied judgment calls: three Quick Check items rewritten as fresh
+  transfer scenarios (QC 6.1 #2, QC 6.4 #1 and #3), Q&A Q1 given a
+  comparative frame to reach Analyze, flex-shrink name-drop removed,
+  "browser DevTools" on first mention, Read-the-Bar-Back display:
+  block attribution made precise. Skipped with rationale: TIY
+  6.4/6.5 running on the real site (deliberate capstone graduation,
+  plan-compliant), the 5-subsection count in 6.2 and 6.4 (content
+  coherence beats the 2-4 band, scope agent called both folds
+  optional), TIY 6.5's space-between reuse (new item count and a
+  design judgment make it genuine transfer), invented demo classes
+  (.officer-roster etc.) not shipping in files (they are the
+  anti-leak mechanism).
+* Uncommented the Chapter 6 nav line: Part II fully live.
+  `zensical build --clean`: no issues.
+
+**Chapter 6 design notes:**
+
+* Promises paid: Ch 4's nav-bar promise (6.4 + lab Part 3), Ch 4's
+  specificity cameo (6.3, one paragraph, no scoring), Ch 5's
+  "Flexbox arranges the boxes" and the footer-link wart (fixed live
+  in 6.3, for keeps in lab Part 2), Ch 5's text-decoration caveat
+  (nav links drop underlines with the affordance case argued).
+* Promises planted (pay these explicitly): Ch 7 = sketch layouts
+  deliberately, wireframes, the site plan (Final Checkpoint 1).
+  Ch 8 = flex-wrap is half of responsive design, media queries
+  finish it. Ch 9 = :focus opened the keyboard door, WCAG walks
+  through it. Ch 12 = the multi-page site with real navigation ships.
+* Child combinator, specificity, flex-direction column layouts, and
+  responsive design are deliberate one-mention/limited previews. Do
+  not deepen in place. flex-grow/shrink/basis are deliberately
+  untaught.
+* Pre-term verification (5 min in a real browser): drag the
+  playground window past the ~980px wrap threshold, Tab-key focus
+  stepping in current Chrome/Edge/Firefox, the header row and
+  gallery at a phone-width window (laptop widths were
+  browser-verified this session), default link blue eyeballed once.
+
 ## What Was Done (2026-07-08 Chapter 5 session)
 
 * Wrote and shipped `book/chapters/chapter-05.md` (The Box Model and
@@ -470,19 +562,21 @@ repo.
 
 ## Next Steps
 
-1. Write Chapter 6 (Layout with Flexbox). Same cycle as Chapters 1-5:
-   consolidate draft MLOs to exactly 3 (the old module-06 task file
-   was a duplicate of module-05, so Lab 6A is designed fresh),
-   outline, asset build with executed facts, draft, glossary, QA
-   sweeps, review agents, nav line, build, push. Copy the locked
-   rubric verbatim from chapter-01.md. Pay the nav-bar promise
-   (planted in Chapter 4's text, re-planted by Chapter 5's Looking
-   Ahead) and fix the footer-link wart with Chapter 6 selectors.
-   Lab 6A starters = the Lab 5A model solution (build from
-   chapter-05/starter-site plus the Chapter 5 answer key above).
-   Lab 6A completes the Part II milestone: multi-section page,
-   external stylesheet, controlled spacing and type, Flexbox
-   navigation bar.
+1. Write Chapter 7 (UX and Web Design), opening Part III. Same cycle
+   as Chapters 1-6. Consolidate the course map's Module 7 draft MLOs
+   to exactly 3, outline, asset build with executed facts, draft,
+   glossary, QA sweeps, review agents, nav line (uncomment the
+   Part III block with only Chapter 7 live), build, push. Copy the
+   locked rubric verbatim from chapter-01.md. Pay Chapter 6's plant:
+   "you can build any layout you can sketch, so learn to sketch
+   deliberately." Chapter 7 hosts Final Checkpoint 1 (the site
+   plan), so read docs/part-structure.md's Chapter 7 entry and the
+   final-project thread before outlining. The club-site lab world
+   can continue (the Lab 6A model solution's rule list is in the
+   Chapter 6 session notes above), but Chapter 7 is a planning
+   chapter: expect the data pack to ship planning artifacts
+   (sitemap/wireframe templates, a project brief) rather than
+   starter code.
 2. Repeat per chapter through Chapter 12 (chapters 9 and 12 are new
    coverage with no draft, built from docs/part-structure.md).
 3. Before the term starts: run the 5-minute browser verifications

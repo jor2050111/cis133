@@ -14,6 +14,8 @@ This glossary is the single source of truth for all technical terms used in the 
 
 **absolute URL:** The complete address of a resource: protocol, domain, and path. Use it to link to a page on another site.
 
+**align-items:** The container property that places flex items along the cross axis: `stretch` (the default), `center`, `flex-start`, or `flex-end`. Stretch is why a row's items stand equally tall until you say otherwise.
+
 **alt text:** The text that stands in for an image when its pixels cannot: read aloud by screen readers and shown when the file fails to load. It lives in the `img` element's `alt` attribute.
 
 **article element:** The landmark (`<article>`) that wraps content able to stand alone outside its page, such as a blog post, news story, or review.
@@ -44,6 +46,8 @@ This glossary is the single source of truth for all technical terms used in the 
 
 **cascade:** The tie-breaking system CSS uses when more than one rule targets the same element. An inline style wins over stylesheet rules, and among rules with an equal claim, the later one wins.
 
+**child combinator:** The `>` written between two selectors, which matches direct children only. `nav > a` matches an anchor one level inside the nav and nothing deeper.
+
 **child element:** An element nested directly inside another element. Every element inside a `<header>` is a child of that header.
 
 **class attribute:** The attribute that opts an element into a class, written `class="deadline"`. Any number of elements, of any type, can share one class.
@@ -56,11 +60,15 @@ This glossary is the single source of truth for all technical terms used in the 
 
 **color name:** A CSS color value written as a predefined keyword, such as `teal`. The web defines more than 140 of them, handy for quick tests but rarely an exact match for a brand color.
 
+**combinator:** A symbol written between two selectors that targets elements by their relationship in the page's tree. The descendant combinator (a space) and the child combinator (`>`) are the common ones.
+
 **cookie:** A small piece of data a website stores in your browser so the site can recognize you on a later visit.
 
 **copyright:** The legal protection a creator automatically holds over their work from the moment it is created. Reusing protected work requires permission or a license.
 
 **Creative Commons:** A family of public licenses an author attaches to a work to spell out what reuse is allowed, such as requiring credit or forbidding commercial use.
+
+**cross axis:** The axis that runs perpendicular to a flex container's main axis. `align-items` places items along it.
 
 **CSS (Cascading Style Sheets):** The stylesheet language of the web. CSS rules control how HTML content looks, including color, spacing, type, and layout.
 
@@ -77,6 +85,8 @@ This glossary is the single source of truth for all technical terms used in the 
 **declaration block:** The part of a CSS rule between the braces, holding the rule's declarations.
 
 **decorative image:** An image that adds no content to its page, such as a border strip. It gets a deliberate empty alt (`alt=""`) so screen readers skip it.
+
+**descendant combinator:** The space between two selectors, as in `footer a`: it matches elements sitting at any depth inside the first selector's matches.
 
 **digital certificate:** A file, issued by a trusted authority, that proves a website's identity and enables its encrypted connections.
 
@@ -106,6 +116,18 @@ This glossary is the single source of truth for all technical terms used in the 
 
 **file extension:** The ending of a file name after the dot, such as `.html` or `.txt`. It tells the computer and the browser what kind of file it is.
 
+**Flexbox:** CSS's system for arranging elements along a line. One declaration, `display: flex` on a parent, switches it on.
+
+**flex container:** An element that declares `display: flex`. Its direct children become flex items, and all of the line's controls are declared on it.
+
+**flex-direction:** The container property that sets which way the main axis runs: `row` (the default, horizontal) or `column` (vertical).
+
+**flex item:** A direct child of a flex container. The container arranges its items along the main axis.
+
+**flex-wrap:** The container property that decides whether a full flex line may break. With `wrap`, items that no longer fit move to a new line instead of shrinking.
+
+**:focus:** The pseudo-class that matches an element while it holds keyboard focus, such as a link reached with the Tab key. Every `:hover` style needs a `:focus` twin.
+
 **font-size:** The CSS property that sets how large text renders, in a fixed unit such as `px` or a relative one such as `rem`.
 
 **font stack:** A `font-family` value that lists fonts in order of preference. The browser uses the first font it can supply, so the stack ends with a generic font family as the safety net.
@@ -120,6 +142,8 @@ This glossary is the single source of truth for all technical terms used in the 
 
 ## G
 
+**gap:** The container property that sets the space between neighboring flex items. The container owns the spacing, so the items need no margins of their own.
+
 **generic font family:** A font category rather than a font: `serif`, `sans-serif`, or `monospace`. The browser always owns a font in each category, so a font stack ending in one can never come up empty.
 
 **GIF:** A raster image format limited to 256 colors. It supports simple frame-by-frame animation, which is the main reason it survives.
@@ -131,6 +155,8 @@ This glossary is the single source of truth for all technical terms used in the 
 **header element:** The landmark (`<header>`) that holds a region's introductory content, such as a logo, title, or tagline. Not the same element as `<head>`.
 
 **hex color:** A CSS color value written as `#` plus six characters, read as three pairs for red, green, and blue light, such as `#268080`. The industry-standard way to record exact colors.
+
+**:hover:** The pseudo-class that matches an element while the visitor's pointer rests on it.
 
 **HTML (HyperText Markup Language):** The markup language of the web. HTML elements give a page its structure and meaning.
 
@@ -166,6 +192,8 @@ This glossary is the single source of truth for all technical terms used in the 
 
 **JPEG:** A raster image format with lossy compression, the standard choice for photographs. It does not support transparency.
 
+**justify-content:** The container property that distributes flex items and leftover space along the main axis, with values such as `flex-start`, `center`, `flex-end`, and `space-between`.
+
 ## L
 
 **landmark:** A semantic element that labels a major region of a page, such as `<header>`, `<nav>`, `<main>`, or `<footer>`. Assistive technology builds a jump menu from a page's landmarks.
@@ -174,6 +202,8 @@ This glossary is the single source of truth for all technical terms used in the 
 
 **link element:** The empty head element (`<link>`) that connects a page to another file. With `rel="stylesheet"`, its `href` names the stylesheet the page loads.
 
+**list-style:** The CSS property that controls a list's markers. `list-style: none` removes bullets and numbers, the first move in turning a nav list into a navigation bar.
+
 **lossless compression:** File compression that shrinks a file without discarding any data. PNG uses it.
 
 **lossy compression:** File compression that shrinks a file by permanently discarding detail the eye is unlikely to miss. JPEG uses it.
@@ -181,6 +211,8 @@ This glossary is the single source of truth for all technical terms used in the 
 ## M
 
 **mailto link:** A link whose `href` value begins with `mailto:` and an email address. Activating it opens the visitor's mail app with the address filled in.
+
+**main axis:** The direction a flex container lays its items along, chosen by `flex-direction`. `justify-content` distributes items along it.
 
 **main element:** The landmark (`<main>`) that holds a page's primary content. Every page uses exactly one.
 
@@ -213,6 +245,8 @@ This glossary is the single source of truth for all technical terms used in the 
 **property:** The aspect of an element a CSS declaration styles, such as `color` or `background-color`. It sits before the colon in a declaration.
 
 **protocol:** A set of rules computers follow to exchange data. HTTP, HTTPS, SMTP, and FTP are protocols.
+
+**pseudo-class:** A selector piece, written with a leading colon, that matches an element by its current state instead of its identity, such as `:hover` or `:focus`.
 
 ## Q
 

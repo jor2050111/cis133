@@ -1,0 +1,126 @@
+=====================================================================
+CIS133 SKILLS LAB 6A: THE CLUB SITE GETS ITS LAYOUT
+Written Answers
+=====================================================================
+
+Name:
+Date:
+
+This file travels inside your submission folder along with your
+three HTML pages, your images folder, and club-styles.css. Type
+your answers directly below each numbered prompt. Keep the headings
+and numbering in place so your grader can follow your work.
+
+---------------------------------------------------------------------
+PART 1: FOUNDATION (the header row and the gallery row)
+---------------------------------------------------------------------
+
+1.A  Your header row puts the club logo and the page title on one
+     flex line. Copy the rule that did it exactly as it appears in
+     club-styles.css. Then name the container's main axis and its
+     cross axis, and state which of your declarations works along
+     each axis.
+
+     The rule:
+     Main axis, and the declaration that works along it:
+     Cross axis, and the declaration that works along it:
+
+1.B  Your gallery row wraps. Copy the rule, then describe what you
+     observed at two window widths: one where figures share a line
+     and one where the row wraps onto a new line. Name the
+     declaration that allows the wrap and the declaration that sets
+     the space between figures.
+
+     The rule:
+     Wide window, what you observed:
+     Narrow window, what you observed:
+     The declaration that allows wrapping:
+     The declaration that sets the space between figures:
+
+---------------------------------------------------------------------
+PART 2: APPLICATION (smarter selectors and accessible states)
+---------------------------------------------------------------------
+
+2.A  The footer fix. Copy the rule that repaints the footer's
+     links, exactly as it appears in club-styles.css. State which
+     links it reaches and which it leaves alone. Then explain why
+     the selector footer a is the right tool here and what a bare
+     a rule would have done to the rest of the site.
+
+     Your rule:
+     What it reaches, and what it leaves alone:
+     Why footer a and not a:
+
+2.B  The keyboard pass. Put the mouse away and press Tab through
+     each page. Log what you saw: the order focus moved through
+     the links, and how your :focus style announced each stop.
+     Then confirm that every link region with a :hover style has a
+     :focus twin.
+
+     Pages you tabbed, and the order focus moved:
+     What your :focus style shows at each stop:
+     Every :hover has a :focus twin (yes, or the fix you made):
+
+---------------------------------------------------------------------
+PART 3: EXTENSION (the navigation bar and the milestone)
+---------------------------------------------------------------------
+
+3.A  Your own layout decision. State the decision you made (your
+     nav bar's justify-content choice, or a footer or figure
+     arrangement), and copy the declaration behind it. Then defend
+     it with the axis vocabulary: name the axis the declaration
+     controls and what the reader gains from your choice.
+
+     Your decision, and the declaration behind it:
+     The axis it controls:
+     Your defense:
+
+3.B  Log your validator results: the HTML validator's final
+     message count for each page, and the CSS validator's final
+     result for club-styles.css. Then name one thing either
+     validator caught along the way and what you changed. If both
+     stayed clean the whole time, say so. Finish with the critique
+     no validator can make: one thing about your layout that
+     passes every validator but that you would still improve, and
+     why.
+
+     recycling-guide.html:
+     drive-gallery.html:
+     contact.html:
+     club-styles.css:
+     One thing a validator caught:
+     One thing you would still improve, and why:
+
+     Part II milestone check. Your site should now show all four
+     milestone properties. Confirm each one and name where a
+     grader can see it in your files.
+
+     A multi-section site:
+     One external stylesheet:
+     Controlled spacing and type:
+     A Flexbox navigation bar:
+
+---------------------------------------------------------------------
+QUESTIONS & ANALYSIS
+---------------------------------------------------------------------
+
+Q1.  Pick one flex container you built in this lab. Name its main
+     axis and its cross axis. Then explain what one justify-content
+     or align-items change did to its items and why, citing what
+     you observed in the browser when you made the change.
+
+     Your answer:
+
+Q2.  The accessibility case for :focus. Tab through your own nav
+     bar by keyboard alone and describe the experience with your focus
+     styles, then without them. Who does the focus style serve,
+     and what would removing focus outlines without a replacement
+     cost those visitors?
+
+     Your answer:
+
+
+=====================================================================
+END OF ANSWERS FILE
+Submit the folder: skills-lab-6a-lastname (zipped)
+=====================================================================

@@ -429,7 +429,7 @@ The lab walks the chapter's own path. Part 1 spaces the regions, Part 2 builds t
 
 1. Borrow one Google Font for the site's headings using the single-link form from Section 5.3, back it with an honest fallback stack, and defend the pick in a CSS comment above the rule.
 2. Run a diagnosis. Find one element on any page whose spacing still looks wrong, transcribe its box-model diagram numbers into answer 3.A, name the layer at fault, and fix it with the fewest declarations that solve it.
-3. Validate everything: all three pages through the W3C HTML validator and `club-styles.css` through the CSS validator, repairing until every report shows zero messages. Log the results in answer 3.B and finish with the critique no validator can make: one thing about your spacing or typography you would still improve, and why.
+3. Validate everything: all three pages through the W3C HTML validator and `club-styles.css` through the CSS validator, repairing until every report shows zero messages. Log the results in answer 3.B and finish with the critique no validator can make: one thing about your styling you would still improve, and why.
 
 ### Questions & Analysis 🤔
 

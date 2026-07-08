@@ -82,6 +82,7 @@ WHITE on DEEP TEAL        7.48 to 1
 WHITE on CLUB TEAL        4.69 to 1
 DEEP TEAL on WHITE        7.48 to 1
 DEEP TEAL on LIGHT SAND   4.85 to 1
+LIGHT SAND on DEEP TEAL   4.85 to 1
 CLUB TEAL on WHITE        4.69 to 1
 
 =====================================================================
