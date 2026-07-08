@@ -5,6 +5,76 @@
 **Live site:** https://jor2050111.github.io/cis133/
 **Task list:** cis133-fall26 (`export CLAUDE_CODE_TASK_LIST_ID=cis133-fall26`)
 
+## What Was Done (2026-07-08 Chapter 2 session)
+
+* Wrote and shipped `book/chapters/chapter-02.md` (Basic HTML
+  Elements): 4 content sections (workspace and the edit-save-refresh
+  cycle, document anatomy, headings/paragraphs/lists, links and the
+  W3C validator), 5 Try It Yourself exercises, 4 Quick Checks, Skills
+  Lab 2A, 353 sentences at 13.7 words average, zero at 35+ words.
+* Consolidated Module 2's three draft MLOs into exactly 3:
+  MLO-2.1 (Apply) build a complete document -> 2.1-2.2,
+  MLO-2.2 (Apply) structure content by meaning -> 2.3-2.4,
+  MLO-2.3 (Analyze) diagnose markup errors from validator
+  reports -> 2.4. Full Evaluate-level validator critique (CLO IV)
+  deepens when CSS validation arrives in Chapter 4.
+* Rubric copied verbatim from chapter-01.md (consistency agent
+  diff-verified every cell and the Scoring line).
+* Built `assets/code/chapter-02/`: recycling-guide-content.txt
+  (labeled page text, students type only the markup),
+  broken-contact.html (planted defects for the repair task),
+  skills-lab-2a-answers.txt (fix log plus Q&A), README.md.
+  Continuity: the lab builds the recycling page whose sources
+  Skills Lab 1A vetted.
+* All validator numbers executed, never estimated (Nu checker via
+  curl, 2026-07-08). broken-contact.html: 4 defects produce exactly
+  8 messages, the unclosed strong cascading into 5. The chapter's
+  worked example (unclosed em, 3 messages) and TIY 2.5 (deleted
+  /title, 2 messages) quote captured output. Model solutions for
+  both lab pages validate with zero messages.
+* ANSWER KEY (instructor, not in the student README):
+  broken-contact.html defects are (1) head missing title,
+  (2) h2 closed by /h3, (3) p as a direct child of ul,
+  (4) unclosed strong under Collection Events.
+* Link check: every external URL returns 200 except azdeq.gov,
+  whose WAF blocks curl, so the lab's second source swapped to
+  phoenix.gov (verified 200). Same precedent as Chapter 1's
+  WAF-blocked TIY target.
+* Added 24 terms to `book/glossary.md`.
+* Ran the three review agents (scope, consistency, pedagogy).
+  Applied all 5 required fixes: comment row added to the skeleton
+  walkthrough table, DevTools panel named for Chrome/Edge/Firefox/
+  Safari, block-vs-inline given a Quick Check touchpoint, bolded
+  terms matched to glossary spellings (valid markup, singular
+  block-level/inline element). Applied 4 judgment calls: merged the
+  Attributes H3 so section 2.2 holds 4 subsections, sharpened TIY
+  2.3's predict, switched the worked validator example from title
+  to em so TIY 2.5 stays a discovery, and tightened the hyperlink
+  parenthetical. Skipped with rationale: thematic MLO-to-section
+  mapping (Chapter 1 precedent), DevTools TIY as tooling
+  orientation, and the lab Q&A "justify" verb, which
+  docs/part-structure.md sanctions for Skills Labs.
+* Uncommented the Chapter 2 nav line in zensical.toml.
+  `zensical build --clean`: no issues.
+* CLAUDE_CODE_TASK_LIST_ID pin worked: this session's tasks lived
+  on cis133-fall26 from the start.
+
+**Chapter 2 design notes:**
+
+* Promises paid from Chapter 1: VS Code setup, first HTML document,
+  W3C validator, DevTools first look.
+* Promises planted (pay these explicitly): Ch 3 = semantic
+  landmarks, the full strong/em story, images with alt text ("the
+  club's pages get their pictures"). Ch 4 = heading size belongs to
+  CSS. Ch 5 = spacing belongs to CSS, never br. Ch 12 = publish,
+  file:// becomes https://, relative links survive the move.
+* strong/em and block-vs-inline are deliberate previews with full
+  treatment in Chapter 3. Do not deepen them in place.
+* Pre-term verification (5 min in a real browser): TIY 2.3 DevTools
+  panel names on current browsers, TIY 2.5 blank-page result after
+  deleting /title, and the two lab links (epa.gov electronics page,
+  phoenix.gov) resolving normally.
+
 ## What Was Done (2026-07-08 Chapter 1 session)
 
 * Wrote and shipped `book/chapters/chapter-01.md` (The Internet and
@@ -141,16 +211,19 @@ repo.
 
 ## Next Steps
 
-1. Write Chapter 2 (Basic HTML Elements). Same cycle as Chapter 1:
-   consolidate draft MLOs to exactly 3, outline, draft with the
-   instructional-content-writing skill, starter files with README,
-   glossary, QA sweeps, review agents, nav line, build, push. Copy
-   the locked rubric verbatim from chapter-01.md. Pay Chapter 1's
-   promises: VS Code setup, first HTML document, W3C validator.
+1. Write Chapter 3 (Semantic HTML and Images). Same cycle as
+   Chapters 1-2: consolidate draft MLOs to exactly 3, outline, draft
+   with the instructional-content-writing skill, starter files with
+   README, glossary, QA sweeps, review agents, nav line, build,
+   push. Copy the locked rubric verbatim from chapter-01.md. Pay
+   Chapter 2's promises: semantic landmarks, the full strong/em
+   story, images with alt text. Chapter 3 is the first chapter whose
+   data pack needs image files (PNG only), so budget time for
+   creating them and their alt text.
 2. Repeat per chapter through Chapter 12 (chapters 9 and 12 are new
    coverage with no draft, built from docs/part-structure.md).
-3. Before the term starts: run the 5-minute browser verification of
-   Chapter 1's Try It exercises (see design notes above).
+3. Before the term starts: run the 5-minute browser verifications
+   for Chapters 1 and 2 (see each chapter's design notes above).
 4. After chapters ship: refine the `module-*-task.html` Canvas pages,
    assemble the course data pack zip for Canvas, and set assessment
    weights in docs/part-structure.md.

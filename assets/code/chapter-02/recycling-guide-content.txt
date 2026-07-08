@@ -1,0 +1,98 @@
+=====================================================================
+CIS133 SKILLS LAB 2A: CONTENT FOR THE RECYCLING GUIDE PAGE
+=====================================================================
+
+This file holds every piece of text that appears on the finished
+recycling-guide.html page. Copy text from this file into your HTML
+file instead of retyping it. You type only the markup.
+
+The labels in [BRACKETS] describe each piece of content. They are
+notes to you. They never go into your page.
+
+---------------------------------------------------------------------
+
+[BROWSER TAB TITLE]
+Recycle Your Electronics | PC Computer Club
+
+[MAIN HEADING - there is exactly one of these]
+Recycle Your Old Electronics
+
+[INTRO PARAGRAPH 1]
+Old phones, dead laptops, and tangled chargers pile up in drawers
+because nobody knows what to do with them. The PC Computer Club
+collects unwanted electronics every semester and delivers everything
+to a certified recycler.
+
+[INTRO PARAGRAPH 2]
+This guide explains why electronics deserve better than the trash,
+how to prepare a device before you hand it over, and what the club
+accepts.
+
+[SECTION HEADING]
+Why It Matters
+
+[PARAGRAPH]
+Electronics contain metals worth recovering and materials that do
+not belong in a landfill. One recycled laptop keeps lead, mercury,
+and cadmium out of the ground and puts copper, aluminum, and even
+gold back into use.
+
+[SECTION HEADING]
+Prepare Your Device: Three Steps
+
+[INTRO LINE FOR THE STEPS]
+Complete these steps in order before you drop anything off.
+
+[STEPS - the order matters]
+Back up anything you want to keep, such as photos, documents, and
+saved game data.
+Sign out of every account on the device, then perform a factory
+reset so none of your personal data travels with it.
+Remove any SIM card or memory card. The club recycles the device,
+not your accounts or your cards.
+
+[SECTION HEADING]
+What the Club Accepts
+
+[INTRO LINE FOR THE ITEM LIST]
+Bring any item on this list to a collection event.
+
+[ITEM LIST - the order does not matter. The three indented items
+belong under "Computers and accessories" as a list inside the list.]
+Phones and tablets
+Computers and accessories
+    Laptops
+    Desktop towers
+    Keyboards and mice
+Cables and chargers
+Small electronics such as cameras and handheld games
+
+[SECTION HEADING]
+Learn More
+
+[PARAGRAPH]
+The club vetted its sources before publishing this guide. These two
+earned the club's trust.
+
+[LINK 1 - the link text, then the address it points to]
+Link text: EPA guide to electronics donation and recycling
+Address:   https://www.epa.gov/recycle/electronics-donation-and-recycling
+
+[LINK 2 - the link text, then the address it points to]
+Link text: City of Phoenix official website
+Address:   https://www.phoenix.gov
+
+[FOOTER PARAGRAPH - "Email the club" is an email link. Part 3 adds
+a second link here to your contact page.]
+The PC Computer Club runs a collection table once a month. Email
+the club at computer-club@example.org with questions.
+
+[EMAIL ADDRESS FOR THE EMAIL LINK]
+computer-club@example.org
+
+[PART 3 LINK TEXT - links to contact.html]
+Visit the club's contact page
+
+=====================================================================
+END OF CONTENT FILE
+=====================================================================

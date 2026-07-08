@@ -1,0 +1,98 @@
+=====================================================================
+CIS133 SKILLS LAB 2A: BUILD THE CLUB'S RECYCLING GUIDE
+Written Answers
+=====================================================================
+
+Name:
+Date:
+
+This file travels inside your submission folder along with your two
+HTML pages. Type your answers directly below each numbered prompt.
+Keep the headings and numbering in place so your grader can follow
+your work.
+
+---------------------------------------------------------------------
+PART 1: FOUNDATION
+---------------------------------------------------------------------
+
+1.A  Record the full path of your saved page, from your cis133
+     folder down to the file. Example form:
+     cis133/skills-lab-2a-lastname/recycling-guide.html
+
+     Your path:
+
+1.B  After you changed your title element and refreshed, what
+     changed in the browser, and where did you look to see it?
+     Answer in one sentence.
+
+     Your answer:
+
+---------------------------------------------------------------------
+PART 2: APPLICATION
+---------------------------------------------------------------------
+
+2.A  List your page's headings in order, from top to bottom. Write
+     each heading's element name (h1, h2, ...) and its text. This
+     outline is what a screen reader user would hear first.
+
+     Your outline:
+
+---------------------------------------------------------------------
+PART 3: EXTENSION (fix log)
+---------------------------------------------------------------------
+
+Fill in one block for each REPAIR you made to contact.html. Copy
+each validator message word for word. If one repair silenced more
+than one message, list every message that disappeared in that block.
+You should need four blocks.
+
+Repair 1
+  Validator message(s):
+  Line number(s) the validator pointed to:
+  The actual problem:
+  Your fix:
+
+Repair 2
+  Validator message(s):
+  Line number(s) the validator pointed to:
+  The actual problem:
+  Your fix:
+
+Repair 3
+  Validator message(s):
+  Line number(s) the validator pointed to:
+  The actual problem:
+  Your fix:
+
+Repair 4
+  Validator message(s):
+  Line number(s) the validator pointed to:
+  The actual problem:
+  Your fix:
+
+---------------------------------------------------------------------
+QUESTIONS & ANALYSIS
+---------------------------------------------------------------------
+
+Q1.  Your fix log has more validator messages than repairs. Citing
+     one specific message from your log, explain how a single
+     missing character produced messages on lines you never touched,
+     and what that teaches you about the order in which to fix
+     validator errors.
+
+     Your answer:
+
+Q2.  Your guide page uses one numbered list and one bulleted list,
+     and its links use three different kinds of address: absolute,
+     relative, and mailto. Pick the numbered list and one of the
+     three link kinds. For each, justify the choice by what the
+     content MEANS, and describe a change to the content that would
+     flip your choice.
+
+     Your answer:
+
+
+=====================================================================
+END OF ANSWERS FILE
+Submit the folder: skills-lab-2a-lastname (zipped)
+=====================================================================
