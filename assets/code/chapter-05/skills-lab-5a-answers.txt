@@ -1,0 +1,111 @@
+=====================================================================
+CIS133 SKILLS LAB 5A: GIVE THE CLUB'S SITE BREATHING ROOM
+Written Answers
+=====================================================================
+
+Name:
+Date:
+
+This file travels inside your submission folder along with your
+three HTML pages, your images folder, and club-styles.css. Type
+your answers directly below each numbered prompt. Keep the headings
+and numbering in place so your grader can follow your work.
+
+---------------------------------------------------------------------
+PART 1: FOUNDATION (spacing the landmarks)
+---------------------------------------------------------------------
+
+1.A  Pick one region you spaced in Part 1 (the header, the nav, the
+     footer, or a section). Describe how it looked before your rule
+     and after, and copy the rule that made the difference exactly
+     as it appears in club-styles.css.
+
+     Region you chose:
+     Before:
+     After:
+     The rule:
+
+1.B  Copy the one shorthand declaration you wrote for Part 1
+     exactly as it appears in club-styles.css, then expand it:
+     write the four individual declarations (top, right, bottom,
+     left) it stands for.
+
+     Your shorthand declaration:
+     Its four-line expansion:
+
+---------------------------------------------------------------------
+PART 2: APPLICATION (the readable column and the site's type)
+---------------------------------------------------------------------
+
+2.A  State the max-width you gave main, exactly as it appears in
+     club-styles.css. Then justify the number: what happens to a
+     line of text when the window is wider than your column, and
+     why is that better for the reader?
+
+     Your max-width value:
+     Your justification:
+
+2.B  Log the site's type. Copy your body font stack exactly and
+     name its generic family. Then list the font sizes you set for
+     body text and headings and the body line-height, with one
+     reason apiece.
+
+     Your font stack:
+     Its generic family:
+     Your sizes and line-height, with reasons:
+
+---------------------------------------------------------------------
+PART 3: EXTENSION (the diagnosis and the validators)
+---------------------------------------------------------------------
+
+3.A  Record your DevTools diagnosis. Name the element you picked
+     and the page it lives on, then transcribe the numbers from its
+     box-model diagram (content size, padding, border, margin).
+     Name the layer that caused the problem, and copy the fix you
+     wrote.
+
+     Element and page:
+     Diagram numbers:
+     The layer at fault:
+     The fix:
+
+3.B  Log your validator results: the HTML validator's final
+     message count for each page, and the CSS validator's final
+     result for club-styles.css. Then name one thing either
+     validator caught along the way and what you changed. If both
+     stayed clean the whole time, say so. Finish with the critique
+     no validator can make: one thing about your spacing or
+     typography that passes both validators but that you would
+     still improve, and why.
+
+     recycling-guide.html:
+     drive-gallery.html:
+     contact.html:
+     club-styles.css:
+     One thing a validator caught:
+     One thing you would still improve, and why:
+
+---------------------------------------------------------------------
+QUESTIONS & ANALYSIS
+---------------------------------------------------------------------
+
+Q1.  Judge your finished site against the chapter's four-point
+     readability checklist: contrast, size, line height, and line
+     length. Cite one checklist item your work satisfied, name the
+     exact rule in club-styles.css that satisfied it, and explain
+     how the page reads differently because of it.
+
+     Your answer:
+
+Q2.  Tell the story of your Part 3 diagnosis: what the DevTools
+     box-model diagram showed for your chosen element, why the
+     browser was doing exactly what your CSS told it to do, and
+     what the diagram gave you that guess-and-refresh could not.
+
+     Your answer:
+
+
+=====================================================================
+END OF ANSWERS FILE
+Submit the folder: skills-lab-5a-lastname (zipped)
+=====================================================================

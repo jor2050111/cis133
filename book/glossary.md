@@ -26,6 +26,14 @@ This glossary is the single source of truth for all technical terms used in the 
 
 **body:** The element that holds everything visible in the browser window. All of a page's on-screen content lives inside it.
 
+**border:** The box model layer drawn between an element's padding and its margin: a visible line with a width, style, and color of its own.
+
+**border shorthand:** The `border` property, which sets a border's width, style, and color in one declaration, such as `border: 3px solid #268080;`.
+
+**box model:** The browser's model of every element as a rectangular box built from four layers: content, padding, border, and margin. DevTools draws any element's box as a diagram of nested rectangles.
+
+**box-sizing:** The CSS property that decides what `width` measures. Its `border-box` value makes a declared width cover content, padding, and border together, so the number you write is the box you see.
+
 **browser:** A program that requests pages from web servers and displays them on your screen. Chrome, Edge, Firefox, and Safari are browsers.
 
 **browser default styles:** The stylesheet every browser ships and applies to pages that bring no CSS of their own. It is why an unstyled page still shows large bold headings and blue links.
@@ -98,11 +106,21 @@ This glossary is the single source of truth for all technical terms used in the 
 
 **file extension:** The ending of a file name after the dot, such as `.html` or `.txt`. It tells the computer and the browser what kind of file it is.
 
+**font-size:** The CSS property that sets how large text renders, in a fixed unit such as `px` or a relative one such as `rem`.
+
+**font stack:** A `font-family` value that lists fonts in order of preference. The browser uses the first font it can supply, so the stack ends with a generic font family as the safety net.
+
+**font-style:** The CSS property that slants text with its `italic` value. It changes the look only: stress emphasis stays the job of `<em>`.
+
+**font-weight:** The CSS property that sets how heavy text strokes render, such as `bold`. It changes the look only: marking importance stays the job of `<strong>`.
+
 **footer element:** The landmark (`<footer>`) that holds a region's closing content, such as contact information or copyright lines.
 
 **functional image:** An image that performs a job, usually as the content of a link. Its alt text names the destination or action, never the picture.
 
 ## G
+
+**generic font family:** A font category rather than a font: `serif`, `sans-serif`, or `monospace`. The browser always owns a font in each category, so a font stack ending in one can never come up empty.
 
 **GIF:** A raster image format limited to 256 colors. It supports simple frame-by-frame animation, which is the main reason it survives.
 
@@ -152,6 +170,8 @@ This glossary is the single source of truth for all technical terms used in the 
 
 **landmark:** A semantic element that labels a major region of a page, such as `<header>`, `<nav>`, `<main>`, or `<footer>`. Assistive technology builds a jump menu from a page's landmarks.
 
+**line-height:** The CSS property that sets the vertical room each line of text occupies. A unitless value multiplies the element's own font size, and 1.5 is a readable default for body text.
+
 **link element:** The empty head element (`<link>`) that connects a page to another file. With `rel="stylesheet"`, its `href` names the stylesheet the page loads.
 
 **lossless compression:** File compression that shrinks a file without discarding any data. PNG uses it.
@@ -164,6 +184,10 @@ This glossary is the single source of truth for all technical terms used in the 
 
 **main element:** The landmark (`<main>`) that holds a page's primary content. Every page uses exactly one.
 
+**margin:** The outermost box model layer: transparent space an element claims outside its border to keep neighboring elements at a distance.
+
+**max-width:** The CSS property that caps how wide a box may grow while letting it shrink in narrower windows. Paired with auto side margins, it builds a centered readable column.
+
 ## N
 
 **nav element:** The landmark (`<nav>`) that holds a set of major navigation links, conventionally written as a list of links.
@@ -175,6 +199,8 @@ This glossary is the single source of truth for all technical terms used in the 
 **ordered list:** The list element (`<ol>`) that numbers its items because their sequence matters, such as the steps of a procedure.
 
 ## P
+
+**padding:** The box model layer between an element's content and its border. The element's background paints it, so padding keeps text from touching the edges of its own box.
 
 **parent element:** An element that directly contains another element. The `<body>` is the parent of a page's top-level landmarks.
 
@@ -198,6 +224,8 @@ This glossary is the single source of truth for all technical terms used in the 
 
 **relative URL:** An address that gives directions from the current file, with no protocol or domain, such as `contact.html`. Use it to link between files on the same site.
 
+**rem:** A CSS unit equal to the visitor's base text size, so `1.5rem` means 1.5 times whatever base the visitor's browser is set to. Sizes in rem respect a visitor who raises that base.
+
 **RGB:** The color model behind every screen color: a mix of red, green, and blue light. CSS states the mix directly with the `rgb()` function, such as `rgb(38, 128, 128)`.
 
 ## S
@@ -220,6 +248,8 @@ This glossary is the single source of truth for all technical terms used in the 
 
 **server:** A computer that stores websites and sends pages to browsers that request them.
 
+**shorthand property:** A CSS property that sets several longhand properties in one declaration, such as `padding: 12px 24px` or `border: 3px solid #268080`.
+
 **span element:** The generic inline container (`<span>`). It carries no meaning and marks a run of text for styling or scripting.
 
 **SSL/TLS:** The encryption technology behind HTTPS. It scrambles traffic between the browser and the server so intercepted data cannot be read.
@@ -238,7 +268,13 @@ This glossary is the single source of truth for all technical terms used in the 
 
 **tag:** An element's name inside angle brackets. An opening tag such as `<p>` starts an element, and a closing tag such as `</p>` ends it.
 
+**text-align:** The CSS property that sets how lines of text sit inside their box: `left`, `center`, or `right`.
+
+**text-decoration:** The CSS property that controls lines drawn on text, such as the underline every browser gives links. Removing link underlines removes a signal visitors rely on.
+
 **text editor:** A program that saves exactly the characters you type and nothing else. Code editors such as VS Code are text editors with extra help for writing code.
+
+**text-transform:** The CSS property that recases text for display, such as `uppercase` for short labels, without changing the characters in the markup.
 
 **title element:** The head element that names the page. Its text appears in the browser tab, in bookmarks, and as the headline of a search result.
 
@@ -247,6 +283,8 @@ This glossary is the single source of truth for all technical terms used in the 
 **transparency:** An image property that lets regions of the image be see-through so the page behind shows. PNG supports it fully, and JPEG does not support it at all.
 
 ## U
+
+**universal selector:** The selector `*`, which matches every element on the page. Its everyday job is delivering `box-sizing: border-box` to a whole stylesheet.
 
 **unordered list:** The list element (`<ul>`) that bullets its items because their order does not matter, such as a collection of accepted donations.
 
@@ -267,6 +305,8 @@ This glossary is the single source of truth for all technical terms used in the 
 **W3C (World Wide Web Consortium):** The organization that maintains the web's standards, including HTML and CSS.
 
 **W3C validator:** The free checking service at validator.w3.org that reports every place a page breaks the HTML standard, by line and column.
+
+**web-safe font:** A font installed on nearly every device, such as Arial, Verdana, or Georgia. Web-safe fonts anchor font stacks because a stack can rely on them without downloading anything.
 
 **whitespace collapsing:** The browser behavior that renders any run of spaces, tabs, and line breaks in a file as a single space on the page.
 

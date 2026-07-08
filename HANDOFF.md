@@ -5,6 +5,87 @@
 **Live site:** https://jor2050111.github.io/cis133/
 **Task list:** cis133-fall26 (`export CLAUDE_CODE_TASK_LIST_ID=cis133-fall26`)
 
+## What Was Done (2026-07-08 Chapter 5 session)
+
+* Wrote and shipped `book/chapters/chapter-05.md` (The Box Model and
+  Typography): 4 content sections (every element is a box, spacing
+  syntax individual and shorthand, choosing fonts, text properties
+  and readable typography), 5 Try It Yourself exercises, 4 Quick
+  Checks, Skills Lab 5A, 367 sentences at 14.3 words average, zero
+  at 35+. 480 lines. Same orchestrated pipeline as Chapter 4.
+* Consolidated Module 5's four draft MLOs into exactly 3:
+  MLO-5.1 (Apply) padding/border/margin with individual and shorthand
+  syntax -> 5.1-5.2, MLO-5.2 (Apply) font stacks, sizes, text
+  properties for readability -> 5.3-5.4, MLO-5.3 (Analyze) diagnose
+  spacing and readability with the DevTools box-model diagram and the
+  four-point checklist -> threads all sections, lab-assessed. Rubric
+  byte-identical to chapter-01.md.
+* Built `assets/code/chapter-05/`: `starter-site/` (the Lab 4A model
+  solution: 3 pages + `club-styles.css` + 7 images), `club-palette.txt`
+  (byte-identical copy from chapter-04), `box-practice.html` +
+  `box-practice.css` (engineered numbers: .event-notice 354px total,
+  .volunteer-call 336px from the same 300px width, all 300 under
+  border-box, plus the deliberately cramped `.drive-notes` region
+  whose contrast passes while size 11px, line-height 1.05, and
+  missing max-width violate the checklist), `skills-lab-5a-answers.txt`,
+  README.
+* Lab 4A model solution key calls (in club-styles.css): body light
+  sand/ink, header club teal/white, nav white, footer deep teal/white,
+  `h2, figcaption` deep teal (h1 wears the header's white because deep
+  teal on club teal fails contrast at 1.60:1 and combinators wait for
+  Ch 6), `.reminder` sunset orange on 2 paragraphs across 2 pages,
+  `#meeting-times` sand on the contact schedule ul, figure white
+  plates as the stretch. KNOWN WART, deliberate: footer links render
+  default blue on deep teal (1.26:1). It is the model's own 3.B
+  critique answer and Chapter 6's selector hook. Do not fix before
+  Chapter 6.
+* All validation executed (2026-07-08): Nu zero messages on all 4
+  HTML files, jigsaw 0 errors on both stylesheets, Oswald css2 URL
+  live (single-link student form recorded), all 5 Further Reading
+  URLs 200.
+* Added 20 terms to `book/glossary.md` (19 from the draft plus
+  font-style from review).
+* Ran the three review agents. Applied required fixes: three TIY
+  answer leaks removed (prose now works .event-notice only and TIY
+  5.2 predicts .volunteer-call, the shorthand-clock example switched
+  to fresh `.callout` numbers so TIY 5.3's expansion stays a
+  prediction, the body-margin reveal softened so TIY 5.1 discovers
+  the element and layer), Quick Check 5.1 Q2 given a fresh transfer
+  scenario, Looking Ahead's nav-bar promise reattributed to Chapter 4
+  (its true in-text home), font-style bolded and glossaried, and the
+  UPSTREAM stale promise in chapter-02.md fixed ("leave size for CSS
+  to fix in Chapter 4" now says Chapter 5, where font-size actually
+  lands). Applied judgment calls: Google Fonts preconnect aside
+  trimmed to a bare mention. Skipped with rationale: TIY 5.4/5.5
+  step counts (the checklist practice IS the exercise), 4-subsection
+  density pattern (within the 2-4 band), part-structure.md's Part II
+  Bloom's-focus line reading "Analyze entering in Chapter 6" while
+  Ch 4 ships Evaluate and Ch 5 ships Analyze (same docs-note
+  precedent as Part I), Google Fonts unbolded (matches the CSS Zen
+  Garden external-resource precedent).
+* Uncommented the Chapter 5 nav line. `zensical build --clean`: no
+  issues.
+
+**Chapter 5 design notes:**
+
+* Promises paid: Ch 2's "spacing belongs to CSS, never br" (named
+  callback in 5.1's paint rule), Ch 2's "heading size belongs to
+  CSS" final installment (5.3 font-size), Ch 4's Looking Ahead
+  (text pressing against edges opens the chapter).
+* Promises planted (pay these explicitly): Ch 6 = Flexbox arranges
+  the boxes, the nav becomes a navigation bar (promise now correctly
+  attributed to Chapter 4's text), selectors sharp enough to fix the
+  footer-link wart. Ch 8 = the readable column adapts to any screen.
+  Ch 9 = rem and user settings, the contrast math. Ch 12 = publish.
+* Universal selector, rem-vs-em, inheritance (one sentence in 5.3),
+  and Google Fonts internals are deliberate one-mention previews.
+  Do not deepen in place.
+* Pre-term verification (5 min in a real browser): the DevTools
+  box-model diagram's current tab home (Computed or Layout) in
+  Chrome/Edge/Firefox, body default margin still 8px, TIY 5.4's
+  Verdana-wide claim eyeballed once, Google Fonts embed panel still
+  offering the link form.
+
 ## What Was Done (2026-07-08 Chapter 4 session)
 
 * Wrote and shipped `book/chapters/chapter-04.md` (CSS Foundations):
@@ -389,16 +470,19 @@ repo.
 
 ## Next Steps
 
-1. Write Chapter 5 (The Box Model and Typography). Same cycle as
-   Chapters 1-4: consolidate draft MLOs to exactly 3, outline, asset
-   build with executed facts, draft, glossary, QA sweeps, review
-   agents, nav line, build, push. Copy the locked rubric verbatim
-   from chapter-01.md. Pay Chapter 4's promises: the box model,
-   spacing belongs to CSS and never br. Lab 5A starters = the Lab 4A
-   model solution (build from chapter-04/starter-site plus the
-   Chapter 4 answer key above). A preliminary Chapter 5 outline from
-   the Chapter 4 session is in that session's scratchpad. It needs a
-   refresh against the shipped Chapter 4 before drafting.
+1. Write Chapter 6 (Layout with Flexbox). Same cycle as Chapters 1-5:
+   consolidate draft MLOs to exactly 3 (the old module-06 task file
+   was a duplicate of module-05, so Lab 6A is designed fresh),
+   outline, asset build with executed facts, draft, glossary, QA
+   sweeps, review agents, nav line, build, push. Copy the locked
+   rubric verbatim from chapter-01.md. Pay the nav-bar promise
+   (planted in Chapter 4's text, re-planted by Chapter 5's Looking
+   Ahead) and fix the footer-link wart with Chapter 6 selectors.
+   Lab 6A starters = the Lab 5A model solution (build from
+   chapter-05/starter-site plus the Chapter 5 answer key above).
+   Lab 6A completes the Part II milestone: multi-section page,
+   external stylesheet, controlled spacing and type, Flexbox
+   navigation bar.
 2. Repeat per chapter through Chapter 12 (chapters 9 and 12 are new
    coverage with no draft, built from docs/part-structure.md).
 3. Before the term starts: run the 5-minute browser verifications

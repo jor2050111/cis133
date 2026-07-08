@@ -1,0 +1,55 @@
+/* PC Computer Club site stylesheet.
+   Built in Skills Lab 4A: the club's palette applied with element,
+   class, and id selectors. Every text-on-background pairing below
+   appears on club-palette.txt's passing list. */
+
+/* The site's base: ink text on the set's palest sand. */
+body {
+    background-color: #fac78d;  /* light sand */
+    color: #333333;             /* ink */
+}
+
+/* The landmarks from Chapter 3, dressed in the brand colors. */
+header {
+    background-color: #268080;  /* club teal, the brand */
+    color: #ffffff;             /* white reads on club teal */
+}
+
+nav {
+    background-color: #ffffff;  /* a white bar under the header */
+}
+
+footer {
+    background-color: #1a5e5e;  /* deep teal closes the page */
+    color: #ffffff;
+}
+
+/* Deep teal accents the section headings and every figure caption.
+   The caption color moved here from a leftover inline style in the
+   gallery page. All four captions share one role, so one rule now
+   colors them all. The h1 stays off this list on purpose: it sits
+   on the club teal header, where deep teal is not a passing
+   pairing, so it wears the header's white instead. */
+h2, figcaption {
+    color: #1a5e5e;
+}
+
+/* Key reminders earn attention on every page that carries one.
+   Ink text on sunset orange is a passing pairing. */
+.reminder {
+    background-color: #f4a259;  /* sunset orange flags the note */
+}
+
+/* The site's one meeting schedule, on the contact page only. */
+#meeting-times {
+    background-color: #deb887;  /* sand sets the schedule apart */
+}
+
+/* Stretch decision: white plates behind the figures, echoing the
+   label plates in the club's illustration set. The palette's two
+   prop browns lost here, since neither one backs a passing text
+   pairing. Deep teal captions on white pass at 7.48 to 1, the
+   strongest caption pairing on the list. */
+figure {
+    background-color: #ffffff;
+}

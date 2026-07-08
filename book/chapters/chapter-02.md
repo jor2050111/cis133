@@ -197,7 +197,7 @@ HTML provides six heading levels, `<h1>` down to `<h6>`. They are the outline of
 
 Two rules keep an outline honest. Use exactly one `<h1>` per page. And never skip levels on the way down: an `<h3>` belongs inside an `<h2>` section, not directly under the `<h1>`. This textbook follows the same rules, which is why every chapter has one title and numbered sections beneath it.
 
-Here is the trap: each heading level has a default size, and beginners pick the level that looks right. Wrong instrument. Chapter 1 introduced screen readers, and heading levels are how their users move through a page: many jump from heading to heading and listen to the outline before reading anything. A page whose headings were chosen for size reads to them like a shuffled outline. Choose the level that states the content's rank, and leave size for CSS to fix in Chapter 4.
+Here is the trap: each heading level has a default size, and beginners pick the level that looks right. Wrong instrument. Chapter 1 introduced screen readers, and heading levels are how their users move through a page: many jump from heading to heading and listen to the outline before reading anything. A page whose headings were chosen for size reads to them like a shuffled outline. Choose the level that states the content's rank, and leave size for CSS to fix in Chapter 5.
 
 ### Paragraphs and Whitespace
 

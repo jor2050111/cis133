@@ -1,0 +1,53 @@
+/* Chapter 5 practice stylesheet for box-practice.html. The three
+   announcement boxes carry deliberately clean numbers, so the
+   box-model math works out in whole pixels. The drive-notes rule
+   at the bottom is cramped on purpose. */
+
+body {
+    background-color: #fac78d;  /* light sand, from club-palette.txt */
+    color: #333333;             /* ink, a passing pairing */
+}
+
+/* Box one. Total rendered width by default: 300 content + 48
+   padding + 6 border = 354px. */
+.event-notice {
+    width: 300px;
+    padding: 24px;
+    border: 3px solid #268080;  /* club teal frames the event */
+    margin-bottom: 16px;
+    background-color: #ffffff;
+}
+
+/* Box two declares the same width as box one, then renders
+   narrower: 300 + 24 + 12 = 336px. The diagram tells the truth. */
+.volunteer-call {
+    width: 300px;
+    padding: 12px;
+    border: 6px solid #1a5e5e;  /* deep teal frames the call */
+    margin-bottom: 16px;
+    background-color: #ffffff;
+}
+
+/* Box three uses two-value shorthand. Padding runs 12px top and
+   bottom, 24px left and right. Margin runs 16px top and bottom,
+   32px left and right. Total width: 300 + 48 + 6 = 354px again. */
+.donation-tip {
+    width: 300px;
+    padding: 12px 24px;
+    border: 3px solid #5e9959;  /* saguaro green frames the tip */
+    margin: 16px 32px;
+    background-color: #ffffff;
+}
+
+/* This region is hard to read on purpose. Every declaration is
+   valid CSS, and the contrast pairing passes, which is the point:
+   a region can pass the validator and the contrast list and still
+   fail three points of the typography checklist. It also sets no
+   max-width, so its lines run the full window. */
+.drive-notes {
+    background-color: #ffffff;
+    color: #333333;      /* ink on white passes contrast */
+    font-size: 11px;     /* far below a comfortable body size */
+    line-height: 1.05;   /* the lines nearly touch */
+    padding: 0;          /* the text hugs the region's edges */
+}
