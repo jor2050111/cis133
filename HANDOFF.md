@@ -5,6 +5,60 @@
 **Live site:** https://jor2050111.github.io/cis133/
 **Task list:** cis133-fall26 (`export CLAUDE_CODE_TASK_LIST_ID=cis133-fall26`)
 
+## What Was Done (2026-07-08 Chapter 1 session)
+
+* Wrote and shipped `book/chapters/chapter-01.md` (The Internet and
+  the World Wide Web): 4 content sections, 5 Try It Yourself
+  exercises, 4 Quick Checks, Skills Lab 1A, ~6,000 words at Flesch-
+  friendly 13.2 words/sentence average, zero sentences at 35+ words.
+* Consolidated Module 1's five draft MLOs into exactly 3:
+  MLO-1.1 (Understand) Internet/web/browsers/servers -> 1.1,
+  MLO-1.2 (Understand) IP/DNS/domains/URL parts -> 1.2,
+  MLO-1.3 (Analyze) compare sources and practices for reliability,
+  authorship, security, and ethical use -> 1.3-1.4. The Analyze tag
+  matches CLO III's own level.
+* LOCKED THE RUBRIC. Chapter 1 holds the course's first in-book
+  rubric copy, now canonical for all 12 chapters. The one sanctioned
+  adaptation reads "HTML and CSS syntax and the course tools" in the
+  Code Accuracy Mastery cell. Copy it verbatim from chapter-01.md
+  (or the template) into every later chapter.
+* Built `assets/code/chapter-01/`: skills-lab-1a-worksheet.txt,
+  url-inventory.txt, source-profiles.txt (five fictional source
+  profiles), README.md data dictionary.
+* Added 16 terms to `book/glossary.md` (cache through top-level
+  domain, plus client-server model and query string).
+* Uncommented the Part I nav block with only Chapter 1 live in
+  `zensical.toml`, and the cover's Getting Started link.
+* Added an accessibility bullet to the Chapter 1 entry in
+  `docs/part-structure.md` (outline I.C.4 covers it under Internet
+  fundamentals, and the chapter previews screen readers).
+* Ran three review agents (scope, consistency, pedagogy) and applied
+  every required fix: MLO-1.3 broadened to claim the security strand,
+  SEO given a Quick Check touchpoint, TIY 1.2 made cache-outcome
+  robust, query-string field aligned across chapter/Quick Check/
+  worksheet, TIY 1.3's 404 target switched to
+  www.w3.org/this-page-does-not-exist (verified 404 with visible
+  error page via curl 2026-07-08; the college site's WAF blocks
+  curl).
+* `zensical build --clean`: no issues.
+
+**Chapter 1 design notes:**
+
+* Chapter 1 is a conceptual chapter (no HTML authoring yet), so it
+  carries 5 `text` diagram blocks instead of the 8-15 code-example
+  band. Exempt by design, do not "fix" this.
+* Pre-term verification (5 min in a real browser): TIY 1.3 error
+  pages, TIY 1.5 padlock/certificate panel on phoenixcollege.edu,
+  TIY 1.4 two-engine comparison.
+* Promises planted for later chapters (pay these debts explicitly):
+  Ch 2 = VS Code, first HTML document, W3C validator. Ch 3 = semantic
+  HTML with search engines as an audience, alt text. Ch 9 =
+  accessibility standards and testing. Ch 11 = forms and responsible
+  data collection. Ch 12 = FTP family / secure transfer, publishing.
+* This session ran without CLAUDE_CODE_TASK_LIST_ID set, so its task
+  breakdown lived in a per-session list. Export
+  `CLAUDE_CODE_TASK_LIST_ID=cis133-fall26` before future sessions.
+
 ## What Was Done (2026-07-08 scaffold session)
 
 * Instantiated the repo from
@@ -87,16 +141,17 @@ repo.
 
 ## Next Steps
 
-1. Write Chapter 1 (use `templates/chapter-template.md`, the draft
-   chapter 1 as scope reference, and the instructional-content-writing
-   skill). Consolidate the module's 5 draft MLOs into exactly 3.
-2. Build the `assets/code/chapter-01/` starter files alongside the
-   chapter, with a README data dictionary.
-3. Uncomment the Chapter 1 nav line in `zensical.toml` when it ships,
-   plus the cover's Getting Started link.
-4. Repeat per chapter through Chapter 12 (chapters 9 and 12 are new
+1. Write Chapter 2 (Basic HTML Elements). Same cycle as Chapter 1:
+   consolidate draft MLOs to exactly 3, outline, draft with the
+   instructional-content-writing skill, starter files with README,
+   glossary, QA sweeps, review agents, nav line, build, push. Copy
+   the locked rubric verbatim from chapter-01.md. Pay Chapter 1's
+   promises: VS Code setup, first HTML document, W3C validator.
+2. Repeat per chapter through Chapter 12 (chapters 9 and 12 are new
    coverage with no draft, built from docs/part-structure.md).
-5. After chapters ship: refine the `module-*-task.html` Canvas pages,
+3. Before the term starts: run the 5-minute browser verification of
+   Chapter 1's Try It exercises (see design notes above).
+4. After chapters ship: refine the `module-*-task.html` Canvas pages,
    assemble the course data pack zip for Canvas, and set assessment
    weights in docs/part-structure.md.
 

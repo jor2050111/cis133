@@ -1,0 +1,83 @@
+CIS133 Skills Lab 1A: Source Profiles
+Five web sources the computer club found while researching a
+resource page about recycling old electronics. All five profiles are
+fictional composites written for this course. Evaluate them exactly
+as described. Do not try to visit the URLs.
+
+---------------------------------------------------------------------
+PROFILE A
+---------------------------------------------------------------------
+URL:          https://www.desertvalleyaz.gov/public-works/electronics-recycling
+Site:         City of Desert Valley, Public Works Department
+Author:       No individual byline. Published by the department.
+Last updated: March 2026
+Purpose:      Informs residents how and where to recycle electronics.
+Content:      Lists the city's four drop-off locations with hours,
+              names which devices are accepted, and links to the city
+              ordinance that bans electronics from curbside bins.
+Other notes:  Plain design, no ads. A "Contact Public Works" email
+              appears in the footer.
+
+---------------------------------------------------------------------
+PROFILE B
+---------------------------------------------------------------------
+URL:          https://gadgetguru-tech.blog/why-recycling-is-a-scam
+Site:         Gadget Guru, a personal tech blog
+Author:       "GadgetGuru88" (no real name or bio provided)
+Last updated: August 2019
+Purpose:      Argues that consumer recycling programs waste effort.
+Content:      A long opinion post claiming most collected electronics
+              end up in landfills anyway. Mixes a few statistics
+              (without saying where they came from) with personal
+              stories and complaints.
+Other notes:  Comment section is full of arguments. No sources cited
+              anywhere in the post.
+
+---------------------------------------------------------------------
+PROFILE C
+---------------------------------------------------------------------
+URL:          https://www.desertvalleytimes.com/news/e-waste-surge
+Site:         Desert Valley Times, a local daily newspaper
+Author:       Maria Contreras, staff reporter (byline links to her
+              other articles)
+Last updated: November 2025
+Purpose:      Reports on a rise in electronic waste after the holiday
+              season.
+Content:      Quotes the city's recycling coordinator and a state
+              environmental report, gives collection totals for the
+              past three years, and lists upcoming collection events.
+Other notes:  The site shows the first three paragraphs free, then
+              asks readers to subscribe.
+
+---------------------------------------------------------------------
+PROFILE D
+---------------------------------------------------------------------
+URL:          https://best-tech-tips.info/ultimate-guide-recycle-electronics
+Site:         Best Tech Tips
+Author:       "Editorial Team" (no individuals named)
+Last updated: No date anywhere on the page
+Purpose:      Unclear. The page mixes general advice with product
+              links and heavy advertising.
+Content:      Long, repetitive sections that restate the same generic
+              tips ("recycling is good for the planet") in slightly
+              different words. No local information, no named
+              programs, no citations.
+Other notes:  A banner offers "100+ free recycling images, no
+              attribution needed!" but the page shows no license text
+              and does not say who created the images.
+
+---------------------------------------------------------------------
+PROFILE E
+---------------------------------------------------------------------
+URL:          https://sustainability.canyonstate.edu/e-waste
+Site:         Canyon State College, Office of Sustainability
+Author:       Dr. Lena Ortiz, sustainability coordinator (named on
+              the page with contact information)
+Last updated: September 2024
+Purpose:      Educates students on e-waste and promotes the campus
+              collection program.
+Content:      Explains what counts as e-waste, cites two state
+              environmental reports with links, and posts the campus
+              collection-event calendar for the academic year.
+Other notes:  Part of the college's official site. The event calendar
+              stops at the end of the 2024-2025 academic year.

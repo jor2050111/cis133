@@ -1,0 +1,17 @@
+CIS133 Skills Lab 1A: URL Inventory
+Twelve URLs for the Part 2 dissection task. Choose six per the lab
+instructions. Do not visit these addresses to complete the task.
+Everything you need is in the text of each URL.
+
+ 1. https://www.phoenixcollege.edu/academics
+ 2. https://learn.maricopa.edu/courses/12345
+ 3. https://en.wikipedia.org/wiki/World_Wide_Web
+ 4. https://developer.mozilla.org/en-US/docs/Web/HTML
+ 5. http://example.com/index.html
+ 6. https://www.nps.gov/grca/planyourvisit/weather.htm
+ 7. https://scholar.google.com/scholar?q=web+accessibility
+ 8. https://www.w3.org/WAI/fundamentals/
+ 9. https://duckduckgo.com/?q=phoenix+college
+10. ftp://ftp.example.org/pub/notes.txt
+11. https://mail.google.com/
+12. https://open.maricopa.edu/cis133da/

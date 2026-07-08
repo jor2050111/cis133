@@ -1,0 +1,206 @@
+=====================================================================
+CIS133 SKILLS LAB 1A: TRACE THE WEB, THEN JUDGE IT
+Worksheet
+=====================================================================
+
+Name:
+Date:
+
+Before you submit: rename this file skills-lab-1a-lastname.txt
+(replace "lastname" with your own last name).
+
+Type your answers directly below each numbered prompt. Keep the
+headings and numbering in place so your grader can follow your work.
+
+---------------------------------------------------------------------
+PART 1: FOUNDATION
+---------------------------------------------------------------------
+
+1.1  The five steps of a page request are listed below in scrambled
+     order. Write the correct sequence number (1-5) in front of each
+     letter.
+
+     [ ]  A. The server finds the requested page and sends it back.
+     [ ]  B. You type an address into the browser or tap a link.
+     [ ]  C. The browser renders the returned HTML and CSS into the
+             page you see.
+     [ ]  D. The browser looks up which server holds the page.
+     [ ]  E. The browser sends a request across the Internet to that
+             server.
+
+1.2  In 2-3 sentences of your own words, explain the difference
+     between the Internet and the web to someone who uses both every
+     day but has never thought about it.
+
+     Your answer:
+
+
+1.3  For each scenario, name the client, name the server, and give
+     the clue that told you which was which.
+
+     Scenario A: You open the Canvas app on your phone to check a
+     grade.
+
+     Client:
+     Server:
+     Clue:
+
+     Scenario B: A smart TV plays a movie from a streaming service.
+
+     Client:
+     Server:
+     Clue:
+
+     Scenario C: Your laptop loads this course's textbook site, and
+     a computer at a hosting service sends the pages back.
+
+     Client:
+     Server:
+     Clue:
+
+---------------------------------------------------------------------
+PART 2: APPLICATION
+---------------------------------------------------------------------
+
+2.1  From url-inventory.txt, choose six URLs. Your six must include:
+     * at least one URL that does not use https://
+     * at least one URL that contains a query string
+     * at least one URL that lacks a subdomain or a path
+
+     List the numbers of the six URLs you chose:
+
+
+2.2  Dissect each chosen URL into its parts. If a URL does not have
+     a part, write NONE. Note any query string on the last line.
+
+     URL #___ :
+       Protocol:
+       Subdomain:
+       Domain name:
+       Top-level domain:
+       Path:
+       Query string (if any):
+
+     URL #___ :
+       Protocol:
+       Subdomain:
+       Domain name:
+       Top-level domain:
+       Path:
+       Query string (if any):
+
+     URL #___ :
+       Protocol:
+       Subdomain:
+       Domain name:
+       Top-level domain:
+       Path:
+       Query string (if any):
+
+     URL #___ :
+       Protocol:
+       Subdomain:
+       Domain name:
+       Top-level domain:
+       Path:
+       Query string (if any):
+
+     URL #___ :
+       Protocol:
+       Subdomain:
+       Domain name:
+       Top-level domain:
+       Path:
+       Query string (if any):
+
+     URL #___ :
+       Protocol:
+       Subdomain:
+       Domain name:
+       Top-level domain:
+       Path:
+       Query string (if any):
+
+2.3  Pick any pair from your six URLs that shares a top-level domain
+     or a domain name. In 2-3 sentences, state what the shared part
+     tells you and what the differing parts change about where the
+     browser goes.
+
+     The pair I chose (URL numbers):
+
+     Your answer:
+
+
+---------------------------------------------------------------------
+PART 3: EXTENSION
+---------------------------------------------------------------------
+
+Scenario: your campus computer club is building a resource page
+about recycling old electronics. The club president asked you to vet
+the research. The five sources the club found are described in
+source-profiles.txt.
+
+3.1  Choose three of the five profiles. Score each one against the
+     five evaluation questions from the chapter. One short line per
+     question is enough.
+
+     Profile letter: ___
+       Author:
+       Host:
+       Currency:
+       Purpose:
+       Evidence:
+
+     Profile letter: ___
+       Author:
+       Host:
+       Currency:
+       Purpose:
+       Evidence:
+
+     Profile letter: ___
+       Author:
+       Host:
+       Currency:
+       Purpose:
+       Evidence:
+
+3.2  Write your recommendation memo to the club president
+     (about 150-200 words). Name the source(s) the club should use,
+     the source(s) it should reject, and the evidence that decided
+     each call.
+
+     Memo:
+
+
+3.3  One profile offers images the club wants to reuse on its page.
+     Using the chapter's copyright section, tell the president
+     whether the club may use them, and what the club must do if it
+     does.
+
+     Your answer:
+
+
+---------------------------------------------------------------------
+QUESTIONS & ANALYSIS
+---------------------------------------------------------------------
+
+Q1.  In Part 2, at least one of your URLs lacked a subdomain or a
+     path. Citing that specific URL, explain what the browser does
+     when those parts are absent and why the URL still works.
+
+     Your answer:
+
+
+Q2.  In Part 3, which single evaluation question did the most work
+     in separating your recommended source from your rejected one?
+     Justify the choice, and describe what the rejected source would
+     have to change for you to reverse your decision.
+
+     Your answer:
+
+
+=====================================================================
+END OF WORKSHEET
+Submit as: skills-lab-1a-lastname.txt
+=====================================================================

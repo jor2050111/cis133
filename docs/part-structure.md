@@ -74,6 +74,7 @@ as the verb.
 * Browsers and how a page request travels
 * Search engines, SEO basics, and evaluating online information
 * Ethics, privacy, security (SSL, digital certificates), and copyright
+* Accessibility as a social issue: screen readers preview (outline I.C.4)
 
 **Prior-course parallel:** Module 1 (The Internet, Domains, and Web
 Browsers) and draft chapter 1

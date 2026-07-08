@@ -37,11 +37,7 @@ Present data with tables, collect input with forms, and preview what scripting a
 
 ## Getting Started
 
-<!-- Uncomment once chapter-01.md exists. A live link to a missing
-page fails the build.
-
 Start with [Chapter 1: The Internet and the World Wide Web](chapters/chapter-01.md).
--->
 
 ## Sources & Permissions 📚
 
