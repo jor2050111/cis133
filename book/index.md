@@ -42,3 +42,9 @@ page fails the build.
 
 Start with [Chapter 1: The Internet and the World Wide Web](chapters/chapter-01.md).
 -->
+
+## Sources & Permissions 📚
+
+Learning materials, slides, demonstrations, examples, and activities adapted from:
+
+* *HTML & CSS Simply Explained* by Brad Olsen. Licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/). Available at [open.maricopa.edu/cis133da](https://open.maricopa.edu/cis133da).

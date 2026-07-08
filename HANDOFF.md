@@ -2,8 +2,7 @@
 
 **Last updated:** 2026-07-08
 **Repo:** https://github.com/jor2050111/cis133
-**Live site:** https://jor2050111.github.io/cis133/ (will 404 until the
-workflow push below lands)
+**Live site:** https://jor2050111.github.io/cis133/
 **Task list:** cis133-fall26 (`export CLAUDE_CODE_TASK_LIST_ID=cis133-fall26`)
 
 ## What Was Done (2026-07-08 scaffold session)
@@ -25,45 +24,41 @@ workflow push below lands)
 * Created the GitHub repo, pushed `main`, enabled Pages with
   build_type=workflow.
 
-## BLOCKED: One Action Needed From Mr. Vega
+## Deploy Status: Live
 
-The gh OAuth token lacks the `workflow` scope, so the push of
-`.github/workflows/docs.yml` was rejected. The workflow sits in a
-local commit waiting to go. To unblock, run in any terminal:
-
-```bash
-gh auth refresh -h github.com -s workflow
-cd ~/Documents/code/textbooks/cis133 && git push
-```
-
-After that push, the Actions run builds and deploys the site. Confirm
-the live URL loads. (This same refresh fixes future textbook setups.)
+Mr. Vega refreshed the gh token with the `workflow` scope on
+2026-07-08 and pushed the deploy workflow. The Actions run succeeded
+and the site is live. Future textbook setups will not hit the scope
+rejection.
 
 ## Source Material for Chapters
 
 Draft material lives at
-`/Users/vega/Desktop/temp-to-delete-later/textbook/cis133/`:
+`/Users/vega/Documents/code/textbooks/cis133-OLD-DRAFT-docs-only/`
+(copied there by Mr. Vega on 2026-07-08 from the old Desktop temp
+folder, which is now redundant):
 
 * 10 draft chapters (`chapter-01.md` ... `chapter-10.md`), extracted
-  from the Maricopa OER Pressbooks book previously used
+  from *HTML & CSS Simply Explained* by Brad Olsen
   (open.maricopa.edu/cis133da), plus `intro.md`, `appendix.md`, and an
   `assets/` folder of figures
 * `draft-a-cis133-course-map-v2.md`: the QM course map with drafted
-  MLOs, CC1-CC6, checkpoints, and final project
+  MLOs, CC1-CC6, checkpoints, and final project. Its modules carry 3-5
+  MLOs each. The textbook rule is exactly 3 per chapter, so MLOs get
+  consolidated chapter by chapter during writing.
 * `cis133-course-learning-outcomes.md`: official CLOs and outline
   (already folded into docs/CIS133_CLOs.md)
-* `module-*-task.html`: Canvas module assignment pages, useful when
-  designing Skills Labs
+* `module-*-task.html`: Canvas module assignment pages. They need
+  refinement and feed Skills Lab design after chapters ship.
 
-**Do not delete that folder until all 12 chapters are written.** The
-folder name says temp-to-delete-later, so consider copying it to Drive
-(co-professor) for safekeeping.
-
-**Treatment:** the drafts are scope and topic reference only. Chapters
-get written fresh at CIS360 quality, beginner level, in Mr. Vega's
-voice. Do not paste Pressbooks prose. If any passage is reused, first
-confirm the source book's CC license terms and attribution
-requirements. The drafts do not ship in this public repo.
+**License:** the source book is CC BY-NC 4.0 by Brad Olsen, so
+adapting its materials is permitted with attribution for this
+noncommercial OER textbook. The attribution block lives on the cover
+page (`book/index.md`, Sources & Permissions). Keep it on the cover in
+every redesign. Chapters still get written fresh at CIS360 quality,
+beginner level, in Mr. Vega's voice, with the drafts as scope and
+topic reference. The draft folder itself stays out of this public
+repo.
 
 ## Key Design Decisions
 
@@ -92,14 +87,18 @@ requirements. The drafts do not ship in this public repo.
 
 ## Next Steps
 
-1. Mr. Vega: run the `gh auth refresh` + `git push` above.
-2. Confirm the Actions run succeeds and the live site loads.
-3. Write Chapter 1 (use `templates/chapter-template.md`, the draft
+1. Write Chapter 1 (use `templates/chapter-template.md`, the draft
    chapter 1 as scope reference, and the instructional-content-writing
-   skill).
-4. Build the `assets/code/chapter-01/` starter files alongside the
+   skill). Consolidate the module's 5 draft MLOs into exactly 3.
+2. Build the `assets/code/chapter-01/` starter files alongside the
    chapter, with a README data dictionary.
-5. Uncomment the Chapter 1 nav line in `zensical.toml` when it ships.
+3. Uncomment the Chapter 1 nav line in `zensical.toml` when it ships,
+   plus the cover's Getting Started link.
+4. Repeat per chapter through Chapter 12 (chapters 9 and 12 are new
+   coverage with no draft, built from docs/part-structure.md).
+5. After chapters ship: refine the `module-*-task.html` Canvas pages,
+   assemble the course data pack zip for Canvas, and set assessment
+   weights in docs/part-structure.md.
 
 ## How to Continue
 
