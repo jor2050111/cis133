@@ -28,15 +28,25 @@ This glossary is the single source of truth for all technical terms used in the 
 
 **browser:** A program that requests pages from web servers and displays them on your screen. Chrome, Edge, Firefox, and Safari are browsers.
 
+**browser default styles:** The stylesheet every browser ships and applies to pages that bring no CSS of their own. It is why an unstyled page still shows large bold headings and blue links.
+
 ## C
 
 **cache:** A browser's local store of recently downloaded page files. The cache lets a repeat visit load without downloading everything again.
 
+**cascade:** The tie-breaking system CSS uses when more than one rule targets the same element. An inline style wins over stylesheet rules, and among rules with an equal claim, the later one wins.
+
 **child element:** An element nested directly inside another element. Every element inside a `<header>` is a child of that header.
+
+**class attribute:** The attribute that opts an element into a class, written `class="deadline"`. Any number of elements, of any type, can share one class.
+
+**class selector:** The selector that targets every element carrying a given class, written with a leading dot, such as `.deadline`. Use it to style some elements of a kind, chosen by role.
 
 **client:** Any device that asks a server for something, such as a laptop, phone, or smart TV. The client asks, and the server answers.
 
 **client-server model:** The pattern behind every web interaction. A client asks a server for something, and the server answers.
+
+**color name:** A CSS color value written as a predefined keyword, such as `teal`. The web defines more than 140 of them, handy for quick tests but rarely an exact match for a brand color.
 
 **cookie:** A small piece of data a website stores in your browser so the site can recognize you on a later visit.
 
@@ -46,7 +56,17 @@ This glossary is the single source of truth for all technical terms used in the 
 
 **CSS (Cascading Style Sheets):** The stylesheet language of the web. CSS rules control how HTML content looks, including color, spacing, type, and layout.
 
+**CSS comment:** A note wrapped in `/*` and `*/` that browsers skip entirely. Comments document a stylesheet for the humans who read it, explaining why a choice was made.
+
+**CSS rule:** One complete styling instruction: a selector naming which elements to style and a declaration block saying how.
+
+**CSS validator:** The free checking service at jigsaw.w3.org/css-validator that reports every place a stylesheet breaks the CSS standard. It names the defects that browsers skip silently.
+
 ## D
+
+**declaration:** One property and value pair inside a declaration block, such as `color: #1a5e5e;`. Each declaration ends with a semicolon.
+
+**declaration block:** The part of a CSS rule between the braces, holding the rule's declarations.
 
 **decorative image:** An image that adds no content to its page, such as a border strip. It gets a deliberate empty alt (`alt=""`) so screen readers skip it.
 
@@ -64,7 +84,11 @@ This glossary is the single source of truth for all technical terms used in the 
 
 **element:** One piece of page structure, such as a paragraph, heading, or list. Most elements are written as an opening tag, content, and a closing tag.
 
+**element selector:** The selector that targets every instance of an element by its name, such as `h1` or `footer`.
+
 **empty element:** An element with a single tag and no content or closing tag, such as `<meta>` or `<br>`.
+
+**external stylesheet:** A separate `.css` file connected to pages with the link element. One external stylesheet can style every page of a site, which makes it the professional default.
 
 ## F
 
@@ -88,6 +112,8 @@ This glossary is the single source of truth for all technical terms used in the 
 
 **header element:** The landmark (`<header>`) that holds a region's introductory content, such as a logo, title, or tagline. Not the same element as `<head>`.
 
+**hex color:** A CSS color value written as `#` plus six characters, read as three pairs for red, green, and blue light, such as `#268080`. The industry-standard way to record exact colors.
+
 **HTML (HyperText Markup Language):** The markup language of the web. HTML elements give a page its structure and meaning.
 
 **HTML comment:** A note wrapped in `<!--` and `-->` that browsers skip entirely. Comments document a file for the humans who read its code.
@@ -100,11 +126,19 @@ This glossary is the single source of truth for all technical terms used in the 
 
 ## I
 
+**id attribute:** The attribute that gives one element a unique name on its page, written `id="meeting-times"`. An id value may appear on only one element per page.
+
+**id selector:** The selector that targets the one element carrying a given id, written with a leading hash, such as `#meeting-times`.
+
 **img element:** The empty element (`<img>`) that embeds an image in a page. Its `src` attribute addresses the image file, and its `alt` attribute carries the alt text.
 
 **informative image:** An image that carries content its page needs. Its alt text describes what matters in about a sentence.
 
 **inline element:** An element that flows along inside a line of text instead of starting a new one, such as `<strong>`, `<em>`, or `<a>`.
+
+**inline style:** CSS written into a single element's `style` attribute. It styles that one element only and puts presentation back inside the content file.
+
+**internal stylesheet:** CSS rules written inside a `<style>` element in a page's head. Its rules reach that one page only.
 
 **Internet:** The global network of connected devices and the physical infrastructure that links them. The web runs on top of the Internet.
 
@@ -117,6 +151,8 @@ This glossary is the single source of truth for all technical terms used in the 
 ## L
 
 **landmark:** A semantic element that labels a major region of a page, such as `<header>`, `<nav>`, `<main>`, or `<footer>`. Assistive technology builds a jump menu from a page's landmarks.
+
+**link element:** The empty head element (`<link>`) that connects a page to another file. With `rel="stylesheet"`, its `href` names the stylesheet the page loads.
 
 **lossless compression:** File compression that shrinks a file without discarding any data. PNG uses it.
 
@@ -148,6 +184,8 @@ This glossary is the single source of truth for all technical terms used in the 
 
 **PNG (Portable Network Graphics):** A raster image format with lossless compression and transparency support. The standard choice for illustrations, screenshots, and any image that needs see-through regions.
 
+**property:** The aspect of an element a CSS declaration styles, such as `color` or `background-color`. It sits before the colon in a declaration.
+
 **protocol:** A set of rules computers follow to exchange data. HTTP, HTTPS, SMTP, and FTP are protocols.
 
 ## Q
@@ -160,6 +198,8 @@ This glossary is the single source of truth for all technical terms used in the 
 
 **relative URL:** An address that gives directions from the current file, with no protocol or domain, such as `contact.html`. Use it to link between files on the same site.
 
+**RGB:** The color model behind every screen color: a mix of red, green, and blue light. CSS states the mix directly with the `rgb()` function, such as `rgb(38, 128, 128)`.
+
 ## S
 
 **screen reader:** Software that reads page content aloud, or renders it as braille, for users who are blind or have low vision.
@@ -168,9 +208,15 @@ This glossary is the single source of truth for all technical terms used in the 
 
 **section element:** The landmark (`<section>`) that groups one thematically related chunk of a page under its own heading.
 
+**selector:** The part of a CSS rule that names which elements the rule styles.
+
+**selector list:** Several selectors sharing one declaration block, separated by commas, such as `h1, h2`.
+
 **semantic element:** An element whose name describes what its content is, not how it looks. `<nav>`, `<strong>`, and `<figure>` are semantic elements.
 
 **SEO (search engine optimization):** The practice of improving a page so search engines can find, read, and rank it in unpaid results.
+
+**separation of concerns:** The design principle of keeping content and presentation in separate languages and files: HTML says what content is, CSS says how it looks. It lets one stylesheet edit restyle a whole site without touching content.
 
 **server:** A computer that stores websites and sends pages to browsers that request them.
 
@@ -181,6 +227,8 @@ This glossary is the single source of truth for all technical terms used in the 
 **stress emphasis:** The meaning the `<em>` element marks: the word a reader would stress aloud, which can change what the sentence means. Browsers render it italic.
 
 **strong importance:** The meaning the `<strong>` element marks: content the reader must not miss, such as a warning or deadline. Browsers render it bold.
+
+**style element:** The head element (`<style>`) that holds a page's internal stylesheet.
 
 **subdomain:** An optional prefix on a domain name that points to a section of a site, such as `learn` in learn.maricopa.edu.
 
@@ -207,6 +255,8 @@ This glossary is the single source of truth for all technical terms used in the 
 ## V
 
 **valid markup:** Markup that follows the rules of the HTML standard: required elements present, tags closed, nesting legal. The W3C validator checks for it.
+
+**value:** The setting a CSS declaration assigns to its property, such as `#1a5e5e` in `color: #1a5e5e;`. It sits after the colon in a declaration.
 
 **vector image:** An image stored as drawing instructions instead of pixels, so the computer can redraw it sharp at any size.
 

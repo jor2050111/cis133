@@ -5,6 +5,94 @@
 **Live site:** https://jor2050111.github.io/cis133/
 **Task list:** cis133-fall26 (`export CLAUDE_CODE_TASK_LIST_ID=cis133-fall26`)
 
+## What Was Done (2026-07-08 Chapter 4 session)
+
+* Wrote and shipped `book/chapters/chapter-04.md` (CSS Foundations):
+  4 content sections (what CSS is and rule anatomy, inline/internal/
+  external and the cascade, element/class/id selectors, color systems
+  and CSS validation), 5 Try It Yourself exercises, 4 Quick Checks,
+  Skills Lab 4A, 446 sentences at 14.3 words average, zero at 35+.
+  538 lines. This chapter was built by an orchestrated agent pipeline
+  (outline -> asset agent -> draft agent -> three review agents), same
+  quality gates as Chapters 1-3.
+* Consolidated Module 4's four draft MLOs into exactly 3:
+  MLO-4.1 (Apply) connect CSS three ways -> 4.1-4.2,
+  MLO-4.2 (Apply) rules with selectors and color systems -> 4.1/4.3/4.4,
+  MLO-4.3 (Evaluate) critique with HTML and CSS validators -> 4.4.
+  The Evaluate tag matches CLO IV's own verb (Chapter 1 precedent).
+  Rubric copied verbatim from chapter-01.md (byte-diff verified).
+* Built `assets/code/chapter-04/`: `starter-site/` (Lab 3A model
+  solutions rebuilt from the Chapter 3 answer key, 3 pages + 7 images),
+  `club-palette.txt` (exact hexes extracted from the chapter-03
+  generator, 9 recommended pairings verified in Python at WCAG AA
+  4.5:1 or better), `selector-practice.html`, `cascade-practice.html`
+  + `practice-styles.css`, `skills-lab-4a-answers.txt`, README.
+* Planted defect: `drive-gallery.html` in starter-site carries one
+  leftover inline style (`style="color: #1a5e5e;"` on the second
+  figcaption). Lab Part 3 hunts and migrates it. Disclosed in the
+  README per the gallery-content.txt precedent.
+* All validator claims executed (2026-07-08): Nu checker zero messages
+  on all 8 HTML files, jigsaw clean-pass message captured verbatim,
+  missing-semicolon error captured (the in-chapter worked example:
+  the report blames line 9 for line 8's defect), colr typo error
+  captured but NOT quoted in prose. The typo lives in TIY 4.5 as a
+  genuine discovery, per the Chapter 2 title/em precedent. The
+  duplicate-id validator claim in 4.3 was verified live.
+* Palette: club teal #268080, deep teal #1a5e5e, sunset orange
+  #f4a259, light sand #fac78d, sand #deb887, saguaro green #5e9959,
+  ink #333333, white #ffffff, plus 2 labeled decoy browns.
+* Added 25 terms to `book/glossary.md`.
+* Ran the three review agents (scope, consistency, pedagogy). Applied
+  the required fixes: validator section restructured so prose keeps
+  only the semicolon worked example (TIY discovery preserved), id
+  lowercased in two headings, Key Terms reordered to first-use order,
+  stale pack README rows corrected. Applied judgment calls: WCAG
+  ratio numbers trimmed to a preview (Chapter 9 owns the math), the
+  bare teal keyword rule dropped from the color block, the hex-reading
+  TIY moved ahead of the validator subsection (TIYs renumbered
+  4.4/4.5), the two-browns judgment routed into Part 3's stretch, an
+  Evaluate-level critique prompt added to answer 3.B, one filler
+  "just" removed, glossary declaration/value examples aligned to the
+  chapter's anatomy rule. Skipped with rationale: TIY 4.2's three
+  refresh cycles (inherent to the cascade demo), the 14-line landmark
+  block (coherent unit mirroring the lab task), 6 Key Concepts bullets
+  (template sanctions 4-6), splitting 4.4 into two sections (the fix
+  pass shortened it instead), MLO-4.3's verb chain (matches shipped
+  MLO-2.3/3.3 house pattern).
+* ANSWER KEY (instructor, for the Lab 5A starter build): the Lab 4A
+  model solution links `club-styles.css` from all three heads and uses
+  the chapter's own example rules: body light sand + ink, header club
+  teal + white, nav white, footer deep teal + white, h1/h2 selector
+  list deep teal, a role-named class on content in at least two pages,
+  one id on a unique element, the gallery figcaption's inline
+  declaration migrated into a stylesheet rule, every pairing from the
+  palette's passing list. The chapter-05 asset agent makes the
+  remaining concrete choices from the actual page content and records
+  them in its facts sheet.
+* Uncommented the Part II nav block with only Chapter 4 live in
+  `zensical.toml`. `zensical build --clean`: no issues.
+
+**Chapter 4 design notes:**
+
+* Promises paid from earlier chapters: Ch 2's "heading size belongs
+  to CSS" (TIY 4.1 catches font-size in DevTools, the anatomy example
+  colors h1), Ch 3's "landmarks are the exact hooks your stylesheets
+  grab first" (4.3 styles header/nav/footer), div and span get their
+  styling jobs (4.3).
+* Promises planted (pay these explicitly): Ch 5 = the box model,
+  spacing belongs to CSS and never br, "you can color boxes, next you
+  control their space." Ch 6 = the nav list becomes a navigation bar,
+  cascade/specificity deepens with smarter selectors. Ch 8 = one
+  stylesheet adapts to every screen. Ch 9 = the math behind the
+  palette's passing list. Ch 12 = the stylesheet publishes with the
+  site.
+* hsl() and specificity are deliberate one-mention previews. Do not
+  deepen them in place.
+* Pre-term verification (5 min in a real browser): TIY 4.1's Wikipedia
+  Styles panel and "user agent stylesheet" labels on current browsers,
+  the jigsaw direct-input tab layout, and VS Code still drawing color
+  swatches in .css files (TIY 4.4).
+
 ## What Was Done (2026-07-08 Chapter 3 session)
 
 * Wrote and shipped `book/chapters/chapter-03.md` (Semantic HTML
@@ -301,15 +389,16 @@ repo.
 
 ## Next Steps
 
-1. Write Chapter 4 (CSS Foundations). Same cycle as Chapters 1-3:
-   consolidate draft MLOs to exactly 3, outline, draft with the
-   instructional-content-writing skill, starter files with README,
-   glossary, QA sweeps, review agents, nav line, build, push. Copy
-   the locked rubric verbatim from chapter-01.md. Pay Chapter 3's
-   promises: CSS styles the landmarks, heading size belongs to
-   CSS. The lab world can style the club's three pages from Lab 3A
-   (model solutions rebuild fast from the chapter-03 starters plus
-   the Chapter 3 answer key above).
+1. Write Chapter 5 (The Box Model and Typography). Same cycle as
+   Chapters 1-4: consolidate draft MLOs to exactly 3, outline, asset
+   build with executed facts, draft, glossary, QA sweeps, review
+   agents, nav line, build, push. Copy the locked rubric verbatim
+   from chapter-01.md. Pay Chapter 4's promises: the box model,
+   spacing belongs to CSS and never br. Lab 5A starters = the Lab 4A
+   model solution (build from chapter-04/starter-site plus the
+   Chapter 4 answer key above). A preliminary Chapter 5 outline from
+   the Chapter 4 session is in that session's scratchpad. It needs a
+   refresh against the shipped Chapter 4 before drafting.
 2. Repeat per chapter through Chapter 12 (chapters 9 and 12 are new
    coverage with no draft, built from docs/part-structure.md).
 3. Before the term starts: run the 5-minute browser verifications

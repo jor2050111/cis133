@@ -1,0 +1,18 @@
+/* Practice stylesheet for the Chapter 4 Try It Yourself
+   exercises. It sits beside cascade-practice.html, so the page's
+   relative href finds it with the file name alone. Every color
+   comes from club-palette.txt, and every pairing here passes the
+   palette's contrast list. */
+
+body {
+    background-color: #fac78d;  /* light sand */
+    color: #333333;             /* ink */
+}
+
+h1 {
+    color: #1a5e5e;  /* deep teal: the heading the cascade demo watches */
+}
+
+p {
+    background-color: #ffffff;  /* white panels lift text off the sand */
+}

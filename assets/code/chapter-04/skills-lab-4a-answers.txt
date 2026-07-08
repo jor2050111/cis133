@@ -1,0 +1,106 @@
+=====================================================================
+CIS133 SKILLS LAB 4A: DRESS THE CLUB'S SITE IN ITS OWN COLORS
+Written Answers
+=====================================================================
+
+Name:
+Date:
+
+This file travels inside your submission folder along with your
+three HTML pages, your images folder, and club-styles.css. Type
+your answers directly below each numbered prompt. Keep the headings
+and numbering in place so your grader can follow your work.
+
+---------------------------------------------------------------------
+PART 1: FOUNDATION (connecting the stylesheet)
+---------------------------------------------------------------------
+
+1.A  Copy the link element you added to your pages exactly as it
+     appears in your markup. Name the element it sits inside, and
+     explain in one or two sentences why it belongs there and not
+     in the body.
+
+     Your link element:
+     Where it sits and why:
+
+1.B  After you wrote the body rule in club-styles.css, you
+     refreshed all three pages. Describe what changed on each
+     page, and state how many files you edited to cause it.
+
+     Your answer:
+
+---------------------------------------------------------------------
+PART 2: APPLICATION (selector log)
+---------------------------------------------------------------------
+
+2.A  Fill in one line for each rule you wrote in Part 2. Copy each
+     selector exactly as it appears in club-styles.css, name its
+     kind (element, class, or id), and give the reason that kind
+     fits the job.
+     Example form:
+     header - element selector - every page's header gets the same
+     background
+
+     Your selector log:
+
+2.B  Point at the one class and the one id you created in Part 2.
+     Justify each choice: why did the class content need a class
+     instead of an id, and why did the id content need an id
+     instead of a class? Two or three sentences.
+
+     Your answer:
+
+---------------------------------------------------------------------
+PART 3: EXTENSION (the hunt and the validators)
+---------------------------------------------------------------------
+
+3.A  Record the leftover inline style you found. Name the file and
+     the element that carried it, copy the exact style attribute
+     text, and name the selector in club-styles.css where the
+     declaration lives now.
+
+     File and element:
+     Exact attribute text:
+     New home in the stylesheet:
+
+3.B  Log your validator results: the HTML validator's final
+     message count for each page, and the CSS validator's final
+     result for club-styles.css. Then name one thing either
+     validator caught along the way and what you changed. If both
+     stayed clean the whole time, say so. Finish with the critique
+     no validator can make: one thing about your styling that
+     passes both validators but that you would still improve, and
+     why.
+
+     recycling-guide.html:
+     drive-gallery.html:
+     contact.html:
+     club-styles.css:
+     One thing a validator caught:
+     One thing you would still improve, and why:
+
+---------------------------------------------------------------------
+QUESTIONS & ANALYSIS
+---------------------------------------------------------------------
+
+Q1.  Cite the moment one edit to club-styles.css changed all three
+     pages at once: what did you edit, and what changed where?
+     Then estimate what the same site-wide change would have cost
+     on a site styled with inline styles on every element. Ground
+     your answer in your own Part 1 and Part 2 work.
+
+     Your answer:
+
+Q2.  The HTML validator passed all three of your pages before you
+     wrote a single CSS rule, yet the CSS validator still found
+     work for you during this lab or its Try It Yourself
+     exercises. What does each validator check, and why does a
+     professional run both before shipping?
+
+     Your answer:
+
+
+=====================================================================
+END OF ANSWERS FILE
+Submit the folder: skills-lab-4a-lastname (zipped)
+=====================================================================

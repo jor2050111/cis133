@@ -45,11 +45,11 @@ nav = [
     { "Chapter 2: Basic HTML Elements" = "chapters/chapter-02.md" },
     { "Chapter 3: Semantic HTML and Images" = "chapters/chapter-03.md" },
   ] },
-  # { "Part II: Styling with CSS" = [
-  #   { "Chapter 4: CSS Foundations" = "chapters/chapter-04.md" },
-  #   { "Chapter 5: The Box Model and Typography" = "chapters/chapter-05.md" },
-  #   { "Chapter 6: Layout with Flexbox" = "chapters/chapter-06.md" },
-  # ] },
+  { "Part II: Styling with CSS" = [
+    { "Chapter 4: CSS Foundations" = "chapters/chapter-04.md" },
+    # { "Chapter 5: The Box Model and Typography" = "chapters/chapter-05.md" },
+    # { "Chapter 6: Layout with Flexbox" = "chapters/chapter-06.md" },
+  ] },
   # { "Part III: Design for Every User" = [
   #   { "Chapter 7: UX and Web Design" = "chapters/chapter-07.md" },
   #   { "Chapter 8: Responsive Design and Media Queries" = "chapters/chapter-08.md" },
