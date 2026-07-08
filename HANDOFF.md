@@ -5,6 +5,96 @@
 **Live site:** https://jor2050111.github.io/cis133/
 **Task list:** cis133-fall26 (`export CLAUDE_CODE_TASK_LIST_ID=cis133-fall26`)
 
+## What Was Done (2026-07-08 Chapter 3 session)
+
+* Wrote and shipped `book/chapters/chapter-03.md` (Semantic HTML
+  and Images): 4 content sections (semantic vs non-semantic with
+  the full strong/em story, page landmarks, images and alt text,
+  formats and site organization), 5 Try It Yourself exercises,
+  4 Quick Checks, Skills Lab 3A, 349 sentences at 14.7 words
+  average, zero at 35+ words.
+* Consolidated Module 3's four draft MLOs into exactly 3:
+  MLO-3.1 (Apply) semantic elements by meaning -> 3.1-3.2,
+  MLO-3.2 (Apply) images with purpose-matched alt text -> 3.3,
+  MLO-3.3 (Analyze) differentiate formats, pick format and folder
+  home -> 3.4. Rubric copied verbatim from chapter-01.md
+  (consistency agent diff-verified: only the heading differs).
+* FIRST CHAPTER WITH IMAGE ASSETS. Nine PNGs in
+  `assets/code/chapter-03/`, all rendered by the seeded generator
+  `assets/code/_generators/generate_chapter03_images.py`
+  (BASE_SEED=133, Pillow 12.3.0, byte-identical rerun proven by a
+  double-render assert, plus asserts on dimensions, logo
+  transparency, chart data, and the file-size teaching point).
+  One flat-illustration style throughout: the fictional club's
+  design set. `cactus-garden.png` and `membership-chart.png` are
+  chapter-practice images. The other seven are lab images.
+* IF IMAGES ARE EVER REPLACED (for example with AI-photo
+  upgrades): re-verify TIY 3.5's executed size numbers (~13 KB
+  chart, ~11 KB drive scene, ~3 KB logo), the membership example
+  alt (grows 18 to 39), and the lab chart's cited numbers (64
+  cables, 154 total). The generator asserts pin all of these.
+* Data pack text/HTML: `recycling-guide-start.html` and
+  `contact-start.html` (Lab 2A model solutions, so Lab 3A does not
+  punish a weak Lab 2A twice), `gallery-content.txt` (ships no alt
+  text on purpose), `skills-lab-3a-answers.txt` (landmark map, alt
+  log, format decisions), README with the image data dictionary.
+* All validator claims executed (Nu checker via curl, 2026-07-08):
+  both starters and all three model-solution pages validate with
+  zero messages, and the missing-alt error message was captured
+  live. Model solutions live in the session scratchpad only, per
+  the Chapter 2 precedent.
+* ANSWER KEY (instructor, not in the student README): guide
+  landmark map is header (logo, h1, 2 intro paragraphs), nav
+  (3-link list), main with 4 sections, divider img, footer.
+  `<strong>` on "in order", `<em>` on "not". Contact page earns no
+  footer (deliberate teaching decision in Part 3 step 3). Model
+  informative alts describe the illustrated scenes, divider gets
+  alt="", chart alt delivers cables 64 of 154 total.
+* TIY 3.2 verified live 2026-07-08: en.wikipedia.org/wiki/Recycling
+  renders exactly 1 main and 12 nav elements. All five Further
+  Reading URLs return 200.
+* Added 30 terms to `book/glossary.md` (new G, J, and L sections).
+* Ran the three review agents. Applied all 3 required fixes:
+  banned filler "just" removed (twice), Skills Lab Part 2/3 MLO
+  labels corrected to what each part exercises, and the worked
+  examples de-coupled from graded lab images (the figure example
+  now uses the new chapter-only `membership-chart.png`, the
+  informative example uses `cactus-garden.png`, the folder example
+  uses the divider's taught alt=""). Applied judgment calls: time
+  estimate to 5-6 hours, Ctrl+F-in-Elements bridge added to TIY
+  3.2, example folder renamed to skills-lab-3a-ortiz (fictional
+  student convention), folder tree lists all four lab images,
+  "text-level elements" glossed in 3.1 and unified with the lab
+  wording. Skipped with rationale: dedicated retrieval touchpoints
+  for header-vs-head and img-inline (Quick Checks capped at 3
+  questions, both reinforced indirectly), moving off the 8-example
+  band floor (scope agent recommended no forced additions), and
+  part-structure.md's Part I "Bloom's focus" line still reading
+  "Remember through Apply" while all three shipped chapters tag
+  their third MLO Analyze (docs note, not a chapter defect).
+* Uncommented the Chapter 3 nav line in zensical.toml.
+  `zensical build --clean`: no issues.
+
+**Chapter 3 design notes:**
+
+* Promises paid from Chapter 2: semantic landmarks, the full
+  strong/em story, images with alt text, "the club's pages get
+  their pictures." Also paid Chapter 1's semantic-HTML-for-search
+  and alt-text previews, and Chapter 2's block-vs-inline return.
+* Promises planted (pay these explicitly): Ch 4 = CSS styles the
+  landmarks ("the exact hooks your stylesheets grab first"),
+  heading size belongs to CSS. Ch 6 = the nav list becomes a
+  styled navigation bar. Ch 9 = accessibility deep dive, alt
+  decisions deepen. Ch 12 = publish, index.html becomes the home
+  page name, the self-contained folder survives the move.
+* aside and WebP are deliberate one-mention previews. Do not
+  deepen them in place.
+* Pre-term verification (5 min in a real browser): TIY 3.2's
+  Wikipedia landmark counts (a skin change could alter them),
+  TIY 3.3 broken-src rendering with and without alt on current
+  browsers, and the lab pages opening cleanly from a zipped and
+  re-extracted folder.
+
 ## What Was Done (2026-07-08 Chapter 2 session)
 
 * Wrote and shipped `book/chapters/chapter-02.md` (Basic HTML
@@ -211,19 +301,20 @@ repo.
 
 ## Next Steps
 
-1. Write Chapter 3 (Semantic HTML and Images). Same cycle as
-   Chapters 1-2: consolidate draft MLOs to exactly 3, outline, draft
-   with the instructional-content-writing skill, starter files with
-   README, glossary, QA sweeps, review agents, nav line, build,
-   push. Copy the locked rubric verbatim from chapter-01.md. Pay
-   Chapter 2's promises: semantic landmarks, the full strong/em
-   story, images with alt text. Chapter 3 is the first chapter whose
-   data pack needs image files (PNG only), so budget time for
-   creating them and their alt text.
+1. Write Chapter 4 (CSS Foundations). Same cycle as Chapters 1-3:
+   consolidate draft MLOs to exactly 3, outline, draft with the
+   instructional-content-writing skill, starter files with README,
+   glossary, QA sweeps, review agents, nav line, build, push. Copy
+   the locked rubric verbatim from chapter-01.md. Pay Chapter 3's
+   promises: CSS styles the landmarks, heading size belongs to
+   CSS. The lab world can style the club's three pages from Lab 3A
+   (model solutions rebuild fast from the chapter-03 starters plus
+   the Chapter 3 answer key above).
 2. Repeat per chapter through Chapter 12 (chapters 9 and 12 are new
    coverage with no draft, built from docs/part-structure.md).
 3. Before the term starts: run the 5-minute browser verifications
-   for Chapters 1 and 2 (see each chapter's design notes above).
+   for Chapters 1, 2, and 3 (see each chapter's design notes
+   above).
 4. After chapters ship: refine the `module-*-task.html` Canvas pages,
    assemble the course data pack zip for Canvas, and set assessment
    weights in docs/part-structure.md.

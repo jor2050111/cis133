@@ -43,7 +43,7 @@ nav = [
   { "Part I: Web Foundations" = [
     { "Chapter 1: The Internet and the World Wide Web" = "chapters/chapter-01.md" },
     { "Chapter 2: Basic HTML Elements" = "chapters/chapter-02.md" },
-    # { "Chapter 3: Semantic HTML and Images" = "chapters/chapter-03.md" },
+    { "Chapter 3: Semantic HTML and Images" = "chapters/chapter-03.md" },
   ] },
   # { "Part II: Styling with CSS" = [
   #   { "Chapter 4: CSS Foundations" = "chapters/chapter-04.md" },

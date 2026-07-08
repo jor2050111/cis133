@@ -1,0 +1,50 @@
+=====================================================================
+CIS133 SKILLS LAB 3A: CONTENT FOR THE PHOTO GALLERY PAGE
+=====================================================================
+
+This file holds every piece of text that appears on the finished
+drive-gallery.html page. Copy text from this file into your HTML
+file instead of retyping it. You type only the markup.
+
+The labels in [BRACKETS] describe each piece of content. They are
+notes to you. They never go into your page.
+
+One thing this file does NOT hold: alt text. You write every alt
+value on this page yourself, by looking at each image. That is the
+point of the exercise.
+
+---------------------------------------------------------------------
+
+[BROWSER TAB TITLE]
+Spring Drive Gallery | PC Computer Club
+
+[MAIN HEADING - there is exactly one of these]
+Spring Drive Gallery
+
+[INTRO PARAGRAPH]
+The club's spring recycling drive filled a Saturday morning with
+donated devices and busy volunteers. These pictures from the club's
+illustration set tell the story of the day.
+
+[PICTURE 1 - file: sorting-station.png]
+Caption: Volunteers sorted every donation into labeled bins within
+an hour of opening.
+
+[PICTURE 2 - file: donation-boxes.png]
+Caption: Cables and chargers were the most common donation of the
+day, 64 items in all.
+
+[PICTURE 3 - file: volunteer-crew.png]
+Caption: The volunteer crew that ran the welcome table, still
+smiling at closing time.
+
+[FOOTER PARAGRAPH - reuse the email link pattern from the guide]
+The PC Computer Club runs a collection table once a month. Email
+the club at computer-club@example.org with questions.
+
+[EMAIL ADDRESS FOR THE EMAIL LINK]
+computer-club@example.org
+
+=====================================================================
+END OF CONTENT FILE
+=====================================================================

@@ -1,0 +1,119 @@
+=====================================================================
+CIS133 SKILLS LAB 3A: GIVE THE CLUB'S SITE STRUCTURE AND PICTURES
+Written Answers
+=====================================================================
+
+Name:
+Date:
+
+This file travels inside your submission folder along with your
+three HTML pages and your images folder. Type your answers directly
+below each numbered prompt. Keep the headings and numbering in
+place so your grader can follow your work.
+
+---------------------------------------------------------------------
+PART 1: FOUNDATION (landmark map)
+---------------------------------------------------------------------
+
+1.A  List every landmark element you added to recycling-guide.html,
+     in page order. For each one, name the content it now wraps.
+     Example form:
+     header - the club logo, the h1, and the two intro paragraphs
+
+     Your landmark map:
+
+1.B  One region of the page was the hardest to assign a landmark.
+     Name the region, the element you chose, and the other element
+     you almost chose. One or two sentences.
+
+     Your answer:
+
+---------------------------------------------------------------------
+PART 2: APPLICATION (alt text log)
+---------------------------------------------------------------------
+
+2.A  Fill in one line for each image you placed on the guide page.
+     Copy each alt value exactly as it appears in your markup. An
+     empty alt is written alt="" and that counts as a decision.
+
+     File: club-logo.png
+       Your alt value:
+       Purpose (informative or decorative):
+
+     File: recycling-drive.png
+       Your alt value:
+       Purpose (informative or decorative):
+
+     File: devices-collected-chart.png
+       Your alt value:
+       Purpose (informative or decorative):
+
+     File: desert-divider.png
+       Your alt value:
+       Purpose (informative or decorative):
+
+2.B  Record the width and height attributes you wrote for
+     recycling-drive.png, and state where those two numbers came
+     from. One sentence.
+
+     Your answer:
+
+---------------------------------------------------------------------
+PART 3: EXTENSION (gallery and format decisions)
+---------------------------------------------------------------------
+
+3.A  Copy the three alt values you wrote for the gallery images.
+     For each one, state in a phrase what the neighboring caption
+     adds that the alt does not repeat.
+
+     sorting-station.png
+       Your alt value:
+       What the caption adds:
+
+     donation-boxes.png
+       Your alt value:
+       What the caption adds:
+
+     volunteer-crew.png
+       Your alt value:
+       What the caption adds:
+
+3.B  The club plans three new pieces of media for next semester.
+     Choose one file format for each (from Section 3.4) and justify
+     each choice in one sentence, naming the format property that
+     decided it.
+
+     A camera photo of the fall drive's crowd:
+       Format and reason:
+
+     A redrawn club logo that must stay sharp at any size:
+       Format and reason:
+
+     A three-second animated loop of the sorting line:
+       Format and reason:
+
+---------------------------------------------------------------------
+QUESTIONS & ANALYSIS
+---------------------------------------------------------------------
+
+Q1.  Open your finished recycling-guide.html next to the starter
+     file in your browser. The two pages render nearly identical
+     pixels, yet Part 1 took real work. Citing your landmark map
+     from 1.A, name two audiences from this chapter that can now
+     read your page differently, and explain what each one gained.
+
+     Your answer:
+
+Q2.  Your alt log in 2.A contains at least one empty alt (alt="")
+     and several written ones. Pick one written alt and the empty
+     one. Justify each choice by the job that image does on the
+     page. Then describe a change to the page's content that would
+     force you to replace the empty alt with real alt text.
+
+     Your answer:
+
+
+=====================================================================
+END OF ANSWERS FILE
+Submit the folder: skills-lab-3a-lastname (zipped)
+=====================================================================

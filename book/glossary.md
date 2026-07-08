@@ -14,6 +14,10 @@ This glossary is the single source of truth for all technical terms used in the 
 
 **absolute URL:** The complete address of a resource: protocol, domain, and path. Use it to link to a page on another site.
 
+**alt text:** The text that stands in for an image when its pixels cannot: read aloud by screen readers and shown when the file fails to load. It lives in the `img` element's `alt` attribute.
+
+**article element:** The landmark (`<article>`) that wraps content able to stand alone outside its page, such as a blog post, news story, or review.
+
 **attribute:** A name and value pair written inside an opening tag that configures the element, such as `lang="en"`.
 
 ## B
@@ -27,6 +31,8 @@ This glossary is the single source of truth for all technical terms used in the 
 ## C
 
 **cache:** A browser's local store of recently downloaded page files. The cache lets a repeat visit load without downloading everything again.
+
+**child element:** An element nested directly inside another element. Every element inside a `<header>` is a child of that header.
 
 **client:** Any device that asks a server for something, such as a laptop, phone, or smart TV. The client asks, and the server answers.
 
@@ -42,7 +48,11 @@ This glossary is the single source of truth for all technical terms used in the 
 
 ## D
 
+**decorative image:** An image that adds no content to its page, such as a border strip. It gets a deliberate empty alt (`alt=""`) so screen readers skip it.
+
 **digital certificate:** A file, issued by a trusted authority, that proves a website's identity and enables its encrypted connections.
+
+**div element:** The generic block-level container (`<div>`). It carries no meaning and serves as a hook for styling and scripting when no semantic element fits.
 
 **DNS (Domain Name System):** The Internet's address book. DNS translates a domain name you can read into an IP address computers can route.
 
@@ -58,11 +68,25 @@ This glossary is the single source of truth for all technical terms used in the 
 
 ## F
 
+**figcaption element:** The element (`<figcaption>`) that supplies a figure's visible caption. It lives inside a `<figure>`.
+
+**figure element:** The element (`<figure>`) that wraps self-contained illustrative content, such as a chart or diagram, often paired with a `<figcaption>`.
+
 **file extension:** The ending of a file name after the dot, such as `.html` or `.txt`. It tells the computer and the browser what kind of file it is.
+
+**footer element:** The landmark (`<footer>`) that holds a region's closing content, such as contact information or copyright lines.
+
+**functional image:** An image that performs a job, usually as the content of a link. Its alt text names the destination or action, never the picture.
+
+## G
+
+**GIF:** A raster image format limited to 256 colors. It supports simple frame-by-frame animation, which is the main reason it survives.
 
 ## H
 
 **head:** The element that holds information about the page, such as its title and character encoding. Nothing inside the head appears in the browser window.
+
+**header element:** The landmark (`<header>`) that holds a region's introductory content, such as a logo, title, or tagline. Not the same element as `<head>`.
 
 **HTML (HyperText Markup Language):** The markup language of the web. HTML elements give a page its structure and meaning.
 
@@ -76,17 +100,37 @@ This glossary is the single source of truth for all technical terms used in the 
 
 ## I
 
+**img element:** The empty element (`<img>`) that embeds an image in a page. Its `src` attribute addresses the image file, and its `alt` attribute carries the alt text.
+
+**informative image:** An image that carries content its page needs. Its alt text describes what matters in about a sentence.
+
 **inline element:** An element that flows along inside a line of text instead of starting a new one, such as `<strong>`, `<em>`, or `<a>`.
 
 **Internet:** The global network of connected devices and the physical infrastructure that links them. The web runs on top of the Internet.
 
 **IP address:** A numeric label, such as 91.198.174.192, that identifies a device on a network.
 
+## J
+
+**JPEG:** A raster image format with lossy compression, the standard choice for photographs. It does not support transparency.
+
+## L
+
+**landmark:** A semantic element that labels a major region of a page, such as `<header>`, `<nav>`, `<main>`, or `<footer>`. Assistive technology builds a jump menu from a page's landmarks.
+
+**lossless compression:** File compression that shrinks a file without discarding any data. PNG uses it.
+
+**lossy compression:** File compression that shrinks a file by permanently discarding detail the eye is unlikely to miss. JPEG uses it.
+
 ## M
 
 **mailto link:** A link whose `href` value begins with `mailto:` and an email address. Activating it opens the visitor's mail app with the address filled in.
 
+**main element:** The landmark (`<main>`) that holds a page's primary content. Every page uses exactly one.
+
 ## N
+
+**nav element:** The landmark (`<nav>`) that holds a set of major navigation links, conventionally written as a list of links.
 
 **nesting:** Placing elements inside other elements. A nested element must close before the element that contains it closes.
 
@@ -96,9 +140,13 @@ This glossary is the single source of truth for all technical terms used in the 
 
 ## P
 
+**parent element:** An element that directly contains another element. The `<body>` is the parent of a page's top-level landmarks.
+
 **path:** The part of a URL after the domain. It names the specific page or file requested on the server.
 
 **plain text:** A file format that contains nothing but characters, with no hidden formatting data. HTML files are plain text.
+
+**PNG (Portable Network Graphics):** A raster image format with lossless compression and transparency support. The standard choice for illustrations, screenshots, and any image that needs see-through regions.
 
 **protocol:** A set of rules computers follow to exchange data. HTTP, HTTPS, SMTP, and FTP are protocols.
 
@@ -108,6 +156,8 @@ This glossary is the single source of truth for all technical terms used in the 
 
 ## R
 
+**raster image:** An image stored as a grid of colored pixels. Scaling it past its true size turns it soft and blocky. PNG, JPEG, and GIF are raster formats.
+
 **relative URL:** An address that gives directions from the current file, with no protocol or domain, such as `contact.html`. Use it to link between files on the same site.
 
 ## S
@@ -116,13 +166,25 @@ This glossary is the single source of truth for all technical terms used in the 
 
 **search engine:** A software system that finds pages on the web that match what you ask for. It works in three stages: crawling, indexing, and ranking.
 
+**section element:** The landmark (`<section>`) that groups one thematically related chunk of a page under its own heading.
+
+**semantic element:** An element whose name describes what its content is, not how it looks. `<nav>`, `<strong>`, and `<figure>` are semantic elements.
+
 **SEO (search engine optimization):** The practice of improving a page so search engines can find, read, and rank it in unpaid results.
 
 **server:** A computer that stores websites and sends pages to browsers that request them.
 
+**span element:** The generic inline container (`<span>`). It carries no meaning and marks a run of text for styling or scripting.
+
 **SSL/TLS:** The encryption technology behind HTTPS. It scrambles traffic between the browser and the server so intercepted data cannot be read.
 
+**stress emphasis:** The meaning the `<em>` element marks: the word a reader would stress aloud, which can change what the sentence means. Browsers render it italic.
+
+**strong importance:** The meaning the `<strong>` element marks: content the reader must not miss, such as a warning or deadline. Browsers render it bold.
+
 **subdomain:** An optional prefix on a domain name that points to a section of a site, such as `learn` in learn.maricopa.edu.
+
+**SVG (Scalable Vector Graphics):** The web's vector image format. It stays sharp at every size, which makes it ideal for logos, icons, and diagrams.
 
 ## T
 
@@ -134,6 +196,8 @@ This glossary is the single source of truth for all technical terms used in the 
 
 **top-level domain (TLD):** The ending of a domain name, such as .com, .org, .edu, or .gov. Some endings are open to anyone, and others are restricted to certain kinds of organizations.
 
+**transparency:** An image property that lets regions of the image be see-through so the page behind shows. PNG supports it fully, and JPEG does not support it at all.
+
 ## U
 
 **unordered list:** The list element (`<ul>`) that bullets its items because their order does not matter, such as a collection of accepted donations.
@@ -143,6 +207,8 @@ This glossary is the single source of truth for all technical terms used in the 
 ## V
 
 **valid markup:** Markup that follows the rules of the HTML standard: required elements present, tags closed, nesting legal. The W3C validator checks for it.
+
+**vector image:** An image stored as drawing instructions instead of pixels, so the computer can redraw it sharp at any size.
 
 **VS Code (Visual Studio Code):** The free code editor from Microsoft used throughout this course. It runs on Windows, macOS, and Linux.
 
