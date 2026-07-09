@@ -1,0 +1,67 @@
+=====================================================================
+CIS133 SITE PLAN TEMPLATE
+=====================================================================
+
+This template serves two assignments. Skills Lab 7A uses it to plan
+the club site's growth. Final Checkpoint 1 uses it again to plan
+your own final project site. Same document, same sections, your
+content. Replace every instruction line with your own material and
+delete nothing else.
+
+Site name:
+Prepared by:
+Date:
+Prepared for:
+
+---------------------------------------------------------------------
+1. SITE GOALS
+---------------------------------------------------------------------
+
+State what the site must accomplish, in 2-3 numbered goals. Write
+each goal as an outcome someone could check, not as a wish.
+
+---------------------------------------------------------------------
+2. TARGET AUDIENCE
+---------------------------------------------------------------------
+
+Name each audience the site serves. For each one, state what they
+already know, what they come to do, and what would make them leave.
+
+---------------------------------------------------------------------
+3. SITEMAP
+---------------------------------------------------------------------
+
+Draw the site's structure as a text tree: every page, branching
+from Home, with each page's file name beside its title. A page that
+is not in this tree does not exist.
+
+---------------------------------------------------------------------
+4. WIREFRAMES
+---------------------------------------------------------------------
+
+Sketch each new or changed page as labeled boxes, at desktop width
+and at phone width. Label every box with the landmark element it
+will become. No colors, no fonts. Paste text sketches here, or name
+the image files that hold your photographed paper sketches.
+
+---------------------------------------------------------------------
+5. NAVIGATION PLAN
+---------------------------------------------------------------------
+
+List the navigation bar's labels in order, and defend each label in
+one line: what it leads to and why a visitor would predict that
+correctly. State where the bar appears and confirm it is the same
+on every page.
+
+---------------------------------------------------------------------
+6. CONSISTENCY RULES
+---------------------------------------------------------------------
+
+List the rules every page will obey: the shared regions, the one
+stylesheet, and anything else that must never vary from page to
+page. These rules are promises. Breaking one later is a design
+decision that needs a reason.
+
+=====================================================================
+END OF TEMPLATE
+=====================================================================

@@ -14,6 +14,8 @@ This glossary is the single source of truth for all technical terms used in the 
 
 **absolute URL:** The complete address of a resource: protocol, domain, and path. Use it to link to a page on another site.
 
+**accessibility:** The practice of building sites every visitor can use, including people who rely on screen readers, keyboards, or other assistive tools. One of the five UX principles.
+
 **align-items:** The container property that places flex items along the cross axis: `stretch` (the default), `center`, `flex-start`, or `flex-end`. Stretch is why a row's items stand equally tall until you say otherwise.
 
 **alt text:** The text that stands in for an image when its pixels cannot: read aloud by screen readers and shown when the file fails to load. It lives in the `img` element's `alt` attribute.
@@ -62,6 +64,8 @@ This glossary is the single source of truth for all technical terms used in the 
 
 **combinator:** A symbol written between two selectors that targets elements by their relationship in the page's tree. The descendant combinator (a space) and the child combinator (`>`) are the common ones.
 
+**consistency:** The UX principle that the same things look and behave the same way on every page, so nothing has to be relearned. One external stylesheet and a shared navigation bar enforce it.
+
 **cookie:** A small piece of data a website stores in your browser so the site can recognize you on a later visit.
 
 **copyright:** The legal protection a creator automatically holds over their work from the moment it is created. Reusing protected work requires permission or a license.
@@ -109,6 +113,8 @@ This glossary is the single source of truth for all technical terms used in the 
 **external stylesheet:** A separate `.css` file connected to pages with the link element. One external stylesheet can style every page of a site, which makes it the professional default.
 
 ## F
+
+**feedback:** The UX principle that a site answers every visitor action with a visible response, such as a link that lights up for both the pointer and the Tab key.
 
 **figcaption element:** The element (`<figcaption>`) that supplies a figure's visible caption. It lives inside a `<figure>`.
 
@@ -224,6 +230,8 @@ This glossary is the single source of truth for all technical terms used in the 
 
 **nav element:** The landmark (`<nav>`) that holds a set of major navigation links, conventionally written as a list of links.
 
+**navigation label:** The visible text of a navigation bar link. A good label lets a visitor predict the page behind it before clicking.
+
 **nesting:** Placing elements inside other elements. A nested element must close before the element that contains it closes.
 
 ## O
@@ -246,6 +254,8 @@ This glossary is the single source of truth for all technical terms used in the 
 
 **protocol:** A set of rules computers follow to exchange data. HTTP, HTTPS, SMTP, and FTP are protocols.
 
+**prototype:** A clickable mockup built from wireframes wired together, so a test visitor can tap through a site before any code exists.
+
 **pseudo-class:** A selector piece, written with a leading colon, that matches an element by its current state instead of its identity, such as `:hover` or `:focus`.
 
 ## Q
@@ -259,6 +269,8 @@ This glossary is the single source of truth for all technical terms used in the 
 **relative URL:** An address that gives directions from the current file, with no protocol or domain, such as `contact.html`. Use it to link between files on the same site.
 
 **rem:** A CSS unit equal to the visitor's base text size, so `1.5rem` means 1.5 times whatever base the visitor's browser is set to. Sizes in rem respect a visitor who raises that base.
+
+**responsiveness:** The UX principle that a layout adapts to the visitor's screen instead of demanding one screen size.
 
 **RGB:** The color model behind every screen color: a mix of red, green, and blue light. CSS states the mix directly with the `rgb()` function, such as `rgb(38, 128, 128)`.
 
@@ -284,6 +296,10 @@ This glossary is the single source of truth for all technical terms used in the 
 
 **shorthand property:** A CSS property that sets several longhand properties in one declaration, such as `padding: 12px 24px` or `border: 3px solid #268080`.
 
+**site plan:** The planning document a site is built from: goals, target audience, sitemap, wireframes, navigation plan, and consistency rules, assembled for stakeholders to approve before building.
+
+**sitemap:** A diagram of a site's structure: every page, branching from the home page, with connections showing how the pages relate.
+
 **span element:** The generic inline container (`<span>`). It carries no meaning and marks a run of text for styling or scripting.
 
 **SSL/TLS:** The encryption technology behind HTTPS. It scrambles traffic between the browser and the server so intercepted data cannot be read.
@@ -301,6 +317,8 @@ This glossary is the single source of truth for all technical terms used in the 
 ## T
 
 **tag:** An element's name inside angle brackets. An opening tag such as `<p>` starts an element, and a closing tag such as `</p>` ends it.
+
+**target audience:** The people a site is built to serve, described by what they already know, what they come to do, and what would make them leave.
 
 **text-align:** The CSS property that sets how lines of text sit inside their box: `left`, `center`, or `right`.
 
@@ -324,6 +342,12 @@ This glossary is the single source of truth for all technical terms used in the 
 
 **URL (Uniform Resource Locator):** The full address of a resource on the web. Each part of a URL directs the browser to the right place.
 
+**usability:** The UX principle that visitors can complete their tasks without instructions or guesswork.
+
+**user experience (UX):** The quality of a visitor's whole visit to a site: whether they find what they came for, how much guesswork it takes, and whether they would come back.
+
+**user interface (UI):** The controls and visuals a visitor operates: the buttons, links, menus, and forms, and how each one looks.
+
 ## V
 
 **valid markup:** Markup that follows the rules of the HTML standard: required elements present, tags closed, nesting legal. The W3C validator checks for it.
@@ -343,5 +367,7 @@ This glossary is the single source of truth for all technical terms used in the 
 **web-safe font:** A font installed on nearly every device, such as Arial, Verdana, or Georgia. Web-safe fonts anchor font stacks because a stack can rely on them without downloading anything.
 
 **whitespace collapsing:** The browser behavior that renders any run of spaces, tabs, and line breaks in a file as a single space on the page.
+
+**wireframe:** A grayscale sketch of one page's layout: labeled boxes for each region, with no colors or fonts. Planning draws one at desktop width and one at phone width.
 
 **World Wide Web (the web):** The worldwide collection of linked pages and resources you reach through a browser. The web is one service that runs on the Internet.

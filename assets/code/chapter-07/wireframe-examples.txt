@@ -1,0 +1,96 @@
+=====================================================================
+CIS133 WIREFRAME EXAMPLES: COPY AND ADAPT
+=====================================================================
+
+Two skeleton wireframes of a generic page, one at desktop width and
+one at phone width. Copy either frame into your own plan and adapt
+it: rename the content boxes, add or remove boxes, and resize
+regions to fit the page you are planning. Keep the landmark labels
+(header, nav, main, footer) on whatever boxes play those roles.
+
+Wireframes are deliberately grayscale. Boxes and labels only. No
+colors, no fonts. Those decisions belong to the stylesheet, later.
+
+You may sketch on paper instead and photograph the result. Both
+forms are accepted wherever a wireframe is required. Draw text
+frames with plain keyboard characters (+, -, |) so they survive
+any viewer.
+
+---------------------------------------------------------------------
+DESKTOP WIDTH
+---------------------------------------------------------------------
+
++---------------------------------------------------------------+
+| header                                                        |
+|  +----------+   +-----------------------------------------+   |
+|  |   logo   |   | site title                              |   |
+|  +----------+   +-----------------------------------------+   |
++---------------------------------------------------------------+
+| nav                                                           |
+|  [ label 1 ]  [ label 2 ]  [ label 3 ]  [ label 4 ]           |
++---------------------------------------------------------------+
+| main                                                          |
+|  +---------------------------------------------------------+  |
+|  | page heading                                            |  |
+|  +---------------------------------------------------------+  |
+|  +--------------------------+   +--------------------------+  |
+|  | content block A          |   | content block B          |  |
+|  | (text, image, or list)   |   | (text, image, or list)   |  |
+|  +--------------------------+   +--------------------------+  |
+|  +---------------------------------------------------------+  |
+|  | content block C (full width)                            |  |
+|  +---------------------------------------------------------+  |
++---------------------------------------------------------------+
+| footer                                                        |
+|  contact line and site links                                  |
++---------------------------------------------------------------+
+
+---------------------------------------------------------------------
+PHONE WIDTH
+---------------------------------------------------------------------
+
++---------------------------+
+| header                    |
+|  +--------+               |
+|  |  logo  |               |
+|  +--------+               |
+|  +---------------------+  |
+|  | site title          |  |
+|  +---------------------+  |
++---------------------------+
+| nav                       |
+|  [ label 1 ] [ label 2 ]  |
+|  [ label 3 ] [ label 4 ]  |
++---------------------------+
+| main                      |
+|  +---------------------+  |
+|  | page heading        |  |
+|  +---------------------+  |
+|  +---------------------+  |
+|  | content block A     |  |
+|  +---------------------+  |
+|  +---------------------+  |
+|  | content block B     |  |
+|  +---------------------+  |
+|  +---------------------+  |
+|  | content block C     |  |
+|  +---------------------+  |
++---------------------------+
+| footer                    |
+|  contact line and links   |
++---------------------------+
+
+---------------------------------------------------------------------
+READING THE FRAMES
+---------------------------------------------------------------------
+
+* Every outer box is a landmark you already build in HTML: header,
+  nav, main, footer.
+* Boxes that sit side by side are a flex line. Boxes that stack are
+  the normal flow, no layout rule needed.
+* The phone frame stacks what the desktop frame lays in rows. Note
+  which rows wrap and which regions simply narrow.
+
+=====================================================================
+END OF WIREFRAME EXAMPLES
+=====================================================================

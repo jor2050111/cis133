@@ -1,0 +1,96 @@
+=====================================================================
+PC COMPUTER CLUB: SITE EXPANSION BRIEF
+From the club officers, Fall 2026
+=====================================================================
+
+You built us a three-page site, and it works. The recycling guide
+answers the questions we used to answer one email at a time. The
+gallery shows what a drive looks like. The contact page fills our
+meetings. Thank you.
+
+Now the club is growing, and the site has to grow with it. This
+brief tells you what we need. You decide how to build it. Show us
+a plan before you build anything.
+
+---------------------------------------------------------------------
+WHAT THE SITE MUST ACCOMPLISH (THE CLUB'S GOALS)
+---------------------------------------------------------------------
+
+1. Keep electronics out of the landfill. More visitors should find
+   our drop-offs and drives, and arrive with devices ready to hand
+   over.
+
+2. Grow the club. We want ten new members by December, and the site
+   should do the recruiting we cannot do in person.
+
+3. Answer questions before they become emails. Meeting times, event
+   dates, and what we accept should be findable without writing to
+   an officer.
+
+---------------------------------------------------------------------
+WHO VISITS THE SITE (TWO AUDIENCES)
+---------------------------------------------------------------------
+
+* Current members. They already know what the club is. They visit
+  for one reason: when and where is the next event. They want that
+  answer fast, from any page.
+
+* Prospective members. They arrive from a flyer, a friend, or a
+  campus search. They need to learn what the club does, see that we
+  are welcoming, and find out how to join. If the first page they
+  see confuses them, we lose them.
+
+---------------------------------------------------------------------
+WHAT WE NEED
+---------------------------------------------------------------------
+
+KEEP these three pages. They earn their place.
+
+* The recycling guide (recycling-guide.html)
+* The spring drive gallery (drive-gallery.html)
+* The contact page (contact.html)
+
+ADD three more.
+
+1. A home page. The site has never had one. A first-time visitor
+   lands on the recycling guide and has to guess what the club is.
+   We want a front door: what the club is, what we do, and where to
+   go next.
+
+2. An events page. Visitors keep asking when the next drop-off is.
+   Publish our fall schedule. Here is the raw content, straight
+   from the officers' planning notes:
+
+   * Fall Welcome Meeting. Tuesday, September 1, 3:00 to 4:30 p.m.,
+     Computer Commons. New members welcome, no device required.
+   * September Drop-Off Day. Tuesday, September 15, 3:00 to
+     4:30 p.m., Computer Commons. Bring phones, laptops, cables,
+     and chargers.
+   * October Drop-Off Day. Tuesday, October 13, 3:00 to 4:30 p.m.,
+     Computer Commons. Bring phones, laptops, cables, and chargers.
+   * Fix-It Workshop. Saturday, October 24, 10:00 a.m. to noon,
+     Computer Commons. Learn to test and wipe donated devices.
+   * Fall Recycling Drive. Saturday, November 7, 9:00 a.m. to
+     1:00 p.m., Student Union lawn. Our biggest event of the term.
+   * Semester Wrap Meeting. Tuesday, November 17, 3:00 to
+     4:30 p.m., Computer Commons. Drive results and spring plans.
+
+3. A join page. We meet interested students at every drive and then
+   lose track of them. We want the site to collect the name and
+   email of every student who wants to hear from us, so an officer
+   can invite them to the next meeting.
+
+---------------------------------------------------------------------
+WHAT WE ARE NOT ASKING FOR
+---------------------------------------------------------------------
+
+Do not redesign the club's look. The colors and the logo stay. We
+like that every page already matches. Whatever you add should match
+too.
+
+Send your plan to computer-club@example.org. The officers meet
+Tuesdays and will review it the week you send it.
+
+=====================================================================
+END OF BRIEF
+=====================================================================

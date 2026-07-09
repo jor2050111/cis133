@@ -1,0 +1,104 @@
+=====================================================================
+CIS133 UX AUDIT WORKSHEET: THE FIVE PRINCIPLES
+=====================================================================
+
+Name:
+Date:
+Site audited:
+
+Use one copy of this worksheet per site. Work through the five
+principles in order. For each one, follow the "what to check"
+prompt, then record at least one strength and one gap where they
+exist. A strength names something the site does well and where you
+saw it. A gap names something the site fails to do and where a
+visitor would feel it. Point at pages and regions, not feelings:
+"the contact page's schedule" beats "it seems fine."
+
+---------------------------------------------------------------------
+1. USABILITY
+---------------------------------------------------------------------
+
+Definition: visitors can complete their tasks without instructions
+or guesswork.
+
+What to check: pick the site's most likely visitor task and try to
+complete it yourself, counting every stop where you had to guess
+what to do next.
+
+Strength:
+
+Gap:
+
+---------------------------------------------------------------------
+2. ACCESSIBILITY
+---------------------------------------------------------------------
+
+Definition: the site works for every visitor, including people
+using screen readers, keyboards, or other assistive tools.
+
+What to check: confirm every image has fitting alt text, then put
+the mouse away and Tab through each page, watching whether focus
+stays visible at every stop.
+
+Strength:
+
+Gap:
+
+---------------------------------------------------------------------
+3. CONSISTENCY
+---------------------------------------------------------------------
+
+Definition: the same things look and behave the same way on every
+page, so nothing has to be relearned.
+
+What to check: visit every page and compare the header, the
+navigation, the colors, and the type. Note anything that changes
+between pages, and anything a visitor would expect to find but
+cannot.
+
+Strength:
+
+Gap:
+
+---------------------------------------------------------------------
+4. FEEDBACK
+---------------------------------------------------------------------
+
+Definition: the site answers every visitor action with a visible
+response.
+
+What to check: hover over each link with the mouse, then Tab to
+each link with the keyboard, and confirm the page signals both
+kinds of contact.
+
+Strength:
+
+Gap:
+
+---------------------------------------------------------------------
+5. RESPONSIVENESS
+---------------------------------------------------------------------
+
+Definition: the layout adapts to the visitor's screen instead of
+demanding one screen size.
+
+What to check: drag the browser window from wide to narrow and
+watch each page. Note what adapts gracefully and what breaks,
+overflows, or wastes space.
+
+Strength:
+
+Gap:
+
+---------------------------------------------------------------------
+HEADLINE FINDING
+---------------------------------------------------------------------
+
+Of everything you logged above, name the one gap you would fix
+first, and why it costs the site's visitors the most.
+
+Your call:
+
+=====================================================================
+END OF WORKSHEET
+=====================================================================

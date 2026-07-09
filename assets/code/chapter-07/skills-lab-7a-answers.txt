@@ -1,0 +1,93 @@
+=====================================================================
+CIS133 SKILLS LAB 7A: THE CLUB SITE GROWS UP
+Written Answers
+=====================================================================
+
+Name:
+Date:
+
+This file travels inside your submission folder along with your
+completed audit worksheet, your site plan document, and your
+wireframes (text frames or photographed sketches). Type your
+answers directly below each numbered prompt. Keep the headings and
+numbering in place so your grader can follow your work.
+
+---------------------------------------------------------------------
+PART 1: FOUNDATION (the brief and the audit)
+---------------------------------------------------------------------
+
+1.A  Restate the brief in your own words: the site's goals and its
+     two audiences. Do not copy the officers' sentences. Prove you
+     understood them.
+
+     The goals, restated:
+     Audience one, and what they need:
+     Audience two, and what they need:
+
+1.B  Summarize your five-principles audit of the provided club
+     site. Your full findings live in the worksheet. Here, name the
+     strongest strength and the costliest gap you found, each tied
+     to its principle, and say which audience each one affects most.
+
+     Strongest strength, and its principle:
+     Costliest gap, and its principle:
+     Who feels each one most:
+
+---------------------------------------------------------------------
+PART 2: APPLICATION (the sitemap and the wireframes)
+---------------------------------------------------------------------
+
+2.A  Paste your six-page sitemap tree here, exactly as it appears
+     in your site plan. Then state which pages sit in the
+     navigation bar and defend any page you left out of it.
+
+     The tree:
+     Pages in the nav:
+     Anything left out, and why:
+
+2.B  State where your wireframes live (pasted in the site plan, or
+     named image files in your folder). List each frame you drew,
+     the page and width it shows, and the landmark label on each
+     outer box.
+
+     Where the wireframes live:
+     Frames drawn (page, width, landmarks):
+
+---------------------------------------------------------------------
+PART 3: EXTENSION (the navigation plan and the site plan)
+---------------------------------------------------------------------
+
+3.A  List your navigation bar's labels in order. Then defend each
+     label in one line: what it leads to, and why a visitor would
+     predict that correctly before clicking.
+
+     The labels, in order:
+     Each label's defense:
+
+3.B  Confirm your site plan document is assembled from the template
+     with every section complete. Then close with the self-critique
+     no checklist can make. Name the two biggest UX risks in your
+     own plan, and describe how you would test for them with one
+     real user before building.
+
+     Site plan assembled (sections you completed):
+     Risk one, and the one-user test for it:
+     Risk two, and the one-user test for it:
+
+---------------------------------------------------------------------
+QUESTIONS & ANALYSIS
+---------------------------------------------------------------------
+
+Q1.  See lab Questions & Analysis.
+
+     Your answer:
+
+Q2.  See lab Questions & Analysis.
+
+     Your answer:
+
+
+=====================================================================
+END OF ANSWERS FILE
+Submit the folder: skills-lab-7a-lastname (zipped)
+=====================================================================

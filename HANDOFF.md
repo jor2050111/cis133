@@ -5,6 +5,105 @@
 **Live site:** https://jor2050111.github.io/cis133/
 **Task list:** cis133-fall26 (`export CLAUDE_CODE_TASK_LIST_ID=cis133-fall26`)
 
+## What Was Done (2026-07-08 Chapter 7 session, opens Part III)
+
+* Wrote and shipped `book/chapters/chapter-07.md` (UX and Web Design):
+  4 content sections (plan before you code, UX/UI and the five
+  principles, sitemaps and wireframes, navigation design and the site
+  plan), 5 Try It Yourself exercises, 4 Quick Checks, Skills Lab 7A,
+  404 sentences at 14.1 words average, zero at 35+. ~482 lines. Same
+  orchestrated pipeline as Chapters 4-6. Planning chapter: exempt by
+  design from the 8-15 code-example band (Chapter 1 precedent), it
+  carries 4 text diagram blocks (tutoring center sitemap, two
+  wireframes, box-to-landmark mapping) plus one HTML skeleton and one
+  CSS flex rule. Chapter 7 hosts the final project kickoff (Final
+  Checkpoint 1: the site plan).
+* Consolidated Module 7's four draft MLOs into exactly 3:
+  MLO-7.1 (Analyze) differentiate UX from UI via the five principles
+  -> 7.1-7.2, MLO-7.2 (Apply) construct sitemap and wireframes ->
+  7.3 (Construct-as-Apply per the MLO-6.3 precedent), MLO-7.3
+  (Evaluate) critique navigation and consistency to produce a site
+  plan -> 7.4 plus lab Parts 1 and 3. Rubric byte-identical to
+  chapter-01.md (diff-verified by two review agents).
+* Built `assets/code/chapter-07/` (planning artifacts, no starter
+  code): `club-site/` (the Lab 6A model solution rebuilt from the
+  chapter-06 pack plus the HANDOFF rule list: header flex row,
+  .drive-gallery wrap row with 296px figures, footer-link wart FIXED
+  FOR KEEPS with footer a light sand, hover/focus twins, full nav
+  bar, centered .page-divider), `project-brief.txt` (officers'
+  expansion brief: home page, events page, join page, 3 goals, 2
+  audiences, 6 date-verified events, never says table or form),
+  `ux-audit-worksheet.txt` (five principles, blank findings),
+  `site-plan-template.txt` (serves Lab 7A AND Final Checkpoint 1),
+  `wireframe-examples.txt` (generic ASCII frames, desktop 65-char
+  and phone 29-char), `skills-lab-7a-answers.txt`, README with two
+  disclosures (wart fixed, no palette file because wireframes are
+  deliberately grayscale).
+* Lab 7A design: Part 1 digests the brief and audits the shared
+  club-site copy against the five principles (the missing home page
+  is the discoverable headline gap, never announced in prose),
+  Part 2 constructs the six-page sitemap (Home, Guide, Gallery,
+  Events, Join, Contact) and wireframes two pages at two widths,
+  Part 3 assembles the stakeholder-ready site plan with a
+  self-critique and one-user test plan.
+* All validation executed (2026-07-08): Nu zero messages on all 3
+  club-site pages, jigsaw 0 errors on club-styles.css, every pairing
+  from the palette passing list (4.69:1 and 4.85:1, no new math),
+  Wikipedia Recycling still renders 1 main and 12 nav, MDN top-nav
+  labels recorded for TIY 7.3, WebAIM nav labels recorded for TIY
+  7.5, phoenixcollege.edu WAF-blocked (TIY 7.1 asserts nothing about
+  its contents), all 5 Further Reading URLs 200 (A List Apart cited
+  at its final long-form URL).
+* Added 13 terms to `book/glossary.md` (accessibility, consistency,
+  feedback, navigation label, prototype, responsiveness, site plan,
+  sitemap, target audience, usability, UX, UI, wireframe).
+* Ran the three review agents. Applied required fixes: the site-plan
+  table's last row had swallowed the following paragraph (silent
+  content loss confirmed in rendered HTML, fixed and render-verified),
+  and the focus-outline attribution split correctly across Chapter 3
+  (alt text, landmarks) and Chapter 6 (focus outlines). Applied
+  judgment calls: two "just" fillers cut, Quick Check 7.3 #3 rewritten
+  as a fresh soccer-league footer scenario (it nearly re-asked the
+  section's own worked card-row example), lab Part 1 co-tagged with
+  MLO-7.3 (its audit is critique work, Chapter 3 label precedent).
+  Skipped with rationale: 7.3's length imbalance (the diagram-heavy
+  core is the chapter's point), 7.4's six subsections (Chapter 6
+  precedent), the backtick-vs-linked Wikipedia URL style (book-wide
+  split, cleanup candidate), lab Part 3's assemble verb read as
+  Create (Create is reserved for Part IV, assembly sits under
+  MLO-7.2's Construct), and the thematic MLO-to-section offset
+  (shipped house pattern since Chapter 1).
+* Uncommented the Part III nav block with only Chapter 7 live.
+  `zensical build --clean`: no issues.
+
+**Chapter 7 design notes:**
+
+* Promises paid: Ch 6's "you can build any layout you can sketch,
+  learn to sketch deliberately" (7.3's box-to-landmark payoff), Ch
+  6's hover/focus named as the feedback principle in action (7.2),
+  Ch 3's descriptive link text rule returning as nav-label law
+  (7.4), Ch 4's one-stylesheet consistency engineering (7.2), Ch 1's
+  source-evaluation habit connected to audience research (7.1).
+* Promises planted (pay these explicitly): Ch 8 = the phone-width
+  wireframe cannot be fully built yet, flex-wrap is half and media
+  queries finish it. Ch 9 = the accessibility principle's full
+  framework (WCAG, POUR, the contrast math). Ch 10 = the events
+  page's schedule content wants a table. Ch 11 = the join page's
+  signup wants a form. Ch 12 = the home page becomes index.html and
+  the plan's site ships. Final Checkpoint 2 (draft pages) lands near
+  Chapter 10.
+* Personas, prototypes/Figma, breadcrumbs, F/Z scanning patterns,
+  and usability testing are deliberate one-mention previews. Do not
+  deepen in place.
+* IMPORTANT for Chapter 8: `assets/code/chapter-07/club-site/` is
+  the Lab 6A model solution and Chapter 8's starter site. Copy it
+  into the chapter-08 pack rather than rebuilding.
+* Pre-term verification (5 min in a real browser): phoenixcollege.edu
+  home page's calls to action (TIY 7.1, WAF blocks curl), the
+  Wikipedia article's contents sidebar and Tab focus visibility
+  (TIY 7.2/7.4), MDN's top nav labels (TIY 7.3), WebAIM's nav labels
+  (TIY 7.5).
+
 ## What Was Done (2026-07-08 Chapter 6 session, closes Part II)
 
 * Wrote and shipped `book/chapters/chapter-06.md` (Layout with
@@ -562,23 +661,20 @@ repo.
 
 ## Next Steps
 
-1. Write Chapter 7 (UX and Web Design), opening Part III. Same cycle
-   as Chapters 1-6. Consolidate the course map's Module 7 draft MLOs
-   to exactly 3, outline, asset build with executed facts, draft,
-   glossary, QA sweeps, review agents, nav line (uncomment the
-   Part III block with only Chapter 7 live), build, push. Copy the
-   locked rubric verbatim from chapter-01.md. Pay Chapter 6's plant:
-   "you can build any layout you can sketch, so learn to sketch
-   deliberately." Chapter 7 hosts Final Checkpoint 1 (the site
-   plan), so read docs/part-structure.md's Chapter 7 entry and the
-   final-project thread before outlining. The club-site lab world
-   can continue (the Lab 6A model solution's rule list is in the
-   Chapter 6 session notes above), but Chapter 7 is a planning
-   chapter: expect the data pack to ship planning artifacts
-   (sitemap/wireframe templates, a project brief) rather than
-   starter code.
-2. Repeat per chapter through Chapter 12 (chapters 9 and 12 are new
-   coverage with no draft, built from docs/part-structure.md).
+1. Write Chapter 8 (Responsive Design and Media Queries). Same cycle
+   as Chapters 1-7. The course map's Module 8 carries exactly 3
+   draft MLOs already (explain responsive purpose, define media
+   queries, apply base styles plus overrides): consolidate wording
+   to house format. Starter site: copy
+   `assets/code/chapter-07/club-site/` into the chapter-08 pack.
+   Pay Chapter 6's and 7's plants: flex-wrap is half of responsive
+   design and media queries finish it, and the phone-width wireframe
+   from Lab 7A becomes buildable. Viewport meta tag, breakpoints,
+   DevTools device mode.
+2. Then Chapter 9 (Web Accessibility): new coverage with no draft
+   module, built from docs/part-structure.md and outline section V.
+   Chapter 9 owns the contrast math behind the palette's passing
+   list (promised since Chapter 4). Then repeat through Chapter 12.
 3. Before the term starts: run the 5-minute browser verifications
    for Chapters 1, 2, and 3 (see each chapter's design notes
    above).
