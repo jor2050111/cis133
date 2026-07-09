@@ -1,0 +1,95 @@
+=====================================================================
+CIS133 SKILLS LAB 12A: THE SITE SHIPS
+Written Answers
+=====================================================================
+
+Name:
+Date:
+
+This file travels inside your submission folder along with the
+finished club site (six pages now), the stylesheet, the footer
+script, and your completed checklist copies. Type your answers
+directly below each numbered prompt. Keep the headings and
+numbering in place so your grader can follow your work.
+
+---------------------------------------------------------------------
+PART 1: FOUNDATION (the front door)
+---------------------------------------------------------------------
+
+1.A  Log the build of index.html: which page you saved-as from,
+     where each block of home-content.txt landed on the page, and
+     why the file is named index.html.
+
+     Page used for save-as:
+     Where each content block landed:
+     Why the name index.html:
+
+1.B  Record the navigation update: the Home link's text and
+     position, the pages you touched, and the validator message
+     count for each of the six pages.
+
+     Link text and position:
+     Pages touched:
+     Validation results (six pages):
+
+---------------------------------------------------------------------
+PART 2: APPLICATION (the script)
+---------------------------------------------------------------------
+
+2.A  Log the script attachment: the span you added and its id,
+     where the script element sits and why it sits there, and
+     what the footer shows when the page loads.
+
+     The span and its id:
+     Script element location and why:
+     What the footer shows:
+
+2.B  Answer where the year is computed (whose machine ran the
+     script), and what that means for the club's January
+     maintenance. Then trace one join-list sign-up's full trip:
+     the client's half you built in Chapter 11 and the server's
+     half in concept.
+
+     Where the year is computed:
+     January maintenance:
+     The sign-up's full trip:
+
+---------------------------------------------------------------------
+PART 3: EXTENSION (the pre-flight and the publish)
+---------------------------------------------------------------------
+
+3.A  Log the pre-flight: which checks found something on which
+     pages, the repairs you made, and the final message counts
+     from both validators.
+
+     Findings by check and page:
+     Repairs made:
+     Final validation results:
+
+3.B  Log the publish: the transfer method and why it is the
+     secure choice, the live URL, and how you verified the live
+     site. Close the site plan: name each of the six planned
+     pages, now live.
+
+     Transfer method and why:
+     LIVE URL:
+     Live verification:
+     The six pages, live:
+
+---------------------------------------------------------------------
+QUESTIONS & ANALYSIS
+---------------------------------------------------------------------
+
+Q1.  See lab Questions & Analysis.
+
+     Your answer:
+
+Q2.  See lab Questions & Analysis.
+
+     Your answer:
+
+
+=====================================================================
+END OF ANSWERS FILE
+Submit the folder: skills-lab-12a-lastname (zipped)
+=====================================================================

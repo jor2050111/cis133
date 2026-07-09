@@ -74,6 +74,8 @@ This glossary is the single source of truth for all technical terms used in the 
 
 **client-server model:** The pattern behind every web interaction. A client asks a server for something, and the server answers.
 
+**client-side scripting:** Scripting that runs in the browser, on the visitor's machine. It answers events, changes the loaded page, and can keep no secrets, because everything sent to the browser is readable by the visitor.
+
 **color name:** A CSS color value written as a predefined keyword, such as `teal`. The web defines more than 140 of them, handy for quick tests but rarely an exact match for a brand color.
 
 **combinator:** A symbol written between two selectors that targets elements by their relationship in the page's tree. The descendant combinator (a space) and the child combinator (`>`) are the common ones.
@@ -102,6 +104,8 @@ This glossary is the single source of truth for all technical terms used in the 
 
 ## D
 
+**database:** Organized storage on a server that a program can query later. When a form submits for real, a server-side program re-checks the data and stores it in one.
+
 **data cell:** The table cell element (`<td>`) that holds one value in a grid. Its meaning comes from its row and its column together.
 
 **declaration:** One property and value pair inside a declaration block, such as `color: #1a5e5e;`. Each declaration ends with a semicolon.
@@ -123,6 +127,8 @@ This glossary is the single source of truth for all technical terms used in the 
 **doctype declaration:** The required first line of an HTML document, written `<!DOCTYPE html>`. It tells the browser the file uses modern HTML.
 
 **domain name:** The human-readable name of a website, such as phoenixcollege.edu. You register a domain name so visitors do not need to remember an IP address.
+
+**dynamic page:** A page a server-side program builds fresh for each request, the way a search results page assembles itself around a query. Contrast with a static site's ready-made files.
 
 ## E
 
@@ -170,6 +176,8 @@ This glossary is the single source of truth for all technical terms used in the 
 
 **form element:** The element (`<form>`) that wraps a page's input controls and owns the submit trip. When the form submits, the browser bundles its controls' names and values and sends them together.
 
+**FTP (File Transfer Protocol):** The Internet's original protocol for moving files between computers. It transfers files and credentials unencrypted, so publishing uses its secure relatives, SFTP or FTPS.
+
 **functional image:** An image that performs a job, usually as the content of a link. Its alt text names the destination or action, never the picture.
 
 ## G
@@ -212,6 +220,8 @@ This glossary is the single source of truth for all technical terms used in the 
 
 **img element:** The empty element (`<img>`) that embeds an image in a page. Its `src` attribute addresses the image file, and its `alt` attribute carries the alt text.
 
+**index.html:** The web's default file name for a folder's home page. A web server serves it automatically when a visitor asks for the folder itself.
+
 **informative image:** An image that carries content its page needs. Its alt text describes what matters in about a sentence.
 
 **inline element:** An element that flows along inside a line of text instead of starting a new one, such as `<strong>`, `<em>`, or `<a>`.
@@ -227,6 +237,8 @@ This glossary is the single source of truth for all technical terms used in the 
 **IP address:** A numeric label, such as 91.198.174.192, that identifies a device on a network.
 
 ## J
+
+**JavaScript:** The scripting language of the web. HTML gives a page structure and CSS gives it presentation, and JavaScript adds behavior: the page acting after it loads.
 
 **JPEG:** A raster image format with lossy compression, the standard choice for photographs. It does not support transparency.
 
@@ -314,6 +326,8 @@ This glossary is the single source of truth for all technical terms used in the 
 
 **POUR:** The four principles WCAG organizes its rules under: perceivable, operable, understandable, and robust.
 
+**pre-flight check:** The full checking stack run on every page before a site publishes and before every update after. Its eight checks span both validators, the link walk, the accessibility audit, the Tab walk, device mode, a second browser, and a live-URL verify after the upload.
+
 **property:** The aspect of an element a CSS declaration styles, such as `color` or `background-color`. It sits before the colon in a declaration.
 
 **protocol:** A set of rules computers follow to exchange data. HTTP, HTTPS, SMTP, and FTP are protocols.
@@ -350,6 +364,8 @@ This glossary is the single source of truth for all technical terms used in the 
 
 **screen reader:** Software that reads page content aloud, or renders it as braille, for users who are blind or have low vision.
 
+**script element:** The element (`<script>`) that attaches scripting to a page. With a `src` attribute it loads a separate script file, and it sits just before the closing body tag so the elements above it exist when the script runs.
+
 **search engine:** A software system that finds pages on the web that match what you ask for. It works in three stages: crawling, indexing, and ranking.
 
 **section element:** The landmark (`<section>`) that groups one thematically related chunk of a page under its own heading.
@@ -368,15 +384,21 @@ This glossary is the single source of truth for all technical terms used in the 
 
 **server:** A computer that stores websites and sends pages to browsers that request them.
 
+**server-side scripting:** Scripting that runs on the server: programs that receive submitted data, query databases, and build pages before they travel. The server is the one machine in the conversation a visitor cannot read.
+
+**SFTP:** A secure file transfer protocol that encrypts the whole trip between your machine and the server. It is one of the two secure choices for publishing a site, alongside FTPS.
+
 **shorthand property:** A CSS property that sets several longhand properties in one declaration, such as `padding: 12px 24px` or `border: 3px solid #268080`.
 
-**site plan:** The planning document a site is built from: goals, target audience, sitemap, wireframes, navigation plan, and consistency rules, assembled for stakeholders to approve before building.
-
 **sitemap:** A diagram of a site's structure: every page, branching from the home page, with connections showing how the pages relate.
+
+**site plan:** The planning document a site is built from: goals, target audience, sitemap, wireframes, navigation plan, and consistency rules, assembled for stakeholders to approve before building.
 
 **span element:** The generic inline container (`<span>`). It carries no meaning and marks a run of text for styling or scripting.
 
 **SSL/TLS:** The encryption technology behind HTTPS. It scrambles traffic between the browser and the server so intercepted data cannot be read.
+
+**static site:** A site the server delivers as ready-made files, the same for every visitor. Static sites are fast, cheap to host, and leave nothing on the server to break.
 
 **stress emphasis:** The meaning the `<em>` element marks: the word a reader would stress aloud, which can change what the sentence means. Browsers render it italic.
 
@@ -459,6 +481,8 @@ This glossary is the single source of truth for all technical terms used in the 
 **W3C validator:** The free checking service at validator.w3.org that reports every place a page breaks the HTML standard, by line and column.
 
 **WCAG (Web Content Accessibility Guidelines):** The W3C's standard for accessible web content, organized under the POUR principles and graded in conformance levels A, AA, and AAA.
+
+**web host:** A business or service that keeps a site's folder on an always-on server with a public address. Shared hosting, static site hosts, and school-provided space are the common options.
 
 **web-safe font:** A font installed on nearly every device, such as Arial, Verdana, or Georgia. Web-safe fonts anchor font stacks because a stack can rely on them without downloading anything.
 

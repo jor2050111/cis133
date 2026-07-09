@@ -1,0 +1,82 @@
+=====================================================================
+PC COMPUTER CLUB: HOME PAGE CONTENT
+From the club officers, Fall 2026
+=====================================================================
+
+The join page shipped, and sign-ups already beat the paper scraps.
+Thank you. One page from our expansion brief remains, and it is the
+one we asked for first: the front door.
+
+Right now a first-time visitor lands on the recycling guide and has
+to guess what the club is. The home page fixes that. It says what
+the club is, what we do, and where to go next, in that order. Every
+word you need is below. Copy the wording instead of retyping it
+from memory. You decide the markup.
+
+---------------------------------------------------------------------
+HEADLINE (the page's one big heading)
+---------------------------------------------------------------------
+
+The PC Computer Club
+
+---------------------------------------------------------------------
+WHAT THE CLUB IS (one paragraph, right under the headline)
+---------------------------------------------------------------------
+
+We are students who keep electronics out of the landfill. The club
+collects unwanted phones, laptops, cables, and chargers from
+campus, and every donation goes to a certified recycler. No major
+required, no experience required.
+
+---------------------------------------------------------------------
+WHAT WE DO (three short blocks, each with its own small heading)
+---------------------------------------------------------------------
+
+RECYCLING DRIVES
+Twice a year the club takes over a corner of campus and collects
+everything students no longer want. The spring drive brought in
+154 items in one Saturday morning.
+
+FIX-IT WORKSHOPS
+Every donated device gets tested and wiped before the recycler
+picks it up. Members learn to do both at our workshops, and nobody
+arrives knowing how.
+
+CLUB MEETINGS
+We meet weekly during the semester to plan drives, sort donations,
+and welcome whoever walks in.
+
+---------------------------------------------------------------------
+WHERE TO GO NEXT (three links, each naming its destination)
+---------------------------------------------------------------------
+
+1. Read the recycling guide before your first drop-off.
+   -> recycling-guide.html
+
+2. Find the next drop-off on the fall events page.
+   -> events.html
+
+3. Join the club and hear about every event by email.
+   -> join.html
+
+---------------------------------------------------------------------
+THE STANDING MEETING LINE (make this one easy to spot)
+---------------------------------------------------------------------
+
+The club meets Tuesdays, 3:00 to 4:30 p.m., in the Computer
+Commons. Walk in any week.
+
+---------------------------------------------------------------------
+ONE MORE THING
+---------------------------------------------------------------------
+
+The home page should match the rest of the site: same colors, same
+logo, same navigation bar. Put Home FIRST in the menu, on all six
+pages, so a lost visitor can always start over.
+
+Send questions to computer-club@example.org. The officers meet
+Tuesdays.
+
+=====================================================================
+END OF CONTENT
+=====================================================================

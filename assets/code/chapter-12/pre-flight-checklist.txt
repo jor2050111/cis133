@@ -1,0 +1,80 @@
+=====================================================================
+CIS133 CHAPTER 12: PRE-FLIGHT CHECKLIST
+=====================================================================
+
+Run every check below on one page at a time, before the site goes
+public and again before every update. Checks 1 through 7 run on
+your own machine. Check 8 runs after the upload, on the live site.
+Write what you find on the blank lines, and write "clean" when a
+check finds nothing.
+
+Page checked:
+Date:
+
+---------------------------------------------------------------------
+
+1. HTML VALIDATOR
+   Run the page through the W3C HTML validator. Zero messages
+   before anything ships.
+
+   Findings:
+
+
+2. CSS VALIDATOR (once per stylesheet, not once per page)
+   Run each stylesheet the site links through the W3C CSS
+   validator. Zero errors.
+
+   Findings:
+
+
+3. LINK WALK
+   Click every link on the page: the whole menu, plus every link
+   in the content and the footer. Each one lands where its text
+   promises.
+
+   Findings:
+
+
+4. ACCESSIBILITY CHECKLIST
+   Run the Chapter 9 human checklist (accessibility-checklist.txt)
+   on the page, all seven checks.
+
+   Findings:
+
+
+5. TAB WALK
+   Put down the mouse and press Tab through the page one more
+   time. Every link and control is reachable, and a visible
+   outline marks every stop.
+
+   Findings:
+
+
+6. DEVICE-MODE WALK
+   Open DevTools device mode at a phone width. No sideways
+   scrolling, the menu wraps instead of overflowing, and the text
+   stays readable.
+
+   Findings:
+
+
+7. SECOND BROWSER
+   Open the page in a browser you did not build in. Confirm the
+   layout, the fonts, and the images hold.
+
+   Findings:
+
+
+8. LIVE-URL VERIFY (after the upload)
+   Open the page at its https address, on a real phone if you
+   can. Click through the menu. Then run the HTML validator once
+   more, this time by pasting the live address into the
+   validator's address tab.
+
+   Findings:
+
+
+=====================================================================
+END OF CHECKLIST
+Copy this file once per page you check.
+=====================================================================

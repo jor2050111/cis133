@@ -5,6 +5,130 @@
 **Live site:** https://jor2050111.github.io/cis133/
 **Task list:** cis133-fall26 (`export CLAUDE_CODE_TASK_LIST_ID=cis133-fall26`)
 
+## What Was Done (2026-07-08 Chapter 12 session, COMPLETES THE BOOK)
+
+ALL 12 CHAPTERS ARE SHIPPED. Part IV and the textbook are complete.
+
+* Wrote and shipped `book/chapters/chapter-12.md` (Scripting
+  Concepts and Publishing), the book's second new-coverage chapter
+  (no draft module existed): 4 content sections (what scripting
+  adds: the client's half, the server's half, hosting and the
+  move, the pre-flight and the publish), 5 Try It Yourself
+  exercises, 4 Quick Checks, Skills Lab 12A, 409 sentences at 15.1
+  words average, zero at 35+. 491 lines, 11 code examples (2 html,
+  4 js listings byte-faithful to the pack files, 5 text
+  diagrams). Same pipeline as Chapters 4-11.
+* Designed 3 MLOs fresh: MLO-12.1 (Understand) ILLUSTRATE what
+  scripting adds, client-side and server-side in concept (CLO XI's
+  own verb and level, the MLO-1.3/4.3 matching-CLO-verb precedent)
+  -> 12.1-12.2, MLO-12.2 (Apply) perform the pre-flight and
+  publish with secure transfer -> 12.3-12.4, MLO-12.3 (Create)
+  produce the complete six-page club site (CLO XII's own verb) ->
+  lab. Rubric byte-identical to chapter-01.md.
+* Built `assets/code/chapter-12/`: `starter-site/` (the Lab 11A
+  model verbatim: 5 pages including the join form, cmp and diff -r
+  verified), `club-palette.txt` (chain ch04->...->ch12),
+  `home-content.txt` (officers' front-door text, labeled blocks:
+  headline, what-the-club-is, three what-we-do blurbs, three calls
+  to action, the standing meeting line), `footer-year.js` (one
+  line + WHY comment, span id="footer-year" contract),
+  `script-playground.html` + `playground-script.js` (button demo,
+  the deliberately insecure pass-phrase gate cactus-club-2026 with
+  the supply-closet payoff line, the visit-date line),
+  `path-test.html` + a copied image (relative src renders,
+  absolute file:///Users/club-officer/... breaks on every machine:
+  the upload lesson), `pre-flight-checklist.txt` (8 checks per
+  page), `skills-lab-12a-answers.txt` (with LIVE URL line),
+  README (both broken-on-purpose disclosures).
+* Lab 12A model solution (scratchpad chapter-12-model-solution/)
+  IS THE COURSE'S FINISHED SITE: index.html built from
+  home-content (title Home | PC Computer Club, h1 The PC Computer
+  Club, three CTAs to guide/events/join), Home FIRST in all six
+  navs (Home, Recycling Guide, Spring Drive Gallery, Fall Events,
+  Join the Club, Contact the Club), footer-year.js attached with
+  the copyright span, club-styles.css UNCHANGED (the no-new-CSS
+  law held to the last page). The final project references this
+  model. No further chapter consumes it.
+* All validation executed (2026-07-08/09): Nu zero messages on all
+  13 HTML files (validator.w3.org engine 26.7.8, driven through
+  the preview browser's page-context fetch after curl drew
+  Cloudflare). BY-URL INPUT MODE PROVEN: the validator fetched the
+  live textbook site and checked it (9 messages, all site-generator
+  chrome, none course-authored: the chapter claims only the input
+  mode, never zero-on-live). Jigsaw 0 errors both stylesheets.
+  Behavioral checks executed over http AND file:// (identical):
+  button before/after strings, gate wrong/right messages with the
+  phrase readable at line 19 of the served js, footer year and
+  visit date matched system values at run time (recorded as
+  match-not-literal), path-test relative renders while absolute
+  breaks showing its alt text, model index clean at 375/641/1280
+  with the six-link nav wrapping 3/2/1 rows, all six navs in
+  site-plan order, zero console errors. Both .js files pass node
+  --check. All 5 Further Reading URLs 200 with zero redirects
+  (five MDN pages: Publishing your website, What is JavaScript,
+  What is a web server, Upload files, How much does it cost).
+* Added 12 terms to `book/glossary.md` (JavaScript, script
+  element, client-side scripting, server-side scripting, database,
+  static site, dynamic page, web host, FTP, SFTP, index.html,
+  pre-flight check). Referenced, never re-added: client, server,
+  client-server model, HTTP, HTTPS, protocol, query string.
+* Ran the three review agents. Applied required fixes: section
+  12.2 gained TIY 12.3 "The Trip You Cannot Watch" (a paper-trace
+  Predict-Run-Explain: sketch the join list's future before the
+  section draws it; the no-server rule kept, and every section
+  now carries a TIY per the house standard; the move test and
+  pre-flight TIYs renumbered 12.4/12.5), and the glossary's SFTP
+  entry's sentence fragment repaired. Applied judgment calls: the
+  Chapter 2 relative-links promise given proper quotation marks
+  (it is verbatim, confirmed at chapter-02.md line 302), Quick
+  Check 12.4 #2 reframed as a soccer-league direct-input-vs-live
+  validator split (it had been recall of just-taught content),
+  the script-attach fragment's indentation cleaned, Module
+  Overview prerequisites line gained Chapter 8's device-mode
+  habit, and the PRE-EXISTING glossary sort slip fixed (sitemap
+  now precedes site plan, letter-by-letter law). Skipped with
+  rationale: Looking Ahead longer than the outline's 2-3
+  sentences (it is the book's single closing paragraph), the
+  code-example tally counting text diagrams (house convention
+  since Chapter 9), MLO-12.1's Understand tag (institutionally
+  correct: CLO XI's own level).
+* Uncommented the Chapter 12 nav line: ALL 12 CHAPTERS LIVE,
+  PART IV COMPLETE. `zensical build --clean`: no issues.
+
+**Chapter 12 design notes:**
+
+* Promises paid (the book's full debt list, each verified against
+  its source text): Ch 1's FTP plant (line 170, quoted) and HTTPS
+  law (line 284, quoted) and client-server model, Ch 2's
+  relative-links-survive-the-move (line 302, quoted verbatim) and
+  file://-becomes-https, Ch 3's index.html plant (line 318) and
+  self-contained folder, Ch 4's stylesheet-publishes promise and
+  the validator URL door, Ch 5's borrowed-font-travels clause, Ch
+  7's six-page site plan (closed by name in lab Part 3), Ch 8's
+  multi-browser pre-flight plant (line 138, quoted), Ch 9's audit
+  re-run (check 4 runs the seven-check instrument), Ch 10/11
+  Looking Aheads (home page, server story, pre-flight), Ch 11's
+  join-page no-server sentence (quoted verbatim opening 12.2).
+* Promises planted: NONE. The book ends. The final project (weeks
+  13-15) and "writing scripts is a later course's work" are the
+  only forward pointers. The close lands the theme: the course
+  ends where the web begins.
+* One-mention treatments: FileZilla, Python/PHP/server-side
+  JavaScript (one naming sentence), databases (one honest
+  sentence), static-vs-dynamic (one breath), the copyright
+  entity. Do not deepen.
+* Hosting is deliberately generic: the course shell names the
+  host and credentials, and the lab carries a hosting contingency
+  (pre-flight and zip submit on time even if the host is not
+  provisioned). BEFORE THE TERM: provision the course host and
+  write the hosting details + credentials flow into the Canvas
+  shell, then run one end-to-end publish following lab Part 3.
+* Pre-term verification (5 min in a real browser): the playground
+  button and gate by hand, path-test opened from Finder, the
+  address-input tab on validator.w3.org (the chapter's check 8
+  ceremony), VoiceOver on the finished index.html, the Nu probe
+  parity items carried from Chapters 10-11.
+
 ## What Was Done (2026-07-08 Chapter 11 session)
 
 * Wrote and shipped `book/chapters/chapter-11.md` (HTML Forms):
@@ -1106,27 +1230,29 @@ repo.
 
 ## Next Steps
 
-1. Write Chapter 10 (HTML Tables), opening Part IV. Same cycle as
-   Chapters 4-9. Consolidate Module 9's three draft MLOs (identify
-   table components, style tables with CSS, create an accessible
-   styled table page) to house format. Pay Chapter 9's plant: the
-   events page from the Lab 7A site plan finally gets its content
-   (the chapter-07 project-brief.txt lists the 6 events with
-   dates/times/locations: that content becomes the table), and
-   accessible tables (th, scope, caption) continue Chapter 9's
-   work. Starter site: the Lab 9A model solution (club site with
-   rem conversions; rebuild from the chapter-09 answers + facts
-   sheet key). Chapter 10 also hosts Final Checkpoint 2 (draft
-   pages) per docs/part-structure.md.
-2. Then Chapter 11 (HTML Forms: the join page, the label-input
-   contract) and Chapter 12 (Scripting Concepts and Publishing,
-   the other new-coverage chapter).
-3. Before the term starts: run the 5-minute browser verifications
-   for Chapters 1, 2, and 3 (see each chapter's design notes
-   above).
-4. After chapters ship: refine the `module-*-task.html` Canvas pages,
-   assemble the course data pack zip for Canvas, and set assessment
-   weights in docs/part-structure.md.
+THE TEXTBOOK IS COMPLETE: all 12 chapters shipped, all 12 asset
+packs built, the full nav live, every build clean. What remains is
+course operations, not authoring:
+
+1. Before the term starts: run each chapter's 5-minute pre-term
+   browser verification list (every "What Was Done" section above
+   carries one; Chapters 1-3 and 9-12 have the meatiest).
+2. Provision the course web host, write the hosting details and
+   credentials flow into the Canvas shell (Lab 12A and the final
+   project depend on it), and run one end-to-end publish following
+   Lab 12A Part 3.
+3. Assemble the course data pack zip for Canvas from assets/code/
+   (all 12 chapter folders plus the _generators note) and post it
+   per the CLAUDE.md loading convention.
+4. Refine the `module-*-task.html` Canvas pages against the
+   shipped Skills Labs, and set assessment weights in
+   docs/part-structure.md before syllabus publication.
+5. DONE 2026-07-09: the Lab 12A model solution (the course's
+   finished six-page site) is preserved on Drive at
+   `co-professor/01-teaching/05-cis133-web-development/textbook-instructor-materials/lab-12a-model-site/`
+   with a README. It stays out of this public repo on purpose
+   (answer-key discipline). The Chapter 10/11 model solutions
+   need no copy: each ships as the next chapter's starter-site.
 
 ## How to Continue
 

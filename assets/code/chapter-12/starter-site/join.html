@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Join the Club | PC Computer Club</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400..700&display=swap">
+    <link rel="stylesheet" href="club-styles.css">
+</head>
+<body>
+    <!-- PC Computer Club website: join page, the site plan's
+         second promised addition, built in Skills Lab 11A from
+         the officers' join page notes. -->
+    <header>
+        <img src="images/club-logo.png"
+        alt="PC Computer Club logo"
+        width="240" height="240">
+        <h1>Join the PC Computer Club</h1>
+        <p>New members keep the club's drives running, and every
+        member hears about events by email. Joining takes a name,
+        an email address, and nothing else.</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="recycling-guide.html">Recycling Guide</a></li>
+            <li><a href="drive-gallery.html">Spring Drive Gallery</a></li>
+            <li><a href="events.html">Fall Events</a></li>
+            <li><a href="join.html">Join the Club</a></li>
+            <li><a href="contact.html">Contact the Club</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <p>Fill in the two required fields, add as much or as
+        little of the rest as you like, and press the button.</p>
+
+        <p class="reminder">We use what you share here only to
+        email you about club events.</p>
+
+        <form>
+            <label for="full-name">Full name (required)</label>
+            <input type="text" id="full-name" name="full-name"
+            autocomplete="name" required>
+
+            <label for="email">Email (required)</label>
+            <input type="email" id="email" name="email"
+            autocomplete="email" required>
+
+            <label for="heard-about">How did you hear about the
+            club?</label>
+            <select id="heard-about" name="heard-about">
+                <option value="">Choose one</option>
+                <option value="flyer">A flyer</option>
+                <option value="friend">A friend</option>
+                <option value="campus-event">A campus event</option>
+                <option value="web-search">A web search</option>
+                <option value="other">Other</option>
+            </select>
+
+            <fieldset>
+                <legend>What are you interested in?</legend>
+                <p>
+                    <input type="checkbox" id="interest-drop-offs"
+                    name="interest" value="drop-off-days">
+                    <label for="interest-drop-offs">Drop-off days</label>
+                </p>
+                <p>
+                    <input type="checkbox" id="interest-workshops"
+                    name="interest" value="fix-it-workshops">
+                    <label for="interest-workshops">Fix-it workshops</label>
+                </p>
+                <p>
+                    <input type="checkbox" id="interest-drive"
+                    name="interest" value="fall-drive">
+                    <label for="interest-drive">The fall drive</label>
+                </p>
+                <p>
+                    <input type="checkbox" id="interest-meetings"
+                    name="interest" value="general-meetings">
+                    <label for="interest-meetings">General meetings</label>
+                </p>
+            </fieldset>
+
+            <label for="questions">Questions for the officers</label>
+            <textarea id="questions" name="questions" rows="4"
+            placeholder="Example: Do I need to bring a device?"></textarea>
+
+            <button>Add me to the list</button>
+        </form>
+
+        <p>The join list is new this term. While the officers
+        finish the behind-the-scenes piece that stores sign-ups,
+        you can also email
+        <a href="mailto:computer-club@example.org">computer-club@example.org</a>.</p>
+    </main>
+
+    <footer>
+        <p>The PC Computer Club runs a collection table once a month.
+        Email the club at
+        <a href="mailto:computer-club@example.org">computer-club@example.org</a>
+        with questions.</p>
+    </footer>
+</body>
+</html>

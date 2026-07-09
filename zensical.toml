@@ -58,7 +58,7 @@ nav = [
   { "Part IV: Building Complete Sites" = [
     { "Chapter 10: HTML Tables" = "chapters/chapter-10.md" },
     { "Chapter 11: HTML Forms" = "chapters/chapter-11.md" },
-    # { "Chapter 12: Scripting Concepts and Publishing" = "chapters/chapter-12.md" },
+    { "Chapter 12: Scripting Concepts and Publishing" = "chapters/chapter-12.md" },
   ] },
   { "Glossary" = "glossary.md" },
 ]
