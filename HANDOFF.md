@@ -5,6 +5,116 @@
 **Live site:** https://jor2050111.github.io/cis133/
 **Task list:** cis133-fall26 (`export CLAUDE_CODE_TASK_LIST_ID=cis133-fall26`)
 
+## What Was Done (2026-07-08 Chapter 9 session, closes Part III)
+
+* Wrote and shipped `book/chapters/chapter-09.md` (Web
+  Accessibility): 4 content sections (WCAG/POUR/conformance levels,
+  structure every tool can read, perceivable content: color/type/
+  images, the audit: evaluators and human checks), 6 Try It Yourself
+  exercises, 4 Quick Checks, Skills Lab 9A, 387 sentences at 14.8
+  words average, zero at 35+. 490 lines, 9 code examples. PART III
+  IS COMPLETE and its milestone (plan, adapt, include) closes in Lab
+  9A Part 3. New coverage: no draft module existed. Same pipeline as
+  Chapters 4-8 including the orchestrator browser-verification step.
+* Designed 3 MLOs fresh (no course-map module): MLO-9.1 (Apply)
+  implement accessible structure and navigation -> 9.2, MLO-9.2
+  (Apply) apply WCAG perceivability rules to color/type/images ->
+  9.3, MLO-9.3 (Evaluate) evaluate pages against Level AA with an
+  evaluator and human checks -> 9.4 plus lab. Section 9.1 is the
+  framework section (thematic mapping, house pattern). Rubric
+  byte-identical to chapter-01.md.
+* Built `assets/code/chapter-09/`: `starter-site/` (the Lab 8A
+  model solution: viewport tags on all 3 pages, one max-width 640px
+  query block with gallery figures 100%, main padding 24px 8px, nav
+  a padding 12px 16px, h1 40->32px step-down as the Part 3
+  refinement choice), `drive-day-flyer.html` + `flyer-styles.css`
+  (the audit target with EXACTLY 8 planted barriers: h1->h3 skip,
+  two Click-here links counted once, missing alt on an informative
+  image, verbose alt on the decorative divider, #c99b66-on-#fdeecd
+  body text at 2.19:1, color-alone "shown in red" signal,
+  outline: none with no replacement, hard 11px body),
+  `flyer-images/` (2 byte-copies, self-contained), `club-palette.txt`
+  (cmp chain intact), `contrast-cards.txt` (TIY pairs: 10.12 pass,
+  4.12 near-miss fail, 1.88 clear fail, ratios not printed in the
+  file), `rem-demo.html` + `.css` (three specimens 16px/1rem/1.5rem),
+  `accessibility-checklist.txt` (7 human checks),
+  `skills-lab-9a-answers.txt`, README (flyer-broken-on-purpose and
+  Lab-8A-lineage disclosures). INSTRUCTOR DEFECT KEY lives in the
+  session facts sheet (scratchpad chapter-09-facts.md), not the
+  README.
+* All validation executed (2026-07-08): Nu zero on the 3 starter
+  pages and rem-demo, the flyer fails with exactly 2 messages
+  (missing alt + heading skip: the validator layer catches 2 of the
+  8, and lab Q1's tool-stack assignment honors it), jigsaw 0 errors
+  on all three stylesheets, contrast ratios computed in Python
+  (2.19 flyer, cards 10.12/4.12/1.88, re-verified 4.85 light sand
+  on deep teal and 1.26 old wart, 21.00/1.00 scale anchors), all 8
+  candidate URLs 200 (WAVE, WAVE extension, WebAIM contrast
+  checker, WCAG22 quickref, W3C WCAG overview, MDN Accessibility,
+  A11Y Project checklist, WebAIM POUR).
+* Orchestrator browser-verified (preview server): the starter's
+  query block on both sides of 640 (figures 623px/1-per-line vs
+  296px/2-per-line, both padding changes, h1 step), all 8 flyer
+  defects rendering live, rem-demo root-size response (16/16/24 at
+  default root, 16/20/30 at a 20px root).
+* Added 10 terms to `book/glossary.md` (WCAG, POUR, perceivable,
+  operable, understandable, robust, conformance level, contrast
+  ratio, accessibility evaluator, keyboard navigation). Collision
+  discipline held: accessibility, alt text, the three image kinds,
+  rem, and screen reader were NOT re-added.
+* Ran the three review agents. Applied required fixes: TIY 9.6
+  "First WAVE" added to section 9.4 (wave.webaim.org on the W3C
+  home page, prediction open-ended, no unverified report claims),
+  restoring the every-section-has-a-TIY standard, and the
+  prerequisites line widened to Chapters 3-8 (it had omitted
+  Chapter 5, whose px/rem distinction the chapter depends on).
+  Applied judgment calls: the second legal-standards clause cut
+  (one-mention discipline), Quick Check 9.2 #1's heading pattern
+  freshened to h1/h2/h2/h5 (it had reused the worked example
+  verbatim), Review Q4's skip changed to h3->h5 (third reuse of the
+  same pattern), a bridging sentence added after the focus-repair
+  example noting Chapter 6's background flip also satisfies the law
+  (TIY 9.3 anchoring risk), and the 8-barrier count clarified in
+  the lab and README ("counting a barrier once even where it
+  strikes twice": the two Click-here links are one barrier).
+  Skipped with rationale: the alt four-jobs table restating three
+  known kinds (the lab needs the table as a working reference), QC
+  9.1 #3 at recall level (a QC set may carry one recall anchor),
+  QC 9.4 #2's two-finding triage rehearsal (deliberate scaffolding
+  for the lab's 8-finding version), bare "DevTools" without the
+  "browser DevTools" first-mention (matches shipped Chapters 2/3/7,
+  a book-wide pass would be the fix, not a Ch 9 edit).
+* Uncommented the Chapter 9 nav line: PART III FULLY LIVE.
+  `zensical build --clean`: no issues.
+
+**Chapter 9 design notes:**
+
+* Promises paid: Ch 4's "math behind the palette's passing list"
+  (the 1-to-21 scale, AA thresholds, 4.85 decoded, the 1.26 wart
+  named invisible ink), Ch 5's "rem and user settings" (9.3 + the
+  lab's px-to-rem conversion), Ch 6's ":focus opened the keyboard
+  door" (the law is WCAG 2.4.7, cited once as a naming sample),
+  Ch 7's accessibility-principle plant (the framework arrives),
+  Ch 8's "every screen size served, now every user" (intro), Ch
+  3's alt-decision deepening (four jobs, complex images new) and
+  Devon's return, Ch 1's social framing (one paragraph, one legal
+  sentence).
+* Promises planted (pay these explicitly): Ch 10 = the events page
+  from the Lab 7A site plan gets its content, accessible tables
+  (headers, scope, captions) continue this work. Ch 11 = the forms
+  accessibility contract (label-input partnership), the join page.
+  Ch 12 = the pre-flight check runs this chapter's audit before
+  publishing. Final project = checkpoint pages arrive auditable.
+* ARIA, VoiceOver/NVDA, legal obligations (one sentence), AAA
+  (described not pursued), and WCAG criterion numbers (2.4.7 only)
+  are deliberate one-mention treatments. Do not deepen.
+* Pre-term verification (5 min in a real browser): the WAVE online
+  tool's summary panel on w3.org (TIY 9.6 asserts nothing about
+  its findings), the WAVE extension install flow, the browser
+  settings path for default font size in Chrome/Edge/Firefox (TIY
+  9.5), a 200 percent zoom walk on the starter site (TIY 9.1), and
+  the WebAIM contrast checker UI (TIY 9.4).
+
 ## What Was Done (2026-07-08 Chapter 8 session)
 
 * Wrote and shipped `book/chapters/chapter-08.md` (Responsive Design
@@ -759,22 +869,21 @@ repo.
 
 ## Next Steps
 
-1. Write Chapter 9 (Web Accessibility), closing Part III. New
-   coverage with no draft module: build from docs/part-structure.md
-   and district outline section V (WCAG, POUR, conformance levels,
-   structure, link design, color, images, forms preview, evaluator).
-   Chapter 9 owns the contrast math behind the palette's passing
-   list (promised since Chapter 4) and the rem-and-user-settings
-   discussion (promised since Chapter 5). Pay Ch 6's ":focus opened
-   the keyboard door" and Ch 8's "every screen size served, now
-   every user." Starter site: the Lab 8A model solution (build it
-   from the chapter-08 answers plus the lab design, the same way
-   chapter-07's club-site rebuilt Lab 6A). Expect an audit-target
-   page with planted accessibility defects and an accessibility
-   evaluator walkthrough (pick one: WAVE is the likely candidate,
-   verify it live).
-2. Then Part IV: Chapters 10-12 per docs/part-structure.md
-   (Chapter 12 is the other new-coverage chapter).
+1. Write Chapter 10 (HTML Tables), opening Part IV. Same cycle as
+   Chapters 4-9. Consolidate Module 9's three draft MLOs (identify
+   table components, style tables with CSS, create an accessible
+   styled table page) to house format. Pay Chapter 9's plant: the
+   events page from the Lab 7A site plan finally gets its content
+   (the chapter-07 project-brief.txt lists the 6 events with
+   dates/times/locations: that content becomes the table), and
+   accessible tables (th, scope, caption) continue Chapter 9's
+   work. Starter site: the Lab 9A model solution (club site with
+   rem conversions; rebuild from the chapter-09 answers + facts
+   sheet key). Chapter 10 also hosts Final Checkpoint 2 (draft
+   pages) per docs/part-structure.md.
+2. Then Chapter 11 (HTML Forms: the join page, the label-input
+   contract) and Chapter 12 (Scripting Concepts and Publishing,
+   the other new-coverage chapter).
 3. Before the term starts: run the 5-minute browser verifications
    for Chapters 1, 2, and 3 (see each chapter's design notes
    above).

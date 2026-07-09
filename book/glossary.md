@@ -16,6 +16,8 @@ This glossary is the single source of truth for all technical terms used in the 
 
 **accessibility:** The practice of building sites every visitor can use, including people who rely on screen readers, keyboards, or other assistive tools. One of the five UX principles.
 
+**accessibility evaluator:** A tool that scans a rendered page and flags the accessibility barriers software can detect, such as missing alt text, empty links, and failing contrast. WAVE is the course's evaluator.
+
 **align-items:** The container property that places flex items along the cross axis: `stretch` (the default), `center`, `flex-start`, or `flex-end`. Stretch is why a row's items stand equally tall until you say otherwise.
 
 **alt text:** The text that stands in for an image when its pixels cannot: read aloud by screen readers and shown when the file fails to load. It lives in the `img` element's `alt` attribute.
@@ -70,7 +72,11 @@ This glossary is the single source of truth for all technical terms used in the 
 
 **combinator:** A symbol written between two selectors that targets elements by their relationship in the page's tree. The descendant combinator (a space) and the child combinator (`>`) are the common ones.
 
+**conformance level:** The grade of WCAG a page claims to meet: Level A, AA, or AAA. Level AA is the working target for this course and for most of the industry.
+
 **consistency:** The UX principle that the same things look and behave the same way on every page, so nothing has to be relearned. One external stylesheet and a shared navigation bar enforce it.
+
+**contrast ratio:** The measure of how strongly text stands out from its background, running from 1 to 1 (text on its own color) to 21 to 1 (black on white). WCAG Level AA requires 4.5 to 1 for body text.
 
 **cookie:** A small piece of data a website stores in your browser so the site can recognize you on a later visit.
 
@@ -208,6 +214,10 @@ This glossary is the single source of truth for all technical terms used in the 
 
 **justify-content:** The container property that distributes flex items and leftover space along the main axis, with values such as `flex-start`, `center`, `flex-end`, and `space-between`.
 
+## K
+
+**keyboard navigation:** Operating a page entirely from the keyboard, with the Tab key stepping through its interactive elements. Every element a mouse can operate must be reachable this way, with focus visible at every stop.
+
 ## L
 
 **landmark:** A semantic element that labels a major region of a page, such as `<header>`, `<nav>`, `<main>`, or `<footer>`. Assistive technology builds a jump menu from a page's landmarks.
@@ -250,6 +260,8 @@ This glossary is the single source of truth for all technical terms used in the 
 
 ## O
 
+**operable:** The POUR principle that every control works for every input. Keyboard reachability and visible focus styles are its core demands.
+
 **ordered list:** The list element (`<ol>`) that numbers its items because their sequence matters, such as the steps of a procedure.
 
 **override:** A rule inside a media query that changes a base rule's value for the widths the query names. An override carries only the differences and sits below the base rule it adjusts.
@@ -262,9 +274,13 @@ This glossary is the single source of truth for all technical terms used in the 
 
 **path:** The part of a URL after the domain. It names the specific page or file requested on the server.
 
+**perceivable:** The POUR principle that content must be able to reach every visitor's senses in some form, such as alt text standing in for images and text that contrasts with its background.
+
 **plain text:** A file format that contains nothing but characters, with no hidden formatting data. HTML files are plain text.
 
 **PNG (Portable Network Graphics):** A raster image format with lossless compression and transparency support. The standard choice for illustrations, screenshots, and any image that needs see-through regions.
+
+**POUR:** The four principles WCAG organizes its rules under: perceivable, operable, understandable, and robust.
 
 **property:** The aspect of an element a CSS declaration styles, such as `color` or `background-color`. It sits before the colon in a declaration.
 
@@ -291,6 +307,8 @@ This glossary is the single source of truth for all technical terms used in the 
 **responsiveness:** The UX principle that a layout adapts to the visitor's screen instead of demanding one screen size.
 
 **RGB:** The color model behind every screen color: a mix of red, green, and blue light. CSS states the mix directly with the `rgb()` function, such as `rgb(38, 128, 128)`.
+
+**robust:** The POUR principle that markup must be valid and semantic enough for any tool to parse, including assistive technology and tools not yet built.
 
 ## S
 
@@ -354,6 +372,8 @@ This glossary is the single source of truth for all technical terms used in the 
 
 ## U
 
+**understandable:** The POUR principle that content and controls must make sense: plain language, labels that predict what follows, and pages that behave consistently.
+
 **universal selector:** The selector `*`, which matches every element on the page. Its everyday job is delivering `box-sizing: border-box` to a whole stylesheet.
 
 **unordered list:** The list element (`<ul>`) that bullets its items because their order does not matter, such as a collection of accepted donations.
@@ -385,6 +405,8 @@ This glossary is the single source of truth for all technical terms used in the 
 **W3C (World Wide Web Consortium):** The organization that maintains the web's standards, including HTML and CSS.
 
 **W3C validator:** The free checking service at validator.w3.org that reports every place a page breaks the HTML standard, by line and column.
+
+**WCAG (Web Content Accessibility Guidelines):** The W3C's standard for accessible web content, organized under the POUR principles and graded in conformance levels A, AA, and AAA.
 
 **web-safe font:** A font installed on nearly every device, such as Arial, Verdana, or Georgia. Web-safe fonts anchor font stacks because a stack can rely on them without downloading anything.
 

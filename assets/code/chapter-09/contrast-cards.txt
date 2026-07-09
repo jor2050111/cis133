@@ -1,0 +1,43 @@
+=====================================================================
+CIS133 CHAPTER 9: CONTRAST PREDICTION CARDS
+=====================================================================
+
+Three text-on-background pairings, fresh for this exercise. None of
+them comes from the club's palette. For each card, predict whether
+the pairing passes the WCAG AA minimum for body text (4.5 to 1).
+Commit to the prediction before you check anything. Then run both
+hex values through the WebAIM contrast checker and record the ratio
+it reports.
+
+The checker: https://webaim.org/resources/contrastchecker/
+
+---------------------------------------------------------------------
+
+[CARD 1]
+Text color:       #2b3a67  (dark navy)
+Background color: #f5f5f5  (near-white gray)
+
+Your prediction (pass or fail):
+Ratio the checker reports:
+
+---------------------------------------------------------------------
+
+[CARD 2]
+Text color:       #7d7d7d  (medium gray)
+Background color: #ffffff  (white)
+
+Your prediction (pass or fail):
+Ratio the checker reports:
+
+---------------------------------------------------------------------
+
+[CARD 3]
+Text color:       #9acd32  (yellow green)
+Background color: #ffffff  (white)
+
+Your prediction (pass or fail):
+Ratio the checker reports:
+
+=====================================================================
+END OF CONTRAST CARDS
+=====================================================================

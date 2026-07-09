@@ -1,0 +1,63 @@
+/* Drive Day flyer styles. A warm sand-and-tan look picked by eye
+   to match the desert scenes, with the club's deep teal on the
+   banner and footer. */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fdeecd;  /* warm sand, picked by eye */
+    color: #c99b66;             /* light tan, matches the ground
+                                   in the club's illustrations */
+    margin: 0;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 11px;            /* small type fits the whole pitch
+                                   on one screen */
+    line-height: 1.5;
+}
+
+header {
+    background-color: #1a5e5e;  /* deep teal, the club's color */
+    color: #ffffff;
+    padding: 24px 16px;
+    text-align: center;
+}
+
+main {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 24px 16px;
+}
+
+h3 {
+    color: #1a5e5e;             /* deep teal section titles */
+}
+
+/* Red marks the items the drive cannot take. */
+.not-accepted {
+    color: #b3261e;
+}
+
+/* The focus boxes looked messy around the links, so they are
+   gone. */
+a {
+    outline: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.flyer-divider {
+    display: block;
+    margin: 32px auto;
+}
+
+footer {
+    background-color: #1a5e5e;
+    color: #ffffff;
+    padding: 24px 16px;
+    text-align: center;
+}

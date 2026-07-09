@@ -1,0 +1,73 @@
+=====================================================================
+CIS133 CHAPTER 9: HUMAN ACCESSIBILITY CHECKLIST
+=====================================================================
+
+Run every check below on one page at a time. Automated tools run
+before or after this list, but these seven checks belong to you.
+Each one judges something no evaluator can measure. Write what you
+find on the blank lines, and write "clean" when a check finds
+nothing.
+
+Page checked:
+Date:
+
+---------------------------------------------------------------------
+
+1. HEADING OUTLINE READ
+   List the page's headings in order with their levels. Confirm
+   the levels never skip on the way down.
+
+   Findings:
+
+
+2. LANDMARK CHECK
+   Confirm the page's content lives inside header, nav, main, and
+   footer landmarks, and that each landmark holds the content its
+   name promises.
+
+   Findings:
+
+
+3. LINK TEXT READ
+   Read every link's text by itself, away from its sentence.
+   Confirm each one names its destination.
+
+   Findings:
+
+
+4. TAB WALK
+   Put down the mouse and press Tab through the page. Confirm
+   every link is reachable, the order makes sense, and a visible
+   outline always marks where you are.
+
+   Findings:
+
+
+5. ZOOM TEST
+   Set the browser zoom to 200 percent. Confirm the text stays
+   readable and nothing overlaps, escapes its box, or forces
+   sideways scrolling.
+
+   Findings:
+
+
+6. ALT HONESTY READ
+   Read each image's alt text against the image and its job on the
+   page. Informative images get a description that delivers the
+   content. Decorative images get an empty alt.
+
+   Findings:
+
+
+7. CONTRAST SPOT CHECKS
+   Find the page's text-on-background pairings and run each
+   through the WebAIM contrast checker. Body text needs 4.5 to 1
+   or better.
+
+   Findings:
+
+
+=====================================================================
+END OF CHECKLIST
+Copy this file once per page you audit.
+=====================================================================

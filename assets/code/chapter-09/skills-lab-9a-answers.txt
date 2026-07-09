@@ -1,0 +1,95 @@
+=====================================================================
+CIS133 SKILLS LAB 9A: THE CLUB SITE PASSES THE AUDIT
+Written Answers
+=====================================================================
+
+Name:
+Date:
+
+This file travels inside your submission folder along with the
+repaired flyer and its stylesheet, the updated club site, and your
+completed checklist copies. Type your answers directly below each
+numbered prompt. Keep the headings and numbering in place so your
+grader can follow your work.
+
+---------------------------------------------------------------------
+PART 1: FOUNDATION (the structure audit)
+---------------------------------------------------------------------
+
+1.A  Log the flyer's structural findings from your checklist run:
+     the heading outline, the landmark check, the link text read,
+     and the Tab walk. Name the POUR principle each finding
+     violates.
+
+     Findings, each with its POUR principle:
+
+1.B  Record each structural fix you made: the element or rule you
+     changed, what it says now, and who the new version serves
+     that the old one failed.
+
+     Fixes:
+
+---------------------------------------------------------------------
+PART 2: APPLICATION (perceivable content)
+---------------------------------------------------------------------
+
+2.A  Log the flyer's contrast and color findings: each failing
+     pairing with the ratio the checker reported, the replacement
+     pairing you chose from the palette's passing list, and the
+     after ratio. Include the color-alone finding and the text
+     label that fixed it. Then log both alt decisions: what you
+     wrote and the image job that justifies each call.
+
+     Contrast findings (before ratio, replacement, after ratio):
+     Color-alone finding and fix:
+     Alt decisions and the jobs behind them:
+
+2.B  Record your type conversion in flyer-styles.css and
+     club-styles.css: the px sizes you found, the rem values that
+     replaced them, and the base size your math used. Then state
+     in one or two sentences who the conversion serves.
+
+     The conversion (px found, rem shipped, base used):
+     Who it serves:
+
+---------------------------------------------------------------------
+PART 3: EXTENSION (the evaluator and the milestone)
+---------------------------------------------------------------------
+
+3.A  Log your evaluator run: the tool you used, the pages you ran
+     it on, and what it flagged. Then name at least one repaired
+     problem no tool flagged, and say which human check caught it.
+
+     Evaluator, pages, and flags:
+     What the evaluator could not see:
+
+3.B  Log your human-check results for the club site's three pages
+     and your validation pass (final message counts for every page
+     and stylesheet). Then close the Part III milestone: name
+     where a grader sees each leg (the plan from Lab 7A, the
+     responsive behavior from Lab 8A, and this lab's evaluation).
+     Finish with your triage call: the one repair you would ship
+     first if you could ship only one, and your defense.
+
+     Human-check results:
+     Validation results:
+     Where a grader sees each Part III leg:
+     Your triage call and defense:
+
+---------------------------------------------------------------------
+QUESTIONS & ANALYSIS
+---------------------------------------------------------------------
+
+Q1.  See lab Questions & Analysis.
+
+     Your answer:
+
+Q2.  See lab Questions & Analysis.
+
+     Your answer:
+
+
+=====================================================================
+END OF ANSWERS FILE
+Submit the folder: skills-lab-9a-lastname (zipped)
+=====================================================================
