@@ -5,6 +5,127 @@
 **Live site:** https://jor2050111.github.io/cis133/
 **Task list:** cis133-fall26 (`export CLAUDE_CODE_TASK_LIST_ID=cis133-fall26`)
 
+## What Was Done (2026-07-08 Chapter 10 session, opens Part IV)
+
+* Wrote and shipped `book/chapters/chapter-10.md` (HTML Tables):
+  4 content sections (the right tool for the data, table structure,
+  tables every tool can read, styling tables for readability plus
+  the phone wrapper and Final Checkpoint 2), 6 Try It Yourself
+  exercises, 4 Quick Checks, Skills Lab 10A, 337 sentences at 14.6
+  words average, zero at 35+. 476 lines, 10 teaching code examples
+  plus 2 quoted Nu messages. Same pipeline as Chapters 4-9,
+  including the orchestrator browser-verification pass (independent
+  second execution of the asset agent's numbers: all matched).
+* Consolidated Module 9's three draft MLOs to house format:
+  MLO-10.1 (Analyze) differentiate tabular data via the two-axes
+  test -> 10.1, MLO-10.2 (Apply) construct accessible tables with
+  headers, scope, captions -> 10.2-10.3, MLO-10.3 (Create) produce
+  the styled events page -> 10.4 plus lab. MLO-10.3 is THE BOOK'S
+  FIRST CREATE-LEVEL MLO (Part IV's reserved tier). Rubric
+  byte-identical to chapter-01.md.
+* Built `assets/code/chapter-10/`: `starter-site/` (the Lab 9A
+  model solution: pages byte-identical to chapter-09's, stylesheet
+  carries ONLY the rem conversions: body 1rem, h1 2.5rem, h2
+  1.5rem, query h1 2rem), `club-palette.txt` (cmp chain
+  ch04->...->ch10), `events-content.txt` (the six fall events,
+  word-for-word from the Chapter 7 brief, labeled fields = the
+  table's five columns), `table-practice.html` +
+  `practice-styles.css` (the spring drive tally, NO
+  thead/tbody/caption on purpose: TIYs add them),
+  `wide-practice.html` (7-column drop-off log, complete
+  structure, engineered to overflow a phone),
+  `skills-lab-10a-answers.txt`, README. PRACTICE DATA = THE
+  CHAPTER 3 CHART'S DATA exactly (Cables 64, Phones 38, Laptops
+  21, Small electronics 17, Tablets 14, sum 154, chart order):
+  one truth, two presentations, asserted by parsing the shipped
+  files. Wide-practice per-date splits sum to those counts.
+* Lab 10A model solution (scratchpad chapter-10-model-solution/,
+  becomes Chapter 11's starter): events.html (caption, thead with
+  5 th scope="col": Event/Date/Time/Location/Details, six tbody
+  rows, .table-scroll wrapper div), nav Recycling Guide / Spring
+  Drive Gallery / Fall Events / Contact the Club on all four
+  pages, club-styles.css table block (collapse, width 100%, white
+  base, ink 1px cell borders, 8px 12px padding, text-align left,
+  caption deep teal bold, thead white-on-club-teal 4.69, zebra
+  ink-on-sand 6.81, hover ink-on-light-sand 8.19 placed after the
+  stripe rule, .table-scroll overflow-x auto) plus ONE base
+  change: `nav ul` gained flex-wrap wrap (browser-proven: four
+  links need ~415px, three fit 375 exactly). The lab surfaces the
+  nav overflow as a Part 3 phone-test discovery repaired with
+  Chapter 6's flex-wrap.
+* All validation executed (2026-07-08): Nu zero messages on all 9
+  files (starter pages, practice pages, 4 model pages; six on
+  validator.w3.org engine 26.7.8, the rest on validator.nu after a
+  Cloudflare rate limit: same engine). Nu probes captured verbatim:
+  misplaced caption = ERROR ("Element caption not allowed as child
+  of element table in this context..."), ragged row = WARNING
+  ("...was 1 columns wide, which is less than the column count
+  established by the first row (2)."). Jigsaw 0 errors on all
+  three stylesheets. Contrast ratios all on the palette's printed
+  passing list. Date and sum asserts all pass. All 5 Further
+  Reading URLs 200 (two MDN pages cited at their new Reference
+  final URLs).
+* Browser-verified twice (asset agent headless + orchestrator
+  preview server, matching numbers): naked table 0px borders and
+  auto-inserted tbody wrapping all 6 rows, zebra with auto tbody
+  paints data rows 1/3/5 (header counts as position one) and
+  shifts to 2/4 with explicit thead/tbody (TIY 10.5's chained
+  discovery), wide table overflows 375px by 199px and the wrapper
+  contains it (550px content in 327px window), model events page
+  clean at 375/640/641/1280 with the h1 2rem/2.5rem step and nav
+  wrap, collapse probe 147px vs 140px.
+* Added 13 terms to `book/glossary.md` (border-collapse, caption
+  element, data cell, header cell, :nth-child(), scope attribute,
+  structural pseudo-class, table element, table row, tabular data,
+  tbody element, thead element, zebra striping) and extended the
+  existing pseudo-class entry from state-only to state-or-position.
+* Ran the three review agents. Applied required fixes: THREE TIY
+  answer leaks closed (TIY 10.1's worked table had pre-classified
+  the exercise's target, so the TIY now runs on three fresh
+  candidates: tutor roster, tip list, hours paragraph. TIY 10.2's
+  th-bold-centered default was pre-stated, now discovered. TIY
+  10.6's wrapper outcome was narrated in prose, now held to a
+  policy statement with the outcome as the discovery, and the
+  judging admonition moved after the exercise), the false Chapter
+  5 attribution corrected ("readability contract" -> the actual
+  four-point checklist), and the glossary's border-collapse entry
+  re-sorted before border shorthand. Applied judgment calls: the
+  29-line finished-schedule example trimmed to 22 (one tbody row),
+  Quick Check 10.1 #1 given a fresh printer-loan-log scenario,
+  :nth-child() spelling standardized (chapter Key Terms + glossary
+  key now both carry the parens). Skipped with rationale: 10.4's
+  five H3 subsections (house precedent counts TIY/QC H3s, every
+  shipped chapter exceeds the literal 2-4 band), QC 10.3/10.4
+  first questions as recall anchors (one allowed per set), the
+  Create-level grading emphasis note (rubric's Analysis criterion
+  already carries it).
+* Uncommented the Part IV nav block with only Chapter 10 live.
+  `zensical build --clean`: no issues.
+
+**Chapter 10 design notes:**
+
+* Promises paid: Ch 9's Looking Ahead (headers, scope, captions
+  continue the accessibility work: 10.3 opens by redeeming it),
+  Ch 7's brief (the events page finally publishes the six events),
+  Ch 8's no-sideways-scroll law (the wrapper repair), Ch 3's chart
+  (the practice table restates its exact data), Final Checkpoint 2
+  hosted at the end of 10.4 (Ch 7's Checkpoint 1 register).
+* Promises planted (pay these explicitly): Ch 11 = the join page,
+  forms, the label-input contract Chapter 9 promised. Ch 12 = the
+  home page arrives, the whole site publishes behind a full
+  pre-flight check.
+* colspan/rowspan and tfoot are deliberate one-mention items.
+  :nth-child() is deliberately the course's LAST new selector
+  (only even/odd taught, pattern arguments left to Further
+  Reading). Do not deepen any of these.
+* Pre-term verification (5 min in a real browser): VoiceOver (or
+  any screen reader) on the model events page (caption announced,
+  cell read with its column header), the hover-beats-stripe feel
+  check on the events table, re-POST the two Nu probe files to
+  validator.w3.org once its rate limit cools (validator.nu
+  recorded the verbatim messages; parity expected), and TIY 10.3's
+  DevTools auto-tbody view in current Chrome/Edge/Firefox.
+
 ## What Was Done (2026-07-08 Chapter 9 session, closes Part III)
 
 * Wrote and shipped `book/chapters/chapter-09.md` (Web

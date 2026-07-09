@@ -38,6 +38,8 @@ This glossary is the single source of truth for all technical terms used in the 
 
 **border:** The box model layer drawn between an element's padding and its margin: a visible line with a width, style, and color of its own.
 
+**border-collapse:** The CSS property that controls whether neighboring table borders merge. Its `collapse` value replaces the browser's default gap between cell borders with single shared lines.
+
 **border shorthand:** The `border` property, which sets a border's width, style, and color in one declaration, such as `border: 3px solid #268080;`.
 
 **box model:** The browser's model of every element as a rectangular box built from four layers: content, padding, border, and margin. DevTools draws any element's box as a diagram of nested rectangles.
@@ -53,6 +55,8 @@ This glossary is the single source of truth for all technical terms used in the 
 ## C
 
 **cache:** A browser's local store of recently downloaded page files. The cache lets a repeat visit load without downloading everything again.
+
+**caption element:** The element (`<caption>`) that gives a table its own title, written as the table's first child. It belongs to the table and travels with it, the way a `<figcaption>` belongs to its figure.
 
 **cascade:** The tie-breaking system CSS uses when more than one rule targets the same element. An inline style wins over stylesheet rules, and among rules with an equal claim, the later one wins.
 
@@ -95,6 +99,8 @@ This glossary is the single source of truth for all technical terms used in the 
 **CSS validator:** The free checking service at jigsaw.w3.org/css-validator that reports every place a stylesheet breaks the CSS standard. It names the defects that browsers skip silently.
 
 ## D
+
+**data cell:** The table cell element (`<td>`) that holds one value in a grid. Its meaning comes from its row and its column together.
 
 **declaration:** One property and value pair inside a declaration block, such as `color: #1a5e5e;`. Each declaration ends with a semicolon.
 
@@ -171,6 +177,8 @@ This glossary is the single source of truth for all technical terms used in the 
 ## H
 
 **head:** The element that holds information about the page, such as its title and character encoding. Nothing inside the head appears in the browser window.
+
+**header cell:** The table cell element (`<th>`) that names a column or a row instead of holding data. Tools that read tables announce a header with every cell it governs.
 
 **header element:** The landmark (`<header>`) that holds a region's introductory content, such as a logo, title, or tagline. Not the same element as `<head>`.
 
@@ -258,6 +266,8 @@ This glossary is the single source of truth for all technical terms used in the 
 
 **nesting:** Placing elements inside other elements. A nested element must close before the element that contains it closes.
 
+**:nth-child():** The structural pseudo-class that matches elements by position among their siblings, using keywords such as `even` and `odd`. `tbody tr:nth-child(even)` selects a table's even data rows.
+
 ## O
 
 **operable:** The POUR principle that every control works for every input. Keyboard reachability and visible focus styles are its core demands.
@@ -288,7 +298,7 @@ This glossary is the single source of truth for all technical terms used in the 
 
 **prototype:** A clickable mockup built from wireframes wired together, so a test visitor can tap through a site before any code exists.
 
-**pseudo-class:** A selector piece, written with a leading colon, that matches an element by its current state instead of its identity, such as `:hover` or `:focus`.
+**pseudo-class:** A selector piece, written with a leading colon, that matches an element by its current state or its position among siblings instead of its identity, such as `:hover`, `:focus`, or `:nth-child()`.
 
 ## Q
 
@@ -311,6 +321,8 @@ This glossary is the single source of truth for all technical terms used in the 
 **robust:** The POUR principle that markup must be valid and semantic enough for any tool to parse, including assistive technology and tools not yet built.
 
 ## S
+
+**scope attribute:** The attribute that tells tools what a header cell governs: `scope="col"` for the cells below it, `scope="row"` for the cells beside it.
 
 **screen reader:** Software that reads page content aloud, or renders it as braille, for users who are blind or have low vision.
 
@@ -344,6 +356,8 @@ This glossary is the single source of truth for all technical terms used in the 
 
 **strong importance:** The meaning the `<strong>` element marks: content the reader must not miss, such as a warning or deadline. Browsers render it bold.
 
+**structural pseudo-class:** A pseudo-class that matches an element by its position among its siblings instead of its current state. `:nth-child()` is the one this course teaches.
+
 **style element:** The head element (`<style>`) that holds a page's internal stylesheet.
 
 **subdomain:** An optional prefix on a domain name that points to a section of a site, such as `learn` in learn.maricopa.edu.
@@ -352,9 +366,17 @@ This glossary is the single source of truth for all technical terms used in the 
 
 ## T
 
+**table element:** The element (`<table>`) that presents tabular data as a grid of rows and columns. It presents data only: page layout belongs to CSS.
+
+**table row:** The element (`<tr>`) that holds one horizontal run of cells. A table's columns emerge from the position of cells across its rows.
+
+**tabular data:** Content in which every value takes its meaning from two directions at once, its row and its column. The two-axes test that identifies it decides when a table is the right element.
+
 **tag:** An element's name inside angle brackets. An opening tag such as `<p>` starts an element, and a closing tag such as `</p>` ends it.
 
 **target audience:** The people a site is built to serve, described by what they already know, what they come to do, and what would make them leave.
+
+**tbody element:** The element (`<tbody>`) that groups a table's data rows apart from its header row. Browsers build one silently when a file omits it, so writing it keeps the file honest with the page the browser serves.
 
 **text-align:** The CSS property that sets how lines of text sit inside their box: `left`, `center`, or `right`.
 
@@ -363,6 +385,8 @@ This glossary is the single source of truth for all technical terms used in the 
 **text editor:** A program that saves exactly the characters you type and nothing else. Code editors such as VS Code are text editors with extra help for writing code.
 
 **text-transform:** The CSS property that recases text for display, such as `uppercase` for short labels, without changing the characters in the markup.
+
+**thead element:** The element (`<thead>`) that groups a table's header row apart from its data rows, so tools and style rules can treat the namers and the named differently.
 
 **title element:** The head element that names the page. Its text appears in the browser tab, in bookmarks, and as the headline of a search result.
 
@@ -415,3 +439,7 @@ This glossary is the single source of truth for all technical terms used in the 
 **wireframe:** A grayscale sketch of one page's layout: labeled boxes for each region, with no colors or fonts. Planning draws one at desktop width and one at phone width.
 
 **World Wide Web (the web):** The worldwide collection of linked pages and resources you reach through a browser. The web is one service that runs on the Internet.
+
+## Z
+
+**zebra striping:** The readability pattern that tints alternating table rows so the eye can hold a line across many columns. One rule builds it: `tbody tr:nth-child(even)` with a background color.

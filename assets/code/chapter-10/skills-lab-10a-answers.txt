@@ -1,0 +1,99 @@
+=====================================================================
+CIS133 SKILLS LAB 10A: THE EVENTS PAGE
+Written Answers
+=====================================================================
+
+Name:
+Date:
+
+This file travels inside your submission folder along with the
+updated club site (four pages now), the extended stylesheet, and
+your checklist copy. Type your answers directly below each numbered
+prompt. Keep the headings and numbering in place so your grader can
+follow your work.
+
+---------------------------------------------------------------------
+PART 1: FOUNDATION (the table and the nav)
+---------------------------------------------------------------------
+
+1.A  Log the build of events.html: which page you saved-as from,
+     the caption you wrote, the five column headers and the scope
+     you gave them, and where the six event rows live in the
+     table's structure.
+
+     Page used for save-as:
+     Caption text:
+     Column headers and scope:
+     Where the event rows live:
+
+1.B  Record the navigation update: the link text you chose, where
+     it sits in the bar, the pages you touched, and the validator
+     message count for each of the four pages.
+
+     Link text and position:
+     Pages touched:
+     Validation results:
+
+---------------------------------------------------------------------
+PART 2: APPLICATION (the table style block)
+---------------------------------------------------------------------
+
+2.A  Log the style block you added to club-styles.css: the
+     border-collapse decision, where the borders and padding
+     landed, and the alignment call you made for header and data
+     cells.
+
+     Collapse, borders, and padding:
+     Alignment call:
+
+2.B  Record every color pairing the table wears: the header row's
+     text on its background, and the stripe's text on its
+     background. Quote each pairing's ratio from the palette's
+     passing list, and note any pairing you considered and
+     rejected.
+
+     Header row pairing and ratio:
+     Stripe pairing and ratio:
+     Rejected pairing, if any:
+
+---------------------------------------------------------------------
+PART 3: EXTENSION (the phone test and the checkpoint)
+---------------------------------------------------------------------
+
+3.A  Log the phone test: the device-mode width you tested, what
+     the table did before your fix, the rule and wrapper you
+     added, and which element scrolls now.
+
+     Width tested and what you saw:
+     The fix you shipped:
+     Which element scrolls now:
+
+3.B  Log the Chapter 9 habit run on the new page: your checklist
+     findings and both validators' message counts. Then make the
+     right-tool defense: why the schedule earned a table while the
+     guide's preparation steps stayed a list. Close with your
+     Final Checkpoint 2 hand-off: which draft pages of your own
+     site follow this page's pattern.
+
+     Checklist findings:
+     Validation results:
+     The right-tool defense:
+     Your draft pages:
+
+---------------------------------------------------------------------
+QUESTIONS & ANALYSIS
+---------------------------------------------------------------------
+
+Q1.  See lab Questions & Analysis.
+
+     Your answer:
+
+Q2.  See lab Questions & Analysis.
+
+     Your answer:
+
+
+=====================================================================
+END OF ANSWERS FILE
+Submit the folder: skills-lab-10a-lastname (zipped)
+=====================================================================

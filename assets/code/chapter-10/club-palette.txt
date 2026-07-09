@@ -1,0 +1,90 @@
+=====================================================================
+CIS133 SKILLS LAB 4A: THE CLUB'S DESIGN SET PALETTE
+=====================================================================
+
+Every color below comes straight from the club's illustration set,
+the same set that drew the logo, the charts, and the drive scenes.
+The hex values are exact. Copy them from this file into your CSS
+instead of retyping them from memory.
+
+The labels in [BRACKETS] name each color. They are notes to you.
+They never go into your stylesheet.
+
+---------------------------------------------------------------------
+
+[CLUB TEAL]
+#268080
+The club's brand color: the logo disk and every banner in the set.
+A strong region background behind white text.
+
+[DEEP TEAL]
+#1a5e5e
+The darker teal from the logo's shading. A heading color on light
+backgrounds, or a background behind white text.
+
+[SUNSET ORANGE]
+#f4a259
+The sky in every outdoor scene. A warm accent background behind
+dark text.
+
+[LIGHT SAND]
+#fac78d
+The set's palest tone, from the sunlit sky. A page background that
+keeps dark text readable.
+
+[SAND]
+#deb887
+The desert ground under every scene. A calm region background
+behind dark text.
+
+[SAGUARO GREEN]
+#5e9959
+The cactus and bin green. An accent for small touches. Too light to
+sit behind white body text.
+
+[INK]
+#333333
+The dark gray the set uses for text and outlines. The site's body
+text color.
+
+[WHITE]
+#ffffff
+The label plates and the logo's arrows. A page background, or the
+text color on either teal.
+
+---------------------------------------------------------------------
+
+TWO LOOKALIKES TO LEAVE ALONE
+
+The set also mixes two browns for background props. Both sit close
+to SAND, and neither earned a job on the site. Choosing SAND over
+these two is a design decision, not a coin flip.
+
+[GRAVEL, a prop color, not a site color]
+#c9a276
+
+[CARDBOARD, a prop color, not a site color]
+#c49a6c
+
+---------------------------------------------------------------------
+
+TEXT-ON-BACKGROUND PAIRINGS THAT PASS WCAG AA (4.5 to 1 or better)
+
+Chapter 9 teaches the contrast math. For now, trust the list. Every
+pairing below was checked and passes the 4.5 to 1 minimum for body
+text. A pairing missing from this list has not earned that trust.
+
+INK on WHITE             12.63 to 1
+INK on LIGHT SAND         8.19 to 1
+INK on SAND               6.81 to 1
+INK on SUNSET ORANGE      6.11 to 1
+WHITE on DEEP TEAL        7.48 to 1
+WHITE on CLUB TEAL        4.69 to 1
+DEEP TEAL on WHITE        7.48 to 1
+DEEP TEAL on LIGHT SAND   4.85 to 1
+LIGHT SAND on DEEP TEAL   4.85 to 1
+CLUB TEAL on WHITE        4.69 to 1
+
+=====================================================================
+END OF PALETTE FILE
+=====================================================================

@@ -1,0 +1,13 @@
+/* Practice stylesheet for the chapter's table exercises. It sets
+   readable base type and nothing else: the table rules are yours
+   to add, one Try It Yourself at a time. */
+
+body {
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 1rem;            /* the visitor's default, the
+                                   course habit since Chapter 9 */
+    line-height: 1.5;
+    color: #333333;             /* ink on white */
+    background-color: #ffffff;
+    margin: 24px;
+}

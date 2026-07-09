@@ -1,0 +1,60 @@
+=====================================================================
+PC COMPUTER CLUB: FALL 2026 EVENTS
+Content for the events page (Skills Lab 10A)
+=====================================================================
+
+These six events repeat the officers' planning notes from the
+Chapter 7 site expansion brief (project-brief.txt), word for word.
+The brief published them as prose. Your job is to publish them as a
+table. Copy the values below into your cells instead of retyping
+them from the book.
+
+Each event lists the same five fields. The fields are your columns.
+
+---------------------------------------------------------------------
+
+EVENT 1
+Event:    Fall Welcome Meeting
+Date:     Tuesday, September 1
+Time:     3:00 to 4:30 p.m.
+Location: Computer Commons
+Details:  New members welcome, no device required.
+
+EVENT 2
+Event:    September Drop-Off Day
+Date:     Tuesday, September 15
+Time:     3:00 to 4:30 p.m.
+Location: Computer Commons
+Details:  Bring phones, laptops, cables, and chargers.
+
+EVENT 3
+Event:    October Drop-Off Day
+Date:     Tuesday, October 13
+Time:     3:00 to 4:30 p.m.
+Location: Computer Commons
+Details:  Bring phones, laptops, cables, and chargers.
+
+EVENT 4
+Event:    Fix-It Workshop
+Date:     Saturday, October 24
+Time:     10:00 a.m. to noon
+Location: Computer Commons
+Details:  Learn to test and wipe donated devices.
+
+EVENT 5
+Event:    Fall Recycling Drive
+Date:     Saturday, November 7
+Time:     9:00 a.m. to 1:00 p.m.
+Location: Student Union lawn
+Details:  Our biggest event of the term.
+
+EVENT 6
+Event:    Semester Wrap Meeting
+Date:     Tuesday, November 17
+Time:     3:00 to 4:30 p.m.
+Location: Computer Commons
+Details:  Drive results and spring plans.
+
+=====================================================================
+END OF EVENTS CONTENT
+=====================================================================
