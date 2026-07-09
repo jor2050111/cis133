@@ -1,0 +1,103 @@
+=====================================================================
+CIS133 SKILLS LAB 8A: THE CLUB SITE MEETS EVERY SCREEN
+Written Answers
+=====================================================================
+
+Name:
+Date:
+
+This file travels inside your submission folder along with your
+three HTML pages, your images folder, and club-styles.css. Type
+your answers directly below each numbered prompt. Keep the headings
+and numbering in place so your grader can follow your work.
+
+---------------------------------------------------------------------
+PART 1: FOUNDATION (the viewport tag and the diagnosis)
+---------------------------------------------------------------------
+
+1.A  Copy the viewport meta tag exactly as it now appears in your
+     pages' heads. Then describe what device mode showed you on one
+     page: how the page rendered at your phone profile, and what
+     the tag changed.
+
+     The tag:
+     Page you watched, and the phone profile you picked:
+     What device mode showed, and what the tag changed:
+
+1.B  Log the rendered width device mode reports for each page at
+     your phone profile, with the tag in place.
+
+     recycling-guide.html rendered width:
+     drive-gallery.html rendered width:
+     contact.html rendered width:
+
+1.C  Walk each page at three widths: a phone width, a mid width,
+     and a laptop width. List every place the layout embarrasses
+     itself. Name the page, the width where it happens, and what
+     goes wrong. This list is your evidence for Part 2.
+
+     The three widths you used:
+     Diagnosis list (page, width, what goes wrong):
+
+---------------------------------------------------------------------
+PART 2: APPLICATION (the small-screen query)
+---------------------------------------------------------------------
+
+2.A  State the breakpoint you chose and defend it with content
+     evidence from your Part 1 diagnosis: what stops fitting at
+     that width, and what arithmetic or observation produced the
+     number. Then copy your query block exactly as it appears in
+     club-styles.css, including its comment.
+
+     Your breakpoint, and the content evidence behind it:
+     The query block:
+
+---------------------------------------------------------------------
+PART 3: EXTENSION (your own query and the verification pass)
+---------------------------------------------------------------------
+
+3.A  Copy the additional query you chose to write. State what it
+     adjusts and which screens it serves. Then defend the decision:
+     what does a visitor at that width gain that the base rules
+     alone did not give them?
+
+     The query you wrote:
+     What it adjusts, and which screens it serves:
+     Your defense:
+
+3.B  Log your validator results: the HTML validator's final message
+     count for each page, and the CSS validator's final result for
+     club-styles.css. Then confirm your three-width verification
+     pass: name the three widths and one thing you checked on every
+     page at each width.
+
+     recycling-guide.html:
+     drive-gallery.html:
+     contact.html:
+     club-styles.css:
+     The three widths, and what you checked at each:
+
+     Part III milestone check, the responsive leg. Each page should
+     now adapt its layout to the screen. Name where a grader can
+     see it happen: the page, the width to set, and what visibly
+     changes.
+
+     Where a grader sees the site adapt:
+
+---------------------------------------------------------------------
+QUESTIONS & ANALYSIS
+---------------------------------------------------------------------
+
+Q1.  See lab Questions & Analysis.
+
+     Your answer:
+
+Q2.  See lab Questions & Analysis.
+
+     Your answer:
+
+
+=====================================================================
+END OF ANSWERS FILE
+Submit the folder: skills-lab-8a-lastname (zipped)
+=====================================================================

@@ -22,9 +22,13 @@ This glossary is the single source of truth for all technical terms used in the 
 
 **article element:** The landmark (`<article>`) that wraps content able to stand alone outside its page, such as a blog post, news story, or review.
 
+**at-rule:** A CSS instruction that begins with an at sign and speaks to the stylesheet itself instead of styling one selector. `@media` is the first one this course teaches.
+
 **attribute:** A name and value pair written inside an opening tag that configures the element, such as `lang="en"`.
 
 ## B
+
+**base styles:** The rules in a stylesheet that sit outside every media query and serve every screen size. Query blocks adjust them and never repeat them.
 
 **block-level element:** An element that begins on a new line and claims the page's full width. Headings, paragraphs, and lists are block-level elements.
 
@@ -37,6 +41,8 @@ This glossary is the single source of truth for all technical terms used in the 
 **box model:** The browser's model of every element as a rectangular box built from four layers: content, padding, border, and margin. DevTools draws any element's box as a diagram of nested rectangles.
 
 **box-sizing:** The CSS property that decides what `width` measures. Its `border-box` value makes a declared width cover content, padding, and border together, so the number you write is the box you see.
+
+**breakpoint:** The screen width at which a media query changes a layout. Good breakpoints come from where the content stops fitting, not from a chart of device sizes.
 
 **browser:** A program that requests pages from web servers and displays them on your screen. Chrome, Edge, Firefox, and Safari are browsers.
 
@@ -91,6 +97,8 @@ This glossary is the single source of truth for all technical terms used in the 
 **decorative image:** An image that adds no content to its page, such as a border strip. It gets a deliberate empty alt (`alt=""`) so screen readers skip it.
 
 **descendant combinator:** The space between two selectors, as in `footer a`: it matches elements sitting at any depth inside the first selector's matches.
+
+**device mode:** The browser DevTools view that emulates how a chosen phone or tablet renders a page and reports the rendered width. It is how this course tests layouts without owning every device.
 
 **digital certificate:** A file, issued by a trusted authority, that proves a website's identity and enables its encrypted connections.
 
@@ -226,6 +234,12 @@ This glossary is the single source of truth for all technical terms used in the 
 
 **max-width:** The CSS property that caps how wide a box may grow while letting it shrink in narrower windows. Paired with auto side margins, it builds a centered readable column.
 
+**media feature:** The condition a media query tests, written in parentheses after `@media`. It looks like a declaration but asks a question about the viewport, such as `(max-width: 720px)`.
+
+**media query:** A CSS at-rule, written `@media (condition) { ... }`, whose rules apply only while the screen satisfies the condition, such as a maximum or minimum viewport width.
+
+**mobile-first:** The design order that plans and styles the narrow screen first, letting wider screens be the enhancement. In CSS it reads as base styles for phones plus `min-width` overrides.
+
 ## N
 
 **nav element:** The landmark (`<nav>`) that holds a set of major navigation links, conventionally written as a list of links.
@@ -237,6 +251,8 @@ This glossary is the single source of truth for all technical terms used in the 
 ## O
 
 **ordered list:** The list element (`<ol>`) that numbers its items because their sequence matters, such as the steps of a procedure.
+
+**override:** A rule inside a media query that changes a base rule's value for the widths the query names. An override carries only the differences and sits below the base rule it adjusts.
 
 ## P
 
@@ -269,6 +285,8 @@ This glossary is the single source of truth for all technical terms used in the 
 **relative URL:** An address that gives directions from the current file, with no protocol or domain, such as `contact.html`. Use it to link between files on the same site.
 
 **rem:** A CSS unit equal to the visitor's base text size, so `1.5rem` means 1.5 times whatever base the visitor's browser is set to. Sizes in rem respect a visitor who raises that base.
+
+**responsive design:** The practice of building one page that adapts its layout to every screen size, built from fluid content and media queries at content-driven breakpoints.
 
 **responsiveness:** The UX principle that a layout adapts to the visitor's screen instead of demanding one screen size.
 
@@ -355,6 +373,10 @@ This glossary is the single source of truth for all technical terms used in the 
 **value:** The setting a CSS declaration assigns to its property, such as `#1a5e5e` in `color: #1a5e5e;`. It sits after the colon in a declaration.
 
 **vector image:** An image stored as drawing instructions instead of pixels, so the computer can redraw it sharp at any size.
+
+**viewport:** The area a browser gives a page to lay out in. On a desktop it matches the window's page area, and on a phone it matches the device only when the page asks with the viewport meta tag.
+
+**viewport meta tag:** The head line `<meta name="viewport" content="width=device-width, initial-scale=1">`, which tells a phone browser to lay the page out at the device's true width instead of a legacy wide canvas.
 
 **VS Code (Visual Studio Code):** The free code editor from Microsoft used throughout this course. It runs on Windows, macOS, and Linux.
 

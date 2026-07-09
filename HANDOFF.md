@@ -5,6 +5,104 @@
 **Live site:** https://jor2050111.github.io/cis133/
 **Task list:** cis133-fall26 (`export CLAUDE_CODE_TASK_LIST_ID=cis133-fall26`)
 
+## What Was Done (2026-07-08 Chapter 8 session)
+
+* Wrote and shipped `book/chapters/chapter-08.md` (Responsive Design
+  and Media Queries): 4 content sections (one site every screen, the
+  viewport meta tag, media queries and breakpoints, base styles plus
+  overrides), 5 Try It Yourself exercises, 4 Quick Checks, Skills
+  Lab 8A, 392 sentences at 15.1 words average, zero at 35+. 480
+  lines, 9 code examples. Same orchestrated pipeline as Chapters
+  4-7, plus a NEW PIPELINE STEP: the orchestrator browser-verified
+  every layout claim with a local preview server before drafting
+  (results appended to the session facts sheet).
+* Consolidated Module 8's three draft MLOs into house format:
+  MLO-8.1 (Apply) implement the viewport meta tag, tested in
+  DevTools device mode -> 8.1-8.2, MLO-8.2 (Apply) construct media
+  queries at content-driven breakpoints -> 8.3, MLO-8.3 (Analyze)
+  diagnose where layouts fail and which base-plus-overrides layer
+  owns the fix -> 8.4 plus lab. Rubric byte-identical to
+  chapter-01.md.
+* Built `assets/code/chapter-08/`: `starter-site/` (byte-identical
+  copy of chapter-07/club-site, cmp-verified, still no viewport
+  tag: adding it is Lab Part 1), `club-palette.txt` (cmp-verified
+  chain ch04->ch05->ch06->ch08), `query-playground.html` + `.css`
+  (the club bulletin bench, queries pre-written for
+  read-predict-verify), `no-viewport.html` + `viewport.html` (TIY
+  8.2 pair, bodies byte-identical, heads differ by one line),
+  `skills-lab-8a-answers.txt`, README.
+* Engineered and BROWSER-VERIFIED numbers (preview server,
+  2026-07-08): body background flips light sand to sunset orange at
+  exactly 600px (inclusive), .banner-title 22/28/36px at
+  400/700/1000 with the 501-899 neither-query gap, .update-card
+  padding 10px at and below 600 and 20px above, card row wrap
+  thresholds exact at 584/864/1144, and the starter gallery (with a
+  viewport tag injected) seats 2 figures at 640px and 1 at 639px:
+  the lab's expected content-driven breakpoint derivation is
+  browser-exact. BONUS: the preview environment emulated the
+  no-viewport ~980px layout viewport live, executing the "phone's
+  lie" claim.
+* All validation executed (2026-07-08): Nu zero messages on all 6
+  pack HTML files (and Nu confirmed it does NOT require a viewport
+  tag: the chapter frames that as "valid and phone-ready are
+  different standards"), jigsaw 0 errors both stylesheets, at-rule
+  grep of Chapters 1-7 came back zero so @media is truthfully the
+  course's first at-rule, all 5 Further Reading URLs 200 (two MDN
+  URLs cited at their final redirect targets).
+* Added 11 terms to `book/glossary.md` (base styles, breakpoint,
+  device mode, media query, mobile-first, override, responsive
+  design, viewport, viewport meta tag, plus at-rule and media
+  feature from review).
+* Ran the three review agents. Applied required fixes: the img
+  max-width provenance corrected from "Chapter 5 pack, promised
+  twice" to the truth (Chapter 6 pack, one README promise) in both
+  the chapter and the pack README, TIY 8.3's answer leak closed
+  (the anatomy example now teaches on an invented tutoring center
+  rule at 720px instead of printing the playground's real 600px
+  block with its outcome narrated), TIY 8.4's gap leak closed (the
+  501-899 resolution sentence replaced with the general
+  a-pair-can-leave-a-gap concept, students now derive it). Applied
+  judgment calls: MLO-8.1's verb Prepare swapped to the approved
+  Implement, MLO-8.3 reworded to one verb with two objects
+  (MLO-5.3 pattern), at-rule and media feature bolded and
+  glossaried (Quick Check 8.3 quizzes them by name), prerequisites
+  line unified to "Chapters 5-7", Quick Check 8.3 #3's breakpoint
+  chart number swapped 768 -> 1024 (768 was the section's own
+  worked anti-pattern). Skipped with rationale: the banner-title
+  example reuse across TIY 8.4 and 8.4's cascade trace (deliberate
+  scaffolding, same numbers two skills), 9 code examples near the
+  band floor (in band), TIY 8.1's inventory-implication (reviewer
+  ruled it stops short of a leak).
+* Uncommented the Chapter 8 nav line. `zensical build --clean`: no
+  issues.
+
+**Chapter 8 design notes:**
+
+* Promises paid: Ch 6's "flex-wrap is half of responsive design"
+  (quoted and paid through 8.3-8.4), Ch 7's phone-width wireframe
+  becomes buildable (intro and lab), Ch 5's "the column learns to
+  adapt to any screen" (8.1's max-width-as-ceiling inventory), Ch
+  4's one-stylesheet promise (8.4's file-grew-layers framing), the
+  Chapter 6 pack README's img max-width promise (8.1, fluid
+  images).
+* Promises planted (pay these explicitly): Ch 9 = every screen size
+  is served, now every user: WCAG, POUR, the contrast math, what
+  rem does for visitors who resize type. Ch 12 = the pre-flight
+  check renders the site in multiple browsers and screen sizes
+  before publishing. Final project = Checkpoint 2 draft pages
+  arrive responsive.
+* Orientation and print media features, device-width charts (named
+  to be argued against), and the ~980px default (hedged "most
+  phone browsers... about 980 pixels") are deliberate one-mention
+  or hedged treatments. Do not deepen.
+* Pre-term verification (5 min in a real browser): DevTools device
+  toolbar location and device list naming in current
+  Chrome/Edge/Firefox (the chapter deliberately avoids precise UI
+  names), Wikipedia's narrow-window visual adaptation (TIY 8.1),
+  no-viewport.html vs viewport.html on a physical phone or device
+  mode (TIY 8.2), the playground flip at 600 on a real machine
+  (TIY 8.3, browser-verified locally this session).
+
 ## What Was Done (2026-07-08 Chapter 7 session, opens Part III)
 
 * Wrote and shipped `book/chapters/chapter-07.md` (UX and Web Design):
@@ -661,20 +759,22 @@ repo.
 
 ## Next Steps
 
-1. Write Chapter 8 (Responsive Design and Media Queries). Same cycle
-   as Chapters 1-7. The course map's Module 8 carries exactly 3
-   draft MLOs already (explain responsive purpose, define media
-   queries, apply base styles plus overrides): consolidate wording
-   to house format. Starter site: copy
-   `assets/code/chapter-07/club-site/` into the chapter-08 pack.
-   Pay Chapter 6's and 7's plants: flex-wrap is half of responsive
-   design and media queries finish it, and the phone-width wireframe
-   from Lab 7A becomes buildable. Viewport meta tag, breakpoints,
-   DevTools device mode.
-2. Then Chapter 9 (Web Accessibility): new coverage with no draft
-   module, built from docs/part-structure.md and outline section V.
+1. Write Chapter 9 (Web Accessibility), closing Part III. New
+   coverage with no draft module: build from docs/part-structure.md
+   and district outline section V (WCAG, POUR, conformance levels,
+   structure, link design, color, images, forms preview, evaluator).
    Chapter 9 owns the contrast math behind the palette's passing
-   list (promised since Chapter 4). Then repeat through Chapter 12.
+   list (promised since Chapter 4) and the rem-and-user-settings
+   discussion (promised since Chapter 5). Pay Ch 6's ":focus opened
+   the keyboard door" and Ch 8's "every screen size served, now
+   every user." Starter site: the Lab 8A model solution (build it
+   from the chapter-08 answers plus the lab design, the same way
+   chapter-07's club-site rebuilt Lab 6A). Expect an audit-target
+   page with planted accessibility defects and an accessibility
+   evaluator walkthrough (pick one: WAVE is the likely candidate,
+   verify it live).
+2. Then Part IV: Chapters 10-12 per docs/part-structure.md
+   (Chapter 12 is the other new-coverage chapter).
 3. Before the term starts: run the 5-minute browser verifications
    for Chapters 1, 2, and 3 (see each chapter's design notes
    above).

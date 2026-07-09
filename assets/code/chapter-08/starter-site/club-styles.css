@@ -1,0 +1,224 @@
+/* PC Computer Club site stylesheet.
+   Built in Skills Lab 4A (the club's palette applied with element,
+   class, and id selectors), given space and type in Skills Lab 5A
+   (box-model spacing, the readable column, the site's fonts), and
+   laid out in Skills Lab 6A (the flex header and gallery rows, the
+   footer-link fix, and the navigation bar).
+   Every text-on-background pairing below appears on
+   club-palette.txt's passing list. */
+
+/* Sizing baseline: border-box makes width mean the visible box,
+   border to border, so padding and border carve space inside a
+   declared width instead of growing the box. */
+* {
+    box-sizing: border-box;
+}
+
+/* The site's base: ink text on the set's palest sand, with the
+   site's type set once here because font settings flow down into
+   everything inside the body. The stack ends in a generic family
+   the browser can always supply. margin: 0 is the Part 3
+   diagnosis fix: the browser's default body margin left a sand
+   gutter around the header and footer bands. */
+body {
+    background-color: #fac78d;  /* light sand */
+    color: #333333;             /* ink */
+    margin: 0;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 16px;            /* the browser default, kept on
+                                   purpose: body text no smaller
+                                   than default */
+    line-height: 1.5;           /* the course's readable default */
+}
+
+/* The landmarks from Chapter 3, dressed in Lab 4A's colors and
+   now padded so their text stops pressing the colored edges.
+   Lab 6A adds the layout: logo and title share the first flex
+   line, centered against each other on the cross axis. wrap
+   keeps each intro paragraph on its own full-width line instead
+   of squeezing it into a column. */
+header {
+    background-color: #268080;  /* club teal, the brand */
+    color: #ffffff;             /* white reads on club teal */
+    padding: 24px 16px;         /* two values: 24 top and bottom,
+                                   16 left and right */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+}
+
+nav {
+    background-color: #ffffff;  /* a white bar under the header */
+    padding: 12px 16px;
+}
+
+/* The bar: strip the browser's list dressing (the bullets and
+   the 40-pixel indent), then lay the items on one line. The
+   nav ul selector scopes the stripping to the bar, so the
+   contact page's meeting list keeps its bullets. */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 8px;
+}
+
+/* Padded blocks make bigger targets, in the brand teal that
+   passes on the bar's white. display: block hands each link a
+   real box that owns its padding. The bar's position and its
+   states carry the link signal, so the underline can go. */
+nav a {
+    display: block;
+    padding: 8px 12px;
+    color: #268080;             /* club teal on white passes */
+    text-decoration: none;
+}
+
+/* Hover and focus, equal citizens: the same signal for the
+   mouse and the keyboard. White on club teal is on the
+   palette's passing list, and no outline is removed. */
+nav a:hover,
+nav a:focus {
+    background-color: #268080;  /* club teal */
+    color: #ffffff;
+}
+
+/* The readable column: never wider than 640px, centered whenever
+   the window is wider, and padded at the sides so text never
+   touches the window edges on a phone. */
+main {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 24px 16px;
+}
+
+/* Air after each section, so one topic ends before the next
+   heading arrives. */
+section {
+    padding-bottom: 24px;
+}
+
+footer {
+    background-color: #1a5e5e;  /* deep teal closes the page */
+    color: #ffffff;
+    padding: 24px 16px;
+}
+
+/* The Lab 4A defect, finally fixed: the footer's links wore the
+   browser's default link blue on deep teal, a pairing that fails
+   contrast and that no validator could see. footer a reaches only
+   the footer's links, so the guide's source links stay untouched.
+   Light sand on deep teal passes at 4.85 to 1. */
+footer a {
+    color: #fac78d;             /* light sand on deep teal */
+}
+
+/* The footer links' states invert the fix: deep teal text on a
+   light sand block, the same passing pairing read the other way,
+   with the browser's focus outline left in place. */
+footer a:hover,
+footer a:focus {
+    background-color: #fac78d;  /* light sand */
+    color: #1a5e5e;             /* deep teal */
+}
+
+/* Every image caps at the width of whatever box holds it, the
+   same never-wider promise the column makes. Without this rule
+   the 800-pixel drive photo bursts out of the 640-pixel column.
+   height: auto keeps each image's shape once the width shrinks.
+   Chapter 8 builds on this pattern. */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Headings borrow Oswald from Google Fonts (linked in each
+   page's head). Oswald is a condensed sans, so its backups stay
+   sans: Arial where the download fails, then the safety net. */
+h1, h2 {
+    font-family: "Oswald", Arial, sans-serif;
+}
+
+/* The site's type scale in two decisions: a condensed face
+   carries a larger banner without shouting, and section titles
+   step down but stay clearly above body size. */
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+/* Deep teal accents the section headings and every figure caption.
+   The caption color moved here from a leftover inline style in the
+   gallery page. All four captions share one role, so one rule now
+   colors them all. The h1 stays off this list on purpose: it sits
+   on the club teal header, where deep teal is not a passing
+   pairing, so it wears the header's white instead. */
+h2, figcaption {
+    color: #1a5e5e;
+}
+
+/* Key reminders earn attention on every page that carries one.
+   Ink text on sunset orange is a passing pairing. Padding keeps
+   the note's words off its orange panel edges. */
+.reminder {
+    background-color: #f4a259;  /* sunset orange flags the note */
+    padding: 12px 16px;
+}
+
+/* The site's one meeting schedule, on the contact page only.
+   Clockwise from the top: 16 top, 16 right, 16 bottom, 40 left.
+   The left side keeps the browser's own 40 so the list markers
+   stay inside the sand panel instead of hanging past its edge.
+   The club teal accent runs along that same edge. */
+#meeting-times {
+    background-color: #deb887;  /* sand sets the schedule apart */
+    padding: 16px 16px 16px 40px;
+    border-left: 6px solid #268080;  /* club teal marks the schedule */
+}
+
+/* Stretch decision from Lab 4A: white plates behind the figures,
+   echoing the label plates in the club's illustration set. Deep
+   teal captions on white pass at 7.48 to 1. Lab 5A frames each
+   plate in sand, pads it so image and caption sit off the frame,
+   and spaces it: 24 above and below, zero at the sides, replacing
+   the browser's default 40-pixel side indents so plates use the
+   column's full width. */
+figure {
+    background-color: #ffffff;
+    border: 3px solid #deb887;  /* sand frames each figure plate */
+    padding: 16px;
+    margin: 24px 0;
+}
+
+/* The gallery page's main wears a role-named class, so these
+   rules reach that page's figure plates and no others. A
+   wrapping, gapped flex row lets the plates share lines when
+   the window allows and stack when it does not. */
+.drive-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+/* Two plates per line inside the readable column: the column
+   offers 608 pixels of content width, and two 296-pixel figures
+   plus one 16-pixel gap fill it exactly. Margins drop to zero
+   so the container's gap owns all the spacing. */
+.drive-gallery figure {
+    width: 296px;
+    margin: 0;
+}
+
+/* The decorative divider strip earns a pause between the guide
+   and the footer. An image is inline until told otherwise, and
+   auto side margins center a block: the tools Chapter 5's
+   comment waited for. 32 above and below keeps the pause. */
+.page-divider {
+    display: block;
+    margin: 32px auto;
+}

@@ -52,7 +52,7 @@ nav = [
   ] },
   { "Part III: Design for Every User" = [
     { "Chapter 7: UX and Web Design" = "chapters/chapter-07.md" },
-    # { "Chapter 8: Responsive Design and Media Queries" = "chapters/chapter-08.md" },
+    { "Chapter 8: Responsive Design and Media Queries" = "chapters/chapter-08.md" },
     # { "Chapter 9: Web Accessibility" = "chapters/chapter-09.md" },
   ] },
   # { "Part IV: Building Complete Sites" = [

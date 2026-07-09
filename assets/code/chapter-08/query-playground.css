@@ -1,0 +1,124 @@
+/* Query playground stylesheet for Chapter 8. The base rules come
+   first and serve every screen. The media queries live at the
+   bottom, each one below the base rule it adjusts, because at
+   equal specificity the later rule wins. The chapter's exercises
+   read these queries and predict what they do before dragging
+   the window to check. */
+
+/* Width means the visible box, the course baseline since
+   Chapter 5. */
+* {
+    box-sizing: border-box;
+}
+
+/* The club's own base: ink text on light sand, in the site's
+   body stack. margin: 0 keeps the banner and the card row
+   flush with the window edges, so the widths you read in
+   DevTools line up with the numbers in the queries. */
+body {
+    background-color: #fac78d;  /* light sand */
+    color: #333333;             /* ink */
+    margin: 0;
+    font-family: Verdana, Arial, sans-serif;
+    line-height: 1.5;
+}
+
+/* The banner band: white on deep teal passes at 7.48 to 1.
+   Everything on the flipping page background stays ink, so
+   every pairing on this page sits on the palette's passing
+   list at every width. */
+.page-banner {
+    background-color: #1a5e5e;  /* deep teal */
+    color: #ffffff;
+    padding: 32px 20px;
+}
+
+/* The banner title's base size. Two queries below adjust this
+   one declaration, one for narrow windows and one for wide
+   ones. In between, this base value is the only rule standing. */
+.banner-title {
+    font-size: 28px;
+}
+
+/* The row's title sits on the flipping page background, so it
+   inherits the body's ink. The side padding matches the row's
+   20px inset so the title lines up with the cards below it. */
+.row-title {
+    padding: 0 20px;
+}
+
+/* The card row: a wrapping flex line, the Chapter 6 pattern.
+   The sand panel and deep teal frame keep the row's edges
+   visible while cards change lines. */
+.update-row {
+    background-color: #deb887;  /* sand: the board behind the cards */
+    border: 2px solid #1a5e5e;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* One update card. The 260px width is deliberate: the row seats
+   fewer cards per line as the window narrows, so the wrap points
+   give you real widths to measure. The base padding is the value
+   a query below overrides on small screens. */
+.update-card {
+    background-color: #ffffff;  /* white card on the sand board */
+    border: 3px solid #268080;  /* club teal frames each card */
+    padding: 20px;
+    width: 260px;
+}
+
+/* Card headings sit on white cards only, where deep teal passes
+   at 7.48 to 1. The reading column's heading stays ink because
+   it sits on the page background, which changes color below. */
+.update-card h3 {
+    color: #1a5e5e;
+}
+
+/* The readable column, the Chapter 5 pattern: never wider than
+   560px, centered when the window offers more, padded so text
+   never touches the window edge. A ceiling, not a floor. */
+.reading-column {
+    max-width: 560px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ================================================================
+   MEDIA QUERIES. Every override below adjusts a base rule above.
+   Read each query aloud before you drag: "when the window is at
+   most this wide" or "when the window is at least this wide."
+   ================================================================ */
+
+/* The small-screen block. The background flip is the loudest
+   proof a query fired: no measuring, no squinting. The card
+   padding tightens at the same width, because a small screen
+   cannot afford 20 pixels of white on every card edge. */
+@media (max-width: 600px) {
+    body {
+        background-color: #f4a259;  /* sunset orange, ink still passes */
+    }
+
+    .update-card {
+        padding: 10px;
+    }
+}
+
+/* The banner title steps down when the window is at most 500px
+   wide, so the heading stops crowding a phone-width banner. */
+@media (max-width: 500px) {
+    .banner-title {
+        font-size: 22px;
+    }
+}
+
+/* The banner title steps up when the window is at least 900px
+   wide. Between these two queries neither applies, and the
+   base 28px rule stands alone. */
+@media (min-width: 900px) {
+    .banner-title {
+        font-size: 36px;
+    }
+}
