@@ -5,6 +5,122 @@
 **Live site:** https://jor2050111.github.io/cis133/
 **Task list:** cis133-fall26 (`export CLAUDE_CODE_TASK_LIST_ID=cis133-fall26`)
 
+## What Was Done (2026-07-08 Chapter 11 session)
+
+* Wrote and shipped `book/chapters/chapter-11.md` (HTML Forms):
+  4 content sections (the form and the label contract, the input
+  family, where the data goes, the accessible styled form), 5 Try
+  It Yourself exercises, 4 Quick Checks, Skills Lab 11A, 392
+  sentences at 14.5 words average, zero at 35+. 493 lines, 13
+  code examples. Same pipeline as Chapters 4-10.
+* Consolidated Module 10's three draft MLOs to house format:
+  MLO-11.1 (Apply) construct labeled form controls -> 11.1-11.2,
+  MLO-11.2 (Apply) DEMONSTRATE how submitted data travels
+  (elevated from the draft's Understand-level "explain": lab Part
+  3 literally demonstrates it) -> 11.3, MLO-11.3 (Create) design
+  the join page collecting only what it needs -> 11.4 plus lab.
+  Rubric byte-identical to chapter-01.md.
+* Built `assets/code/chapter-11/`: `starter-site/` (the Lab 10A
+  model solution verbatim: 4 pages with the events table and
+  nav-wrap, cmp-verified), `club-palette.txt` (chain
+  ch04->...->ch11), `join-page-notes.txt` (officers' voice:
+  required name+email, 5-option select, 4 interest checkboxes,
+  questions textarea, the "and nothing else" line, the data
+  promise sentence), `session-request.html` + `request-styles.css`
+  (the tutoring center's complete labeled form: the TIY
+  read-predict-verify object, no :focus rule so the lab adds
+  focus styling), `skills-lab-11a-answers.txt`, README.
+* Lab 11A model solution (scratchpad chapter-11-model-solution/,
+  becomes Chapter 12's starter): join.html (8 for/id-paired
+  labels, required+autocomplete on name/email, fieldset/legend
+  around the interest checkboxes sharing name="interest", the
+  empty-value "Choose one" first option on the optional select,
+  the data promise in .reminder, an honest no-server sentence
+  planting Chapter 12), Join the Club link on ALL FIVE navs
+  (Guide, Gallery, Events, Join, Contact), club-styles.css form
+  block (label display block stacking, fieldset label inline,
+  controls width 100% + padding + restated type, fieldset input
+  width auto, teal 2px :focus ring on every control, button
+  club-teal/white with hover/focus twins, one-checkbox-per-p
+  stacking with element selectors only).
+* SELECTOR DISCIPLINE HELD: Chapter 10's last-new-selector claim
+  is binding law. Chapter 11 introduces NO new selector kinds
+  (no attribute selectors anywhere), grep-verified by two review
+  agents.
+* All validation executed (2026-07-08): Nu zero messages on all
+  10 HTML files (validator.nu: w3.org Cloudflare-challenged all
+  session, parity re-run on the pre-term list). Action-less forms
+  and the autocomplete tokens draw nothing. Jigsaw 0 errors on
+  all 3 stylesheets. Contrast pairings all on the palette's
+  printed list (focus ring 3.04 vs light sand passes the 3:1
+  non-text edge). All 5 Further Reading URLs 200 with zero
+  redirects.
+* BEHAVIORAL verification executed (headless browser over http,
+  plus the orchestrator's file:// proof with headless Chrome):
+  label clicks focus inputs and select radios, shared-name radios
+  exclusive and split names let both check, GET submit lands on
+  the same page with exactly
+  ?student-name=Jordan+Ortiz&student-email=jordan%40example.org&subject=algebra&session-type=drop-in&notes=
+  (space -> +, @ -> %40, empty named control travels, untouched
+  select sends its first option), a nameless control stays home,
+  unchecked radio groups send nothing, empty required blocked
+  with the current-Chrome bubble (quoted hedged), @-less email
+  blocked, placeholder vanishes at the first character, repeated
+  interest= pairs travel for multi-checked boxes, model join
+  page clean at 375/641/1280. FILE:// PROVEN: the same submit
+  works identically from file:// (auto-submit probe, query
+  string received on the file URL), so TIY 11.3's address-bar
+  read works where students actually work. POST probe: python
+  http.server answers 501, so POST stays concept-only.
+* Added 14 terms to `book/glossary.md` (checkbox, fieldset
+  element, form element, GET, input element, label element,
+  legend element, name attribute, name-value pair, placeholder,
+  POST, radio button, select element, textarea element).
+  query string, client-server model, and pseudo-class referenced,
+  never re-added.
+* Ran the three review agents. Applied required fixes: the
+  28-line form-geometry CSS block split in two at the
+  labels/controls boundary (the 25-line ceiling), and MLO-11.1's
+  "text areas" unified to "textareas" (glossary spelling).
+  Applied judgment calls: the temporal "just" in TIY 11.1's
+  Explain reworded ("a moment ago"), Quick Check 11.1 #3 given a
+  fresh newsletter-signup transfer scenario (it had reused the
+  worked example's exact control, leaving the set with two recall
+  anchors). Skipped with rationale: glossary entries for label
+  and placeholder state the click and vanish behaviors that TIYs
+  11.1/11.5 discover (a glossary's job is the complete
+  definition, both sit after their TIYs in linear order:
+  structural tradeoff, precedent stands), three 15-16 line CSS
+  blocks (under the ceiling, Chapter 10 precedent).
+* Uncommented the Chapter 11 nav line. `zensical build --clean`:
+  no issues.
+
+**Chapter 11 design notes:**
+
+* Promises paid BY NAME: Ch 9's 9.4 label-partnership plant
+  (quoted verbatim in 11.1), Ch 1's query string + Lab 1A
+  dissection (11.3, the student's own form now writes one), Ch
+  1 line 293's collection promise (quoted in 11.3, drives lab
+  Part 3's refusal defense and Q&A Q2), Ch 1 line 284's HTTPS
+  rule (one POST/GET callback sentence), Ch 10's Looking Ahead
+  and Ch 7's brief (the join page, the officers' name-and-email
+  ask quoted in the intro).
+* Promises planted (pay in Ch 12, explicitly): the server story
+  (the form's missing mail carrier: what receives the pairs,
+  hosting, secure transfer), the home page, the publish, the
+  pre-flight check. The join page's own no-server sentence
+  plants it in the club's voice.
+* One-mention treatments: password/number/date/file input types,
+  input type="submit" as the older spelling, POST (conceptual
+  only, NO exercise: the 501 probe is why). Do not deepen.
+* Pre-term verification (5 min in a real browser): stock-Chrome
+  validation bubble wording and default focus-ring color (the
+  chapter names no ring color on purpose), the button hover
+  feel on join.html, VoiceOver on join.html (label announced
+  with input, legend with each checkbox), one ceremonial file://
+  submit of session-request.html, w3.org validator parity for
+  the 10 files.
+
 ## What Was Done (2026-07-08 Chapter 10 session, opens Part IV)
 
 * Wrote and shipped `book/chapters/chapter-10.md` (HTML Tables):

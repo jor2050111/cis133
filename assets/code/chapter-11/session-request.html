@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Request a Session | Campus Tutoring Center</title>
+    <link rel="stylesheet" href="request-styles.css">
+</head>
+<body>
+    <!-- Campus Tutoring Center: session request form. Chapter 11's
+         Try It Yourself exercises read, predict, and experiment on
+         this complete page. -->
+    <h1>Request a Tutoring Session</h1>
+    <p>Tell the tutoring center who you are and what you want to
+    work on. A coordinator matches every request with a tutor.</p>
+
+    <form>
+        <label for="student-name">Full name (required)</label>
+        <input type="text" id="student-name" name="student-name"
+        required>
+
+        <label for="student-email">Email (required)</label>
+        <input type="email" id="student-email" name="student-email"
+        required>
+
+        <label for="subject">Subject</label>
+        <select id="subject" name="subject">
+            <option value="algebra">Algebra</option>
+            <option value="biology">Biology</option>
+            <option value="chemistry">Chemistry</option>
+            <option value="writing">Writing</option>
+        </select>
+
+        <fieldset>
+            <legend>Session type</legend>
+            <input type="radio" id="type-drop-in"
+            name="session-type" value="drop-in">
+            <label for="type-drop-in">Drop-in</label>
+            <input type="radio" id="type-appointment"
+            name="session-type" value="appointment">
+            <label for="type-appointment">Appointment</label>
+        </fieldset>
+
+        <label for="notes">Notes for your tutor</label>
+        <textarea id="notes" name="notes" rows="4"
+        placeholder="Example: I have a quiz on Friday and want help with chapter 4."></textarea>
+
+        <button>Request a session</button>
+    </form>
+</body>
+</html>

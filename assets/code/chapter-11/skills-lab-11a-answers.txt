@@ -1,0 +1,99 @@
+=====================================================================
+CIS133 SKILLS LAB 11A: THE JOIN PAGE
+Written Answers
+=====================================================================
+
+Name:
+Date:
+
+This file travels inside your submission folder along with the
+updated club site (five pages now), the extended stylesheet, and
+your checklist copy. Type your answers directly below each numbered
+prompt. Keep the headings and numbering in place so your grader can
+follow your work.
+
+---------------------------------------------------------------------
+PART 1: FOUNDATION (the form and the nav)
+---------------------------------------------------------------------
+
+1.A  Log the build of join.html: which page you saved-as from, the
+     control you chose for each item in the officers' notes, and
+     how each label is paired with its control.
+
+     Page used for save-as:
+     Control for each field:
+     How labels are paired:
+
+1.B  Record the navigation update and the officers' promise: the
+     link text you chose, where it sits in the bar, the pages you
+     touched, where the data-promise sentence landed on the page,
+     and the validator message count for each of the five pages.
+
+     Link text and position:
+     Pages touched:
+     Promise sentence location:
+     Validation results:
+
+---------------------------------------------------------------------
+PART 2: APPLICATION (the helping attributes and the style block)
+---------------------------------------------------------------------
+
+2.A  Log the helping attributes: which controls got required and
+     autocomplete, how the labels mark the required fields in
+     text, and any placeholder you wrote or refused (and why).
+
+     Required and autocomplete:
+     Required marked in text:
+     Placeholder decisions:
+
+2.B  Log the form style block you added to club-styles.css: how
+     labels and controls stack, the focus signal every control
+     shows, and every color pairing the form wears with its ratio
+     quoted from the palette's passing list.
+
+     Label and control stacking:
+     Focus signal:
+     Pairings and ratios:
+
+---------------------------------------------------------------------
+PART 3: EXTENSION (the demonstration and the audit)
+---------------------------------------------------------------------
+
+3.A  Log the submit demonstration: what you typed, the URL the
+     browser wrote after Submit, which name-value pairs traveled,
+     and whether any control stayed home (and why).
+
+     What you typed:
+     The URL after Submit:
+     Pairs that traveled:
+     Any control that stayed home:
+
+3.B  Log the Chapter 9 habit run on the new page: your checklist
+     findings, the Tab walk, and both validators' message counts.
+     State where the data would go if the club had a server, and
+     why the page makes no promise it cannot keep. Close with the
+     collection defense: name one field a lesser form would have
+     added, and why refusing it honors the Chapter 1 promise.
+
+     Checklist findings and Tab walk:
+     Validation results:
+     Where the data would go with a server:
+     The collection defense:
+
+---------------------------------------------------------------------
+QUESTIONS & ANALYSIS
+---------------------------------------------------------------------
+
+Q1.  See lab Questions & Analysis.
+
+     Your answer:
+
+Q2.  See lab Questions & Analysis.
+
+     Your answer:
+
+
+=====================================================================
+END OF ANSWERS FILE
+Submit the folder: skills-lab-11a-lastname (zipped)
+=====================================================================

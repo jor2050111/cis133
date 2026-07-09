@@ -60,6 +60,8 @@ This glossary is the single source of truth for all technical terms used in the 
 
 **cascade:** The tie-breaking system CSS uses when more than one rule targets the same element. An inline style wins over stylesheet rules, and among rules with an equal claim, the later one wins.
 
+**checkbox:** The form control (`<input type="checkbox">`) that gives one option its own independent yes or no. Only a checked box sends its name-value pair when the form submits.
+
 **child combinator:** The `>` written between two selectors, which matches direct children only. `nav > a` matches an anchor one level inside the nav and nothing deeper.
 
 **child element:** An element nested directly inside another element. Every element inside a `<header>` is a child of that header.
@@ -136,6 +138,8 @@ This glossary is the single source of truth for all technical terms used in the 
 
 **feedback:** The UX principle that a site answers every visitor action with a visible response, such as a link that lights up for both the pointer and the Tab key.
 
+**fieldset element:** The element (`<fieldset>`) that wraps a group of related form controls, such as a radio group, and draws its boundary. Its legend names the question the group answers.
+
 **figcaption element:** The element (`<figcaption>`) that supplies a figure's visible caption. It lives inside a `<figure>`.
 
 **figure element:** The element (`<figure>`) that wraps self-contained illustrative content, such as a chart or diagram, often paired with a `<figcaption>`.
@@ -164,6 +168,8 @@ This glossary is the single source of truth for all technical terms used in the 
 
 **footer element:** The landmark (`<footer>`) that holds a region's closing content, such as contact information or copyright lines.
 
+**form element:** The element (`<form>`) that wraps a page's input controls and owns the submit trip. When the form submits, the browser bundles its controls' names and values and sends them together.
+
 **functional image:** An image that performs a job, usually as the content of a link. Its alt text names the destination or action, never the picture.
 
 ## G
@@ -171,6 +177,8 @@ This glossary is the single source of truth for all technical terms used in the 
 **gap:** The container property that sets the space between neighboring flex items. The container owns the spacing, so the items need no margins of their own.
 
 **generic font family:** A font category rather than a font: `serif`, `sans-serif`, or `monospace`. The browser always owns a font in each category, so a font stack ending in one can never come up empty.
+
+**GET:** The default submit method, which sends a form's name-value pairs in the URL as a query string. It fits requests that are safe to repeat, bookmark, and share, such as searches.
 
 **GIF:** A raster image format limited to 256 colors. It supports simple frame-by-frame animation, which is the main reason it survives.
 
@@ -210,6 +218,8 @@ This glossary is the single source of truth for all technical terms used in the 
 
 **inline style:** CSS written into a single element's `style` attribute. It styles that one element only and puts presentation back inside the content file.
 
+**input element:** The empty element (`<input>`) that renders a single form control. Its `type` attribute picks the control's personality: `text`, `email`, `radio`, `checkbox`, and more.
+
 **internal stylesheet:** CSS rules written inside a `<style>` element in a page's head. Its rules reach that one page only.
 
 **Internet:** The global network of connected devices and the physical infrastructure that links them. The web runs on top of the Internet.
@@ -228,7 +238,11 @@ This glossary is the single source of truth for all technical terms used in the 
 
 ## L
 
+**label element:** The element (`<label>`) that holds a form control's visible name. Its `for` attribute matches the control's `id`, so tools announce the label with the control and clicks on the label operate it.
+
 **landmark:** A semantic element that labels a major region of a page, such as `<header>`, `<nav>`, `<main>`, or `<footer>`. Assistive technology builds a jump menu from a page's landmarks.
+
+**legend element:** The element (`<legend>`), written first inside a fieldset, that names the question the group of controls answers. A screen reader announces it alongside each option in the group.
 
 **line-height:** The CSS property that sets the vertical room each line of text occupies. A unitless value multiplies the element's own font size, and 1.5 is a readable default for body text.
 
@@ -260,6 +274,10 @@ This glossary is the single source of truth for all technical terms used in the 
 
 ## N
 
+**name attribute:** The attribute that labels a control's answer for the trip: submitted data travels as the control's `name` paired with its current value. A control without one sends nothing.
+
+**name-value pair:** One piece of submitted form data: a control's `name` joined to its current value, such as `subject=algebra`. Pairs travel joined by `&`.
+
 **nav element:** The landmark (`<nav>`) that holds a set of major navigation links, conventionally written as a list of links.
 
 **navigation label:** The visible text of a navigation bar link. A good label lets a visitor predict the page behind it before clicking.
@@ -286,9 +304,13 @@ This glossary is the single source of truth for all technical terms used in the 
 
 **perceivable:** The POUR principle that content must be able to reach every visitor's senses in some form, such as alt text standing in for images and text that contrasts with its background.
 
+**placeholder:** The attribute that shows a gray hint inside an empty form control and disappears once the visitor types. A placeholder may supplement a label but never replace one.
+
 **plain text:** A file format that contains nothing but characters, with no hidden formatting data. HTML files are plain text.
 
 **PNG (Portable Network Graphics):** A raster image format with lossless compression and transparency support. The standard choice for illustrations, screenshots, and any image that needs see-through regions.
+
+**POST:** The submit method that sends a form's name-value pairs inside the request instead of the URL. It fits private or state-changing submissions, such as a signup.
 
 **POUR:** The four principles WCAG organizes its rules under: perceivable, operable, understandable, and robust.
 
@@ -305,6 +327,8 @@ This glossary is the single source of truth for all technical terms used in the 
 **query string:** The optional part of a URL that follows a question mark. It carries extra information, such as search terms, to the server.
 
 ## R
+
+**radio button:** The form control (`<input type="radio">`) for one choice among a few. Radios that share a `name` form one group, and the group allows a single selection.
 
 **raster image:** An image stored as a grid of colored pixels. Scaling it past its true size turns it soft and blocky. PNG, JPEG, and GIF are raster formats.
 
@@ -329,6 +353,8 @@ This glossary is the single source of truth for all technical terms used in the 
 **search engine:** A software system that finds pages on the web that match what you ask for. It works in three stages: crawling, indexing, and ranking.
 
 **section element:** The landmark (`<section>`) that groups one thematically related chunk of a page under its own heading.
+
+**select element:** The element (`<select>`) that offers one choice among many in a compact menu. Each choice is an `<option>` with its own value, and an untouched menu submits its first option.
 
 **selector:** The part of a CSS rule that names which elements the rule styles.
 
@@ -379,6 +405,8 @@ This glossary is the single source of truth for all technical terms used in the 
 **tbody element:** The element (`<tbody>`) that groups a table's data rows apart from its header row. Browsers build one silently when a file omits it, so writing it keeps the file honest with the page the browser serves.
 
 **text-align:** The CSS property that sets how lines of text sit inside their box: `left`, `center`, or `right`.
+
+**textarea element:** The element (`<textarea>`) that renders a multi-line text box for longer answers. Unlike input it is a container element, and its `rows` attribute suggests a visible height.
 
 **text-decoration:** The CSS property that controls lines drawn on text, such as the underline every browser gives links. Removing link underlines removes a signal visitors rely on.
 

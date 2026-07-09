@@ -1,0 +1,71 @@
+=====================================================================
+PC COMPUTER CLUB: JOIN PAGE NOTES
+From the club officers, Fall 2026
+=====================================================================
+
+The events page shipped, and it already answers the question we
+hear most. Thank you. Now build the second page from our expansion
+brief: the join page.
+
+Here is the problem it solves. At every drive, interested students
+give an officer their name on a scrap of paper. The scraps get
+lost. We want the site to collect each student's name and email so
+an officer can invite them to the next meeting. No scraps.
+
+---------------------------------------------------------------------
+WHAT THE FORM MUST COLLECT
+---------------------------------------------------------------------
+
+REQUIRED. The form cannot do its job without these two.
+
+* Full name.
+* Email address. This is how we invite people, so it has to be a
+  working address.
+
+OPTIONAL. A student can skip all of these and still join the list.
+
+* How they heard about the club. Give them one menu with these
+  choices:
+    - A flyer
+    - A friend
+    - A campus event
+    - A web search
+    - Other
+* What they are interested in. Let them pick any, all, or none:
+    - Drop-off days
+    - Fix-it workshops
+    - The fall drive
+    - General meetings
+* Questions for the officers. A box where they can write a sentence
+  or two if they want. Most will leave it empty, and that is fine.
+
+---------------------------------------------------------------------
+AND NOTHING ELSE
+---------------------------------------------------------------------
+
+No birthdays. No phone numbers. No student IDs. An officer only
+needs a name to greet someone and an email to reach them. Every
+extra question we ask is one more reason to walk away from the
+form, and one more piece of someone's information we would have to
+guard.
+
+Put this sentence on the page, near the form, where every visitor
+can read it before they type:
+
+    We use what you share here only to email you about club
+    events.
+
+---------------------------------------------------------------------
+ONE MORE THING
+---------------------------------------------------------------------
+
+The join page should match the rest of the site: same colors, same
+logo, same navigation bar. Add it to the menu on every page so a
+visitor can join from anywhere.
+
+Send questions to computer-club@example.org. The officers meet
+Tuesdays.
+
+=====================================================================
+END OF NOTES
+=====================================================================

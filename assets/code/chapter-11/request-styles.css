@@ -1,0 +1,59 @@
+/* Campus Tutoring Center: request form stylesheet. Readable base
+   type and stacked labels, nothing more. Chapter 11 and Skills
+   Lab 11A make the styling decisions this file leaves out. */
+
+body {
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333333;             /* ink on white */
+    background-color: #ffffff;
+    max-width: 640px;           /* the course's readable column */
+    margin: 24px auto;
+    padding: 0 16px;
+}
+
+/* Each label sits on its own line above its control, so the eye
+   travels straight down one column. */
+label {
+    display: block;
+    margin: 16px 0 4px;
+}
+
+/* Inside the fieldset, each choice keeps its label beside its
+   control on one shared line. */
+fieldset label {
+    display: inline;
+    margin: 0;
+}
+
+/* Controls take the column's full width, with padding so typed
+   text sits off the walls. Form controls ignore the page's font
+   settings unless told, so these rules restate the site's type. */
+input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #333333;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 1rem;
+}
+
+/* The radio controls live inside the fieldset, and each needs
+   only its own small box, not the full column. */
+fieldset input {
+    width: auto;
+    padding: 0;
+}
+
+fieldset {
+    border: 1px solid #333333;
+    padding: 16px;
+    margin: 16px 0;
+}
+
+button {
+    padding: 12px 24px;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 1rem;
+    margin-top: 16px;
+}
