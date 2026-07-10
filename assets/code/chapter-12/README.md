@@ -90,8 +90,12 @@ the site does not already wear.
 
 All images are PNG and share one flat-illustration style: the
 fictional club's matching design set. The seven files in
-`starter-site/images/` are unchanged from the Chapter 11 pack, and
-their alt text is already written into the site's pages.
+`starter-site/images/` are byte-identical to the Chapter 11 pack's
+copies (one checksum per file name across the whole course
+pack, verified), and their alt text is already written into
+the site's pages. Each file's pixel dimensions and role are
+documented once, in the Chapter 3 pack README's image table,
+and that table applies to these copies unchanged.
 
 ## Source and license
 

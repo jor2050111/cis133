@@ -23,7 +23,7 @@ from PIL import Image, ImageDraw, ImageFont
 BASE_SEED = 133
 OUT_DIR = Path(__file__).resolve().parents[1] / "chapter-03"
 
-# One palette across all eight images keeps the set coherent
+# One palette across all nine images keeps the set coherent
 SKY = (244, 162, 89)        # desert sunset orange
 SKY_LIGHT = (250, 199, 141)
 GROUND = (222, 184, 135)    # sandy tan

@@ -20,9 +20,10 @@ paragraphs, list items, link text, and addresses. Labels in
 [BRACKETS] describe each piece so students can match content to the
 right element. Students copy the text and type only the markup.
 
-**broken-contact.html** is the club's contact page with a small
-number of planted markup errors for the Part 3 validator repair
-task. Students copy it into their lab folder as `contact.html`, run
+**broken-contact.html** is the club's contact page with exactly
+four planted markup errors for the Part 3 validator repair task.
+One defect can cascade into several messages, so the W3C
+validator reports exactly 8 messages on the file as shipped. Students copy it into their lab folder as `contact.html`, run
 it through the W3C validator, and fix every error. The repaired page
 validates with zero messages.
 

@@ -61,7 +61,7 @@ the submission folder unrenamed.
 
 Written for CIS133 by the course author. The PC Computer Club and
 its events are fictional, and the club's email address uses the
-reserved example.org domain. All eight images are original
+reserved example.org domain. All nine images are original
 illustrations rendered by the course's seeded generator script
 (`assets/code/_generators/generate_chapter03_images.py`), so they
 carry no third-party license. The chart's numbers are fictional and
