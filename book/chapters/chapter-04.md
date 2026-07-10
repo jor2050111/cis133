@@ -501,10 +501,10 @@ Answer both questions in the answers file. These answers carry significant rubri
 ### Rubric: Skills Lab 4A
 
 This lab is graded with the standard
-[Skills Lab Rubric](../skills-lab-rubric.md): 16 points, four criteria
-at 4 points each (Code Accuracy and Efficiency, Output Quality,
-Documentation and Code Comments, and Analysis, Interpretation, and
-Response to QUESTION(s)).
+[Skills Lab Rubric](../skills-lab-rubric.md): four criteria at
+4 points each, 16 points total. The criteria are Code Accuracy and
+Efficiency, Output Quality, Documentation and Code Comments, and
+Analysis, Interpretation, and Response to QUESTION(s).
 
 ---
 
