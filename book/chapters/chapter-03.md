@@ -50,7 +50,7 @@ cannot recover it afterward.</p>
 
 The first sentence stresses which Friday. The second flags a warning that protects the visitor's data. Both choices are about meaning, and the bold and italic rendering is the browser's default costume for that meaning.
 
-Now the misunderstood part. HTML also has `<b>` and `<i>`, which produce the same bold and italic pixels while promising nothing about meaning. They are typographic conventions without emphasis: `<b>` for drawing the eye (a product name in a review), `<i>` for text set off from normal prose (a book title, a ship's name, a foreign phrase). Most screen readers, at their default settings, voice all four the same way. The durable difference is what the file records: `<strong>` and `<em>` store meaning where any reader, human or software, can find it, and `<b>` and `<i>` store only a look.
+Now the misunderstood part. HTML also has `<b>` and `<i>`, two holdovers that mark text for visual distinction while promising nothing about meaning. They are typographic conventions without emphasis: `<b>` for drawing the eye (a product name in a review), `<i>` for text set off from normal prose (a book title, a ship's name, a foreign phrase).
 
 The decision rule: if removing the markup would change what the sentence MEANS, use `<strong>` or `<em>`. If it would only change how the text LOOKS, you are probably reaching for presentation, and Chapter 4 gives you CSS, the right tool for looks.
 
@@ -75,6 +75,8 @@ Render that page and the div and span change nothing you can see. They exist as 
 **Run:** Add both paragraphs to a practice file in your `cis133` folder, save, and refresh. Look closely. Then right-click each phrase and Inspect to confirm which element produced which pixels.
 
 **Explain:** In 1-2 sentences, explain why identical pixels do not make the two elements interchangeable, and name one reader of your file that treats them differently.
+
+One honest caution now that you have looked: most screen readers, at their default settings, voice all four elements the same way. The durable difference is what the file records. `<strong>` and `<em>` store meaning where any reader, human or software, can find it. `<b>` and `<i>` store only a look.
 
 ### Quick Check 3.1 ✅
 
@@ -183,7 +185,7 @@ The **img element** (`<img>`) embeds an image into a page. It is an empty elemen
 alt="Three green cacti in a gravel garden under an orange sky">
 ```
 
-Save a practice page with that line at your `cis133` root and the browser displays the club's cactus illustration. A screen reader reads the alt text aloud, then says "image." An image with no pixels available shows the alt text in place. One attribute serves three situations, which is why the validator treats a missing `alt` as an error, not a style complaint.
+Save a practice page with that line at your `cis133` root and the browser displays the club's cactus illustration. A screen reader reads the alt text aloud, then says "image." What happens when the pixels cannot arrive at all? The next exercise breaks the path on purpose. The validator's opinion hints at the stakes: it treats a missing `alt` as an error, not a style complaint.
 
 `<img>` has one more surprise: it is an inline element. Chapter 2's rule still holds. An image flows along inside a line of text like one oversized character, and it starts no new line on its own.
 
@@ -205,7 +207,7 @@ alt="Three green cacti in a gravel garden under an orange sky"
 width="400" height="400">
 ```
 
-The numbers should state the image's true size, 400 by 400 for this file. The browser trusts your numbers over the file's truth: declare a wrong pair and it stretches or squashes the pixels to obey you. So why declare at all? Because the browser reserves that space before the file arrives. Without declared dimensions, a slow-loading image shoves the whole page downward when it lands, the jump you have felt on sluggish sites a hundred times.
+The numbers should state the image's true size, 400 by 400 for this file. Whose numbers win when your markup and the file disagree? The next exercise settles it. Why declare at all? Because the browser reserves that space before the file arrives. Without declared dimensions, a slow-loading image shoves the whole page downward when it lands, the jump you have felt on sluggish sites a hundred times.
 
 Where do the true numbers come from? Your data pack's README lists every image's pixels, and your operating system shows them in a file's properties or Get Info panel.
 
@@ -288,7 +290,7 @@ File size is the recurring stake in every row. Chapter 1 traced a page request a
 
 **Run:** Find the three files in your `cis133` folder and check their sizes in your file manager (List view on Mac, Details view on Windows).
 
-**Explain:** The chart outweighs the drive scene at about 13 KB to 11 KB, despite holding barely two-thirds as many pixels, and the logo comes in near 3 KB. In 1-2 sentences, explain what besides pixel count drives a PNG's size.
+**Explain:** Your file manager just handed you the true ranking. In 1-2 sentences, explain what besides pixel count drives a PNG's size, using the pair whose order surprised you most.
 
 ### Organizing a Real Site
 

@@ -110,7 +110,7 @@ This course leans on `flex-start`, `center`, `flex-end`, and `space-between`. Th
 
 ### align-items: Placing Items on the Cross Axis
 
-**align-items** places items along the cross axis, and its default explains something you have already watched. The default is `stretch`: every item stretches across the cross axis to match the line, so a row's boxes all stand as tall as the tallest content. That is what TIY 6.1 did to the four cards' heights. The other everyday values are `center`, `flex-start`, and `flex-end`, and none of them stretches. Each item keeps its natural height and takes its assigned position: centered on the line, or hugging one edge of it.
+**align-items** places items along the cross axis, and its default explains something you have already watched. The default is `stretch`: every item stretches across the cross axis to match the line, so a row's boxes all stand as tall as the tallest content. That is what TIY 6.1 did to the four cards' heights. The other everyday values are `center`, `flex-start`, and `flex-end`, and the next exercise has you call what one of them does to those four heights.
 
 Between the two properties, remember the split. `justify-content` answers "where along the line," and `align-items` answers "where across it."
 

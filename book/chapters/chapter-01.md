@@ -138,7 +138,7 @@ Every time you visit a site by name, DNS works in the background:
 3. The DNS server answers with the number, such as 34.193.144.129.
 4. Your browser sends the page request to the server at that address.
 
-The lookup takes milliseconds, and your browser remembers recent answers so repeat visits skip the line. You only notice DNS when it fails. Mistype a domain and no DNS server can answer, so the browser gives up before any page request is ever sent. That failure looks different from a missing page, and the Try It below shows you both.
+The lookup takes milliseconds, and your browser remembers recent answers so repeat visits skip the line. You mostly notice DNS when it fails. Mistype a domain and no DNS server can answer the lookup. The Try It below stages that failure beside a different kind of failure, so you can compare what the browser does with each.
 
 ### URLs: The Complete Address
 
@@ -197,7 +197,7 @@ A **search engine** is a software system that finds pages on the web that match 
 2. Indexing. The engine stores what the crawlers found in a giant, searchable catalog.
 3. Ranking. When you search, the engine sorts matching pages by how useful it predicts each one will be.
 
-Ranking is the stage with consequences. Every engine uses its own recipe of signals: how well the page matches your words, how many other sites link to it, how fresh it is, and hundreds more. Different recipes produce different results, which is why two engines can answer the same question differently. The results page mixes those ranked findings with paid advertisements, and part of reading results well is telling the two apart.
+Ranking is the stage with consequences. Every engine uses its own recipe of signals: how well the page matches your words, how many other sites link to it, how fresh it is, and hundreds more. No two engines weigh the signals the same way. The results page mixes those ranked findings with paid advertisements, and part of reading results well is telling the two apart.
 
 Search predates the web itself, and each generation of engines added a piece of what you now take for granted:
 
@@ -279,7 +279,7 @@ Ethics online reaches past copyright. Consider three examples: insulting someone
 
 Section 1.2 introduced HTTPS as the secure protocol. Here is what it protects you from. Traffic between your browser and a server passes through many machines you do not control. Over plain HTTP, anyone along the way can read that traffic, including passwords and card numbers. HTTPS encrypts the conversation using a technology called **SSL/TLS**, so intercepted traffic reads as gibberish.
 
-Encryption alone is not enough. You also need proof that the server on the other end is who it claims to be. A **digital certificate** is a file, issued by a trusted authority, that proves a website's identity and enables its encrypted connections. Your browser checks the certificate on every HTTPS visit and shows a padlock (or a tune icon in some browsers) when it verifies. When a certificate is missing, expired, or does not match the site, the browser throws a full-page warning instead. Take those warnings seriously.
+Encryption alone is not enough. You also need proof that the server on the other end is who it claims to be. A **digital certificate** is a file, issued by a trusted authority, that proves a website's identity and enables its encrypted connections. Your browser checks the certificate on every HTTPS visit. When a certificate is missing, expired, or does not match the site, the browser throws a full-page warning instead. Take those warnings seriously.
 
 The developer's rule is simple: never send private information through a page whose address starts with `http://`, and never ask your visitors to. When your final project collects anything from a user, it should travel over HTTPS.
 

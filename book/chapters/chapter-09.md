@@ -144,7 +144,7 @@ This is not a new law. Chapter 3 demanded descriptive link text, and Chapter 7's
 
 ### The Keyboard Walk
 
-The last structural demand is **keyboard navigation**: operating a page entirely from the keyboard, with Tab stepping forward through its interactive elements and Shift plus Tab stepping back. Three things must be true. Every interactive element is reachable. The order makes sense, and on your pages it will, because focus follows source order, the same top-to-bottom order the markup reads in. And the current stop is always visible.
+The last structural demand is **keyboard navigation**: operating a page entirely from the keyboard, with Tab stepping forward through its interactive elements and Shift plus Tab stepping back. Three things must be true. Every interactive element is reachable. The order makes sense to a visitor working through the page. And the current stop is always visible.
 
 That last demand is Chapter 6's law grown up: never remove a focus outline without a replacement at least as visible. WCAG states its rules as numbered success criteria, and this one is criterion 2.4.7, Focus Visible. That citation is a naming sample, not the start of a catalog, and it is the only criterion number this course asks you to recognize.
 
@@ -237,15 +237,13 @@ The same rule guards a habit from Chapter 5. Links inside body text are told apa
 
 ### Type a Visitor Can Resize
 
-Chapter 5 introduced `px` and `rem` as two different promises and saved the payoff for now. A pixel value is a fixed promise: `16px` renders the same for every visitor, whatever their settings say. A `rem` is a proportional promise: `1rem` means the root element's text size. That size comes from the visitor's own browser default (16 pixels until the visitor raises it) as long as no stylesheet resets the root. Many low-vision visitors raise that default once and leave it raised. Text sized in `rem` grows to meet them. Text sized in `px` ignores the request.
+Chapter 5 introduced `px` and `rem` as two different promises and saved the payoff for now. A pixel value is a fixed promise: `16px` renders the same for every visitor, whatever their settings say. A `rem` is a proportional promise: `1rem` means the root element's text size. That size comes from the visitor's own browser default (16 pixels until the visitor raises it) as long as no stylesheet resets the root. Here is why the two promises matter: many low-vision visitors raise that default once and leave it raised, and the two units answer that request differently. The rem experiment at the end of this section stages the difference so you can watch it.
 
-Zoom does not make the setting redundant. Zoom is a per-page chore repeated on every site, while the default size is set once and follows the visitor everywhere, and only `rem` text listens to it. Converting is one division, the `px` value over 16:
+Zoom does not make the setting redundant. Zoom is a per-page chore repeated on every site, while the default size is set once and follows the visitor everywhere. Converting is one division, the `px` value over 16:
 
 ```css
 /* The tutoring center's type, converted. Divide each px value
-   by the 16px default: 16 / 16 = 1rem, 24 / 16 = 1.5rem. For
-   a visitor whose default is raised to 20px, these rules now
-   render at 20px and 30px instead of staying frozen. */
+   by the 16px default: 16 / 16 = 1rem, 24 / 16 = 1.5rem. */
 body {
     font-size: 1rem;      /* was 16px */
 }

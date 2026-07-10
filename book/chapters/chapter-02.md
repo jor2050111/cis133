@@ -125,7 +125,7 @@ Walk it line by line:
 | `<html lang="en">` | The root element. Every other element lives inside it. |
 | `<head>` | The **head** holds information about the page: things the browser needs that never paint on screen. |
 | `<meta charset="UTF-8">` | Declares the character encoding. UTF-8 covers nearly every written language, so accented names and symbols display correctly. |
-| `<title>` | The **title element** names the page. Its text appears in the browser tab, in bookmarks, and as the headline of a search result. Chapter 1's SEO section is why it matters. |
+| `<title>` | The **title element** names the page. Search engines read it as the headline of a search result, which is Chapter 1's SEO section at work. Where else the name shows up is the next exercise's discovery. |
 | `<body>` | The **body** holds everything that appears in the browser window. All of your visible content lives here. |
 | `<!-- ... -->` | A note to humans that the browser skips. The Comments subsection below explains it fully. |
 

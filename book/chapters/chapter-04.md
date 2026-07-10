@@ -72,7 +72,7 @@ Two more habits ride along. Comment the file itself at the top, the way your HTM
 
 How far can separation of concerns go? The classic demonstration is [CSS Zen Garden](https://csszengarden.com), a site that has collected designer submissions for over two decades. Every design on it uses the identical HTML file. Only the stylesheet changes, and the results range from clean corporate pages to full illustrated landscapes. Same content, same markup, any look. That is the power the club's site is about to borrow at a smaller scale: one stylesheet, three pages, one visual identity.
 
-Here is the twist hiding inside the president's complaint: your "unstyled" pages were never unstyled. Every browser ships a stylesheet of its own and applies it to any page that brings no CSS. Those are the **browser default styles**, and they are where every look you have seen so far came from. Large bold headings, indented bullets, blue underlined links: all of it is the browser's taste, not the absence of taste. When you write your own rules, you are overriding defaults that were there all along.
+The next exercise sends you hunting for the twist hiding inside the president's complaint. Take the prediction seriously before you run it.
 
 ### Try It Yourself 4.1: Catch the Browser's Stylist 🛠️
 
@@ -81,6 +81,8 @@ Here is the twist hiding inside the president's complaint: your "unstyled" pages
 **Run:** Open [en.wikipedia.org/wiki/Recycling](https://en.wikipedia.org/wiki/Recycling), right-click the article's main heading, and choose Inspect. Beside the markup, browser DevTools shows a Styles panel listing every rule that reaches the heading, written exactly like this section's examples. Look for a `font-size` declaration while you are there: the heading size Chapter 2 told you to leave to CSS, being left to CSS. Hover over a declaration and a checkbox appears. Uncheck a font or color declaration, watch the heading change, then check it back on. Now scroll the panel down: the bottom rules are labeled "user agent stylesheet."
 
 **Explain:** In 1-2 sentences, explain what took over when you unchecked a declaration, and what the user agent stylesheet entries tell you about who styled your Chapter 3 pages.
+
+Here is the twist you just caught in the act: your "unstyled" pages were never unstyled. Every browser ships a stylesheet of its own and applies it to any page that brings no CSS. Those are the **browser default styles**, and they are where every look you have seen so far came from. Large bold headings, indented bullets, blue underlined links: all of it is the browser's taste, not the absence of taste. When you write your own rules, you are overriding defaults that were there all along.
 
 ### Quick Check 4.1 ✅
 
@@ -361,7 +363,7 @@ The file also lists two prop browns from the set, labeled as lookalikes that sit
 
 ### Try It Yourself 4.4: Read the Hex Before the Screen 🛠️
 
-**Predict:** Rank these three palette values from lightest to darkest using only their pairs: `#fac78d`, `#268080`, `#1a5e5e`. Remember that pairs closer to `ff` mean more light.
+**Predict:** Rank these three palette values from lightest to darkest using only their pairs: `#deb887`, `#5e9959`, `#333333`. Remember that pairs closer to `ff` mean more light.
 
 **Run:** Open `practice-styles.css` in VS Code, which draws a small color swatch beside every color value in a CSS file. Paste each of the three values, one at a time, into the h1 rule's `color` declaration and watch the swatch. Undo your edits when you finish, and confirm the file matches the pack original.
 
@@ -414,7 +416,7 @@ Make the clean report your shipping bar for styles, the same bar Chapter 2 set f
 
 Time to earn a validator report of your own. If your `cascade-practice.html` still carries the TIY 4.2 style block, remove it first so the external file is back in charge.
 
-**Predict:** You will change line 13 of `practice-styles.css` from `color` to `colr`. Three predictions. What will the browser show when you refresh the page? What color does the heading fall back to with its own rule dead? And what will the validator's report say about a property that does not exist?
+**Predict:** You will change line 13 of `practice-styles.css` from `color` to `colr`. Two predictions. With its own rule dead, what color does the heading fall back to when you refresh? And what will the validator's report say about a property that does not exist: will it guess what you meant?
 
 **Run:** Make the typo, save, and refresh `cascade-practice.html`. Note the heading's color and the complete absence of any complaint. Then paste the stylesheet into the CSS validator's direct input tab and read the report closely: the line it names, the rule it names, and the help it offers beyond a rejection. Fix the typo, revalidate, and leave the file clean.
 

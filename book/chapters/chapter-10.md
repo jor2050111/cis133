@@ -129,7 +129,7 @@ One more layer of honesty separates the namers from the named. The **thead eleme
 </table>
 ```
 
-Nothing visible changes, which should ring a Chapter 3 bell: landmarks changed no pixels either. The split states which rows are structure and which are data, and Section 10.4 pays it, the moment a style rule needs to know exactly where the data starts. The browser holds its own opinion about this split, and TIY 10.3 catches it acting on that opinion.
+Nothing visible changes, which should ring a Chapter 3 bell: landmarks changed no pixels either. The split states which rows are structure and which are data, and Section 10.4 pays it, the moment a style rule needs to know exactly where the data starts.
 
 Two powers get named once and set aside. Cells can span several columns or rows with the `colspan` and `rowspan` attributes, and this course's tables never need them. A third grouping element, `<tfoot>`, wraps summary rows, and the course never needs it either.
 
@@ -300,7 +300,7 @@ tbody tr:hover {
 
 ### When the Table Meets the Phone
 
-Every page you have shipped since Chapter 8 obeys one law: the page itself never scrolls sideways. Tables strain that law harder than anything else you own, because a table refuses to shrink past its content. A cell will not wrap below its longest word, a column must seat its widest cell, and the sum of those minimums is a floor. A schedule with enough columns carries a floor wider than a phone, and then something has to give. TIY 10.6 puts a seven-column table on a 375-pixel screen so you can watch what gives.
+Every page you have shipped since Chapter 8 obeys one law: the page itself never scrolls sideways. Tables put that law under more strain than anything else you own, and nothing in this chapter has promised that a seven-column schedule can keep it on a phone. TIY 10.6 puts exactly that table on a 375-pixel screen. Before the experiment runs, the page needs a policy ready, in case something has to give.
 
 The honest repair at this course's level is a scroll container: one wrapper, one rule.
 
@@ -331,6 +331,8 @@ The honest repair at this course's level is a scroll container: one wrapper, one
 **Run:** Open the page in device mode at 375 pixels and try to read the whole log. Record what moves. Then wrap the table in the `.table-scroll` div, add the wrapper rule to `practice-styles.css`, and run the same test again.
 
 **Explain:** In 1-2 sentences, state which element takes the sideways scroll after the repair, and how the page's standing against Chapter 8's law changed between the two runs.
+
+What you watched has a mechanism worth naming. A cell will not wrap below its longest word, a column must seat its widest cell, and the sum of those minimums is a floor the table defends. A schedule with enough columns carries a floor wider than a phone, which is why the columns never squeezed to fit.
 
 !!! note
     Judge any table repair the Chapter 8 way: device mode, a phone profile, and a slow walk down the whole page. A table that pans inside a page that stands still is the pass. A page that moves with it is not.

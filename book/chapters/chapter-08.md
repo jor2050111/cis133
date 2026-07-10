@@ -76,11 +76,11 @@ One more connection before the tools arrive. Chapter 7's principle list named re
 
 ### Try It Yourself 8.1: Two Sites, One Narrow Window 🛠️
 
-**Predict:** You are about to squeeze two pages: the Wikipedia article you audited in Chapter 7, and the club's own starter page. Both will survive, but not the same way. Predict which page changes its layout plan as the window narrows, with regions moving or disappearing, and which one keeps a single plan and bends it. Write one specific thing you expect each page to do.
+**Predict:** You are about to squeeze two pages: the Wikipedia article you audited in Chapter 7, and the club's own starter page. Predict what each page will do as the window narrows. Does either one change its layout plan outright, with regions moving or disappearing? Does either keep a single plan and bend it? Commit to one specific expectation per page.
 
 **Run:** Open `https://en.wikipedia.org/wiki/Recycling` in one browser window and the pack's `assets/code/chapter-08/starter-site/recycling-guide.html` in another. Drag each window's edge slowly from full laptop width to as narrow as it will go, twice each. Watch regions, not words: what moves, what shrinks, what rearranges, what disappears.
 
-**Explain:** In 1-2 sentences, report which page did more than bend, and tie what the club page did to this section's inventory: name the mechanism behind each change you saw.
+**Explain:** In 1-2 sentences, report what each page did, and tie the club page's changes to this section's inventory: name the mechanism behind each change you saw.
 
 ### Quick Check 8.1 ✅
 
@@ -133,7 +133,7 @@ One more fact explains why this must become a habit. The HTML validator does not
 
 You could test all this by owning one of every phone. DevTools ships the practical answer. **Device mode** is DevTools' phone emulation view: find the device toolbar in DevTools, switch it on, and pick a phone profile from its list. The page area re-renders as that phone would render it, at that phone's width, and device mode reports the rendered width so you can log exact numbers.
 
-Device mode is also where you can watch the lie happen. Load a tagless page at a phone profile and the make-believe canvas goes to work: the page lays itself out about 980 pixels wide and arrives shrunken. Add the tag and the same page lays out at the device's true width. A narrow desktop window can never show you this, because a desktop window always gives the page its real width, tag or no tag. That is why your window-dragging tests from earlier chapters kept working on tagless pages, and why they stop being enough the moment phones are the audience.
+Device mode is also where you can watch the lie happen, and the next exercise stages exactly that. A narrow desktop window can never show you it, because a desktop window always gives the page its real width, tag or no tag. That is why your window-dragging tests from earlier chapters kept working on tagless pages, and why they stop being enough the moment phones are the audience.
 
 Device mode is an emulation, and emulation is not the last word. Chapter 12's pre-flight check renders the finished site in multiple browsers and screen sizes before anything publishes, and a real phone belongs in that check. For this chapter's work, device mode is the right tool: fast, exact about widths, and sitting inside the DevTools you already use.
 

@@ -173,7 +173,7 @@ The request form is complete: labeled controls, one legended group, one button. 
 
 The moment a form submits, the browser walks its controls and bundles each one's `name` with its current value. One control makes one **name-value pair**: the name comes from your markup, the value from whatever the visitor typed or picked. The bundle is the whole shipment. A control without a `name` contributes nothing and stays home, however carefully the visitor filled it in. That is why Section 11.1 told you to name every control.
 
-Where the bundle travels is the method's decision, and the default method is **GET**. GET ships the pairs in plain sight, appended to the page's own address in the shape `?name=value&name=value`. You have read that shape before. Chapter 1 named it the query string, and Lab 1A had you dissect live URLs into their parts, query strings included. The term returns with a promotion, because this time your own form writes one.
+Where the bundle travels is the method's decision, and the default method is **GET**. Chapter 1 is about to pay you back. Lab 1A had you dissect other people's URLs into their parts, and the next exercise has your own form write an address you can read with the same eyes.
 
 ### Try It Yourself 11.3: Read the Trip 🛠️
 
@@ -183,7 +183,7 @@ Where the bundle travels is the method's decision, and the default method is **G
 
 **Explain:** In 1-2 sentences, name the attribute each pair's left side came from, and name the Chapter 1 term for everything after the question mark.
 
-Here is the trip one filled-out copy of the request form took, exactly as the browser wrote it:
+Now the name for what you watched: GET ships the pairs in plain sight, appended to the page's own address in the shape `?name=value&name=value`, the query string Chapter 1 named. Here is the trip one filled-out copy of the request form took, exactly as the browser wrote it:
 
 ```text
 ?student-name=Jordan+Ortiz&student-email=jordan%40example.org&subject=algebra&session-type=drop-in&notes=
@@ -222,7 +222,7 @@ Three attributes make a form kinder before any styling arrives. The first is `re
 required autocomplete="email">
 ```
 
-The second is `autocomplete`. Give it a standard token such as `"name"` or `"email"`, and the browser offers to fill the field with what it already knows about its own user. Two keystrokes replace twenty for everyone, and Chapter 9's one-handed visitor feels the difference most. The third is `placeholder`, and it arrives with a law attached. A **placeholder** shows a gray hint inside an empty control, such as an example answer. The law: a placeholder is a hint, never a label. Section 11.4 finishes that argument, and TIY 11.5 lets you watch the reason for yourself.
+The second is `autocomplete`. Give it a standard token such as `"name"` or `"email"`, and the browser offers to fill the field with what it already knows about its own user. Two keystrokes replace twenty for everyone, and Chapter 9's one-handed visitor feels the difference most. The third is `placeholder`, and it arrives with a law attached. A **placeholder** writes a gray hint into a control, such as an example answer. The law: a placeholder is a hint, never a label. Section 11.4 finishes that argument, and TIY 11.5 lets you watch the reason for yourself.
 
 ### Try It Yourself 11.4: The Browser Says No 🛠️
 
