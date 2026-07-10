@@ -1,9 +1,95 @@
 # CIS133 Textbook: HANDOFF
 
-**Last updated:** 2026-07-09
+**Last updated:** 2026-07-10
 **Repo:** https://github.com/jor2050111/cis133
 **Live site:** https://jor2050111.github.io/cis133/
 **Task list:** cis133-fall26 (`export CLAUDE_CODE_TASK_LIST_ID=cis133-fall26`)
+
+## What Was Done (2026-07-10 improvement plan Phase A: 87.2 -> 91.6, PUBLICATION-READY)
+
+Executed Phase A of `../evaluations/cis133-2026-07-10-improvement-plan.md`
+in full (A1 accuracy sweep, A2 Predict-leak closure, A3 README polish),
+then re-scored with the baseline method appendix. Four commits
+(`3158fe5`, `ea658f0`, `9a07f1d`, `9e02961`), one per rubric criterion
+plus the re-audit tightenings, all pushed, all four Pages deploys green,
+live site verified serving the revised text. Post-revision scorecard:
+`../evaluations/cis133-2026-07-10-post-revision-scored-rubric.md`.
+
+* **C1 3->4.** All nine enumerated accuracy defects fixed. The landmark
+  fix used the pre-authorized B4 minimal option: section/article are now
+  "organizing elements inside main," not landmarks, the jump-menu claim
+  attaches to the big four only (section 3.2, summary 3.5, Lab 3A,
+  both glossary entries), and nothing students build changed. Also:
+  print as media type, border order as convention, honest validation
+  rationale (standardized recovery hides defects), refresh-button
+  revalidation, "light sand" at the 3.04:1 claim, derivable 608px
+  budget (Lab 6A now prints the starter's real main rule), background
+  under the border, NAT hedge, strong/em voicing hedged to
+  machine-readability, W3C "one of the bodies," GIF lossless qualified,
+  699/700 fractional hedge, WCAG bold-18.7px large-text clause, 1rem
+  as root size, margin collapse banked at the figure example.
+* **C5 3->4.** All twenty enumerated Predict leaks closed by the plan's
+  move/genericize/repoint pattern. The acceptance re-audit ran: four
+  parallel adversarial reviewers re-read all 62 Predicts, none of the
+  twenty re-flagged on its cited prose, and four repairs they caught as
+  still loose (TIY 1.3, 3.1, 4.1, 11.3, including two chapter-intro
+  foreshadows) were tightened in `9e02961`. C5 stops at 4, not 5,
+  because the re-audit surfaced a second ring OUTSIDE the enumerated
+  twenty (see found-not-fixed below); per session ground rules those
+  went to this list, never the diff.
+* **C15 4->5.** ch3 README "eight"->nine images (generator comment too;
+  generator re-run in a fresh venv on Pillow 12.3.0: asserts pass, git
+  status clean, zero drift). ch2 README states the exact contract: 4
+  planted errors, exactly 8 validator messages. ch10-12 READMEs state
+  the by-reference rule: starter images byte-identical to the prior
+  pack (one checksum per file name, verified), dimensions documented in
+  the ch3 image table.
+* **Full method re-run at `9e02961`:** 45/45 intended-valid HTML zero
+  messages, broken-contact exactly 8, flyer exactly 2 ON THE PINNED
+  W3.ORG ENGINE (see watchlist below), Jigsaw 16/16 at 0 errors, node
+  --check 2/2, sentence checker zero flags 12/12, Flesch 64.9-73.0 all
+  in or above band (mean 69.5), style sweep all zeros, chain md5s and
+  diffs hold, 36/36 path references resolve, 59 Further Reading URLs
+  live (same 9 bot-block 403s, same 4 MDN redirects), build clean,
+  deploys green.
+
+**FOUND, NOT FIXED (queue for a C5-closure micro-session; all existed
+verbatim at baseline and sit outside the plan's enumerated twenty):**
+
+* TIY 2.4 (chapter-02.md Explain): opens "The browser accepted both.",
+  printing the outcome inside the exercise (the TIY 3.5 species). The
+  strongest item; it alone blocks C5 = 5.
+* TIY 12.3 (chapter-12.md): the receive/re-check/store trip is narrated
+  in prose just before the sketch exercise asks students to draw it.
+* Explain steps that name the outcome they ask students to explain:
+  TIY 4.3 ("why orange won"), TIY 6.4 ("why the contact page's email
+  link kept its default blue").
+* Run steps that narrate outcomes: TIY 5.1 (body margin + user agent
+  attribution; prose at ch5:51 also pre-states the layer), TIY 5.4
+  ("watch the lines tighten... falls back to the browser's own
+  default").
+* TIY 1.1 (chapter-01.md:56): "show you the code it received" directly
+  before the what-will-you-see Predict.
+* Self-answering titles (stricter lens; decide once whether titles
+  count): 10.3 "The Browser's Silent Repair," 11.4 "The Browser Says
+  No," 11.5 "The Vanishing Hint," 12.2 "The Lock Drawn on the Door,"
+  12.5 "The Five-Minute Pre-Flight." Also TIY 5.5's lead-in "cramped
+  on purpose."
+* Glossary `W3C` entry still reads "The organization that maintains the
+  web's standards" (the ch2 fix's one-word cousin).
+
+**Watchlist addition (sharpens the baseline's pre-term item):** the
+ch9 "exactly 2 messages" flyer claim is engine-deployment-sensitive.
+validator.w3.org (the engine the chapter points students at) returns
+2; validator.nu's current deployment omits the heading-skip message
+and returns 1. Verified both ways this session (w3.org via browser
+page-context fetch after curl drew Cloudflare all day). Re-check at
+pre-term on validator.w3.org itself.
+
+**Decisions pending (queued for Mr. Vega as one set):** B1 inline MLO
+bindings (family-wide question), B2 committed validation harness
+(location + log policy; lifts C14 to 5), B3 book images (lifts C10 to
+5). None implemented, per the session mandate.
 
 ## What Was Done (2026-07-09 universal rubric: single-source rollout)
 
