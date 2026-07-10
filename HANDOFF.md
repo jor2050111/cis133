@@ -5,6 +5,24 @@
 **Live site:** https://jor2050111.github.io/cis133/
 **Task list:** cis133-fall26 (`export CLAUDE_CODE_TASK_LIST_ID=cis133-fall26`)
 
+## What Was Done (2026-07-10 CLO surfacing + restamp: 91.6 CONFIRMED)
+
+Executed this book's slice of the family CLO alignment plan
+(`../evaluations/family-clo-alignment-plan-2026-07-10.md`) in commit
+`82d64d5`: the twelve elevated CLOs now display verbatim on
+`book/index.md`, every chapter opens with a CLO alignment block after
+its MLO list (primary alignments, Ch 7: III/XII, Ch 10: V/VIII), and
+`templates/chapter-template.md` plus `CLAUDE.md` carry the pattern as
+law. A restamp evaluation then re-verified the score at the new head:
+all prose-touched mechanical checks rerun clean (CLO verbatim check 12
+of 12, structure greps, style law, sentence ceiling, Flesch in band,
+clean build), untouched-input checks carried forward from the parent,
+and C4 stays 4 because the approved B1 bindings are not implemented
+yet. **Index confirmed 91.6, Publication-ready, at `82d64d5`.**
+Addendum: `../evaluations/cis133-2026-07-10-clo-restamp-addendum.md`.
+Note: `82d64d5` is not yet pushed, so the live site predates the CLO
+blocks until the next push.
+
 ## What Was Done (2026-07-10 improvement plan Phase A: 87.2 -> 91.6, PUBLICATION-READY)
 
 Executed Phase A of `../evaluations/cis133-2026-07-10-improvement-plan.md`
