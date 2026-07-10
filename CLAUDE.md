@@ -23,6 +23,7 @@ them into this repo:
   (design tokens and theme mapping)
 - `.github/workflows/docs.yml` (build and deploy workflow)
 - Lint configuration
+- `book/skills-lab-rubric.md` (the universal Skills Lab rubric page)
 - `tools/` QA scripts (sentence length, output comments, chapter code runs)
 - The style-guide core, synced to `docs/style-guide-core.md`
   (`docs/style-guide.md` is the course-specific layer on top of it)
@@ -52,6 +53,7 @@ textbooks/cis133/       # local folder = GitHub repo: cis133
 ├── book/                              # PUBLISHED textbook (single source of truth)
 │   ├── index.md                       # Site home page
 │   ├── glossary.md                    # Published glossary
+│   ├── skills-lab-rubric.md               # Universal Skills Lab rubric (synced)
 │   ├── chapters/
 │   │   └── chapter-01.md ... chapter-12.md
 │   ├── stylesheets/
@@ -320,13 +322,25 @@ Every chapter must include a Module Overview section immediately after the narra
 **Submission:** [Format and requirements]
 ```
 
-**Rubric (Always include -- verbatim-locked, the same across all chapters and all textbooks):**
+**Rubric (single-source, shared by every textbook in the family):**
 
-Every Skills Lab uses ONE shared rubric: a 4-criterion, 16-point table
-(4 points per criterion, scored from 4 down to 0). Do NOT invent
-per-chapter rubrics or add, remove, or reword rows. Copy it exactly (do
-not reword any cell) from the canonical source,
-`templates/skills-lab-rubric-template.md`.
+Every Skills Lab uses ONE universal rubric: a 4-criterion, 16-point
+table (4 points per criterion, scored from 4 down to 0). The canonical
+master is `../shared/skills-lab-rubric.md`. The sync script
+(`../shared/tools/sync-shared.sh`) copies it to
+`book/skills-lab-rubric.md`, a published page in the site nav. Never
+hand-edit the synced copy, and never paste or reword the table inside
+a chapter. Edit the master, then re-run the sync so every book updates
+together.
+
+How chapters reference it:
+
+- Chapter 1 displays the full rubric by transcluding it at build time
+  with the snippet include `--8<-- "skills-lab-rubric.md:rubric"`
+  (pymdownx.snippets is enabled in zensical.toml).
+- Chapters 2-12 use a short reference block that links to the rubric
+  page. Copy the pattern from any existing chapter or from
+  `templates/skills-lab-rubric-template.md`.
 
 The four criteria, in order:
 
@@ -336,8 +350,9 @@ The four criteria, in order:
 - **Analysis, Interpretation, and Response to QUESTION(s)**
 
 Levels are Mastery (4), Proficiency (3), Developing (2), Emerging (1),
-Not Evident (0), and the block ends with the line
-`**Scoring:** 16 points total (4 points per criterion)`.
+Not Evident (0), and the table ends with the line
+`**Scoring:** 16 points total, 4 points per criterion (8 points
+technical execution, 8 points transferable skills)`.
 
 **Key principles:**
 
@@ -598,7 +613,7 @@ colors do not transfer, and list numbering can restart after code blocks.
 **Always consult these files:**
 
 - `/templates/chapter-template.md` - QM-aligned hybrid structure
-- `/templates/skills-lab-rubric-template.md` - The locked 16-point rubric
+- `book/skills-lab-rubric.md` - Universal Skills Lab rubric (synced from ../shared/)
 - `/templates/try-it-yourself-template.md` - Predict-Run-Explain pattern
 - `/docs/style-guide-core.md` - Shared writing law (synced)
 - `/docs/style-guide.md` - Course-specific writing standards
@@ -633,7 +648,7 @@ Before considering a chapter complete, verify:
 - [ ] All "Try It Yourself" use Predict-Run-Explain pattern
 - [ ] Quick Checks after each major section (2-3 questions each)
 - [ ] Skills Lab with 3 parts (Foundation/Application/Extension)
-- [ ] Shared 16-point rubric included, copied verbatim from the rubric template
+- [ ] Rubric follows the single-source pattern (chapter 1 transcludes, chapters 2-12 link)
 - [ ] Questions & Analysis (2 questions) after Part 3, before Submission
 - [ ] Skills Lab loads a provided dataset from assets/code/chapter-NN/
 - [ ] Skills Lab parts explicitly align with MLOs

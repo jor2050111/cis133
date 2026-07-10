@@ -436,14 +436,11 @@ Answer both questions in the answers file. These answers carry significant rubri
 
 ### Rubric: Skills Lab 2A
 
-| Criteria | Mastery (4) | Proficiency (3) | Developing (2) | Emerging (1) | Not Evident (0) |
-| --- | --- | --- | --- | --- | --- |
-| **Code Accuracy and Efficiency** | Code is Accurate, Efficient, and ERROR-FREE. Demonstrates optimal use of HTML and CSS syntax and the course tools | Code is mostly accurate and efficient. MINOR ERRORS are present but do not significantly affect the output or performance | Code runs but contains SOME ERRORS or INEFFICIENCIES. The output is sometimes incorrect or incomplete | Code is FREQUENTLY INCORRECT or inefficient, with multiple errors that prevent the program from running | No Submission or Not Evident |
-| **Output Quality** | EXCEPTIONAL outputs with outstanding clarity and detail. They effectively enhance understanding of the work | GOOD quality outputs that accurately represent the results. Well-labeled and clear | Outputs are ADEQUATE but lack sophistication or have minor errors in labeling or presentation | Outputs are POORLY CONSTRUCTED, unclear, or irrelevant. Labeling is missing or incorrect | No Submission or Not Evident |
-| **Documentation and Code Comments** | COMPREHENSIVE and concise documentation and comments. They greatly enhance the readability and understanding of the code | CLEAR documentation and comments that aid in understanding the code's purpose and logic | SOME documentation and comments are present, but they lack clarity or are incomplete | MINIMAL or no documentation and comments. Code is difficult to follow | No Submission or Not Evident |
-| **Analysis, Interpretation, and Response to QUESTION(s)** | COMPREHENSIVE and INSIGHTFUL analysis. Interpretations are precise and fully supported by compelling evidence. Answers to questions are thorough, demonstrating deep understanding and insight | SOLID analysis. Interpretations are logical, well-reasoned, and supported by evidence. Answers to questions demonstrate a good understanding of the material | BASIC analysis is conducted. Interpretations are present but lack depth or detail. Answers to questions are basic and show limited understanding | Analysis is MINIMAL or incorrect. Interpretations and conclusions are missing or irrelevant. Fails to adequately answer the questions asked in the assignment | No Submission or Not Evident |
-
-**Scoring:** 16 points total (4 points per criterion)
+This lab is graded with the standard
+[Skills Lab Rubric](../skills-lab-rubric.md): 16 points, four criteria
+at 4 points each (Code Accuracy and Efficiency, Output Quality,
+Documentation and Code Comments, and Analysis, Interpretation, and
+Response to QUESTION(s)).
 
 ---
 

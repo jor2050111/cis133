@@ -183,7 +183,7 @@ See course glossary for full definitions
 
 ### Rubric: Skills Lab NA
 
-[Copy the course's locked 16-point rubric VERBATIM from the course's canonical in-book copy (see `/templates/skills-lab-rubric-template.md`). Four criteria scored 4-0: Code Accuracy and Efficiency, Output Quality, Documentation and Code Comments, and Analysis, Interpretation, and Response to QUESTION(s). Do not reword any cell after the course locks its copy. End with the Scoring line.]
+[Do not paste the rubric table here. Chapter 1 transcludes the canonical table with `--8<-- "skills-lab-rubric.md:rubric"` after a two-line lead-in. Chapters 2-12 use the short link block. See `/templates/skills-lab-rubric-template.md` for both patterns.]
 
 ---
 

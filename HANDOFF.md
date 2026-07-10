@@ -1,9 +1,24 @@
 # CIS133 Textbook: HANDOFF
 
-**Last updated:** 2026-07-08
+**Last updated:** 2026-07-09
 **Repo:** https://github.com/jor2050111/cis133
 **Live site:** https://jor2050111.github.io/cis133/
 **Task list:** cis133-fall26 (`export CLAUDE_CODE_TASK_LIST_ID=cis133-fall26`)
+
+## What Was Done (2026-07-09 universal rubric: single-source rollout)
+
+The Skills Lab rubric is now single-sourced family-wide. The canonical
+master is `../shared/skills-lab-rubric.md`, synced to
+`book/skills-lab-rubric.md` (published in the site nav). Chapter 1
+transcludes the table at build time with
+`--8<-- "skills-lab-rubric.md:rubric"` (pymdownx.snippets enabled in
+`zensical.toml`), and chapters 2-12 carry a short link block instead of
+the table. This book's labels were already canonical. The cells changed
+slightly: criterion 1 is now course-neutral (no HTML/CSS tool list),
+the Documentation Mastery cell encodes the WHY-over-WHAT and colleague
+standards, and the scoring line states the 8 technical + 8 transferable
+split. CLAUDE.md law, `templates/skills-lab-rubric-template.md`, and
+the chapter template now describe the single-source pattern.
 
 ## What Was Done (2026-07-08 Chapter 12 session, COMPLETES THE BOOK)
 

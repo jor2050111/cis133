@@ -61,6 +61,7 @@ nav = [
     { "Chapter 12: Scripting Concepts and Publishing" = "chapters/chapter-12.md" },
   ] },
   { "Glossary" = "glossary.md" },
+  { "Skills Lab Rubric" = "skills-lab-rubric.md" },
 ]
 
 # ----------------------------------------------------------------------------
@@ -144,6 +145,8 @@ pygments_lang_class = true
 [project.markdown_extensions.pymdownx.magiclink]
 [project.markdown_extensions.pymdownx.mark]
 [project.markdown_extensions.pymdownx.smartsymbols]
+[project.markdown_extensions.pymdownx.snippets]
+base_path = ["book"]
 [project.markdown_extensions.pymdownx.superfences]
 custom_fences = [
   { name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_code_format" }
