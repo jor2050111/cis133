@@ -34,6 +34,20 @@ matplotlib.use("Agg")
 REPO = Path(__file__).resolve().parents[1]
 
 BLOCK_RE = re.compile(r"^```python\n(.*?)^```", re.M | re.S)
+MAGIC_RE = re.compile(r"^\s*[%!]")
+
+
+def neutralize_magics(code: str) -> str:
+    """Comment out IPython magics and shell escapes.
+
+    Lines like `%matplotlib inline` or `!pip install` are valid in the
+    students' JupyterLab notebooks but are not Python syntax, so the
+    harness comments them out instead of failing the block.
+    """
+    return "\n".join(
+        "# [magic] " + ln if MAGIC_RE.match(ln) else ln
+        for ln in code.splitlines()
+    )
 
 
 def run_chapter(chapter_path: Path) -> int:
@@ -52,7 +66,8 @@ def run_chapter(chapter_path: Path) -> int:
         buf = io.StringIO()
         try:
             with redirect_stdout(buf):
-                exec(compile(code, f"{chapter_path.name}:block{i}",
+                exec(compile(neutralize_magics(code),
+                             f"{chapter_path.name}:block{i}",
                              "exec"), namespace)
             status = "OK"
         except Exception:
