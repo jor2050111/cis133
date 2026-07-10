@@ -30,7 +30,7 @@ Chapter 2 sorted elements into two kinds: block-level elements that stack like b
 
 Start at the center. The content is the text or image the box exists to hold. Around it sits **padding**, open space between the content and the border that still belongs to the element's own body. Around the padding runs the **border**, a drawn line with a width, a style, and a color of its own. Outside the border lies the **margin**, transparent space the element claims to keep its neighbors at a distance.
 
-One fact makes the layers easy to tell apart on screen. An element's background color paints its content and its padding, stops at the border, and never touches the margin. Padding is space inside the paint. Margin is space outside it.
+One fact makes the layers easy to tell apart on screen. An element's background color paints its content and its padding, runs on beneath the border to its outer edge, and never touches the margin. A `solid` border hides that last strip of paint, so the background appears to stop where the border starts. Padding is space inside the paint. Margin is space outside it.
 
 The numbers are yours to set. Your data pack ships a practice pair for this chapter, `assets/code/chapter-05/box-practice.html` and `box-practice.css`, which styles three club announcements as boxes you can measure. Here is the first box's rule, exactly as shipped:
 
@@ -101,6 +101,8 @@ figure {
 }
 ```
 
+One behavior to bank before you measure real pages: when two stacked elements' vertical margins meet, the browser keeps the larger of the two instead of adding them (developers call it margin collapse). Two of these figures stack 24 pixels apart, not 48.
+
 Single-side properties shine when you mean one side. The practice file's `margin-bottom: 16px` spaces each announcement from the next without adding stray space above the first one. When all four sides need values, four separate declarations start to feel like typing the same word four times. CSS agrees.
 
 ### The Shorthand Clock
@@ -127,7 +129,7 @@ The practice file's third box, `.donation-tip`, uses the two-value form for both
 
 ### Borders: Width, Style, Color
 
-A border is a drawn line, so it takes three decisions: how thick, what kind of line, and what color. Each decision has a longhand property, and the **border shorthand** takes all three in one declaration, in that order.
+A border is a drawn line, so it takes three decisions: how thick, what kind of line, and what color. Each decision has a longhand property, and the **border shorthand** takes all three in one declaration. The browser accepts the three values in any order. Write them width, style, color anyway: it is the order every stylesheet you will read expects.
 
 ```css
 /* Longhand: three decisions, three declarations. */

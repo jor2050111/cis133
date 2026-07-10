@@ -200,14 +200,14 @@ Structure serves the tools that read for people. Perceivability serves the sense
 
 The palette file has carried the same promise since Chapter 4: trust the passing list, and Chapter 9 will teach the math. A **contrast ratio** measures how strongly text stands out from its background. It compares how much light the two colors give off, with a small constant added so the scale behaves at the dark end. The scale runs from 1 to 1, text on its own exact color, to 21 to 1, pure black on pure white. Run white on white through the math and it computes exactly 1.00. Black on white computes exactly 21.00. Every real pairing lands between those anchors.
 
-WCAG Level AA sets the thresholds. Body text needs 4.5 to 1 or better. Large text, 24 pixels and up, passes at 3 to 1, because bigger strokes stay readable at lower contrast. The whole scale at a glance:
+WCAG Level AA sets the thresholds. Body text needs 4.5 to 1 or better. Large text passes at 3 to 1, because bigger, heavier strokes stay readable at lower contrast. WCAG counts text as large at 24 pixels and up, or about 18.7 pixels and up when bold. The whole scale at a glance:
 
 | Measurement | Ratio | What it means |
 | --- | --- | --- |
 | Text on its own exact color | 1.00 | The scale's floor: invisible |
 | Pure black on pure white | 21.00 | The scale's ceiling |
 | AA minimum for body text | 4.5 to 1 | The bar this course grades against |
-| AA minimum for large text (24px and up) | 3 to 1 | Bigger strokes earn a lower bar |
+| AA minimum for large text (24px+, or bold 18.7px+) | 3 to 1 | Bigger or heavier strokes earn a lower bar |
 
 Now the passing list's numbers read as measurements instead of decoration. The footer fix from Chapter 6, light sand on deep teal, sits on the list at 4.85 to 1: past the AA bar with room to spare. The wart it repaired has a number too. Default link blue on deep teal measures 1.26 to 1, barely above text on its own color. Invisible ink. Devon never met that wart, but every visitor squinting through glare met it head-on.
 
@@ -237,7 +237,7 @@ The same rule guards a habit from Chapter 5. Links inside body text are told apa
 
 ### Type a Visitor Can Resize
 
-Chapter 5 introduced `px` and `rem` as two different promises and saved the payoff for now. A pixel value is a fixed promise: `16px` renders the same for every visitor, whatever their settings say. A `rem` is a proportional promise: `1rem` means the visitor's own default text size, which is 16 pixels until the visitor raises it in their browser settings. Many low-vision visitors raise that default once and leave it raised. Text sized in `rem` grows to meet them. Text sized in `px` ignores the request.
+Chapter 5 introduced `px` and `rem` as two different promises and saved the payoff for now. A pixel value is a fixed promise: `16px` renders the same for every visitor, whatever their settings say. A `rem` is a proportional promise: `1rem` means the root element's text size. That size comes from the visitor's own browser default (16 pixels until the visitor raises it) as long as no stylesheet resets the root. Many low-vision visitors raise that default once and leave it raised. Text sized in `rem` grows to meet them. Text sized in `px` ignores the request.
 
 Zoom does not make the setting redundant. Zoom is a per-page chore repeated on every site, while the default size is set once and follows the visitor everywhere, and only `rem` text listens to it. Converting is one division, the `px` value over 16:
 

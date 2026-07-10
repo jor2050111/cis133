@@ -50,7 +50,7 @@ cannot recover it afterward.</p>
 
 The first sentence stresses which Friday. The second flags a warning that protects the visitor's data. Both choices are about meaning, and the bold and italic rendering is the browser's default costume for that meaning.
 
-Now the misunderstood part. HTML also has `<b>` and `<i>`, which produce the same bold and italic pixels while promising nothing about meaning. They are typographic conventions without emphasis: `<b>` for drawing the eye (a product name in a review), `<i>` for text set off from normal prose (a book title, a ship's name, a foreign phrase). A screen reader can voice `<strong>` and `<em>` differently. It has no reason to change its voice for `<b>` or `<i>`.
+Now the misunderstood part. HTML also has `<b>` and `<i>`, which produce the same bold and italic pixels while promising nothing about meaning. They are typographic conventions without emphasis: `<b>` for drawing the eye (a product name in a review), `<i>` for text set off from normal prose (a book title, a ship's name, a foreign phrase). Most screen readers, at their default settings, voice all four the same way. The durable difference is what the file records: `<strong>` and `<em>` store meaning where any reader, human or software, can find it, and `<b>` and `<i>` store only a look.
 
 The decision rule: if removing the markup would change what the sentence MEANS, use `<strong>` or `<em>`. If it would only change how the text LOOKS, you are probably reaching for presentation, and Chapter 4 gives you CSS, the right tool for looks.
 
@@ -86,7 +86,7 @@ Render that page and the div and span change nothing you can see. They exist as 
 
 ## 3.2 Page Landmarks: Naming Your Regions
 
-Semantic choices at the sentence level help, but Devon's complaint was about whole regions: no way to tell the banner from the content from the footer. HTML gives every page region a name. A **landmark** is a semantic element that labels a major region of the page, and assistive technology builds a jump menu out of them. This section introduces the six you will use on nearly every page you ever build.
+Semantic choices at the sentence level help, but Devon's complaint was about whole regions: no way to tell the banner from the content from the footer. HTML gives every page region a name. A **landmark** is a semantic element that labels a major region of the page, and assistive technology builds a jump menu out of them. This section introduces the six elements you will use on nearly every page you ever build: four landmarks that shape the page, and two organizing elements that structure the content inside `<main>`.
 
 ### The Big Four: header, nav, main, footer
 
@@ -127,7 +127,7 @@ With this structure, Devon's screen reader offers a landmark menu: banner, navig
 
 ### Inside main: section and article
 
-Two more landmarks organize the content within.
+Two more semantic elements organize the content within. Neither is a landmark. They give the markup structure any reader of the file can use, but they do not join the jump menu Devon's screen reader builds.
 
 * The **section element** (`<section>`) groups one thematically related chunk of a page, and it should always contain a natural heading. Your guide's "Why It Matters" block, its `<h2>` plus its paragraphs, is a section.
 * The **article element** (`<article>`) wraps content that could stand alone: a blog post, a news story, a product review. The test is portability. If you handed the content to someone with no idea what site it came from, would it still make sense?
@@ -149,7 +149,7 @@ The two confuse everyone at first, so use the tests in order. Could it stand alo
 
 One more landmark exists, `<aside>`, for content related to but separate from the main flow, like a sidebar. You will meet it in the wild, and it can wait until you need it.
 
-A caution before the lab: adding landmarks changes almost nothing visually. Landmarks are block-level containers, and your headings and paragraphs were already stacking as blocks. The payoff is real but invisible, which is exactly why beginners skip it and professionals do not.
+A caution before the lab: adding these structural elements changes almost nothing visually. They are block-level containers, and your headings and paragraphs were already stacking as blocks. The payoff is real but invisible, which is exactly why beginners skip it and professionals do not.
 
 ### Try It Yourself 3.2: The Landmark Census 🛠️
 
@@ -277,7 +277,7 @@ So why does your data pack ship only PNGs? The club's images are flat-color illu
 | ------ | ------ | ----------- | ------------ | --------- | ----------------- |
 | PNG | Raster | Lossless | Yes | No | Illustrations, screenshots, transparency |
 | JPEG | Raster | Lossy | No | No | Photographs |
-| GIF | Raster | Lossless, 256 colors | Limited | Yes | Simple animations |
+| GIF | Raster | Lossless within its 256 colors | Limited | Yes | Simple animations |
 | SVG | Vector | Not applicable | Yes | Possible | Logos, icons, diagrams |
 
 File size is the recurring stake in every row. Chapter 1 traced a page request across the Internet, and every image is one more file making that trip. Oversized images are the single most common reason student pages load slowly.
@@ -330,7 +330,7 @@ One more convention to bank for later: the web's default name for a site's home 
 ### Key Concepts
 
 * Semantic elements name what content IS, and that meaning serves three readers: browsers, assistive technology, and software like search crawlers that never draws pixels. `<strong>` marks importance and `<em>` marks spoken stress, while `<b>` and `<i>` copy the looks and promise nothing. The meaningless containers `<div>` and `<span>` are last resorts, not defaults.
-* Landmarks label page regions: `<header>` introduces, `<nav>` holds the site's links in a list, `<main>` holds the primary content exactly once per page, and `<footer>` closes. Inside them, `<section>` groups themed content under a heading, and `<article>` wraps content that could stand alone. Assistive technology turns landmarks into a jump menu.
+* Landmarks label page regions: `<header>` introduces, `<nav>` holds the site's links in a list, `<main>` holds the primary content exactly once per page, and `<footer>` closes. Assistive technology turns those four into a jump menu. Inside `<main>`, the organizing elements `<section>` (one themed chunk under a heading) and `<article>` (content that could stand alone) add structure without joining the menu.
 * The empty `<img>` element embeds images through attributes. `src` addresses the file (relative URLs for your own images), `alt` stands in when pixels cannot, and `width` and `height` declare the true dimensions so the browser reserves honest space.
 * Alt text follows the image's job. Informative images get a one-sentence description of what matters, decorative images get a deliberate `alt=""`, functional images describe their destination, and complex images pair a finding-level alt with a visible `<figcaption>` inside a `<figure>`.
 * Formats are trade-offs: PNG (lossless, transparency) for illustrations and screenshots, JPEG (lossy) for photographs, GIF for simple animation, SVG (vector) for logos and diagrams that must scale. File size rides on every choice. Sites stay portable when pages sit at the folder top with an `images` folder beside them, addressed by relative URLs.
@@ -366,7 +366,7 @@ Answer from memory before checking back through the chapter.
 
 1. Create a folder named `skills-lab-3a-lastname` at your `cis133` root with an `images` folder inside it, and copy `skills-lab-3a-answers.txt` into it.
 2. Copy `recycling-guide-start.html` into your lab folder and rename it `recycling-guide.html`. Update the comment at the top of the body with the lab number, your name, and the date.
-3. Wrap the page's regions in landmarks: a `header` for the title and intro paragraphs, a `main` for the page's content, one `section` per themed block inside it, and a `footer` for the closing paragraph. Indent one extra level, as Chapter 2 taught, so the new nesting stays readable.
+3. Wrap the page's regions in landmarks: a `header` for the title and intro paragraphs, a `main` for the page's content, and a `footer` for the closing paragraph. Add one `section` per themed block inside the main. Indent one extra level, as Chapter 2 taught, so the new nesting stays readable.
 4. Add a `nav` between the header and the main, holding a list of three links: Recycling Guide (`recycling-guide.html`), Spring Drive Gallery (`drive-gallery.html`), and Contact the Club (`contact.html`). Two of the three pages do not exist yet. Part 3 pays that debt.
 5. Give two phrases their text-level elements: the phrase "in order" in the drop-off instructions, and the word "not" in the Why It Matters paragraph. Choose between `<strong>` and `<em>` for each by meaning.
 6. Record your landmark map in answer 1.A and your hardest landmark call in answer 1.B. Validate the page and fix anything the validator reports.

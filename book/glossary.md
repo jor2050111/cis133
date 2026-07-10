@@ -22,7 +22,7 @@ This glossary is the single source of truth for all technical terms used in the 
 
 **alt text:** The text that stands in for an image when its pixels cannot: read aloud by screen readers and shown when the file fails to load. It lives in the `img` element's `alt` attribute.
 
-**article element:** The landmark (`<article>`) that wraps content able to stand alone outside its page, such as a blog post, news story, or review.
+**article element:** The semantic element (`<article>`) that wraps content able to stand alone outside its page, such as a blog post, news story, or review. It organizes content inside `<main>` and is not a landmark.
 
 **at-rule:** A CSS instruction that begins with an at sign and speaks to the stylesheet itself instead of styling one selector. `@media` is the first one this course teaches.
 
@@ -368,7 +368,7 @@ This glossary is the single source of truth for all technical terms used in the 
 
 **search engine:** A software system that finds pages on the web that match what you ask for. It works in three stages: crawling, indexing, and ranking.
 
-**section element:** The landmark (`<section>`) that groups one thematically related chunk of a page under its own heading.
+**section element:** The semantic element (`<section>`) that groups one thematically related chunk of a page under its own heading. It organizes content inside `<main>` and is not a landmark.
 
 **select element:** The element (`<select>`) that offers one choice among many in a compact menu. Each choice is an `<option>` with its own value, and an untouched menu submits its first option.
 

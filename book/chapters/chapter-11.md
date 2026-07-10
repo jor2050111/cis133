@@ -317,7 +317,7 @@ input:focus, select:focus, textarea:focus {
 }
 ```
 
-Club teal on white sits on the passing list at 4.69 to 1. Against the site's sand page background, the ring computes 3.04 to 1, past the 3 to 1 minimum WCAG sets for non-text marks. Measured, never eyeballed, as always.
+Club teal on white sits on the passing list at 4.69 to 1. Against the site's light sand page background, the ring computes 3.04 to 1, past the 3 to 1 minimum WCAG sets for non-text marks. Measured, never eyeballed, as always.
 
 The button is the page's call to action, and it dresses like one. White on club teal carries the passing list's 4.69 to 1. Hover and focus are equal citizens, Chapter 6's oldest law, and the swap reads like the nav links' inversion turned around. One trick keeps the button steady: the border matches the background, so the edge exists in both states and the button never changes size.
 

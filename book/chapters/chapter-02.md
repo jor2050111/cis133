@@ -321,9 +321,9 @@ Read the <a href="recycling-guide.html">electronics recycling guide</a>.
 
 ### Valid Markup and the W3C Validator
 
-Chapter 1 promised you a tool that checks your work, and here it is. **Valid markup** follows the rules of the HTML standard: required elements present, tags closed, nesting legal. Browsers do not enforce those rules. When markup breaks, a browser silently guesses at what you meant, and different browsers guess differently. Your page can look fine on your machine and fall apart on a visitor's, and you control your code, never their browser.
+Chapter 1 promised you a tool that checks your work, and here it is. **Valid markup** follows the rules of the HTML standard: required elements present, tags closed, nesting legal. Browsers do not enforce those rules. When markup breaks, a browser quietly repairs it into something it can render, following recovery steps the HTML standard spells out. The rescue is the trap. The repaired page looks fine, so the defect stays in your file. It resurfaces later: in the styling hooks Chapter 4 hangs on your structure, in what a screen reader announces, in the next edit stacked on top of the guess.
 
-The referee is the **W3C validator** at [validator.w3.org](https://validator.w3.org/), a free checker run by the **W3C** (World Wide Web Consortium), the body that maintains the web's standards. Give it your page three ways: by address, by file upload, or by pasting your markup into Direct Input. For `file://` pages, upload or paste.
+The referee is the **W3C validator** at [validator.w3.org](https://validator.w3.org/), a free checker run by the **W3C** (World Wide Web Consortium), one of the bodies that maintain the web's standards. Give it your page three ways: by address, by file upload, or by pasting your markup into Direct Input. For `file://` pages, upload or paste.
 
 The validator answers with a report. Each message names the problem and points to a line and column in your file. Reading those reports is a skill, and two habits make it:
 

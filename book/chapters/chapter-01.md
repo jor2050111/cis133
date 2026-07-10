@@ -49,7 +49,7 @@ Think about what this means for your future sites. Your visitors will arrive on 
 
 A **browser** is a program that requests pages from web servers and displays them on your screen. Chrome, Edge, Firefox, and Safari are browsers. Each one does three jobs. It sends your request to the right server. It receives the files the server returns. Then it renders those files, which means it turns HTML and CSS code into the page you see.
 
-Browsers share the same core controls: an address bar, back and forward buttons, a refresh button, bookmarks, and tabs. Modern address bars double as search boxes. Browsers also keep a **cache**, a local store of recently downloaded page files. The cache lets a repeat visit load without downloading everything again. The refresh button tells the browser to fetch fresh copies instead.
+Browsers share the same core controls: an address bar, back and forward buttons, a refresh button, bookmarks, and tabs. Modern address bars double as search boxes. Browsers also keep a **cache**, a local store of recently downloaded page files. The cache lets a repeat visit load without downloading everything again. The refresh button tells the browser to check with the server for newer copies, though files that have not changed may still come from the cache.
 
 Here is the developer's angle. You control your code, but you never control which browser a visitor uses. Some visitors run the newest Chrome. Others run an older browser on an aging laptop. Writing standard, valid code is how you serve all of them, and Chapter 2 introduces the validator that checks your work.
 
@@ -107,7 +107,7 @@ Step 2 of the round trip hid some machinery: the browser "looks up which server 
 
 ### IP Addresses
 
-Every device on the Internet needs an address, just as every house on a street needs one. An **IP address** is a numeric label, such as 91.198.174.192, that identifies a device on a network. Routers use IP addresses to move each request and response to the right machine. The common format you will see is four numbers separated by dots. A newer format called IPv6 uses longer addresses because the Internet outgrew the original supply, but the idea is the same: one device, one address.
+Every device on the Internet needs an address, just as every house on a street needs one. An **IP address** is a numeric label, such as 91.198.174.192, that identifies a device on a network. Routers use IP addresses to move each request and response to the right machine. The common format you will see is four numbers separated by dots. A newer format called IPv6 uses longer addresses because the Internet outgrew the original supply, but the idea is the same: an address routers can deliver to. In practice a home router often shares one public address across the whole household, which is part of how the original supply stretched so far.
 
 Numbers work well for machines and poorly for people. Nobody wants to memorize 91.198.174.192 to look something up. That problem led to domain names.
 

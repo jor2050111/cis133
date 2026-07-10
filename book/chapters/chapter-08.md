@@ -322,7 +322,7 @@ Desktop-first order runs the retrofit direction: the base rules describe the wid
 }
 ```
 
-The two numbers differ by one on purpose. "At most 699" and "at least 700" split every width between them, with no gap and no overlap.
+The two numbers differ by one on purpose. "At most 699" and "at least 700" split every whole-pixel width between them, with no overlap. A zoomed browser can report a fractional width that slips between the two, a corner case to know about, not to design around.
 
 Which direction should you write? Starting a stylesheet from nothing, professionals usually go mobile-first. The reason is Chapter 7's: the narrow layout is the harder discipline, so it should be the foundation, not the afterthought. The club's stylesheet is not starting from nothing. It grew up at laptop width across three labs, it works there, and rewriting it narrow-first would cost hours and teach little. So the lab retrofits: the desktop-grown sheet stays the base, and `max-width` overrides tighten the small screens. Retrofit is honest, common industry work. Many of the stylesheets you will meet in the wild were desktop sites once.
 
@@ -354,7 +354,7 @@ The last skill is reading, because from now on a stylesheet's rules no longer al
 
 Run every trace the same way. Start from the base value, then let each query whose condition is true, and whose block mentions the property, overwrite it in source order. You confirmed this exact table in TIY 8.4 with DevTools. The exercise below hands you a fresh trace with one deliberate surprise in it.
 
-One boundary of this chapter, marked on the way out: width is not the only question a query can ask. Media features exist for orientation (is the screen taller than it is wide?) and for print (is this page headed to a printer?), among others. This course's work needs width alone.
+One boundary of this chapter, marked on the way out: width is not the only question a query can ask. Media features exist for orientation (is the screen taller than it is wide?), among others, and a query can also name a media type: `@media print` styles the page headed to a printer. This course's work needs width alone.
 
 ### Try It Yourself 8.5: Trace the Card Padding 🛠️
 
