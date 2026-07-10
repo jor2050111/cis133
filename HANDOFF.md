@@ -86,10 +86,17 @@ and returns 1. Verified both ways this session (w3.org via browser
 page-context fetch after curl drew Cloudflare all day). Re-check at
 pre-term on validator.w3.org itself.
 
-**Decisions pending (queued for Mr. Vega as one set):** B1 inline MLO
-bindings (family-wide question), B2 committed validation harness
-(location + log policy; lifts C14 to 5), B3 book images (lifts C10 to
-5). None implemented, per the session mandate.
+**Decisions made (Mr. Vega, 2026-07-10, end of this session; NONE
+IMPLEMENTED YET, next session executes):** B1 approved: inline
+"(Section N.X)" MLO bindings in CIS133 now, CIS360's identical item
+queued (CIS215 already carries bindings). B2 approved: the validation
+harness lives in `../shared/tools/` as the family web-discipline gate,
+with its log committed to `docs/execution-logs/` (W3C Nu + Jigsaw +
+node --check; sync into cis133 like the Python tools). B3 approved:
+embed committed pack illustrations as in-chapter figures with
+descriptive alt text, starting at the ch3 image walk-through (chart,
+logo, divider). Expected: C4, C14, C10 to 5. Pair the implementation
+session with the C5 found-not-fixed micro-closure above.
 
 ## What Was Done (2026-07-09 universal rubric: single-source rollout)
 
