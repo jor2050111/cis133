@@ -20,6 +20,11 @@ By the end of this chapter, you will be able to:
 * **MLO-7.2 (Apply):** Construct a sitemap and wireframes that plan a multi-page site's structure and layout before any code is written
 * **MLO-7.3 (Evaluate):** Critique an existing site's navigation and page consistency against UX principles to produce a site plan
 
+### This chapter aligns with the following Course Learning Outcomes
+
+* **CLO III (Analyze):** Compare and contrast various research information resources available on the Internet/WWW
+* **CLO XII (Create):** Produce a multi-page website incorporating learned techniques
+
 ---
 
 ## 7.1 Plan Before You Code

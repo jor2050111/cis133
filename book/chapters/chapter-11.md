@@ -20,6 +20,10 @@ By the end of this chapter, you will be able to:
 * **MLO-11.2 (Apply):** Demonstrate how submitted form data travels: name-value pairs, GET and the query string, POST, and the server's role in concept
 * **MLO-11.3 (Create):** Design the club's join page: an accessible, styled signup form that collects only what it needs
 
+### This chapter aligns with the following Course Learning Outcomes
+
+* **CLO VII (Create):** Construct functional HTML forms for user input and data collection
+
 ---
 
 ## 11.1 The Form and the Label Contract

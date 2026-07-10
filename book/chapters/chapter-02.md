@@ -20,6 +20,11 @@ By the end of this chapter, you will be able to:
 * **MLO-2.2 (Apply):** Structure page content with headings, paragraphs, lists, and links, choosing each element by the meaning of its content
 * **MLO-2.3 (Analyze):** Diagnose markup errors in an HTML document by interpreting W3C validator reports
 
+### This chapter aligns with the following Course Learning Outcomes
+
+* **CLO IV (Evaluate):** Critique web pages using HTML and CSS validators to ensure proper markup and styling
+* **CLO V (Create):** Create web pages using HTML for structure and CSS for presentation
+
 ---
 
 ## 2.1 Your Workspace: VS Code, Files, and the Browser

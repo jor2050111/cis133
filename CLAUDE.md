@@ -181,7 +181,7 @@ Every chapter MUST follow this structure:
 1. **Chapter Title** (H1) - `# Chapter N: [Title]`
 2. **Narrative Introduction** - 2-3 engaging paragraphs setting context with an industry scenario
 3. **Module Overview** - Time estimate, prerequisites, deliverables (QM Standard 3)
-4. **Learning Objectives** - Exactly 3 MLOs with decimal numbering and RBT tags
+4. **Learning Objectives** - Exactly 3 MLOs with decimal numbering and RBT tags, followed by the CLO alignment block (this chapter's aligned CLOs, quoted verbatim from docs/CIS133_CLOs.md)
 5. **Main Content Sections** - 4-5 numbered sections (N.1, N.2, etc.) with:
    - **Try It Yourself** exercises (Predict-Run-Explain pattern)
    - **Quick Checks** (2-3 retrieval questions after each major section)
@@ -243,6 +243,7 @@ By the end of this chapter, you will be able to:
 - Each MLO must map to a specific section number (N.1, N.2, etc.)
 - Skills Lab parts must explicitly align with MLOs (e.g., "Aligns with MLO-1.1, MLO-1.3")
 - MLO numbers enable assessment traceability
+- After the MLO list, add `### This chapter aligns with the following Course Learning Outcomes` with this chapter's aligned CLOs (usually 1-3), quoted verbatim from the mapping table in docs/CIS133_CLOs.md. No heading icon.
 
 **Bloom's Taxonomy Action Verbs:**
 
@@ -479,6 +480,7 @@ attributes (`<center>`, `<font>`, `align=`), even in teaching code.
 ```markdown
 ## Module Overview 🧭
 ## Learning Objectives 🎯
+### This chapter aligns with the following Course Learning Outcomes  (NO ICON)
 ### Try It Yourself N.X: [Title] 🛠️
 ### Quick Check N.X ✅
 ## N.5 Summary and Retrieval 💡
@@ -641,6 +643,7 @@ Before considering a chapter complete, verify:
 - [ ] Format: **MLO-N.Y (Bloom's Level):** [Verb] [outcome]
 - [ ] Each MLO maps to specific section number
 - [ ] Bloom's verbs at the course's target levels
+- [ ] CLO alignment block after the MLO list (verbatim outcome text)
 
 **Pedagogical Components:**
 

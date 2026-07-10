@@ -20,6 +20,10 @@ By the end of this chapter, you will be able to:
 * **MLO-8.2 (Apply):** Construct media queries that adjust layout, spacing, and type at content-driven breakpoints
 * **MLO-8.3 (Analyze):** Diagnose where a layout fails across screen widths and which layer of a base-plus-overrides stylesheet owns the fix
 
+### This chapter aligns with the following Course Learning Outcomes
+
+* **CLO X (Apply):** Adapt web content for various screen sizes using CSS media queries
+
 ---
 
 ## 8.1 One Site, Every Screen

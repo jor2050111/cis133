@@ -37,6 +37,14 @@ By the end of this chapter, you will be able to:
 
 [Pick Bloom's levels to match the course level. Introductory courses target Remember, Understand, and Apply. Advanced courses target Apply, Analyze, Evaluate, and Create.]
 
+### This chapter aligns with the following Course Learning Outcomes
+
+* **CLO N (Level):** [Verbatim outcome text from docs/CIS133_CLOs.md]
+
+[List only this chapter's aligned CLOs (usually 1-3), taken from the
+CLO-to-chapter mapping table in docs/CIS133_CLOs.md. Quote the
+outcome text word for word. No heading icon on this block.]
+
 ---
 
 ## N.1 [First Major Topic]
@@ -223,6 +231,8 @@ STRUCTURE CHECKLIST:
 * [ ] Decimal numbering for all main sections (N.1, N.2, etc.)
 * [ ] Module Overview with time/prerequisites/deliverables
 * [ ] Exactly 3 Learning Objectives in MLO-N.Y (Bloom's Level) format
+* [ ] CLO alignment block after the MLO list (verbatim outcome text
+      from docs/CIS133_CLOs.md, no heading icon)
 * [ ] 4-5 main content sections
 * [ ] Try It Yourself in each section (Predict-Run-Explain)
 * [ ] Quick Check after each section
@@ -266,6 +276,7 @@ BULLET FORMATTING:
 HEADING ICONS (REQUIRED, identical across all chapters):
 * Module Overview 🧭
 * Learning Objectives 🎯
+* This chapter aligns with the following Course Learning Outcomes (NO ICON)
 * Try It Yourself N.X 🛠️
 * Quick Check N.X ✅
 * Summary and Retrieval N.5 💡

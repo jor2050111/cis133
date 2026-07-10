@@ -20,6 +20,12 @@ By the end of this chapter, you will be able to:
 * **MLO-4.2 (Apply):** Write CSS rules that style page content using element, class, and id selectors with the web's color systems
 * **MLO-4.3 (Evaluate):** Critique styled pages with the W3C HTML and CSS validators, interpreting their reports to repair markup and styling defects
 
+### This chapter aligns with the following Course Learning Outcomes
+
+* **CLO IV (Evaluate):** Critique web pages using HTML and CSS validators to ensure proper markup and styling
+* **CLO V (Create):** Create web pages using HTML for structure and CSS for presentation
+* **CLO IX (Create):** Compose CSS styles to enhance website appearance and layout
+
 ---
 
 ## 4.1 What CSS Is: One Language for Looks

@@ -20,6 +20,10 @@ By the end of this chapter, you will be able to:
 * **MLO-3.2 (Apply):** Embed images with the `img` element, writing alt text that matches each image's purpose on the page
 * **MLO-3.3 (Analyze):** Differentiate the web's image file formats by their properties to select the right format and folder home for a given image
 
+### This chapter aligns with the following Course Learning Outcomes
+
+* **CLO V (Create):** Create web pages using HTML for structure and CSS for presentation
+
 ---
 
 ## 3.1 From Valid to Meaningful: Semantic HTML

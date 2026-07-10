@@ -20,6 +20,11 @@ By the end of this chapter, you will be able to:
 * **MLO-5.2 (Apply):** Style text with font stacks, sizes, and text properties chosen for readability
 * **MLO-5.3 (Analyze):** Diagnose spacing and readability problems with the DevTools box-model diagram and the chapter's typography guidelines
 
+### This chapter aligns with the following Course Learning Outcomes
+
+* **CLO V (Create):** Create web pages using HTML for structure and CSS for presentation
+* **CLO IX (Create):** Compose CSS styles to enhance website appearance and layout
+
 ---
 
 ## 5.1 Every Element Is a Box

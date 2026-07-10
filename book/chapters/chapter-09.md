@@ -20,6 +20,10 @@ By the end of this chapter, you will be able to:
 * **MLO-9.2 (Apply):** Apply WCAG's perceivability rules to color, type, and images: AA contrast, color-independent meaning, rem-sized text, and purpose-matched alt text
 * **MLO-9.3 (Evaluate):** Evaluate pages against WCAG Level AA with an accessibility evaluator and human checks, prioritizing repairs
 
+### This chapter aligns with the following Course Learning Outcomes
+
+* **CLO VIII (Apply):** Implement basic web accessibility practices to improve site usability
+
 ---
 
 ## 9.1 Every User: WCAG, POUR, and Conformance Levels

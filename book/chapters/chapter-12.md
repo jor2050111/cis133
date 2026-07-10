@@ -20,6 +20,12 @@ By the end of this chapter, you will be able to:
 * **MLO-12.2 (Apply):** Perform the full pre-flight check and publish the site to a web server with secure file transfer
 * **MLO-12.3 (Create):** Produce the complete multi-page club site: the home page, six-page navigation, and every standard the course taught
 
+### This chapter aligns with the following Course Learning Outcomes
+
+* **CLO VI (Apply):** Apply file transfer protocols to upload web pages to a web server
+* **CLO XI (Understand):** Illustrate basic scripting concepts in web development
+* **CLO XII (Create):** Produce a multi-page website incorporating learned techniques
+
 ---
 
 ## 12.1 What Scripting Adds: The Client's Half

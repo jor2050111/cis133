@@ -20,6 +20,12 @@ By the end of this chapter, you will be able to:
 * **MLO-1.2 (Understand):** Describe how IP addresses, DNS, domain names, and the parts of a URL work together to locate a page on the web
 * **MLO-1.3 (Analyze):** Compare web sources and practices for reliability, authorship, security, and ethical use when choosing what to trust on a project
 
+### This chapter aligns with the following Course Learning Outcomes
+
+* **CLO I (Analyze):** Analyze the impact of common Internet and World Wide Web (WWW) resources on modern communication
+* **CLO II (Evaluate):** Evaluate how cultural, ethical, security, and privacy concerns shape Internet/WWW practices
+* **CLO III (Analyze):** Compare and contrast various research information resources available on the Internet/WWW
+
 ---
 
 ## 1.1 The Internet and the World Wide Web

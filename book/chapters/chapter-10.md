@@ -20,6 +20,11 @@ By the end of this chapter, you will be able to:
 * **MLO-10.2 (Apply):** Construct accessible data tables with rows, header and data cells, captions, and header scope
 * **MLO-10.3 (Create):** Produce the club's events page: a styled, readable schedule table integrated into the site
 
+### This chapter aligns with the following Course Learning Outcomes
+
+* **CLO V (Create):** Create web pages using HTML for structure and CSS for presentation
+* **CLO VIII (Apply):** Implement basic web accessibility practices to improve site usability
+
 ---
 
 ## 10.1 The Right Tool for the Data

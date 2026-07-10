@@ -6,6 +6,23 @@ Welcome to the CIS133 textbook. Build, style, and publish accessible multi-page 
 
 This textbook is designed for **community college students in their first web development course**. You need no prior experience. Every chapter starts from zero and builds on the chapters before it.
 
+### Course Learning Outcomes
+
+This textbook teaches to the official course learning outcomes (CLOs) for CIS133:
+
+* **CLO I (Analyze):** Analyze the impact of common Internet and World Wide Web (WWW) resources on modern communication
+* **CLO II (Evaluate):** Evaluate how cultural, ethical, security, and privacy concerns shape Internet/WWW practices
+* **CLO III (Analyze):** Compare and contrast various research information resources available on the Internet/WWW
+* **CLO IV (Evaluate):** Critique web pages using HTML and CSS validators to ensure proper markup and styling
+* **CLO V (Create):** Create web pages using HTML for structure and CSS for presentation
+* **CLO VI (Apply):** Apply file transfer protocols to upload web pages to a web server
+* **CLO VII (Create):** Construct functional HTML forms for user input and data collection
+* **CLO VIII (Apply):** Implement basic web accessibility practices to improve site usability
+* **CLO IX (Create):** Compose CSS styles to enhance website appearance and layout
+* **CLO X (Apply):** Adapt web content for various screen sizes using CSS media queries
+* **CLO XI (Understand):** Illustrate basic scripting concepts in web development
+* **CLO XII (Create):** Produce a multi-page website incorporating learned techniques
+
 ## How This Textbook Is Organized
 
 The textbook is divided into **4 parts** spanning **12 chapters**, each designed to be completed in one week.

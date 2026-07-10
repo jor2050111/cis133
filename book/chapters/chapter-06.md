@@ -20,6 +20,11 @@ By the end of this chapter, you will be able to:
 * **MLO-6.2 (Analyze):** Differentiate elements by tree relationship and interaction state to scope styles with descendant combinators and accessible pseudo-classes
 * **MLO-6.3 (Apply):** Construct an accessible navigation bar from the semantic nav list using Flexbox, combinators, and pseudo-classes
 
+### This chapter aligns with the following Course Learning Outcomes
+
+* **CLO V (Create):** Create web pages using HTML for structure and CSS for presentation
+* **CLO IX (Create):** Compose CSS styles to enhance website appearance and layout
+
 ---
 
 ## 6.1 The Flexbox Model
