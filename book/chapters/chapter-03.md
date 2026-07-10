@@ -74,7 +74,7 @@ Render that page and the div and span change nothing you can see. They exist as 
 
 **Run:** Add both paragraphs to a practice file in your `cis133` folder, save, and refresh. Look closely. Then right-click each phrase and Inspect to confirm which element produced which pixels.
 
-**Explain:** In 1-2 sentences, explain why identical pixels do not make the two elements interchangeable, and name one reader of your file that treats them differently.
+**Explain:** In 1-2 sentences, state whether your findings make the two elements interchangeable, and defend your call with one specific reader of your file.
 
 One honest caution now that you have looked: most screen readers, at their default settings, voice all four elements the same way. The durable difference is what the file records. `<strong>` and `<em>` store meaning where any reader, human or software, can find it. `<b>` and `<i>` store only a look.
 

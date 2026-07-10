@@ -138,7 +138,7 @@ Every time you visit a site by name, DNS works in the background:
 3. The DNS server answers with the number, such as 34.193.144.129.
 4. Your browser sends the page request to the server at that address.
 
-The lookup takes milliseconds, and your browser remembers recent answers so repeat visits skip the line. You mostly notice DNS when it fails. Mistype a domain and no DNS server can answer the lookup. The Try It below stages that failure beside a different kind of failure, so you can compare what the browser does with each.
+The lookup takes milliseconds, and your browser remembers recent answers so repeat visits skip the line. You mostly notice DNS when it fails. Mistype a domain and no DNS server can answer the lookup. The Try It below stages two failures side by side, so you can compare what the browser does with each.
 
 ### URLs: The Complete Address
 
@@ -175,7 +175,7 @@ You will meet the file transfer family again in Chapter 12, when you publish you
 
 **Run:** Type each address into your browser, one at a time, and read each result carefully. Note the exact wording the browser or the site uses.
 
-**Explain:** In 1-2 sentences, explain why one failure happens before any server is contacted and the other failure comes from a server.
+**Explain:** In 1-2 sentences, use the round trip's steps to explain each result: how far did each request get, and what stopped it?
 
 ### Quick Check 1.2 ✅
 
