@@ -29,9 +29,9 @@ Chapters 2-12 reference the page instead of repeating the table:
 ```text
 This lab is graded with the standard
 [Skills Lab Rubric](../skills-lab-rubric.md): four criteria at
-4 points each, 16 points total. The criteria are Code Accuracy and
-Efficiency, Output Quality, Documentation and Code Comments, and
-Analysis, Interpretation, and Response to QUESTION(s).
+4 points each, 16 points total. The criteria are Technical Accuracy
+and Efficiency, Output Quality, Documentation Quality, and Analysis,
+Interpretation, and Response to QUESTION(s).
 ```
 
 The transclusion works because `pymdownx.snippets` is enabled in
@@ -42,7 +42,7 @@ the rubric page's preamble never leaks into chapters.
 ## Why one universal rubric
 
 Students who take more than one course in this family learn the four
-criteria once: Code Accuracy and Efficiency, Output Quality,
-Documentation and Code Comments, and Analysis, Interpretation, and
-Response to QUESTION(s). The 16 points split evenly between technical
-execution (8) and transferable skills (8).
+criteria once: Technical Accuracy and Efficiency, Output Quality,
+Documentation Quality, and Analysis, Interpretation, and Response to
+QUESTION(s). The 16 points split evenly between technical execution
+(8) and transferable skills (8).

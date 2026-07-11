@@ -345,9 +345,9 @@ How chapters reference it:
 
 The four criteria, in order:
 
-- **Code Accuracy and Efficiency**
+- **Technical Accuracy and Efficiency**
 - **Output Quality**
-- **Documentation and Code Comments**
+- **Documentation Quality**
 - **Analysis, Interpretation, and Response to QUESTION(s)**
 
 Levels are Mastery (4), Proficiency (3), Developing (2), Emerging (1),

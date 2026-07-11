@@ -1,9 +1,22 @@
 # CIS133 Textbook: HANDOFF
 
-**Last updated:** 2026-07-10
+**Last updated:** 2026-07-11
 **Repo:** https://github.com/jor2050111/cis133
 **Live site:** https://jor2050111.github.io/cis133/
 **Task list:** cis133-fall26 (`export CLAUDE_CODE_TASK_LIST_ID=cis133-fall26`)
+
+## What Was Done (2026-07-11 rubric criteria renamed)
+
+The family renamed two Skills Lab rubric criteria so one rubric can
+serve non-coding courses (CIS105, future BPC170/270): "Code Accuracy
+and Efficiency" is now "Technical Accuracy and Efficiency", and
+"Documentation and Code Comments" is now "Documentation Quality". In
+this repo: `book/skills-lab-rubric.md` re-synced from the family
+master, the link block in chapters 2-12 updated (byte-identical across
+the family's 33 blocks), the pattern in
+`templates/skills-lab-rubric-template.md` updated, and the CLAUDE.md
+rubric law updated. The pending Canvas rubric task must use the NEW
+labels.
 
 ## What Was Done (2026-07-10 CLO surfacing + restamp: 91.6 CONFIRMED)
 
