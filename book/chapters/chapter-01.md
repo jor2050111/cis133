@@ -16,9 +16,9 @@ This chapter builds that map. You will separate the Internet from the web, since
 
 By the end of this chapter, you will be able to:
 
-* **MLO-1.1 (Understand):** Explain how the Internet, the web, browsers, and servers work together to deliver a web page
-* **MLO-1.2 (Understand):** Describe how IP addresses, DNS, domain names, and the parts of a URL work together to locate a page on the web
-* **MLO-1.3 (Analyze):** Compare web sources and practices for reliability, authorship, security, and ethical use when choosing what to trust on a project
+* **MLO-1.1 (Understand):** Explain how the Internet, the web, browsers, and servers work together to deliver a web page (Section 1.1)
+* **MLO-1.2 (Understand):** Describe how IP addresses, DNS, domain names, and the parts of a URL work together to locate a page on the web (Section 1.2)
+* **MLO-1.3 (Analyze):** Compare web sources and practices for reliability, authorship, security, and ethical use when choosing what to trust on a project (Sections 1.3-1.4)
 
 ### This chapter aligns with the following Course Learning Outcomes
 
@@ -141,7 +141,8 @@ Every time you visit a site by name, DNS works in the background:
 
 1. You request phoenixcollege.edu.
 2. Your browser asks a DNS server for that name's IP address.
-3. The DNS server answers with the number, such as 34.193.144.129.
+3. The DNS server answers with one or more current IP addresses. Those
+   addresses can change as the site changes hosting or network services.
 4. Your browser sends the page request to the server at that address.
 
 The lookup takes milliseconds, and your browser remembers recent answers so repeat visits skip the line. You mostly notice DNS when it fails. Mistype a domain and no DNS server can answer the lookup. The Try It below stages two failures side by side, so you can compare what the browser does with each.
@@ -151,13 +152,13 @@ The lookup takes milliseconds, and your browser remembers recent answers so repe
 With domains in hand, you can read a complete web address. A **URL** (Uniform Resource Locator) is the full address of a resource on the web. Each part directs the browser to the right place:
 
 ```text
-https://www.phoenixcollege.edu/academics/programs
+https://www.phoenixcollege.edu/degrees-certificates
 
 https://              protocol: how to talk to the server
 www                   subdomain
 phoenixcollege        domain name
 .edu                  top-level domain
-/academics/programs   path: which page on the server
+/degrees-certificates path: which page on the server
 ```
 
 The **path** is the part after the domain. It names the specific page or file you want, the way an apartment number narrows down a street address. A URL with no path, like `https://www.phoenixcollege.edu`, asks for the site's home page. Some URLs also carry a **query string**, a `?` followed by extra information, such as the search terms in `https://duckduckgo.com/?q=phoenix+college`. You will build multi-page sites later in this course, and every page you add creates a new path.
@@ -173,15 +174,21 @@ The web's protocols are two members of a larger family. Each protocol on the Int
 | SMTP | Moves email between mail servers |
 | FTP | Transfers files between computers |
 
-You will meet the file transfer family again in Chapter 12, when you publish your final project site to a server using a secure transfer method.
+You will meet the file transfer family again in Chapter 12, when you publish a site to a server using a secure transfer method.
 
-### Try It Yourself 1.3: Two Addresses, Two Errors 🛠️
+### Try It Yourself 1.3: Two Requests, Two Failures 🛠️
 
-**Predict:** Address one is `https://cis133.invalid`, a domain that does not exist. Address two is a real site with a fake path: `https://www.w3.org/this-page-does-not-exist`. Will the browser show the same error for both? If not, which step of the round trip fails in each case?
+**Predict:** Request A uses a reserved `.invalid` domain, so DNS cannot
+return an address. Request B reaches a working server, which returns an
+HTTP 404 response because the requested path is missing. Will the browser
+present the two failures in the same way? Which step fails in each case?
 
-**Run:** Type each address into your browser, one at a time, and read each result carefully. Note the exact wording the browser or the site uses.
+**Run:** Sketch both request paths using the five-step round trip from
+Section 1.1. Stop each path at the first failed step and label the result
+`DNS lookup failed` or `HTTP 404: Not Found`.
 
-**Explain:** In 1-2 sentences, use the round trip's steps to explain each result: how far did each request get, and what stopped it?
+**Explain:** In 1-2 sentences, explain how far each request travels and
+why only one request reaches a web server.
 
 ### Quick Check 1.2 ✅
 
@@ -272,7 +279,7 @@ Start with the rule that surprises people: **copyright** protection is automatic
 
 So ask before you take. Is it acceptable to copy someone's graphic onto your site? Their music into your video? Their page design or their essay into your work? By default, no. You need permission, and the ethical developer looks for it instead of hoping nobody notices.
 
-Permission often already exists in the form of a license. A **Creative Commons** license is a public license an author attaches to a work that spells out what reuse is allowed, such as requiring credit or forbidding commercial use. This textbook practices what it preaches: it adapts material from *HTML & CSS Simply Explained* by Brad Olsen under a Creative Commons BY-NC license, with credit on the cover page. When you reuse licensed work, follow the license and give credit:
+Permission often already exists in the form of a license. A **Creative Commons** license is a public license an author attaches to a work that spells out what reuse is allowed, such as requiring credit or forbidding commercial use. Open educational resources often use these licenses, but you must check the exact license on each work before reuse. When you reuse licensed work, follow its terms and give credit:
 
 ```text
 Photo: "Saguaro at dusk" by R. Alvarez,
@@ -283,11 +290,11 @@ Ethics online reaches past copyright. Consider three examples: insulting someone
 
 ### Security: HTTPS and Digital Certificates
 
-Section 1.2 introduced HTTPS as the secure protocol. Here is what it protects you from. Traffic between your browser and a server passes through many machines you do not control. Over plain HTTP, anyone along the way can read that traffic, including passwords and card numbers. HTTPS encrypts the conversation using a technology called **SSL/TLS**, so intercepted traffic reads as gibberish.
+Section 1.2 introduced HTTPS as the secure protocol. Here is what it protects you from. Traffic between your browser and a server passes through many machines you do not control. Over plain HTTP, anyone along the way can read that traffic, including passwords and card numbers. Modern HTTPS encrypts the conversation with **TLS** (Transport Layer Security), so intercepted traffic cannot be read as plain text. SSL is TLS's obsolete predecessor. The [NIST TLS guidance](https://www.nist.gov/publications/guidelines-selection-configuration-and-use-transport-layer-security-tls-0) documents current TLS versions and configuration requirements.
 
 Encryption alone is not enough. You also need proof that the server on the other end is who it claims to be. A **digital certificate** is a file, issued by a trusted authority, that proves a website's identity and enables its encrypted connections. Your browser checks the certificate on every HTTPS visit. When a certificate is missing, expired, or does not match the site, the browser throws a full-page warning instead. Take those warnings seriously.
 
-The developer's rule is simple: never send private information through a page whose address starts with `http://`, and never ask your visitors to. When your final project collects anything from a user, it should travel over HTTPS.
+The developer's rule is simple: never send private information through a page whose address starts with `http://`, and never ask your visitors to. When a site collects anything from a user, it should travel over HTTPS.
 
 !!! warning
     When the browser shows a full-page certificate warning, do not click past it, and never enter a password or payment details on the other side. The warning means the site's identity could not be verified.
@@ -302,7 +309,7 @@ As a user, you already manage privacy with settings and common sense. This cours
 
 The web's founding promise is access for everyone, and that includes people who see, hear, and move differently. A **screen reader** is software that reads page content aloud, or renders it as braille, for users who are blind or have low vision. Screen readers can only describe what the page's code tells them. An image with no text description is invisible to them. A page with a scrambled structure reads like a shuffled deck.
 
-Laws in many countries require accessible websites for the same reason buildings require ramps. In this book, accessibility is not an afterthought chapter you may skim. You will write text alternatives for images in Chapter 3, and Chapter 9 is devoted to accessibility standards and testing. Every page you build from here forward gets judged partly on who can use it.
+Accessibility requirements depend on the organization and jurisdiction. In the United States, the [Department of Justice Title II web rule](https://www.ada.gov/resources/2024-03-08-web-rule/) sets WCAG 2.1 Level AA as the technical standard for state and local government web content and mobile apps. In this book, accessibility is not an afterthought chapter you may skim. You will write text alternatives for images in Chapter 3, and Chapter 9 is devoted to accessibility standards and testing. Every page you build from here forward gets judged partly on who can use it.
 
 ### Try It Yourself 1.5: Read the Padlock 🛠️
 
@@ -337,7 +344,7 @@ See course glossary for full definitions
 * Internet, World Wide Web, server, client, client-server model, browser, cache (Section 1.1)
 * IP address, domain name, top-level domain, subdomain, DNS, URL, path, query string, protocol, HTTP, HTTPS (Section 1.2)
 * search engine, SEO (Section 1.3)
-* copyright, Creative Commons, SSL/TLS, digital certificate, cookie, screen reader (Section 1.4)
+* copyright, Creative Commons, TLS, digital certificate, cookie, screen reader (Section 1.4)
 
 ### Retrieval Practice
 
@@ -404,7 +411,7 @@ quick reference in later chapters.
 
 2. **Understand:** A page fails to load. Explain how you would tell a DNS failure apart from a missing page on a working server, and which step of the round trip breaks in each case.
 
-3. **Apply:** Break the URL `https://library.canyonstate.edu/guides/citations` into its parts, then rewrite it so it would request that site's home page instead.
+3. **Apply:** Break the URL `https://libguides.maricopa.edu/libraries/citation-guides` into its parts, then rewrite it so it would request that site's home page instead.
 
 4. **Analyze:** Two pages cover the same topic. One is a dated university guide by a named librarian that cites its sources. The other is an undated, unsigned page that ranks higher in your search. Compare the two using the five evaluation questions and state which you would cite on a client's site.
 
@@ -416,10 +423,10 @@ quick reference in later chapters.
 * [Cloudflare Learning Center: What is DNS?](https://www.cloudflare.com/learning/dns/what-is-dns/) - A clear, illustrated explanation of the Domain Name System and each step of a lookup.
 * [Google: How Search Works](https://www.google.com/search/howsearchworks/) - Google's own plain-language tour of crawling, indexing, and ranking.
 * [W3C: Ethical Web Principles](https://www.w3.org/TR/ethical-web-principles/) - The web standards body's short statement of what the web should do for its users, including privacy and accessibility.
-* [Creative Commons: About the licenses](https://creativecommons.org/licenses/) - The license family this textbook itself uses, explained by the organization that maintains it.
+* [Creative Commons: About the licenses](https://creativecommons.org/licenses/) - The license choices an author can apply to a work, explained by the organization that maintains them.
 
 ---
 
 ## Looking Ahead ⏩
 
-You can now read the web's map: what the Internet carries, how an address finds a server, and how a page makes its round trip. In Chapter 2 you cross to the other side of that trip: you will set up VS Code, write your first HTML document, and check it with the W3C validator. The pages you request today become pages you build next week.
+You can now read the web's map: what the Internet carries, how an address finds a server, and how a page makes its round trip. In Chapter 2 you cross to the other side of that trip: you will set up VS Code, write your first HTML document, and check it with the W3C validator. The pages you request here become pages you build in the next chapter.

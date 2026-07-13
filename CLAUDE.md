@@ -222,7 +222,7 @@ Every chapter MUST follow this structure:
   Never write "understand," "know," or "learn" as the verb, even when
   the RBT tag is (Remember) or (Understand). The same rule is recorded
   in docs/part-structure.md.
-- Format: `**MLO-N.Y (Bloom's Level):** [Verb] [measurable outcome]`
+- Format: `**MLO-N.Y (Bloom's Level):** [Verb] [measurable outcome] (Section N.X)`
 - N = chapter number, Y = sequential MLO number (1, 2, 3)
 - Start with: "By the end of this chapter, you will be able to:"
 
@@ -240,7 +240,8 @@ By the end of this chapter, you will be able to:
 
 **Alignment Requirements:**
 
-- Each MLO must map to a specific section number (N.1, N.2, etc.)
+- Each MLO must end with an explicit teaching-section binding such as
+  `(Section N.1)` or `(Sections N.1-N.2)`.
 - Skills Lab parts must explicitly align with MLOs (e.g., "Aligns with MLO-1.1, MLO-1.3")
 - MLO numbers enable assessment traceability
 - After the MLO list, add `### This chapter aligns with the following Course Learning Outcomes` with this chapter's aligned CLOs (usually 1-3), quoted verbatim from the mapping table in docs/CIS133_CLOs.md. No heading icon.
@@ -640,8 +641,8 @@ Before considering a chapter complete, verify:
 **Learning Objectives:**
 
 - [ ] Exactly 3 MLOs with MLO-N.Y numbering and RBT tags
-- [ ] Format: **MLO-N.Y (Bloom's Level):** [Verb] [outcome]
-- [ ] Each MLO maps to specific section number
+- [ ] Format: **MLO-N.Y (Bloom's Level):** [Verb] [outcome] (Section N.X)
+- [ ] Each MLO ends with an explicit teaching-section binding
 - [ ] Bloom's verbs at the course's target levels
 - [ ] CLO alignment block after the MLO list (verbatim outcome text)
 

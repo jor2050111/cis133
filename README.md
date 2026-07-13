@@ -173,6 +173,7 @@ Jorge.Vega@PhoenixCollege.edu
 
 ---
 
-**Status:** Initial Scaffolding - Active Development
+**Status:** Phase 1 publication remediation complete. License and
+editorial blockers remain for the next phase.
 
-**Current Chapter Count:** 0 of 12 (scaffolding only)
+**Current Chapter Count:** 12 of 12

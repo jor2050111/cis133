@@ -4,7 +4,7 @@ Skills Lab 3A left the club with a site that does everything right. Three pages 
 
 The president has a point, and the answer is not that something went wrong. HTML says what content IS, and it stays silent about looks on purpose. Every color the site shows today is a stand-in nobody at the club chose, and this chapter opens with the question of where those looks come from. Changing them is the job of a second language, one you have known by name since Chapter 1. CSS describes how content LOOKS, and this chapter puts it in your hands: rules that select exactly the elements you mean and declare how they should appear.
 
-The design team already did the hard part. The illustration set that drew the logo, the charts, and the drive scenes defines the club's palette, and it ships in your data pack as a file of exact color values. You will connect stylesheets to pages three ways and learn which one professionals default to. You will write selectors that target whole regions, chosen groups, and single elements. You will dress all three pages from one file. And you will add a second validator to your toolkit, because CLO IV's critique habit covers styles as much as markup. One rule carries over from Chapter 3: nothing you style this week may cost the meaning your landmarks built. Devon's jump menu works today, and it still works when the site is teal.
+The design team already did the hard part. The illustration set that drew the logo, the charts, and the drive scenes defines the club's palette, and it ships in your data pack as a file of exact color values. You will connect stylesheets to pages three ways and learn which one professionals default to. You will write selectors that target whole regions, chosen groups, and single elements. You will dress all three pages from one file. And you will add a second validator to your toolkit, because CLO IV's critique habit covers styles as much as markup. One rule carries over from Chapter 3: nothing you style in this chapter may cost the meaning your landmarks built. Devon's jump menu works today, and it still works when the site is teal.
 
 ## Module Overview 🧭
 
@@ -16,9 +16,9 @@ The design team already did the hard part. The illustration set that drew the lo
 
 By the end of this chapter, you will be able to:
 
-* **MLO-4.1 (Apply):** Connect CSS to HTML pages through inline styles, internal stylesheets, and external stylesheets, choosing the method that fits the job
-* **MLO-4.2 (Apply):** Write CSS rules that style page content using element, class, and id selectors with the web's color systems
-* **MLO-4.3 (Evaluate):** Critique styled pages with the W3C HTML and CSS validators, interpreting their reports to repair markup and styling defects
+* **MLO-4.1 (Apply):** Connect CSS to HTML pages through inline styles, internal stylesheets, and external stylesheets, choosing the method that fits the job (Sections 4.1-4.2)
+* **MLO-4.2 (Apply):** Write CSS rules that style page content using element, class, and id selectors with the web's color systems (Sections 4.3-4.4)
+* **MLO-4.3 (Evaluate):** Critique styled pages with the W3C HTML and CSS validators, interpreting their reports to repair markup and styling defects (Section 4.4)
 
 ### This chapter aligns with the following Course Learning Outcomes
 
@@ -62,7 +62,7 @@ Error reports, DevTools panels, and documentation all speak this vocabulary. So 
 
 ### Comments in CSS
 
-Stylesheets grow, and future readers (including you in three weeks) need notes. A **CSS comment** opens with `/*` and closes with `*/`, and browsers skip everything between. The convention from your HTML comments carries over: comment the WHY, because the code already shows the what.
+Stylesheets grow, and future readers (including you after later revisions) need notes. A **CSS comment** opens with `/*` and closes with `*/`, and browsers skip everything between. The convention from your HTML comments carries over: comment the WHY, because the code already shows the what.
 
 ```css
 /* Deep teal instead of club teal: the darker shade keeps
@@ -273,7 +273,7 @@ The decision rule for all three is worth memorizing:
 * A class styles some of these, chosen by role.
 * An id styles exactly this one.
 
-When in doubt between class and id, choose the class. Reuse costs nothing, and "unique" has a way of becoming "two of them" by next semester.
+When in doubt between class and id, choose the class. Reuse costs nothing, and "unique" has a way of becoming "two of them" after a later revision.
 
 This is also where Chapter 3's meaningless containers get their jobs. A `<div>` with a class styles a region no landmark fits, and a `<span>` with a class styles a few words mid-sentence. The habit stands: semantic element first, generic container only when nothing with meaning fits.
 
@@ -540,4 +540,4 @@ Interpretation, and Response to QUESTION(s).
 
 ## Looking Ahead ⏩
 
-The club's site wears its own colors now, and you probably noticed what is still missing: the text presses right against the edges of every colored region, and the pages want breathing room. Chapter 5 hands you the box model, CSS's system for space. The spacing Chapter 2 told you never to fake with `<br>` finally gets its real tools, margins and padding, in the same stylesheet you built this week. You can color boxes now. Next you control their space.
+The club's site wears its own colors now, and you probably noticed what is still missing: the text presses right against the edges of every colored region, and the pages want breathing room. Chapter 5 hands you the box model, CSS's system for space. The spacing Chapter 2 told you never to fake with `<br>` finally gets its real tools, margins and padding, in the same stylesheet you built in this chapter. You can color boxes now. Next you control their space.

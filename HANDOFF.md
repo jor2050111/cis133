@@ -1,9 +1,48 @@
 # CIS133 Textbook: HANDOFF
 
-**Last updated:** 2026-07-11
+**Last updated:** 2026-07-13
 **Repo:** https://github.com/jor2050111/cis133
 **Live site:** https://jor2050111.github.io/cis133/
 **Task list:** cis133-fall26 (`export CLAUDE_CODE_TASK_LIST_ID=cis133-fall26`)
+
+## What Was Done (2026-07-13 Phase 1 publication remediation)
+
+This phase corrected P0 items 1, 2, 3, and 5 from the 2026-07-12 V2
+evaluation. P0 items 4 and 6 remain for the next phase.
+
+1. **Source safety:** Reconciled all 145 complete URL occurrences in
+   `book/` and `assets/code/` to a 100 percent source manifest. The
+   manifest contains 86 unique exact URLs, no broken URL, no unresolved
+   URL, and no unsupported source-linked claim. Fixed the Phoenix
+   College, Maricopa, National Park Service, City of Phoenix, TLS, and
+   accessibility references. Removed URLs from fictional source
+   profiles instead of attaching unrelated live pages to fictional
+   publishers.
+2. **Schedule neutrality:** Removed chapter assignments to weeks,
+   course-shell timing, and numbered project checkpoints. The same 12
+   chapters now support 9-, 12-, 14-, and 16-week mappings. Optional
+   independent-project milestones stay in the instructor layer.
+3. **Keyboard access:** Disabled rendered code-line permalinks. The
+   rebuilt site contains zero `__codelineno` anchors, down from 950.
+   Keyboard and mobile browser checks found no remaining blocker or
+   page-level horizontal overflow.
+4. **Traceability:** Added explicit teaching-section bindings to all 36
+   MLOs. Updated the chapter template and authoring law so future MLOs
+   retain the binding.
+
+The full V2 reevaluation scored **88.8 out of 100**, the Strong draft
+band. G1 through G5 and G8 pass. G6 remains open because the book still
+lacks an open license. G7 remains open because the two deferred
+banned-word hits remain at `book/glossary.md:187` and
+`book/chapters/chapter-03.md:45`. The scorecard and source manifest live
+in `../evaluations/` with the `cis133-2026-07-13-phase-1` prefix.
+
+Verification passed: clean Zensical build, 16 rendered pages, 1,952
+internal links and anchors, 45 intended-valid HTML files, 16 CSS files,
+two JavaScript files, 75 PNG files, all 12 chapter contracts, all 217
+declared glossary terms, and the 221-entry course archive. Pillow 12.3.0
+reproduced all nine generated images byte for byte. The Pillow version
+is still not pinned and remains a maintenance item.
 
 ## What Was Done (2026-07-11 rubric criteria renamed)
 

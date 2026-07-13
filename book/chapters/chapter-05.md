@@ -16,9 +16,9 @@ This chapter works in that order. You will read a box from the inside out and X-
 
 By the end of this chapter, you will be able to:
 
-* **MLO-5.1 (Apply):** Control the space inside and around elements with padding, border, and margin, using individual and shorthand syntax
-* **MLO-5.2 (Apply):** Style text with font stacks, sizes, and text properties chosen for readability
-* **MLO-5.3 (Analyze):** Diagnose spacing and readability problems with the DevTools box-model diagram and the chapter's typography guidelines
+* **MLO-5.1 (Apply):** Control the space inside and around elements with padding, border, and margin, using individual and shorthand syntax (Sections 5.1-5.2)
+* **MLO-5.2 (Apply):** Style text with font stacks, sizes, and text properties chosen for readability (Sections 5.3-5.4)
+* **MLO-5.3 (Analyze):** Diagnose spacing and readability problems with the DevTools box-model diagram and the chapter's typography guidelines (Sections 5.1 and 5.4)
 
 ### This chapter aligns with the following Course Learning Outcomes
 

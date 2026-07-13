@@ -16,9 +16,9 @@ You will read your first scripts and watch them run. You will hear the server's 
 
 By the end of this chapter, you will be able to:
 
-* **MLO-12.1 (Understand):** Illustrate what scripting adds to a site: client-side behavior in the browser and server-side processing in concept
-* **MLO-12.2 (Apply):** Perform the full pre-flight check and publish the site to a web server with secure file transfer
-* **MLO-12.3 (Create):** Produce the complete multi-page club site: the home page, six-page navigation, and every standard the course taught
+* **MLO-12.1 (Understand):** Illustrate what scripting adds to a site: client-side behavior in the browser and server-side processing in concept (Sections 12.1-12.2)
+* **MLO-12.2 (Apply):** Perform the full pre-flight check and publish the site to a web server with secure file transfer (Sections 12.3-12.4)
+* **MLO-12.3 (Create):** Produce the complete multi-page club site: the home page, six-page navigation, and every standard the course taught (Sections 12.3-12.4)
 
 ### This chapter aligns with the following Course Learning Outcomes
 
@@ -34,9 +34,9 @@ Every page you own runs on two languages with a clean split. HTML says what cont
 
 The web has a third layer, and the course saved it for last. **JavaScript** is the scripting language of the web, and its layer is behavior: the page acting after it loads. Structure, presentation, behavior.
 
-A page without a script sits still once the browser draws it. A page with one can answer a click, rewrite its own text, and know what day it is. You have used pages like that all term without thinking about it: a search box that suggests while you type, a map that pans under your finger, the course shell marking an item done. Behind every one of those moments, a script is running.
+A page without a script sits still once the browser draws it. A page with one can answer a click, rewrite its own text, and know what day it is. You use pages like that every day: a search box that suggests while you type, a map that pans under your finger, or a learning system that marks an item done. Behind every one of those moments, a script is running.
 
-One expectation before the first script. This chapter is a preview, not a tutorial. You will read scripts, run them, and say what ran where. Writing them is a later course's work. Reading turns out to be most of the skill this week, because the scripts this course ships are short enough to read whole.
+One expectation before the first script. This chapter is a preview, not a tutorial. You will read scripts, run them, and say what ran where. Writing them is a later course's work. Reading turns out to be most of the skill here, because the scripts this course ships are short enough to read whole.
 
 ### The Script Element and the One Script We Ship
 
@@ -186,7 +186,7 @@ Your job is to know which half of a task belongs to which machine, and that job 
 
 ### Try It Yourself 12.3: The Trip You Cannot Watch 🛠️
 
-**Predict:** Nothing to open and nothing to run: the server's half exists only on paper this term. On paper, sketch the join list's future as boxes and arrows: every machine a sign-up touches, in order, what each one does with the pairs, and where the trip's one trustworthy check happens.
+**Predict:** Nothing to open and nothing to run: the server's half exists only on paper in this chapter. On paper, sketch the join list's future as boxes and arrows: every machine a sign-up touches, in order, what each one does with the pairs, and where the trip's one trustworthy check happens.
 
 **Run:** Compare your sketch against the traced version that follows this exercise, one station at a time. Mark every difference.
 
@@ -225,7 +225,7 @@ One breath covers the last distinction this course owes you. The club's site is 
 
 And Chapter 1's collection rule returns with its full weight. Whatever travels between client and server carries visitor data. Chapter 1 set the law: "never send private information through a page whose address starts with `http://`, and never ask your visitors to."
 
-The join page collects names and emails, so the club's live site must serve `https://`. Your final project owes its visitors the same. Chapter 2 promised your addresses would earn that prefix, and the next section starts the move.
+The join page collects names and emails, so the club's live site must serve `https://`. Any independent project with a form owes its visitors the same. Chapter 2 promised your addresses would earn that prefix, and the next section starts the move.
 
 ### Quick Check 12.2 ✅
 
@@ -247,15 +247,15 @@ The server's half is someone's job to provide. For a site like the club's, that 
 
 Costs run from free static hosts to monthly shared-hosting fees, and the Further Reading survey walks the range. A custom domain name, Chapter 1's term, is a separate purchase that points at whichever host you choose.
 
-Which host this course uses is deliberately not written here. The course shell names your host, your address, and your credentials, because those details belong to your section, not to a book. The moves this chapter teaches are the same on every host.
+Which host a section uses is deliberately not written here. Your instructor provides the host, address, and credentials separately because those details belong to the course layer, not the textbook. The moves this chapter teaches are the same on every host.
 
 ### The Secure Transfer Family
 
-Getting the folder there is the file transfer family's work. Chapter 1 made this meeting an appointment: "You will meet the file transfer family again in Chapter 12, when you publish your final project site to a server using a secure transfer method." **FTP** (File Transfer Protocol) is the family's original name, one row of Chapter 1's protocol table: transfers files between computers.
+Getting the folder there is the file transfer family's work. Chapter 1 made this meeting an appointment: "You will meet the file transfer family again in Chapter 12, when you publish a site to a server using a secure transfer method." **FTP** (File Transfer Protocol) is the family's original name, one row of Chapter 1's protocol table: transfers files between computers.
 
 The original is also showing its age, because plain FTP moves files and credentials unencrypted, the same sin as plain HTTP.
 
-So the modern law follows a rule you already own: transfer over the secure family members, **SFTP** or FTPS, which encrypt the whole trip. Free transfer clients such as FileZilla speak both, and the course shell names the client and settings your section uses.
+So the modern law follows a rule you already own: transfer over the secure family members, **SFTP** or FTPS, which encrypt the whole trip. Free transfer clients such as FileZilla speak both. Your instructor provides the client and connection settings for the selected host.
 
 The upload itself is one idea: copy your site folder's contents into the server's public folder, keeping the structure. Your host's instructions name that public folder.
 
@@ -358,11 +358,11 @@ Paste the live `https://` address into the validator's address tab, and the vali
 
 ### The Update Cycle and the Dress Rehearsal
 
-One habit turns the publish from an event into a cycle. A live site is not an archive: content changes, and the officers will ask for edits the week the site goes up. The update cycle is the pre-flight in miniature. Edit locally, re-run the pre-flight on what changed, re-upload the changed files, verify live.
+One habit turns the publish from an event into a cycle. A live site is not an archive: content changes, and the officers will ask for edits after the site goes up. The update cycle is the pre-flight in miniature. Edit locally, re-run the pre-flight on what changed, re-upload the changed files, verify live.
 
 Nothing edits the server copy directly, because the server holds the copy everyone sees, and the pre-flight is what keeps that copy worthy.
 
-This chapter's lab is also a dress rehearsal. In weeks 13 through 15, the final project runs the same moves on your own site. The plan from Checkpoint 1 and the draft pages from Checkpoint 2 meet the pre-flight, the publish, and the live verification you are about to perform for the club. Week 16 is the showcase. The course shell carries the dates, the milestones, and your hosting details. The club's site is the last site this book builds with you. The next one is yours.
+This chapter's lab is also a dress rehearsal. If your course includes an independent project, the site plan and draft pages meet the pre-flight, the publish, and the live verification you are about to perform for the club. Your instructor maps those milestones to the course calendar and provides the hosting details. The club's site is the last site this book builds with you. The next one is yours.
 
 ### Try It Yourself 12.5: The Five-Minute Pre-Flight 🛠️
 
@@ -421,7 +421,7 @@ Answer from memory before checking back through the chapter.
 The lab walks the chapter's own path. Part 1 builds the front door and grows Chapter 6's navigation bar to its final six links. Part 2 attaches the script and traces the server's half on paper. Part 3 runs the pre-flight, publishes, and closes the site plan.
 
 !!! note
-    One contingency, stated up front: if the course host is not yet provisioned, the course shell says so, and Part 3's publish steps wait for it. The pre-flight and the zip still submit on time.
+    If live hosting is unavailable, complete the local pre-flight and package the site. Your instructor will identify alternate publication evidence.
 
 ### Part 1: Foundation (Aligns with MLO-12.3)
 
@@ -441,7 +441,7 @@ The lab walks the chapter's own path. Part 1 builds the front door and grows Cha
 ### Part 3: Extension (Aligns with MLO-12.2, MLO-12.3)
 
 1. Run the pre-flight on all six pages: one checklist copy per page, checks 1 through 7, audit first. Log every finding before repairing anything, Chapter 9's habit, then repair what you found and re-validate. Record findings, repairs, and final counts in answer 3.A.
-2. Publish per the course shell's hosting details: connect with the secure transfer method your host supports, copy the folder's contents into the server's public folder keeping the structure, and load the real address.
+2. Use the hosting details your instructor provides: connect with the secure transfer method the host supports, copy the folder's contents into the server's public folder while keeping the structure, and load the real address.
 3. Verify live: open the live URL on a real phone if you can, and click through every page from the menu. Run check 8 by pasting the live address into the HTML validator's address tab. Record the transfer method and why it is the secure choice, the LIVE URL, and the verification in answer 3.B. Then close the site plan from Lab 7A: name each of the six planned pages, now live.
 
 ### Questions & Analysis 🤔
@@ -451,7 +451,7 @@ Answer both questions in the answers file. These answers carry significant rubri
 1. Pick one interactive moment on the finished site: the footer's year, the join form's refusal of an empty required field, or a nav link lighting under the pointer. Trace it across the client-server line: what traveled from the server, what ran or rendered on the client, and which parts of the moment needed no server at all. Cite your own pages as evidence.
 2. The officers read your pre-flight log and ask a reasonable question: "It found almost nothing. Can we skip it for next month's update?" Judge the request: name what each layer of the pre-flight guards, weigh what the "almost" would have cost the club live, and state the update policy you would set for the club's next edit.
 
-**Submission:** Zip your `skills-lab-12a-lastname` folder and submit it as `skills-lab-12a-lastname.zip`. It contains the updated `starter-site` folder (six pages, `club-styles.css`, `footer-year.js`, and `images`), your completed checklist copies, and `skills-lab-12a-answers.txt` with the live URL on its LIVE URL line. Every page and the stylesheet must validate with zero messages, every answer must sit under its numbered prompt, and the live URL must be reachable unless the course shell's hosting contingency applies.
+**Submission:** Zip your `skills-lab-12a-lastname` folder and submit it as `skills-lab-12a-lastname.zip`. It contains the updated `starter-site` folder (six pages, `club-styles.css`, `footer-year.js`, and `images`), your completed checklist copies, and `skills-lab-12a-answers.txt` with the live URL or alternate publication evidence your instructor requires. Every page and the stylesheet must validate with zero messages, and every answer must sit under its numbered prompt.
 
 ### Rubric: Skills Lab 12A
 
@@ -491,4 +491,4 @@ Interpretation, and Response to QUESTION(s).
 
 ## Looking Ahead ⏩
 
-For the first time, no chapter waits after this one. The site plan the officers approved in Chapter 7 is complete: six pages promised, six pages live, at an address anyone can visit. What remains is yours. In weeks 13 through 15, the final project runs these same moves on your own site, with the course shell carrying the dates, and the site you just shipped as the working pattern. Twelve chapters ago you learned how a page reaches a screen. Now your pages reach everyone's. The course ends where the web begins.
+For the first time, no chapter waits after this one. The site plan the officers approved in Chapter 7 is complete: six pages promised, six pages live, at an address anyone can visit. If your course includes an independent project, reuse these moves on your own site and let this published site serve as the working pattern. Twelve chapters ago you learned how a page reaches a screen. Now your pages reach everyone's. The course ends where the web begins.

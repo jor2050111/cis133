@@ -2,12 +2,12 @@ CIS133 Skills Lab 1A: Source Profiles
 Five web sources the computer club found while researching a
 resource page about recycling old electronics. All five profiles are
 fictional composites written for this course. Evaluate them exactly
-as described. Do not try to visit the URLs.
+as described. They do not contain live URLs.
 
 ---------------------------------------------------------------------
 PROFILE A
 ---------------------------------------------------------------------
-URL:          https://www.desertvalleyaz.gov/public-works/electronics-recycling
+Address type: Official local government site (.gov)
 Site:         City of Desert Valley, Public Works Department
 Author:       No individual byline. Published by the department.
 Last updated: March 2026
@@ -21,7 +21,7 @@ Other notes:  Plain design, no ads. A "Contact Public Works" email
 ---------------------------------------------------------------------
 PROFILE B
 ---------------------------------------------------------------------
-URL:          https://gadgetguru-tech.blog/why-recycling-is-a-scam
+Address type: Personal blog (.blog)
 Site:         Gadget Guru, a personal tech blog
 Author:       "GadgetGuru88" (no real name or bio provided)
 Last updated: August 2019
@@ -36,7 +36,7 @@ Other notes:  Comment section is full of arguments. No sources cited
 ---------------------------------------------------------------------
 PROFILE C
 ---------------------------------------------------------------------
-URL:          https://www.desertvalleytimes.com/news/e-waste-surge
+Address type: Local news outlet (.com)
 Site:         Desert Valley Times, a local daily newspaper
 Author:       Maria Contreras, staff reporter (byline links to her
               other articles)
@@ -52,7 +52,7 @@ Other notes:  The site shows the first three paragraphs free, then
 ---------------------------------------------------------------------
 PROFILE D
 ---------------------------------------------------------------------
-URL:          https://best-tech-tips.info/ultimate-guide-recycle-electronics
+Address type: Commercial advice site (.info)
 Site:         Best Tech Tips
 Author:       "Editorial Team" (no individuals named)
 Last updated: No date anywhere on the page
@@ -69,7 +69,7 @@ Other notes:  A banner offers "100+ free recycling images, no
 ---------------------------------------------------------------------
 PROFILE E
 ---------------------------------------------------------------------
-URL:          https://sustainability.canyonstate.edu/e-waste
+Address type: College site (.edu)
 Site:         Canyon State College, Office of Sustainability
 Author:       Dr. Lena Ortiz, sustainability coordinator (named on
               the page with contact information)

@@ -31,9 +31,9 @@ HTML5, CSS3, VS Code, browser DevTools.
 
 By the end of this chapter, you will be able to:
 
-* **MLO-N.1 (Bloom's Level):** [Action verb] [measurable outcome aligned with Section N.1]
-* **MLO-N.2 (Bloom's Level):** [Action verb] [measurable outcome aligned with Section N.2]
-* **MLO-N.3 (Bloom's Level):** [Action verb] [measurable outcome aligned with Section N.4]
+* **MLO-N.1 (Bloom's Level):** [Action verb] [measurable outcome] (Section N.1)
+* **MLO-N.2 (Bloom's Level):** [Action verb] [measurable outcome] (Section N.2)
+* **MLO-N.3 (Bloom's Level):** [Action verb] [measurable outcome] (Sections N.3-N.4)
 
 [Pick Bloom's levels to match the course level. Introductory courses target Remember, Understand, and Apply. Advanced courses target Apply, Analyze, Evaluate, and Create.]
 
@@ -231,6 +231,7 @@ STRUCTURE CHECKLIST:
 * [ ] Decimal numbering for all main sections (N.1, N.2, etc.)
 * [ ] Module Overview with time/prerequisites/deliverables
 * [ ] Exactly 3 Learning Objectives in MLO-N.Y (Bloom's Level) format
+* [ ] Every MLO ends with its teaching-section binding
 * [ ] CLO alignment block after the MLO list (verbatim outcome text
       from docs/CIS133_CLOs.md, no heading icon)
 * [ ] 4-5 main content sections

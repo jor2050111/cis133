@@ -1,10 +1,10 @@
 # Chapter 10: HTML Tables
 
-The officers' expansion brief has waited three chapters to be paid. Its second request was an events page: visitors keep asking when the next drop-off is, so publish the fall schedule. A helpful clubmate took a first pass this week and pasted the six events into a draft page as six paragraphs. Now try to answer one visitor's question: when is the Fix-It Workshop? You read all six paragraphs to find out. The officers' notes have structure the paragraphs threw away. Every event answers the same five questions: its name, date, time, location, and one detail worth knowing.
+The officers' expansion brief has waited three chapters to be paid. Its second request was an events page: visitors keep asking when the next drop-off is, so publish the fall schedule. A helpful clubmate took a first pass and pasted the six events into a draft page as six paragraphs. Now try to answer one visitor's question: when is the Fix-It Workshop? You read all six paragraphs to find out. The officers' notes have structure the paragraphs threw away. Every event answers the same five questions: its name, date, time, location, and one detail worth knowing.
 
 The draft also marks a turn in the course. Part III designed for every user: you planned the site, adapted it to every screen, and audited it against WCAG. Part IV builds the pages the site plan promised, starting here. The tool this chapter adds is the HTML table, the element that gives every fact two addresses: its row and its column. A visitor hunting the workshop date reads down one column and across one row, and the answer waits at the intersection. No full read required.
 
-You will learn to tell table data from everything else, and to refuse tables that only want to arrange boxes. You will build the grid from its elements, then make it announce itself honestly to every tool, because Devon is still a member and Chapter 9's work never pauses. You will style the grid until a schedule reads at a glance, and teach a wide table to behave on a phone. Skills Lab 10A publishes the fall schedule at last and adds the events page to every page's navigation. Final Checkpoint 2, the first draft pages of your own site, rides right behind it.
+You will learn to tell table data from everything else, and to refuse tables that only want to arrange boxes. You will build the grid from its elements, then make it announce itself honestly to every tool, because Devon is still a member and Chapter 9's work never pauses. You will style the grid until a schedule reads at a glance, and teach a wide table to behave on a phone. Skills Lab 10A publishes the fall schedule at last and adds the events page to every page's navigation. The same pattern supports Independent Project Milestone 2, a set of draft pages for your own site.
 
 ## Module Overview 🧭
 
@@ -16,9 +16,9 @@ You will learn to tell table data from everything else, and to refuse tables tha
 
 By the end of this chapter, you will be able to:
 
-* **MLO-10.1 (Analyze):** Differentiate data that belongs in a table from content that belongs in lists or layout, justifying the choice
-* **MLO-10.2 (Apply):** Construct accessible data tables with rows, header and data cells, captions, and header scope
-* **MLO-10.3 (Create):** Produce the club's events page: a styled, readable schedule table integrated into the site
+* **MLO-10.1 (Analyze):** Differentiate data that belongs in a table from content that belongs in lists or layout, justifying the choice (Section 10.1)
+* **MLO-10.2 (Apply):** Construct accessible data tables with rows, header and data cells, captions, and header scope (Sections 10.2-10.3)
+* **MLO-10.3 (Create):** Produce the club's events page: a styled, readable schedule table integrated into the site (Section 10.4)
 
 ### This chapter aligns with the following Course Learning Outcomes
 
@@ -342,9 +342,9 @@ What you watched has a mechanism worth naming. A cell will not wrap below its lo
 !!! note
     Judge any table repair the Chapter 8 way: device mode, a phone profile, and a slow walk down the whole page. A table that pans inside a page that stands still is the pass. A page that moves with it is not.
 
-### Final Checkpoint 2: Draft Pages
+### Independent Project Milestone 2: Draft Pages
 
-Checkpoint 1 asked for a plan. Final Checkpoint 2 asks for pages: the first draft pages of your own final site, built to the standard this chapter's lab models. Draft means structurally honest, not finished. Each page carries the full head skeleton, real content in real landmarks, working navigation between the drafts, and a clean pass through the Chapter 9 habits: both validators plus the checklist. Your home page can wait, because Chapter 12 builds it when the whole site publishes and re-runs every check first. The course shell carries the dates and the required page count. The events page you are about to build is the working pattern. You are not practicing pages this week. You are building your site.
+Milestone 1 created the plan. Independent Project Milestone 2 creates draft pages from that plan, built to the standard this chapter's lab models. Draft means structurally honest, not finished. Each page carries the full head skeleton, real content in real landmarks, working navigation between drafts, and a clean pass through the Chapter 9 habits: both validators plus the checklist. Your instructor can set the page count and calendar placement without changing this chapter.
 
 ### Quick Check 10.4 ✅
 
@@ -363,7 +363,7 @@ Checkpoint 1 asked for a plan. Final Checkpoint 2 asks for pages: the first draf
 * Tools read the markup, not the pixels. The caption is the table's own title, first child by validator-enforced law. `scope="col"` and `scope="row"` tell a screen reader which headers govern which cells, so Devon hears "Chemistry, Thursday, 2:00 to 5:00" instead of a bare value.
 * Naked tables draw no grid. `border-collapse: collapse` on the table merges doubled lines, cells take the borders and padding, and `text-align: left` seats headers over their columns.
 * Zebra striping uses the course's last new selector: `tbody tr:nth-child(even)`, a structural pseudo-class matching position instead of state. The thead/tbody split keeps the header row out of the count, and the hover rule sits after the stripe rule so the later rule wins their tie.
-* A wide table can out-floor a phone. The repair is a wrapper div with `overflow-x: auto`: the wrapper scrolls, the page keeps the no-sideways-scroll law. Final Checkpoint 2 is open: draft pages of your own site, built to this chapter's pattern.
+* A wide table can out-floor a phone. The repair is a wrapper div with `overflow-x: auto`: the wrapper scrolls, the page keeps the no-sideways-scroll law. Independent Project Milestone 2 uses this chapter's pattern for your own draft pages.
 
 ### Key Terms
 
@@ -392,7 +392,7 @@ Answer from memory before checking back through the chapter.
 
 **Dataset:** Provided files in `assets/code/chapter-10/` from the course data pack. `starter-site/` holds the club's three pages, the `images` folder, and `club-styles.css` exactly as Skills Lab 9A finished them: the pages are unchanged, and the stylesheet's type now speaks rem. `events-content.txt` carries the six fall events with labeled fields, word for word from the Chapter 7 brief's planning notes, so you copy values instead of retyping prose. `club-palette.txt` travels with every CSS chapter, and its passing list supplies every color this lab's table wears. `table-practice.html`, `wide-practice.html`, and `practice-styles.css` are the chapter's Try It Yourself files and stay out of the submission. `skills-lab-10a-answers.txt` is your written answers file. Part 3 reuses `accessibility-checklist.txt` from the Chapter 9 pack. The folder's README documents every file. Work at the extracted `cis133` root.
 
-The lab walks the chapter's own path. Part 1 builds the page and its table and wires the navigation. Part 2 styles the grid from the palette's passing list. Part 3 survives the phone, passes the Chapter 9 habit, and hands off to Final Checkpoint 2.
+The lab walks the chapter's own path. Part 1 builds the page and its table and wires the navigation. Part 2 styles the grid from the palette's passing list. Part 3 survives the phone, passes the Chapter 9 habit, and supplies a pattern for Independent Project Milestone 2.
 
 ### Part 1: Foundation (Aligns with MLO-10.2)
 
@@ -412,7 +412,7 @@ The lab walks the chapter's own path. Part 1 builds the page and its table and w
 
 1. Run the phone test on the finished events page in device mode at a phone width. Walk the whole page and log everything that breaks the no-sideways-scroll law, top to bottom, before you fix anything: Chapter 9's audit-first habit. Then repair each finding with the tool that owns it, and know that not every repair is new this chapter. Record the findings, the fixes, and which element scrolls now in answer 3.A.
 2. Run the Chapter 9 habit on the new page: copy `accessibility-checklist.txt` from the Chapter 9 pack, run all seven checks on `events.html`, and repair anything they surface. Then validate all four pages and the stylesheet to zero messages. Log the findings and counts in answer 3.B.
-3. Close answer 3.B with two hand-downs. First, the right-tool defense: why the schedule earned a table while the recycling guide's preparation steps stayed a list. Second, the Final Checkpoint 2 hand-off: name the draft pages of your own site that will follow this page's pattern.
+3. Close answer 3.B with two hand-downs. First, the right-tool defense: why the schedule earned a table while the recycling guide's preparation steps stayed a list. Second, the Independent Project Milestone 2 hand-off: name the draft pages of your own site that will follow this page's pattern.
 
 ### Questions & Analysis 🤔
 

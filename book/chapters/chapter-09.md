@@ -16,9 +16,9 @@ You will meet WCAG, its four POUR principles, and the conformance level this cou
 
 By the end of this chapter, you will be able to:
 
-* **MLO-9.1 (Apply):** Implement accessible structure and navigation: ordered headings, landmarks, descriptive link text, and visible focus styles
-* **MLO-9.2 (Apply):** Apply WCAG's perceivability rules to color, type, and images: AA contrast, color-independent meaning, rem-sized text, and purpose-matched alt text
-* **MLO-9.3 (Evaluate):** Evaluate pages against WCAG Level AA with an accessibility evaluator and human checks, prioritizing repairs
+* **MLO-9.1 (Apply):** Implement accessible structure and navigation: ordered headings, landmarks, descriptive link text, and visible focus styles (Sections 9.1-9.2)
+* **MLO-9.2 (Apply):** Apply WCAG's perceivability rules to color, type, and images: AA contrast, color-independent meaning, rem-sized text, and purpose-matched alt text (Section 9.3)
+* **MLO-9.3 (Evaluate):** Evaluate pages against WCAG Level AA with an accessibility evaluator and human checks, prioritizing repairs (Section 9.4)
 
 ### This chapter aligns with the following Course Learning Outcomes
 
@@ -139,7 +139,7 @@ The third menu is the link list. A screen reader can pull every link on a page i
 
 <!-- REPAIRED: each link names its destination, in or out of
      its sentence. -->
-<a href="schedule.html">See this week's tutoring schedule</a>
+<a href="schedule.html">See the current tutoring schedule</a>
 <a href="subjects.html">Browse the subjects we cover</a>
 <a href="tips.html">Read our exam-week study tips</a>
 ```
@@ -191,7 +191,7 @@ The replacement does not have to be an outline. Chapter 6 answered `:focus` with
 ### Quick Check 9.2 ✅
 
 1. A page's headings run `h1`, `h2`, `h2`, `h5`. Describe what a screen reader's heading list shows at the fourth heading, and write the repair.
-2. A sentence reads "Click here to check this week's hours" with the link on "Click here." Rewrite the link text so it survives the link-list read, and name one beneficiary besides screen reader users.
+2. A sentence reads "Click here to check current hours" with the link on "Click here." Rewrite the link text so it survives the link-list read, and name one beneficiary besides screen reader users.
 3. A new theme ships `a { outline: none; }` site-wide because outlines "clutter the look." Name the POUR principle at stake and the repair that keeps the clean design.
 
 ---

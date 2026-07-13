@@ -16,9 +16,9 @@ This chapter walks you through your first build. You will set up VS Code and lea
 
 By the end of this chapter, you will be able to:
 
-* **MLO-2.1 (Apply):** Build a complete HTML document in VS Code that uses the required structure: doctype, html, head, and body
-* **MLO-2.2 (Apply):** Structure page content with headings, paragraphs, lists, and links, choosing each element by the meaning of its content
-* **MLO-2.3 (Analyze):** Diagnose markup errors in an HTML document by interpreting W3C validator reports
+* **MLO-2.1 (Apply):** Build a complete HTML document in VS Code that uses the required structure: doctype, html, head, and body (Sections 2.1-2.2)
+* **MLO-2.2 (Apply):** Structure page content with headings, paragraphs, lists, and links, choosing each element by the meaning of its content (Sections 2.3-2.4)
+* **MLO-2.3 (Analyze):** Diagnose markup errors in an HTML document by interpreting W3C validator reports (Section 2.4)
 
 ### This chapter aligns with the following Course Learning Outcomes
 
@@ -117,7 +117,7 @@ Every HTML document you will ever write starts from the same skeleton. Here it i
 <body>
     <!-- CIS133 Chapter 2 practice page -->
     <h1>My Study Log</h1>
-    <p>This page tracks what I learn in CIS133, one week at a time.</p>
+    <p>This page tracks the web skills I build in CIS133.</p>
 </body>
 </html>
 ```
@@ -473,4 +473,4 @@ Interpretation, and Response to QUESTION(s).
 
 ## Looking Ahead ⏩
 
-You can now build a valid page: structured text, working links, and a clean validator report. Chapter 3 raises the standard from valid to meaningful. You will mark up pages with semantic elements that name each region's purpose, give `<strong>` and `<em>` their full story, and add images with alt text that serves every visitor, sighted or not. The club's pages you built this week are about to get their pictures.
+You can now build a valid page: structured text, working links, and a clean validator report. Chapter 3 raises the standard from valid to meaningful. You will mark up pages with semantic elements that name each region's purpose, give `<strong>` and `<em>` their full story, and add images with alt text that serves every visitor, sighted or not. The club's pages you built in this chapter are about to get their pictures.

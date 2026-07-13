@@ -16,9 +16,9 @@ This chapter delivers the other half. You will teach every page to report its tr
 
 By the end of this chapter, you will be able to:
 
-* **MLO-8.1 (Apply):** Implement the viewport meta tag on every page of a site, testing the result in browser DevTools device mode
-* **MLO-8.2 (Apply):** Construct media queries that adjust layout, spacing, and type at content-driven breakpoints
-* **MLO-8.3 (Analyze):** Diagnose where a layout fails across screen widths and which layer of a base-plus-overrides stylesheet owns the fix
+* **MLO-8.1 (Apply):** Implement the viewport meta tag on every page of a site, testing the result in browser DevTools device mode (Sections 8.1-8.2)
+* **MLO-8.2 (Apply):** Construct media queries that adjust layout, spacing, and type at content-driven breakpoints (Sections 8.3-8.4)
+* **MLO-8.3 (Analyze):** Diagnose where a layout fails across screen widths and which layer of a base-plus-overrides stylesheet owns the fix (Sections 8.1 and 8.4)
 
 ### This chapter aligns with the following Course Learning Outcomes
 
@@ -74,7 +74,9 @@ Chapter 7 had you draw the phone frame for every page, and that order was delibe
 
 Mobile-first is an order of operations, not a law. Section 8.4 shows both directions inside a stylesheet, because the club's own stylesheet grew up at laptop width, and the honest path from there runs the other way.
 
-Your final project rides on this chapter too. The phone wireframes in your Checkpoint 1 site plan were promises, and now their build tool exists. When Checkpoint 2 asks for draft pages, those pages should arrive responsive.
+If your course includes an independent project, this chapter turns its
+phone wireframes into responsive pages. Your instructor can place that
+work wherever it fits the course calendar.
 
 One more connection before the tools arrive. Chapter 7's principle list named responsiveness as one of five measures of UX, and a phone-ready layout serves more of the list than its own row. A page a visitor can read without pinching is usability on a small screen. Targets a thumb can hit are accessibility. Responsive design is UX work you happen to do in CSS.
 

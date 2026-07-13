@@ -79,8 +79,8 @@ Link text: EPA guide to electronics donation and recycling
 Address:   https://www.epa.gov/recycle/electronics-donation-and-recycling
 
 [LINK 2 - the link text, then the address it points to]
-Link text: City of Phoenix official website
-Address:   https://www.phoenix.gov
+Link text: City of Phoenix household hazardous waste collection
+Address:   https://www.phoenix.gov/administration/departments/publicworks/residential-trash-recycling/household-hazardous-waste-collection.html
 
 [FOOTER PARAGRAPH - "Email the club" is an email link. Part 3 adds
 a second link here to your contact page.]
