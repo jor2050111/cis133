@@ -16,9 +16,9 @@ This chapter pays both debts. You will turn a stacked container into an arranged
 
 By the end of this chapter, you will be able to:
 
-* **MLO-6.1 (Apply):** Arrange page content with flex containers, controlling alignment, spacing, and wrapping along the main and cross axes
-* **MLO-6.2 (Analyze):** Differentiate elements by tree relationship and interaction state to scope styles with descendant combinators and accessible pseudo-classes
-* **MLO-6.3 (Apply):** Construct an accessible navigation bar from the semantic nav list using Flexbox, combinators, and pseudo-classes
+* **MLO-6.1 (Apply):** Arrange page content with flex containers, controlling alignment, spacing, and wrapping along the main and cross axes (Sections 6.1-6.2)
+* **MLO-6.2 (Analyze):** Differentiate elements by tree relationship and interaction state to scope styles with descendant combinators and accessible pseudo-classes (Section 6.3)
+* **MLO-6.3 (Apply):** Construct an accessible navigation bar from the semantic nav list using Flexbox, combinators, and pseudo-classes (Section 6.4)
 
 ### This chapter aligns with the following Course Learning Outcomes
 
@@ -488,7 +488,7 @@ Interpretation, and Response to QUESTION(s).
 ## Further Reading 📖
 
 * [MDN: Flexbox](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox) - The reference walk through containers, items, axes, and alignment, at exactly this chapter's depth.
-* [CSS-Tricks: A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) - The industry's favorite Flexbox reference card, with a diagram for every property and value.
+* [CSS-Tricks: A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) - A visual Flexbox reference with diagrams for the major properties and values.
 * [web.dev: Learn CSS: Flexbox](https://web.dev/learn/css/flexbox) - Google's Learn CSS module on Flexbox, extending this chapter's properties with interactive examples.
 * [MDN: :focus](https://developer.mozilla.org/en-US/docs/Web/CSS/:focus) - The pseudo-class reference, including the warning never to remove an outline without a visible replacement.
 * [WebAIM: Keyboard Accessibility](https://webaim.org/techniques/keyboard/) - Why keyboard support matters and how focus styling serves visitors who never touch a mouse.
@@ -497,4 +497,4 @@ Interpretation, and Response to QUESTION(s).
 
 ## Looking Ahead ⏩
 
-Part II is complete. You connected styles to pages, you controlled every box's space and type, and now you arrange the boxes themselves: connect, control, arrange, done. The club's site shows all four milestone properties, and you can build any layout you can sketch. That last word is the point. Chapter 7 opens Part III, Design for Every User, by teaching you to sketch deliberately: user experience, sitemaps, and wireframes. The final project's site plan begins there.
+Part II is complete. You connected styles to pages, you controlled every box's space and type, and now you arrange the boxes themselves: connect, control, arrange, done. The club's site shows all four milestone properties, and you can build any layout you can sketch. That last word is the point. Chapter 7 opens Part III, Design for Every User, by teaching you to sketch deliberately: user experience, sitemaps, and wireframes. An optional independent project's site plan can begin there.

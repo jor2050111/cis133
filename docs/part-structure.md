@@ -2,10 +2,10 @@
 
 **Course:** CIS133: Internet/Web Development Level I
 **Structure:** 12 chapters organized into 4 thematic Parts
-**Schedule:** 12 content weeks + 3 project weeks + 1 showcase/exam week
-= 16-week term (the 14-week flex section compresses the project block)
+**Pacing:** Schedule-neutral. Instructors may use the book in 9-, 12-,
+14-, or 16-week courses without changing chapter content.
 **Prerequisite:** None. Chapters teach from zero.
-**Last revised:** 2026-07-08
+**Last revised:** 2026-07-13
 
 This document is the single authoritative plan for chapter order,
 scope, and outcome coverage.
@@ -19,7 +19,7 @@ This plan synthesizes four sources:
 1. **Official CLOs and district course outline** (docs/CIS133_CLOs.md):
    every outcome and outline section maps to a chapter
 2. **The previous Canvas build:** a 10-module course map (course map
-   v2) with drafted MLOs, checkpoints, and a final project
+   v2) with drafted MLOs, milestones, and an independent project
 3. **OER draft chapters:** 10 draft chapters extracted from the
    Maricopa Pressbooks book used previously (open.maricopa.edu/cis133da),
    kept as raw material only
@@ -36,14 +36,14 @@ This plan synthesizes four sources:
 * Added Chapter 12 (Scripting Concepts and Publishing). It covers
   outline section VII (scripting concepts, CLO XI) and the hosting,
   file transfer, and publishing content (outline III.B and VIII.G,
-  CLO VI) that the 10-module build compressed into final project
+  CLO VI) that the 10-module build compressed into independent project
   instructions.
 * Renamed module topics into action-oriented chapter titles (CSS
   Foundations, Layout with Flexbox, Responsive Design and Media
   Queries).
-* The final project threads through Part III and Part IV, keeping the
-  course map's two Final Checkpoints (site plan at Chapter 7, draft
-  pages near Chapter 10).
+* An optional independent project threads through Parts III and IV with
+  two schedule-neutral milestones: a site plan in Chapter 7 and draft
+  pages in Chapter 10.
 
 **Bloom's rule for every MLO (course-configured, mirrors CLAUDE.md):**
 the full RBT range is available. Early chapters lean on Remember
@@ -202,7 +202,7 @@ navigation bar.
 * UX vs UI, and the core UX principles
 * Sitemaps, wireframes, and prototypes
 * Navigation design and layout consistency
-* Final project kickoff: the site plan (Final Checkpoint 1)
+* Independent project milestone: site plan
 
 **Prior-course parallel:** Module 7 and draft chapter 7
 **Prerequisite bridge:** builds on Chapters 1-6
@@ -268,7 +268,7 @@ accessibility checker.
 * When a table is the right tool (and when it is not)
 * Styling tables for readability
 * Accessible tables: header scope and captions
-* Final project draft pages due (Final Checkpoint 2)
+* Independent project milestone: draft pages
 
 **Prior-course parallel:** Module 9 and draft chapter 9
 **Prerequisite bridge:** builds on Chapters 4-5
@@ -303,36 +303,31 @@ accessibility checker.
 * Server-side ideas: security, databases, and languages
 * Hosting options and secure file transfer
 * Pre-flight checks: validation, links, accessibility
-* Publishing the final project site
+* Publishing an independent project site
 
 **Prior-course parallel:** gap. The previous build compressed this
-into final project instructions.
+into independent project instructions.
 **Prerequisite bridge:** builds on the entire book
 
 **Part IV milestone:** students publish a complete, accessible,
-responsive multi-page website (the final project).
+responsive multi-page website (the independent project).
 
 ---
 
-## Course Schedule (16-Week Term)
+## Schedule-Neutral Course Mapping
 
-| Weeks | Content | Assessment |
-| ----- | ------- | ---------- |
-| 1-3 | Part I: Web Foundations (Ch 1-3) | Skills Labs, quizzes |
-| 4-6 | Part II: Styling with CSS (Ch 4-6) | Skills Labs, quizzes |
-| 7-9 | Part III: Design for Every User (Ch 7-9) | Skills Labs, quizzes, Final Checkpoint 1 (site plan, week 7) |
-| 10-12 | Part IV: Building Complete Sites (Ch 10-12) | Skills Labs, quizzes, Final Checkpoint 2 (draft pages, week 10) |
-| 13-15 | Final project build | Project milestones |
-| 16 | Showcase and final | Final project due |
-
-The 14-week flex online section runs the same sequence with a 2-week
-project block (weeks 13-14).
+The four Parts define the skill sequence, not a calendar. An instructor
+can assign one or more chapters per instructional unit and place the two
+independent project milestones where they fit the section. The same
+chapter files support 9-, 12-, 14-, and 16-week courses. Course dates,
+exams, submission windows, hosting details, and final-project pacing
+belong in instructor materials.
 
 **Assessment structure:**
 
 * Skills Labs (chapter deliverables): [weight]%
 * Module quizzes: [weight]%
-* Final project (with two checkpoints): [weight]%
+* Independent project (with two milestones): [weight]%
 * Weights live in the Canvas build. Confirm before syllabus
   publication.
 
@@ -353,7 +348,7 @@ project block (weeks 13-14).
 | IX. Compose CSS styles | Ch 4-6 | Ch 8, Ch 10 | Strong: three-chapter arc |
 | X. Adapt with media queries | Ch 8 | Ch 12 | Strong: dedicated chapter |
 | XI. Illustrate scripting concepts | Ch 12 | None | Adequate: conceptual coverage only, matches outcome verb |
-| XII. Produce a multi-page website | Ch 12 | Ch 7 | Strong: final project threads from Ch 7 |
+| XII. Produce a multi-page website | Ch 12 | Ch 7 | Strong: independent project threads from Ch 7 |
 
 ---
 
@@ -383,7 +378,7 @@ project block (weeks 13-14).
 * Chapter 8 requires Chapters 5-6 (box model and Flexbox come first)
 * Chapter 9 requires Chapters 3-4 (semantic HTML and CSS basics)
 * Chapters 10-11 require Chapter 4 (styling)
-* Chapter 12 requires the entire book (it publishes the final project)
+* Chapter 12 synthesizes the book (it publishes the independent project)
 
 **Knowledge assumed across all chapters:**
 

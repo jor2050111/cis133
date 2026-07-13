@@ -396,7 +396,7 @@ This glossary is the single source of truth for all technical terms used in the 
 
 **span element:** The generic inline container (`<span>`). It carries no meaning and marks a run of text for styling or scripting.
 
-**SSL/TLS:** The encryption technology behind HTTPS. It scrambles traffic between the browser and the server so intercepted data cannot be read.
+**TLS (Transport Layer Security):** The encryption technology behind modern HTTPS. It protects traffic between the browser and server. SSL is its obsolete predecessor.
 
 **static site:** A site the server delivers as ready-made files, the same for every visitor. Static sites are fast, cheap to host, and leave nothing on the server to break.
 

@@ -16,9 +16,9 @@ You will build the listening machinery first: inputs, choices, menus, and the la
 
 By the end of this chapter, you will be able to:
 
-* **MLO-11.1 (Apply):** Construct labeled form controls: text and email inputs, radio groups, checkboxes, select menus, textareas, and a submit button
-* **MLO-11.2 (Apply):** Demonstrate how submitted form data travels: name-value pairs, GET and the query string, POST, and the server's role in concept
-* **MLO-11.3 (Create):** Design the club's join page: an accessible, styled signup form that collects only what it needs
+* **MLO-11.1 (Apply):** Construct labeled form controls: text and email inputs, radio groups, checkboxes, select menus, textareas, and a submit button (Sections 11.1-11.2)
+* **MLO-11.2 (Apply):** Demonstrate how submitted form data travels: name-value pairs, GET and the query string, POST, and the server's role in concept (Section 11.3)
+* **MLO-11.3 (Create):** Design the club's join page: an accessible, styled signup form that collects only what it needs (Section 11.4)
 
 ### This chapter aligns with the following Course Learning Outcomes
 

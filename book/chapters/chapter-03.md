@@ -16,9 +16,9 @@ The president also had a request: "The pages look bare. Add some pictures." So t
 
 By the end of this chapter, you will be able to:
 
-* **MLO-3.1 (Apply):** Structure page content with semantic elements, choosing landmarks and text-level elements by the meaning of their content
-* **MLO-3.2 (Apply):** Embed images with the `img` element, writing alt text that matches each image's purpose on the page
-* **MLO-3.3 (Analyze):** Differentiate the web's image file formats by their properties to select the right format and folder home for a given image
+* **MLO-3.1 (Apply):** Structure page content with semantic elements, choosing landmarks and text-level elements by the meaning of their content (Sections 3.1-3.2)
+* **MLO-3.2 (Apply):** Embed images with the `img` element, writing alt text that matches each image's purpose on the page (Section 3.3)
+* **MLO-3.3 (Analyze):** Differentiate the web's image file formats by their properties to select the right format and folder home for a given image (Section 3.4)
 
 ### This chapter aligns with the following Course Learning Outcomes
 
@@ -321,7 +321,7 @@ height="24">
 
 Compare that with the practice pages earlier in this chapter, which reached the same kind of file at `assets/code/chapter-03/cactus-garden.png`. Same file idea, different address, because a relative URL always starts from where YOUR page sits. When you copy pack images into your lab site's `images` folder, every src on your pages uses the short form. The folder becomes self-contained: zip it, move it, or publish it in Chapter 12, and every address inside still works.
 
-One more convention to bank for later: the web's default name for a site's home page is `index.html`. Web servers serve it automatically when a visitor asks for a bare folder. Your lab site's pages keep their descriptive names this week, and `index.html` takes over when your final project builds a true multi-page site.
+One more convention to bank for later: the web's default name for a site's home page is `index.html`. Web servers serve it automatically when a visitor asks for a bare folder. Your lab site's pages keep their descriptive names for now, and `index.html` takes over when your independent project builds a true multi-page site.
 
 ### Quick Check 3.4 ✅
 
@@ -437,4 +437,4 @@ Interpretation, and Response to QUESTION(s).
 
 ## Looking Ahead ⏩
 
-Your pages now say what every region and image means, and the club's site finally looks like a site, if a plain one. Chapter 4 hands you CSS, the language that controls how all of it looks: colors, type, and the styling that Chapter 2 told you to stop faking with heading levels. The landmarks you built this week become the exact hooks your stylesheets grab first. Structure this week, presentation next.
+Your pages now say what every region and image means, and the club's site finally looks like a site, if a plain one. Chapter 4 hands you CSS, the language that controls how all of it looks: colors, type, and the styling that Chapter 2 told you to stop faking with heading levels. The landmarks you built in this chapter become the exact hooks your stylesheets grab first. Structure comes first. Presentation comes next.

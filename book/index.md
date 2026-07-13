@@ -25,7 +25,10 @@ This textbook teaches to the official course learning outcomes (CLOs) for CIS133
 
 ## How This Textbook Is Organized
 
-The textbook is divided into **4 parts** spanning **12 chapters**, each designed to be completed in one week.
+The textbook is divided into **4 parts** spanning **12 chapters**. The
+chapters follow a skill sequence without assuming a course calendar. An
+instructor can map the same chapters into a 9-, 12-, 14-, or 16-week
+course without changing the chapter content.
 
 ### Part I: Web Foundations (Chapters 1-3)
 

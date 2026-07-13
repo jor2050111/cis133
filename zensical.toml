@@ -137,7 +137,8 @@ generic = true
 emoji_generator = "zensical.extensions.emoji.to_svg"
 emoji_index = "zensical.extensions.emoji.twemoji"
 [project.markdown_extensions.pymdownx.highlight]
-anchor_linenums = true
+# Code-line permalinks create unnamed keyboard stops in the rendered book.
+anchor_linenums = false
 line_spans = "__span"
 pygments_lang_class = true
 [project.markdown_extensions.pymdownx.inlinehilite]

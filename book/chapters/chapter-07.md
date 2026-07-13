@@ -4,7 +4,7 @@ Skills Lab 6A sent the club's site out the door with its Part II milestone compl
 
 That approach stops working the moment a site wants to grow, and the club's site wants to grow. This chapter's Skills Lab opens with a brief from the club's officers asking for more, and asking to see a plan before anyone writes markup. The request is standard practice, not caution. Professionals plan on paper first because the costs are lopsided. A sketch changes in minutes. Built pages change in hours, and the hours multiply across every page the change touches.
 
-Chapter 7 opens Part III, Design for Every User, and it works differently than the chapters before it: more drawing than typing. You will turn goals and audiences into pages. You will separate user experience from user interface and measure both with five principles. You will draw sitemaps and wireframes, and discover that every box in them is something you already own. By the end you will assemble all of it into a site plan, the same document that launches your final project this week.
+Chapter 7 opens Part III, Design for Every User, and it works differently than the chapters before it: more drawing than typing. You will turn goals and audiences into pages. You will separate user experience from user interface and measure both with five principles. You will draw sitemaps and wireframes, and discover that every box in them is something you already own. By the end you will assemble all of it into a site plan, the same document you can use to launch an independent project.
 
 ## Module Overview 🧭
 
@@ -16,9 +16,9 @@ Chapter 7 opens Part III, Design for Every User, and it works differently than t
 
 By the end of this chapter, you will be able to:
 
-* **MLO-7.1 (Analyze):** Differentiate user experience (UX) from user interface (UI) decisions, using the five UX principles: usability, accessibility, consistency, feedback, and responsiveness
-* **MLO-7.2 (Apply):** Construct a sitemap and wireframes that plan a multi-page site's structure and layout before any code is written
-* **MLO-7.3 (Evaluate):** Critique an existing site's navigation and page consistency against UX principles to produce a site plan
+* **MLO-7.1 (Analyze):** Differentiate user experience (UX) from user interface (UI) decisions, using the five UX principles: usability, accessibility, consistency, feedback, and responsiveness (Sections 7.1-7.2)
+* **MLO-7.2 (Apply):** Construct a sitemap and wireframes that plan a multi-page site's structure and layout before any code is written (Section 7.3)
+* **MLO-7.3 (Evaluate):** Critique an existing site's navigation and page consistency against UX principles to produce a site plan (Section 7.4)
 
 ### This chapter aligns with the following Course Learning Outcomes
 
@@ -47,7 +47,7 @@ Goals also settle arguments later. When two page ideas compete for the top of th
 
 ### Who the Site Serves
 
-The second question names the visitors. A site's **target audience** is the people it is built to serve, described by what they already know, what they come to do, and what would make them leave. Most sites serve more than one audience, and the differences drive design. A visitor who already knows your organization wants this week's details fast. A visitor who has never heard of you needs the what-is-this answer before anything else. Professional teams sometimes press further and write personas, short fictional profiles of one typical visitor, complete with a name and a schedule. This course works at the audience level.
+The second question names the visitors. A site's **target audience** is the people it is built to serve, described by what they already know, what they come to do, and what would make them leave. Most sites serve more than one audience, and the differences drive design. A visitor who already knows your organization wants current details fast. A visitor who has never heard of you needs the what-is-this answer before anything else. Professional teams sometimes press further and write personas, short fictional profiles of one typical visitor, complete with a name and a schedule. This course works at the audience level.
 
 Knowing an audience is research, and you already own the habits. Chapter 1 taught you to interrogate sources: who wrote this, when, and why. Point the same discipline outward. Who will read this site, arriving from where, needing what? Talk to the people the site is for, read the questions they already ask, and treat every assumption about them as a claim that needs evidence.
 
@@ -59,7 +59,7 @@ The campus tutoring center you have been advising in review questions since Chap
 
 | Audience | Comes to | Page that answers |
 | --- | --- | --- |
-| Regulars | check this week's hours, book a slot | Hours and Booking |
+| Regulars | check current hours, book a slot | Hours and Booking |
 | First-timers | learn what help exists, in which subjects | Subjects |
 | Both | pick up exam-week study advice | Study Tips |
 | Both | find the room, ask a question | Contact |
@@ -282,7 +282,7 @@ Plan every page at two widths, because phones are not an edge case. They are how
 +---------------------------+
 ```
 
-Compare the two frames. The card row becomes a stack, the navigation labels break onto new lines, and every region narrows. Read those changes with Chapter 6 eyes and one is already yours: rows that break are `flex-wrap`. The rest of the phone frame's promises (regions that rearrange only below a chosen width, type that adjusts) need a tool you do not own yet. Chapter 8's media queries keep exactly this sketch's promises. Draw the phone frame anyway. The plan should not shrink to fit this week's toolbox.
+Compare the two frames. The card row becomes a stack, the navigation labels break onto new lines, and every region narrows. Read those changes with Chapter 6 eyes and one is already yours: rows that break are `flex-wrap`. The rest of the phone frame's promises (regions that rearrange only below a chosen width, type that adjusts) need a tool you do not own yet. Chapter 8's media queries keep exactly this sketch's promises. Draw the phone frame anyway. The plan should not shrink to fit the tools you have.
 
 One artifact exists past the wireframe, and you should recognize its name. A **prototype** is a clickable mockup: wireframes wired together so a test visitor can tap through them before any code exists, usually in a design tool such as Figma. Teams building large sites prototype before they build. This course's sites plan fine on paper and in text frames, so prototypes stay a term you can recognize, not a deliverable you owe.
 
@@ -358,15 +358,15 @@ Assemble everything this chapter built and you hold the deliverable. A **site pl
 
 In one document, the plan does two jobs. It is the builder's blueprint, specific enough to start coding from. And it is the stakeholder's approval device: the people the site belongs to can read it, push back, and sign off before code costs anyone anything.
 
-### Your Final Project Starts Now
+### Independent Project Milestone 1: Site Plan
 
-The course's final deliverable is a multi-page site of your own: your topic, your audience, built with everything Chapters 1 through 12 teach. That work starts this week, not at the end of the term. Final Checkpoint 1 is a site plan for your own site, built with this chapter's process on the same template the lab uses. The course shell carries the dates and submission details. You are not practicing planning this week. You are planning.
+If your course includes an independent multi-page project, use this chapter's process to plan it. Your topic, audience, sitemap, wireframes, navigation plan, and consistency rules belong in one site plan. Your instructor can assign that milestone wherever it fits the course calendar without changing this chapter.
 
 Choose the topic with the remaining chapters in mind. It needs enough content for several pages, an audience you can name, and at least one person you can hand the plan to for the ten-minute test. A club you belong to, a hobby you can teach, or a cause you can document all carry that weight.
 
 ### Try It Yourself 7.5: The Label Audit 🛠️
 
-**Predict:** WebAIM (`https://webaim.org`) is a nonprofit that teaches web accessibility, and its navigation bar holds five one-word labels. Read the five labels without clicking, and write one line per label predicting the page behind it.
+**Predict:** WebAIM (`https://webaim.org`) teaches web accessibility, and its navigation bar holds five one-word labels. Read the five labels without clicking, and write one line per label predicting the page behind it.
 
 **Run:** Click through all five labels, one at a time. Grade each label pass or fail: pass means the page matches what a first-time visitor would predict from the label alone.
 
@@ -389,7 +389,7 @@ Choose the topic with the remaining chapters in mind. It needs enough content fo
 * A sitemap decides what pages exist and how they connect: a tree branching from Home (`index.html`), every page named, nothing deeper than two clicks. A wireframe decides one page's layout as labeled grayscale boxes, drawn at desktop and phone width. Neither diagram picks colors or fonts. Those wait for the stylesheet.
 * Every wireframe box is a landmark you own, and every side-by-side row is a flex line. The phone frame's remaining promises wait for Chapter 8's media queries.
 * Navigation labels obey the link-text law: a visitor should predict the page behind a label before clicking. The bar keeps one order and one place on every page, and the plan's consistency rules turn those habits into written promises.
-* The site plan assembles six sections into one stakeholder-ready document: goals, target audience, sitemap, wireframes, navigation plan, and consistency rules. Final Checkpoint 1 uses the same template to plan your own final project site.
+* The site plan assembles six sections into one stakeholder-ready document: goals, target audience, sitemap, wireframes, navigation plan, and consistency rules. Independent Project Milestone 1 uses the same template to plan your own site.
 
 ### Key Terms
 
@@ -416,7 +416,7 @@ Answer from memory before checking back through the chapter.
 
 **Goal:** Produce a stakeholder-ready site plan that grows the club's three-page site into the six-page site its officers asked for.
 
-**Dataset:** Provided files in `assets/code/chapter-07/` from the course data pack. This lab ships planning artifacts instead of starter code. `project-brief.txt` is the expansion brief from the club's officers and the lab's founding document. `club-site/` holds the club's finished site exactly as Skills Lab 6A leaves it (three pages, `club-styles.css`, and the `images` folder), and it is the shared audit target, documented in the folder's README. `ux-audit-worksheet.txt` turns the five principles into an audit instrument. `site-plan-template.txt` is the plan document's skeleton, and the same template returns for Final Checkpoint 1. `wireframe-examples.txt` holds copy-and-adapt text frames at both widths. `skills-lab-7a-answers.txt` is your written answers file. Work at the extracted `cis133` root, and leave `club-site/` unedited: it returns as Chapter 8's starter site.
+**Dataset:** Provided files in `assets/code/chapter-07/` from the course data pack. This lab ships planning artifacts instead of starter code. `project-brief.txt` is the expansion brief from the club's officers and the lab's founding document. `club-site/` holds the club's finished site exactly as Skills Lab 6A leaves it (three pages, `club-styles.css`, and the `images` folder), and it is the shared audit target, documented in the folder's README. `ux-audit-worksheet.txt` turns the five principles into an audit instrument. `site-plan-template.txt` is the plan document's skeleton, and the same template supports Independent Project Milestone 1. `wireframe-examples.txt` holds copy-and-adapt text frames at both widths. `skills-lab-7a-answers.txt` is your written answers file. Work at the extracted `cis133` root, and leave `club-site/` unedited: it returns as Chapter 8's starter site.
 
 The lab walks the chapter's own path. Part 1 digests the brief and audits the site you just finished building. Part 2 draws the structure and the layouts. Part 3 assembles the stakeholder document and closes with the judgment call no template can make for you.
 
@@ -472,7 +472,7 @@ Interpretation, and Response to QUESTION(s).
 ## Further Reading 📖
 
 * [NN/g: The Definition of User Experience (UX)](https://www.nngroup.com/articles/definition-user-experience/) - The industry's standard short definition of UX, and how it differs from usability and UI.
-* [NN/g: 10 Usability Heuristics for User Interface Design](https://www.nngroup.com/articles/ten-usability-heuristics/) - The most-cited usability checklist in the field. This chapter's five principles are the course-sized relative of these ten.
+* [NN/g: 10 Usability Heuristics for User Interface Design](https://www.nngroup.com/articles/ten-usability-heuristics/) - A concise usability checklist. This chapter's five principles are the course-sized relative of these ten.
 * [MDN: Design for developers](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Design_for_developers) - MDN's design primer written for people who code first, at exactly this chapter's depth.
 * [A List Apart: Sketching: the Visual Thinking Power Tool](https://alistapart.com/article/sketching-the-visual-thinking-power-tool/) - The case for fast, rough sketching as a thinking tool, not an art project.
 * [W3C WAI: Introduction to Web Accessibility](https://www.w3.org/WAI/fundamentals/accessibility-intro/) - The standards body's introduction to the principle that gets its own chapter in this book.
