@@ -16,9 +16,9 @@ You will learn to tell table data from everything else, and to refuse tables tha
 
 By the end of this chapter, you will be able to:
 
-* **MLO-10.1 (Analyze):** Differentiate data that belongs in a table from content that belongs in lists or layout, justifying the choice (Section 10.1)
-* **MLO-10.2 (Apply):** Construct accessible data tables with rows, header and data cells, captions, and header scope (Sections 10.2-10.3)
-* **MLO-10.3 (Create):** Produce the club's events page: a styled, readable schedule table integrated into the site (Section 10.4)
+* **10.1 (Analyze):** Differentiate data that belongs in a table from content that belongs in lists or layout, justifying the choice (Section 10.1)
+* **10.2 (Apply):** Construct accessible data tables with rows, header and data cells, captions, and header scope (Sections 10.2-10.3)
+* **10.3 (Create):** Produce the club's events page: a styled, readable schedule table integrated into the site (Section 10.4)
 
 ### This chapter aligns with the following Course Learning Outcomes
 
@@ -394,7 +394,7 @@ Answer from memory before checking back through the chapter.
 
 The lab walks the chapter's own path. Part 1 builds the page and its table and wires the navigation. Part 2 styles the grid from the palette's passing list. Part 3 survives the phone, passes the Chapter 9 habit, and supplies a pattern for Independent Project Milestone 2.
 
-### Part 1: Foundation (Aligns with MLO-10.2)
+### Part 1: Foundation (Aligns with Objective 10.2)
 
 1. Create a folder named `skills-lab-10a-lastname` at your `cis133` root. Copy in the whole `starter-site` folder, keeping its name, and `skills-lab-10a-answers.txt`.
 2. Create `events.html` inside `starter-site` the Chapter 2 way: open an existing page, save as, and keep everything the pages share. Retitle the head, keep the header, nav, and footer, and clear `main` down to one short intro paragraph you write.
@@ -402,13 +402,13 @@ The lab walks the chapter's own path. Part 1 builds the page and its table and w
 4. Add the events link to the navigation bar on all four pages, between the gallery link and the contact link, the site plan's order. Choose the link text yourself, and let Chapter 7's label law choose with you.
 5. Validate all four pages to zero messages, and record the nav update and the counts in answer 1.B.
 
-### Part 2: Application (Aligns with MLO-10.3, MLO-10.2)
+### Part 2: Application (Aligns with Objectives 10.3 and 10.2)
 
 1. In `club-styles.css`, add a commented table block below the base rules and above the query block, so the query block keeps the bottom of the file. Set the collapse, the cell borders and padding, the table's width, and your alignment call. Record the block's decisions in answer 2.A.
 2. Dress the grid from the palette's passing list: one pairing for the header row, one for the zebra stripe. Both calls are yours to make and defend. Quote each pairing's ratio from the list in answer 2.B, along with any pairing you considered and rejected.
 3. Stretch, here or in Part 3: the row hover from Section 10.4, placed after the stripe rule. Validate the stylesheet to zero messages.
 
-### Part 3: Extension (Aligns with MLO-10.3, MLO-10.1)
+### Part 3: Extension (Aligns with Objectives 10.3 and 10.1)
 
 1. Run the phone test on the finished events page in device mode at a phone width. Walk the whole page and log everything that breaks the no-sideways-scroll law, top to bottom, before you fix anything: Chapter 9's audit-first habit. Then repair each finding with the tool that owns it, and know that not every repair is new this chapter. Record the findings, the fixes, and which element scrolls now in answer 3.A.
 2. Run the Chapter 9 habit on the new page: copy `accessibility-checklist.txt` from the Chapter 9 pack, run all seven checks on `events.html`, and repair anything they surface. Then validate all four pages and the stylesheet to zero messages. Log the findings and counts in answer 3.B.
@@ -429,7 +429,9 @@ This lab is graded with the standard
 [Skills Lab Rubric](../skills-lab-rubric.md): four criteria at
 4 points each, 16 points total. The criteria are Technical Accuracy
 and Efficiency, Output Quality, Documentation Quality, and Analysis,
-Interpretation, and Response to QUESTION(s).
+Interpretation, and Response to QUESTION(s). Your instructor sets
+the point weights in your course. The criteria and levels are the
+same everywhere.
 
 ---
 

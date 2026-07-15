@@ -16,9 +16,9 @@ This chapter walks you through your first build. You will set up VS Code and lea
 
 By the end of this chapter, you will be able to:
 
-* **MLO-2.1 (Apply):** Build a complete HTML document in VS Code that uses the required structure: doctype, html, head, and body (Sections 2.1-2.2)
-* **MLO-2.2 (Apply):** Structure page content with headings, paragraphs, lists, and links, choosing each element by the meaning of its content (Sections 2.3-2.4)
-* **MLO-2.3 (Analyze):** Diagnose markup errors in an HTML document by interpreting W3C validator reports (Section 2.4)
+* **2.1 (Apply):** Build a complete HTML document in VS Code that uses the required structure: doctype, html, head, and body (Sections 2.1-2.2)
+* **2.2 (Apply):** Structure page content with headings, paragraphs, lists, and links, choosing each element by the meaning of its content (Sections 2.3-2.4)
+* **2.3 (Analyze):** Diagnose markup errors in an HTML document by interpreting W3C validator reports (Section 2.4)
 
 ### This chapter aligns with the following Course Learning Outcomes
 
@@ -408,7 +408,7 @@ Answer from memory before checking back through the chapter.
 
 **Dataset:** Provided files in `assets/code/chapter-02/` from the course data pack: `recycling-guide-content.txt` (every piece of the page's text, labeled), `broken-contact.html` (the club's contact page, with planted markup errors), and `skills-lab-2a-answers.txt` (your written answers file). Work at the extracted `cis133` root. Copy text from the content file instead of retyping it: you type only the markup.
 
-### Part 1: Foundation (Aligns with MLO-2.1)
+### Part 1: Foundation (Aligns with Objective 2.1)
 
 1. Create a folder named `skills-lab-2a-lastname` at your `cis133` root, and copy `skills-lab-2a-answers.txt` into it.
 2. In VS Code, create `recycling-guide.html` inside that folder. Write the full skeleton: doctype, `html` with a `lang` attribute, a head holding `<meta charset="UTF-8">` and the [BROWSER TAB TITLE] from the content file, and an empty body.
@@ -416,14 +416,14 @@ Answer from memory before checking back through the chapter.
 4. Add the [MAIN HEADING] and the two intro paragraphs from the content file. Save, open the page in your browser, and confirm all three appear.
 5. Prove your edit-save-refresh cycle: change your title element's text, save, refresh, and watch the tab. Record your file's path in answer 1.A and what changed in answer 1.B.
 
-### Part 2: Application (Aligns with MLO-2.2)
+### Part 2: Application (Aligns with Objective 2.2)
 
 1. Mark up the rest of the content file in order. Each [SECTION HEADING] becomes a heading at the level your outline calls for, and each labeled paragraph becomes a `<p>`.
 2. The content file labels one series where order matters and one where it does not. Choose the right list element for each, and nest the three indented accessory items as a list inside their parent item.
 3. Add the two Learn More links using the provided link text and addresses, and finish the footer paragraph with its email link. Every link's text must make sense out of context.
 4. Save, refresh, and read your page top to bottom against the content file. Then record your heading outline in answer 2.A.
 
-### Part 3: Extension (Aligns with MLO-2.2, MLO-2.3)
+### Part 3: Extension (Aligns with Objectives 2.2 and 2.3)
 
 1. Validate `recycling-guide.html` at [validator.w3.org](https://validator.w3.org/) using file upload or Direct Input. Fix anything it reports and revalidate until the report is clean.
 2. Copy `broken-contact.html` from the data pack into your lab folder and rename the copy `contact.html`. Open it in your browser first and notice how normal it looks. Then validate it and read the full report.
@@ -445,7 +445,9 @@ This lab is graded with the standard
 [Skills Lab Rubric](../skills-lab-rubric.md): four criteria at
 4 points each, 16 points total. The criteria are Technical Accuracy
 and Efficiency, Output Quality, Documentation Quality, and Analysis,
-Interpretation, and Response to QUESTION(s).
+Interpretation, and Response to QUESTION(s). Your instructor sets
+the point weights in your course. The criteria and levels are the
+same everywhere.
 
 ---
 

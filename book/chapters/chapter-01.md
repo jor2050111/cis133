@@ -16,9 +16,9 @@ This chapter builds that map. You will separate the Internet from the web, since
 
 By the end of this chapter, you will be able to:
 
-* **MLO-1.1 (Understand):** Explain how the Internet, the web, browsers, and servers work together to deliver a web page (Section 1.1)
-* **MLO-1.2 (Understand):** Describe how IP addresses, DNS, domain names, and the parts of a URL work together to locate a page on the web (Section 1.2)
-* **MLO-1.3 (Analyze):** Compare web sources and practices for reliability, authorship, security, and ethical use when choosing what to trust on a project (Sections 1.3-1.4)
+* **1.1 (Understand):** Explain how the Internet, the web, browsers, and servers work together to deliver a web page (Section 1.1)
+* **1.2 (Understand):** Describe how IP addresses, DNS, domain names, and the parts of a URL work together to locate a page on the web (Section 1.2)
+* **1.3 (Analyze):** Compare web sources and practices for reliability, authorship, security, and ethical use when choosing what to trust on a project (Sections 1.3-1.4)
 
 ### This chapter aligns with the following Course Learning Outcomes
 
@@ -364,7 +364,7 @@ Answer from memory before checking back through the chapter.
 
 **Dataset:** Provided files in `assets/code/chapter-01/` from the course data pack: `skills-lab-1a-worksheet.txt` (your answer file), `url-inventory.txt` (12 URLs to dissect), and `source-profiles.txt` (five source profiles for Part 3). Download the data pack from Canvas, extract it, and work at the extracted `cis133` root. Open each file in any text editor. Never retype the file contents.
 
-### Part 1: Foundation (Aligns with MLO-1.1)
+### Part 1: Foundation (Aligns with Objective 1.1)
 
 Work in `skills-lab-1a-worksheet.txt`, which contains numbered spaces for every answer below.
 
@@ -372,13 +372,13 @@ Work in `skills-lab-1a-worksheet.txt`, which contains numbered spaces for every 
 2. In 2-3 sentences of your own words, explain the difference between the Internet and the web to someone who uses both every day but has never thought about it.
 3. The worksheet describes three short scenarios. For each, identify which device is acting as the client and which as the server, and note the clue that told you.
 
-### Part 2: Application (Aligns with MLO-1.2)
+### Part 2: Application (Aligns with Objective 1.2)
 
 1. Choose six URLs from `url-inventory.txt`. Include at least one URL that does not use `https://`, at least one that contains a query string, and at least one that lacks a subdomain or a path.
 2. For each chosen URL, fill in the worksheet's dissection table: protocol, subdomain, domain name, top-level domain, path, and query string. Write NONE for any part a URL does not have.
 3. Two of your six URLs should share something: pick any pair from your set with the same top-level domain or the same domain name. In 2-3 sentences, state what the shared part tells you and what the differing parts change about where the browser goes.
 
-### Part 3: Extension (Aligns with MLO-1.3)
+### Part 3: Extension (Aligns with Objective 1.3)
 
 Your campus computer club is building a resource page about recycling old electronics, and the club president asked you to vet the research. `source-profiles.txt` describes five web sources the club found.
 

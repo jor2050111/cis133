@@ -16,9 +16,9 @@ The design team already did the hard part. The illustration set that drew the lo
 
 By the end of this chapter, you will be able to:
 
-* **MLO-4.1 (Apply):** Connect CSS to HTML pages through inline styles, internal stylesheets, and external stylesheets, choosing the method that fits the job (Sections 4.1-4.2)
-* **MLO-4.2 (Apply):** Write CSS rules that style page content using element, class, and id selectors with the web's color systems (Sections 4.3-4.4)
-* **MLO-4.3 (Evaluate):** Critique styled pages with the W3C HTML and CSS validators, interpreting their reports to repair markup and styling defects (Section 4.4)
+* **4.1 (Apply):** Connect CSS to HTML pages through inline styles, internal stylesheets, and external stylesheets, choosing the method that fits the job (Sections 4.1-4.2)
+* **4.2 (Apply):** Write CSS rules that style page content using element, class, and id selectors with the web's color systems (Sections 4.3-4.4)
+* **4.3 (Evaluate):** Critique styled pages with the W3C HTML and CSS validators, interpreting their reports to repair markup and styling defects (Section 4.4)
 
 ### This chapter aligns with the following Course Learning Outcomes
 
@@ -476,7 +476,7 @@ Answer from memory before checking back through the chapter.
 
 The lab walks the chapter's own path. Part 1 connects one stylesheet to the whole site. Part 2 aims selectors at regions, groups, and one unique element. Part 3 hunts down styling in the wrong home and validates everything to zero.
 
-### Part 1: Foundation (Aligns with MLO-4.1)
+### Part 1: Foundation (Aligns with Objective 4.1)
 
 1. Copy the whole `starter-site` folder to your `cis133` root and rename the copy `skills-lab-4a-lastname`. Copy `skills-lab-4a-answers.txt` into it.
 2. Create `club-styles.css` at the folder's top level, beside the three pages. Start the file with a CSS comment carrying the lab number, your name, and the date.
@@ -484,14 +484,14 @@ The lab walks the chapter's own path. Part 1 connects one stylesheet to the whol
 4. Write the site's base: a `body` rule setting a background color and text color from the palette, as a pairing on the palette file's passing list. Save, then refresh all three pages and watch one file style the whole site.
 5. Record your link element and why it belongs in the head in answer 1.A, and describe the three-page refresh in answer 1.B.
 
-### Part 2: Application (Aligns with MLO-4.2)
+### Part 2: Application (Aligns with Objective 4.2)
 
 1. Style the landmarks with element selectors: give the header, nav, and footer background colors from the palette, and set heading colors that read against their backgrounds. Every text-on-background pairing you create must appear on the palette file's passing list.
 2. Create one class with a role-based name and apply it where the content warrants on at least two pages. The club's content offers candidates: a deadline, a key reminder, a callout.
 3. Create one id for a genuinely unique element on one page, and style it.
 4. Log every selector you wrote in answer 2.A, and justify the class call and the id call in answer 2.B.
 
-### Part 3: Extension (Aligns with MLO-4.1, MLO-4.3)
+### Part 3: Extension (Aligns with Objectives 4.1 and 4.3)
 
 1. One of the three pages carries exactly one leftover inline style. Hunt it down, move its declaration into a fitting rule in `club-styles.css`, and delete the attribute from the markup. Record the hunt in answer 3.A, including why the stylesheet is the better home.
 2. Validate all three pages with the W3C HTML validator and `club-styles.css` with the CSS validator, repairing until every report shows zero messages. Log your results in answer 3.B, then add the critique no validator can make: name one thing about your styling that passes both validators but that you would still improve, and say why.
@@ -512,7 +512,9 @@ This lab is graded with the standard
 [Skills Lab Rubric](../skills-lab-rubric.md): four criteria at
 4 points each, 16 points total. The criteria are Technical Accuracy
 and Efficiency, Output Quality, Documentation Quality, and Analysis,
-Interpretation, and Response to QUESTION(s).
+Interpretation, and Response to QUESTION(s). Your instructor sets
+the point weights in your course. The criteria and levels are the
+same everywhere.
 
 ---
 

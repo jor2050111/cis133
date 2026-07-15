@@ -16,9 +16,9 @@ This chapter works in that order. You will read a box from the inside out and X-
 
 By the end of this chapter, you will be able to:
 
-* **MLO-5.1 (Apply):** Control the space inside and around elements with padding, border, and margin, using individual and shorthand syntax (Sections 5.1-5.2)
-* **MLO-5.2 (Apply):** Style text with font stacks, sizes, and text properties chosen for readability (Sections 5.3-5.4)
-* **MLO-5.3 (Analyze):** Diagnose spacing and readability problems with the DevTools box-model diagram and the chapter's typography guidelines (Sections 5.1 and 5.4)
+* **5.1 (Apply):** Control the space inside and around elements with padding, border, and margin, using individual and shorthand syntax (Sections 5.1-5.2)
+* **5.2 (Apply):** Style text with font stacks, sizes, and text properties chosen for readability (Sections 5.3-5.4)
+* **5.3 (Analyze):** Diagnose spacing and readability problems with the DevTools box-model diagram and the chapter's typography guidelines (Sections 5.1 and 5.4)
 
 ### This chapter aligns with the following Course Learning Outcomes
 
@@ -417,7 +417,7 @@ Answer from memory before checking back through the chapter.
 
 The lab walks the chapter's own path. Part 1 spaces the regions, Part 2 builds the readable column and sets the site's type, and Part 3 borrows a heading font and closes with a DevTools diagnosis.
 
-### Part 1: Foundation (Aligns with MLO-5.1)
+### Part 1: Foundation (Aligns with Objective 5.1)
 
 1. Copy the whole `starter-site` folder to your `cis133` root and rename the copy `skills-lab-5a-lastname`. Copy `skills-lab-5a-answers.txt` into it.
 2. Set the site's sizing baseline: add `* { box-sizing: border-box; }` at the top of `club-styles.css`, below the file comment, with a comment saying what it makes `width` mean.
@@ -425,14 +425,14 @@ The lab walks the chapter's own path. Part 1 spaces the regions, Part 2 builds t
 4. Write at least one of those rules with a two-value or four-value shorthand, and say in a comment which sides it reaches.
 5. Record one region's before and after in answer 1.A, with the rule that made the difference, and your shorthand's four-line expansion in answer 1.B.
 
-### Part 2: Application (Aligns with MLO-5.1, MLO-5.2)
+### Part 2: Application (Aligns with Objectives 5.1 and 5.2)
 
 1. Build the readable column: give `main` a `max-width` and center it with auto margins. Justify your chosen width in answer 2.A.
 2. Add at least one border where the design warrants it, such as a frame for the figure plates or an accent along one panel's edge. Palette colors only.
 3. Set the site's type: a body font stack ending in a generic family, font sizes for body text and headings, and a body `line-height`. Every text-on-background pairing you touch must stay on the palette file's passing list.
 4. Log your stack, its generic family, and your sizes and line-height in answer 2.B, with one reason apiece.
 
-### Part 3: Extension (Aligns with MLO-5.2, MLO-5.3)
+### Part 3: Extension (Aligns with Objectives 5.2 and 5.3)
 
 1. Borrow one Google Font for the site's headings using the single-link form from Section 5.3, back it with an honest fallback stack, and defend the pick in a CSS comment above the rule.
 2. Run a diagnosis. Find one element on any page whose spacing still looks wrong, transcribe its box-model diagram numbers into answer 3.A, name the layer at fault, and fix it with the fewest declarations that solve it.
@@ -453,7 +453,9 @@ This lab is graded with the standard
 [Skills Lab Rubric](../skills-lab-rubric.md): four criteria at
 4 points each, 16 points total. The criteria are Technical Accuracy
 and Efficiency, Output Quality, Documentation Quality, and Analysis,
-Interpretation, and Response to QUESTION(s).
+Interpretation, and Response to QUESTION(s). Your instructor sets
+the point weights in your course. The criteria and levels are the
+same everywhere.
 
 ---
 

@@ -16,9 +16,9 @@ The president also had a request: "The pages look bare. Add some pictures." So t
 
 By the end of this chapter, you will be able to:
 
-* **MLO-3.1 (Apply):** Structure page content with semantic elements, choosing landmarks and text-level elements by the meaning of their content (Sections 3.1-3.2)
-* **MLO-3.2 (Apply):** Embed images with the `img` element, writing alt text that matches each image's purpose on the page (Section 3.3)
-* **MLO-3.3 (Analyze):** Differentiate the web's image file formats by their properties to select the right format and folder home for a given image (Section 3.4)
+* **3.1 (Apply):** Structure page content with semantic elements, choosing landmarks and text-level elements by the meaning of their content (Sections 3.1-3.2)
+* **3.2 (Apply):** Embed images with the `img` element, writing alt text that matches each image's purpose on the page (Section 3.3)
+* **3.3 (Analyze):** Differentiate the web's image file formats by their properties to select the right format and folder home for a given image (Section 3.4)
 
 ### This chapter aligns with the following Course Learning Outcomes
 
@@ -368,7 +368,7 @@ Answer from memory before checking back through the chapter.
 
 **Dataset:** Provided files in `assets/code/chapter-03/` from the course data pack: `recycling-guide-start.html` and `contact-start.html` (the finished Chapter 2 pages), `gallery-content.txt` (every piece of the gallery page's text, labeled), and `skills-lab-3a-answers.txt` (your written answers file). Nine PNG images ship in the same folder, documented in its README. Work at the extracted `cis133` root. Copy provided text instead of retyping it: you type only the markup.
 
-### Part 1: Foundation (Aligns with MLO-3.1)
+### Part 1: Foundation (Aligns with Objective 3.1)
 
 1. Create a folder named `skills-lab-3a-lastname` at your `cis133` root with an `images` folder inside it, and copy `skills-lab-3a-answers.txt` into it.
 2. Copy `recycling-guide-start.html` into your lab folder and rename it `recycling-guide.html`. Update the comment at the top of the body with the lab number, your name, and the date.
@@ -377,7 +377,7 @@ Answer from memory before checking back through the chapter.
 5. Give two phrases their text-level elements: the phrase "in order" in the drop-off instructions, and the word "not" in the Why It Matters paragraph. Choose between `<strong>` and `<em>` for each by meaning.
 6. Record your landmark map in answer 1.A and your hardest landmark call in answer 1.B. Validate the page and fix anything the validator reports.
 
-### Part 2: Application (Aligns with MLO-3.2)
+### Part 2: Application (Aligns with Objective 3.2)
 
 1. Copy `club-logo.png`, `recycling-drive.png`, `devices-collected-chart.png`, and `desert-divider.png` from the data pack into your lab site's `images` folder.
 2. Place the logo at the top of the header, the collection-scene illustration inside the Why It Matters section, and the divider between the main and the footer. Every `src` uses the short relative form from Section 3.4.
@@ -386,7 +386,7 @@ Answer from memory before checking back through the chapter.
 5. Give every image `width` and `height` attributes that state its true pixels (the pack README and your file manager both know them).
 6. Log every alt decision in answer 2.A and your dimension source in answer 2.B. Save, refresh, validate, and confirm every image renders.
 
-### Part 3: Extension (Aligns with MLO-3.1, MLO-3.2, MLO-3.3)
+### Part 3: Extension (Aligns with Objectives 3.1, 3.2, and 3.3)
 
 1. Build `drive-gallery.html` in your lab folder from `gallery-content.txt`: the full Chapter 2 skeleton, then the same header-nav-main-footer landmark pattern as the guide, with the logo in the header.
 2. Copy the three gallery images into your `images` folder. Present each as a `figure` with its provided caption as the `figcaption` and alt text you write yourself. The content file gives you no alt text on purpose.
@@ -409,7 +409,9 @@ This lab is graded with the standard
 [Skills Lab Rubric](../skills-lab-rubric.md): four criteria at
 4 points each, 16 points total. The criteria are Technical Accuracy
 and Efficiency, Output Quality, Documentation Quality, and Analysis,
-Interpretation, and Response to QUESTION(s).
+Interpretation, and Response to QUESTION(s). Your instructor sets
+the point weights in your course. The criteria and levels are the
+same everywhere.
 
 ---
 

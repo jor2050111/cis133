@@ -16,9 +16,9 @@ You will build the listening machinery first: inputs, choices, menus, and the la
 
 By the end of this chapter, you will be able to:
 
-* **MLO-11.1 (Apply):** Construct labeled form controls: text and email inputs, radio groups, checkboxes, select menus, textareas, and a submit button (Sections 11.1-11.2)
-* **MLO-11.2 (Apply):** Demonstrate how submitted form data travels: name-value pairs, GET and the query string, POST, and the server's role in concept (Section 11.3)
-* **MLO-11.3 (Create):** Design the club's join page: an accessible, styled signup form that collects only what it needs (Section 11.4)
+* **11.1 (Apply):** Construct labeled form controls: text and email inputs, radio groups, checkboxes, select menus, textareas, and a submit button (Sections 11.1-11.2)
+* **11.2 (Apply):** Demonstrate how submitted form data travels: name-value pairs, GET and the query string, POST, and the server's role in concept (Section 11.3)
+* **11.3 (Create):** Design the club's join page: an accessible, styled signup form that collects only what it needs (Section 11.4)
 
 ### This chapter aligns with the following Course Learning Outcomes
 
@@ -414,7 +414,7 @@ Answer from memory before checking back through the chapter.
 
 The lab walks the chapter's own path. Part 1 builds the page and its labeled controls. Part 2 adds the helping attributes and the style block. Part 3 demonstrates the trip, passes the Chapter 9 habit, and defends what the form refuses to collect.
 
-### Part 1: Foundation (Aligns with MLO-11.1)
+### Part 1: Foundation (Aligns with Objective 11.1)
 
 1. Create a folder named `skills-lab-11a-lastname` at your `cis133` root. Copy in the whole `starter-site` folder, keeping its name, plus `join-page-notes.txt` and `skills-lab-11a-answers.txt`.
 2. Create `join.html` inside `starter-site` the Chapter 2 way: open an existing page, save as, and keep everything the pages share. Retitle the head, keep the header, nav, and footer, and clear `main` down to one short intro paragraph you write.
@@ -423,13 +423,13 @@ The lab walks the chapter's own path. Part 1 builds the page and its labeled con
 5. Add the join link to the navigation bar on all five pages, between the events link and the contact link, the site plan's order. Choose the link text yourself, and let Chapter 7's label law choose with you.
 6. Validate all five pages to zero messages. Record the nav update, the promise sentence's location, and the counts in answer 1.B.
 
-### Part 2: Application (Aligns with MLO-11.3, MLO-11.1)
+### Part 2: Application (Aligns with Objectives 11.3 and 11.1)
 
 1. Add the helping attributes: `required` on the two fields the officers cannot work without, `autocomplete="name"` and `autocomplete="email"` on the matching inputs, and the word "(required)" in each of those labels, in text. Decide whether any control earns a placeholder, and hold the law: a hint, never a label. Record every decision in answer 2.A.
 2. In `club-styles.css`, add a commented form block below the table block and above the query block, so the query block keeps the bottom of the file. Stack the labels above their controls, size and pad the controls to the column, keep the fieldset's boxes at their own size, and restate the site's type on the controls. Record the block's decisions in answer 2.B.
 3. Make focus visible on every control, and dress the button as the page's call to action with hover and focus twins. Shop every pairing from the palette's passing list, and quote each ratio in answer 2.B. Validate the stylesheet to zero messages.
 
-### Part 3: Extension (Aligns with MLO-11.2, MLO-11.3)
+### Part 3: Extension (Aligns with Objectives 11.2 and 11.3)
 
 1. The demonstration: fill in your form, check any two interest boxes, press the button, and read the address bar. Log in answer 3.A what you typed, the URL the browser wrote, which name-value pairs traveled, and whether any control stayed home. Audit first: log everything before you repair anything a missing pair reveals.
 2. Run the Chapter 9 habit on the new page: a checklist copy, the Tab walk, and both validators to zero messages. Then answer in 3.B where the pairs would go if the club had a server, and why the page as shipped makes no promise it cannot keep.
@@ -450,7 +450,9 @@ This lab is graded with the standard
 [Skills Lab Rubric](../skills-lab-rubric.md): four criteria at
 4 points each, 16 points total. The criteria are Technical Accuracy
 and Efficiency, Output Quality, Documentation Quality, and Analysis,
-Interpretation, and Response to QUESTION(s).
+Interpretation, and Response to QUESTION(s). Your instructor sets
+the point weights in your course. The criteria and levels are the
+same everywhere.
 
 ---
 

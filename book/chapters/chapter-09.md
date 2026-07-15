@@ -16,9 +16,9 @@ You will meet WCAG, its four POUR principles, and the conformance level this cou
 
 By the end of this chapter, you will be able to:
 
-* **MLO-9.1 (Apply):** Implement accessible structure and navigation: ordered headings, landmarks, descriptive link text, and visible focus styles (Sections 9.1-9.2)
-* **MLO-9.2 (Apply):** Apply WCAG's perceivability rules to color, type, and images: AA contrast, color-independent meaning, rem-sized text, and purpose-matched alt text (Section 9.3)
-* **MLO-9.3 (Evaluate):** Evaluate pages against WCAG Level AA with an accessibility evaluator and human checks, prioritizing repairs (Section 9.4)
+* **9.1 (Apply):** Implement accessible structure and navigation: ordered headings, landmarks, descriptive link text, and visible focus styles (Sections 9.1-9.2)
+* **9.2 (Apply):** Apply WCAG's perceivability rules to color, type, and images: AA contrast, color-independent meaning, rem-sized text, and purpose-matched alt text (Section 9.3)
+* **9.3 (Evaluate):** Evaluate pages against WCAG Level AA with an accessibility evaluator and human checks, prioritizing repairs (Section 9.4)
 
 ### This chapter aligns with the following Course Learning Outcomes
 
@@ -408,20 +408,20 @@ Answer from memory before checking back through the chapter.
 
 The lab walks the chapter's own path. Part 1 audits the flyer and repairs its structure. Part 2 repairs what perceivability demands: color, type, and images. Part 3 brings in the evaluator and the checklist, proves the whole site, and closes Part III.
 
-### Part 1: Foundation (Aligns with MLO-9.1)
+### Part 1: Foundation (Aligns with Objective 9.1)
 
 1. Create a folder named `skills-lab-9a-lastname` at your `cis133` root. Copy in `drive-day-flyer.html`, `flyer-styles.css`, the whole `flyer-images` folder, the whole `starter-site` folder, `skills-lab-9a-answers.txt`, and `accessibility-checklist.txt`. Keep the `starter-site` name unchanged, because the flyer's links resolve into it.
 2. Audit before you fix anything. Make a checklist copy for the flyer and run its structure checks: the heading outline read, the landmark check, the link text read, and the Tab walk. The flyer holds 8 barriers in all, counting a barrier once even where it strikes twice, and this pass surfaces the structural share. Log each finding in answer 1.A with the POUR principle it violates, and write "clean" where a check finds nothing.
 3. Repair the structure: correct any heading level that skips, rewrite any link whose text fails the out-of-sentence read, and restore the focus visibility the stylesheet took away. Then re-run the same four checks and confirm they read clean. Record each fix in answer 1.B: the element or rule you changed, what it says now, and who the new version serves that the old one failed.
 
-### Part 2: Application (Aligns with MLO-9.2)
+### Part 2: Application (Aligns with Objective 9.2)
 
 1. Run the contrast spot checks: measure the flyer's text-on-background pairings with the WebAIM checker until you find the pairing that fails, and log the ratio it reports. Repair it with a pairing from the palette's passing list, and record the before and after ratios in answer 2.A.
 2. Find the message the flyer carries in color alone, and give it a text label that survives without the color. Log the finding and the fix in answer 2.A.
 3. Run the alt honesty read and make both calls the four-jobs table demands: write the missing alt text yourself, and empty the alt that decoration never needed. Log both decisions in answer 2.A with the image job that justifies each.
 4. Convert the type. In `flyer-styles.css`, replace the hard px body size with a rem value that restores readable body text (the club site's own body size is a fine model). In `club-styles.css`, convert the body and heading sizes to rem with the divide-by-16 math, in the base rules and in the query block. Record the px values found, the rem values shipped, the base your math used, and who the conversion serves in answer 2.B.
 
-### Part 3: Extension (Aligns with MLO-9.3)
+### Part 3: Extension (Aligns with Objective 9.3)
 
 1. Run WAVE on the repaired flyer and on one club site page: the browser extension for local files, or `wave.webaim.org` if you have a hosted copy. Log the tool, the pages, and every flag in answer 3.A. Then name at least one problem you repaired that no tool flagged, and the human check that caught it.
 2. Run the full seven-check checklist on each of the club site's three pages, one checklist copy per page. Repair anything a check surfaces, and log the human-check results in answer 3.B.
@@ -443,7 +443,9 @@ This lab is graded with the standard
 [Skills Lab Rubric](../skills-lab-rubric.md): four criteria at
 4 points each, 16 points total. The criteria are Technical Accuracy
 and Efficiency, Output Quality, Documentation Quality, and Analysis,
-Interpretation, and Response to QUESTION(s).
+Interpretation, and Response to QUESTION(s). Your instructor sets
+the point weights in your course. The criteria and levels are the
+same everywhere.
 
 ---
 

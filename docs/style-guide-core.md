@@ -307,6 +307,19 @@ Rules:
   term, give a one-or-two-sentence plain definition, then use it.
 * Add every new term to the course glossary (`book/glossary.md`). The
   glossary is the single source of truth for definitions.
+* Glossary entries use definition-list markup under the term's letter
+  heading, in alphabetical order. The term sits on its own line (no
+  bold, no trailing colon) and the definition follows on the next line
+  after a colon and three spaces:
+
+  ```markdown
+  alt text
+  :   The text that stands in for an image when its pixels cannot.
+  ```
+
+* The glossary page carries no authoring instructions. Rules like
+  these live in the style guide and CLAUDE.md, never on the published
+  page students read.
 * Never alternate between synonyms for a defined term. Pick one name
   and keep it textbook-wide.
 * Chapter "Key Terms" sections list terms and point to the glossary.

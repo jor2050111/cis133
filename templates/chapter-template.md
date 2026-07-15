@@ -31,9 +31,9 @@ HTML5, CSS3, VS Code, browser DevTools.
 
 By the end of this chapter, you will be able to:
 
-* **MLO-N.1 (Bloom's Level):** [Action verb] [measurable outcome] (Section N.1)
-* **MLO-N.2 (Bloom's Level):** [Action verb] [measurable outcome] (Section N.2)
-* **MLO-N.3 (Bloom's Level):** [Action verb] [measurable outcome] (Sections N.3-N.4)
+* **N.1 (Bloom's Level):** [Action verb] [measurable outcome] (Section N.1)
+* **N.2 (Bloom's Level):** [Action verb] [measurable outcome] (Section N.2)
+* **N.3 (Bloom's Level):** [Action verb] [measurable outcome] (Sections N.3-N.4)
 
 [Pick Bloom's levels to match the course level. Introductory courses target Remember, Understand, and Apply. Advanced courses target Apply, Analyze, Evaluate, and Create.]
 
@@ -156,7 +156,7 @@ See course glossary for full definitions
 
 **Dataset or starter files:** [Provided file(s) in `assets/code/chapter-NN/`. Name each file and its source. Students load provided files from the course data pack, never hand-type them.]
 
-### Part 1: Foundation (Aligns with MLO-N.1)
+### Part 1: Foundation (Aligns with Objective N.1)
 
 [Tasks all students must complete. Scaffolded for success. Builds on None (chapters teach from zero) skills while introducing chapter-specific techniques.]
 
@@ -164,7 +164,7 @@ See course glossary for full definitions
 2. [Task building on the previous step]
 3. [Task demonstrating the core chapter concept]
 
-### Part 2: Application (Aligns with MLO-N.1, MLO-N.3)
+### Part 2: Application (Aligns with Objectives N.1 and N.3)
 
 [Intermediate synthesis requiring students to combine skills and make judgment calls. Less structured than Part 1.]
 
@@ -172,7 +172,7 @@ See course glossary for full definitions
 2. [Task combining multiple chapter concepts]
 3. [Task producing insight, not just output]
 
-### Part 3: Extension (Aligns with MLO-N.2, MLO-N.3)
+### Part 3: Extension (Aligns with Objectives N.2 and N.3)
 
 [Advanced or creative problem-solving. May involve communication, presentation, or stakeholder considerations. Can be bonus for introductory courses.]
 
@@ -221,7 +221,7 @@ See course glossary for full definitions
 
 ## Looking Ahead ⏩
 
-[2-3 sentences previewing the next chapter. Show how this chapter's concepts lead naturally into the next topic. Build anticipation for the next skill.]
+[2-3 sentences previewing the next chapter. In the final chapter, title this section "Course Conclusion: Where You Go from Here" (no icon) and close the course instead of previewing. Show how this chapter's concepts lead naturally into the next topic. Build anticipation for the next skill.]
 
 ---
 
@@ -230,7 +230,7 @@ See course glossary for full definitions
 STRUCTURE CHECKLIST:
 * [ ] Decimal numbering for all main sections (N.1, N.2, etc.)
 * [ ] Module Overview with time/prerequisites/deliverables
-* [ ] Exactly 3 Learning Objectives in MLO-N.Y (Bloom's Level) format
+* [ ] Exactly 3 Learning Objectives in N.Y (Bloom's Level) format
 * [ ] Every MLO ends with its teaching-section binding
 * [ ] CLO alignment block after the MLO list (verbatim outcome text
       from docs/CIS133_CLOs.md, no heading icon)
@@ -286,5 +286,6 @@ HEADING ICONS (REQUIRED, identical across all chapters):
 * Review Questions N.7 🔄️
 * Further Reading 📖
 * Looking Ahead ⏩
+* Course Conclusion: Where You Go from Here (final chapter, NO ICON)
 
 -->

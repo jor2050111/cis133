@@ -134,7 +134,7 @@ Every module (chapter) states exactly 3 Module Learning Objectives
 Each objective follows this format:
 
 ```markdown
-* **MLO-N.Y (Bloom's Level):** [Verb] [measurable outcome]
+* **N.Y (Bloom's Level):** [Verb] [measurable outcome]
 ```
 
 * MLO = Module Learning Objective prefix
@@ -145,11 +145,11 @@ Each objective follows this format:
 **Example:**
 
 ```markdown
-* **MLO-4.1 (Understand):** Explain how the CSS cascade resolves
+* **4.1 (Understand):** Explain how the CSS cascade resolves
   conflicting rules using specificity and source order
-* **MLO-4.2 (Apply):** Construct a two-column page layout using CSS
+* **4.2 (Apply):** Construct a two-column page layout using CSS
   Grid with named template areas
-* **MLO-4.3 (Analyze):** Compare Grid and flexbox layouts for a given
+* **4.3 (Analyze):** Compare Grid and flexbox layouts for a given
   design and select the better fit
 ```
 
@@ -163,7 +163,7 @@ Each objective follows this format:
 ### Rules
 
 * One verb per objective. "Implement and evaluate" is two objectives.
-* Each objective maps to a specific section number (MLO-4.2 maps to
+* Each objective maps to a specific section number (Objective 4.2 maps to
   section 4.2), which enables assessment traceability.
 * Assessments (Skills Labs, quizzes, projects) cite the MLOs they
   measure.

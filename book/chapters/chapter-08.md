@@ -16,9 +16,9 @@ This chapter delivers the other half. You will teach every page to report its tr
 
 By the end of this chapter, you will be able to:
 
-* **MLO-8.1 (Apply):** Implement the viewport meta tag on every page of a site, testing the result in browser DevTools device mode (Sections 8.1-8.2)
-* **MLO-8.2 (Apply):** Construct media queries that adjust layout, spacing, and type at content-driven breakpoints (Sections 8.3-8.4)
-* **MLO-8.3 (Analyze):** Diagnose where a layout fails across screen widths and which layer of a base-plus-overrides stylesheet owns the fix (Sections 8.1 and 8.4)
+* **8.1 (Apply):** Implement the viewport meta tag on every page of a site, testing the result in browser DevTools device mode (Sections 8.1-8.2)
+* **8.2 (Apply):** Construct media queries that adjust layout, spacing, and type at content-driven breakpoints (Sections 8.3-8.4)
+* **8.3 (Analyze):** Diagnose where a layout fails across screen widths and which layer of a base-plus-overrides stylesheet owns the fix (Sections 8.1 and 8.4)
 
 ### This chapter aligns with the following Course Learning Outcomes
 
@@ -418,20 +418,20 @@ Answer from memory before checking back through the chapter.
 
 The lab walks the chapter's own path. Part 1 gives every page the tag and gathers the diagnosis. Part 2 turns the diagnosis into the site's first query block. Part 3 adds a query of your own and proves the site at three widths.
 
-### Part 1: Foundation (Aligns with MLO-8.1)
+### Part 1: Foundation (Aligns with Objective 8.1)
 
 1. Copy the whole `starter-site` folder to your `cis133` root and rename the copy `skills-lab-8a-lastname`. Copy `skills-lab-8a-answers.txt` into it.
 2. Add the viewport meta tag to all three pages' heads, next to the charset line, exactly as Section 8.2 wrote it. Open one page in device mode at a phone profile, before and after the edit if you want the drama, and record the tag, what changed, and your phone profile in answer 1.A.
 3. With the tag in place, log the rendered width device mode reports for each of the three pages at your phone profile in answer 1.B.
 4. Now diagnose. Walk each page at three widths (a phone width, a mid width, and a laptop width) and list every place the layout embarrasses itself: what crowds, what wastes space, what gets hard to tap. Record the diagnosis list in answer 1.C, naming the page, the width, and the failure. This list is your evidence for Part 2.
 
-### Part 2: Application (Aligns with MLO-8.2, MLO-8.3)
+### Part 2: Application (Aligns with Objectives 8.2 and 8.3)
 
 1. Derive the breakpoint. One page in your diagnosis hands you a number. Drag the gallery page inward and find the exact width where its figures stop sharing a line, pinning it down the way TIY 8.3 pinned the flip. Defend the number with content evidence in answer 2.A: what stops fitting there, and what observation or arithmetic produced it. The gallery row's own widths can confirm the number, the way Section 8.3's card arithmetic confirmed 584.
 2. Write the small-screen block. At the bottom of `club-styles.css`, below every base rule, open a `max-width` query at your breakpoint with a comment naming its job. Give it three overrides. The gallery's figures span the full row width. `main`'s side padding tightens, because the laptop cushion spends width a phone cannot spare. And the nav links' padding grows into targets a thumb can hit, which serves Chapter 7's accessibility principle.
 3. Prove it fired. Check each page below your breakpoint in device mode and confirm all three overrides show. Then copy the whole block, comment included, into answer 2.A.
 
-### Part 3: Extension (Aligns with MLO-8.3)
+### Part 3: Extension (Aligns with Objective 8.3)
 
 1. Write one more query of your own choosing and defend it in answer 3.A. Two directions are worth the work. A wide-screen enhancement: a `min-width` query that seats three gallery figures when the window offers the room, with your arithmetic shown. Or a further small-screen refinement: a heading that steps down, or a header that stacks its logo above its title. Whichever you choose, the block carries only differences and sits below the rules it adjusts.
 2. Run the three-width verification pass: every page at your phone, mid, and laptop widths from Part 1, in device mode. At each stop confirm the layout you shipped: nothing overflows, nothing crowds, every target is comfortable.
@@ -452,7 +452,9 @@ This lab is graded with the standard
 [Skills Lab Rubric](../skills-lab-rubric.md): four criteria at
 4 points each, 16 points total. The criteria are Technical Accuracy
 and Efficiency, Output Quality, Documentation Quality, and Analysis,
-Interpretation, and Response to QUESTION(s).
+Interpretation, and Response to QUESTION(s). Your instructor sets
+the point weights in your course. The criteria and levels are the
+same everywhere.
 
 ---
 

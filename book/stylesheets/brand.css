@@ -265,3 +265,59 @@
   outline: 2px solid var(--md-accent-fg-color);
   outline-offset: 2px;
 }
+
+/* 12. Left nav Part labels -- headings, not links -------------------------- */
+/* With navigation.sections enabled, the theme renders each Part as a section
+   label styled almost like the chapter links below it, so students read it as
+   clickable. The eyebrow treatment (smaller, uppercase, letter-spaced, muted)
+   separates "grouping heading" from "chapter link" in both schemes while the
+   active-chapter highlight keeps doing its job. */
+.md-nav__item--section > .md-nav__link {
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.md-nav--primary > .md-nav__list > .md-nav__item--section {
+  margin-top: 1.25em;
+}
+/* Muted below link color but above 4.5:1 on both scheme backgrounds */
+[data-md-color-scheme="default"] .md-nav__item--section > .md-nav__link {
+  color: color-mix(in srgb, var(--text-body) 72%, transparent);
+}
+[data-md-color-scheme="slate"] .md-nav__item--section > .md-nav__link {
+  color: color-mix(in srgb, var(--text-on-dark) 72%, transparent);
+}
+/* Desktop sidebar only: the label is inert there, so remove the hand cursor
+   and hover shift. The mobile drawer keeps its toggle behavior untouched. */
+@media screen and (min-width: 76.25em) {
+  .md-nav__item--section > .md-nav__link,
+  .md-nav__item--section > .md-nav__link:hover {
+    cursor: default;
+  }
+  [data-md-color-scheme="default"] .md-nav__item--section > .md-nav__link:hover {
+    color: color-mix(in srgb, var(--text-body) 72%, transparent);
+  }
+  [data-md-color-scheme="slate"] .md-nav__item--section > .md-nav__link:hover {
+    color: color-mix(in srgb, var(--text-on-dark) 72%, transparent);
+  }
+}
+
+/* 13. Definition lists -- glossary term / definition separation ------------ */
+/* Glossary pages use real definition lists, so the term (dt) gets the same
+   accent language as headings: canyon terracotta on the light scheme (8.0:1
+   on sand 300) and Phoenix Gold on the dark scheme (10.6:1 on navy 900).
+   The definition keeps body color, so the pair reads at a glance in both
+   modes. Applies to every def list for a consistent visual grammar. */
+.md-typeset dl > dt {
+  font-weight: 700;
+}
+.md-typeset dl > dt:not(:first-child) {
+  margin-top: 1em;
+}
+[data-md-color-scheme="default"] .md-typeset dl > dt {
+  color: var(--accent-canyon);
+}
+[data-md-color-scheme="slate"] .md-typeset dl > dt {
+  color: var(--text-heading-dark);
+}

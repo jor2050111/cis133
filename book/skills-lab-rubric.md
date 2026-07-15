@@ -17,6 +17,14 @@ rubric once and you know what every lab expects of you.
 
 **Scoring:** 16 points total, 4 points per criterion (8 points
 technical execution, 8 points transferable skills)
+
+**A note on points.** The four criteria and five levels never change,
+and neither does their order: Emerging always sits one step below
+Developing, and Mastery is always the top. The point values are a
+reference scale. Your instructor sets the actual weights in your
+course, so the same rubric might be worth 16 points in one course and
+32 in another, or weight one criterion more heavily. Check your course
+syllabus or Canvas rubric for the values that apply to you.
 <!-- --8<-- [end:rubric] -->
 
 ## How to read the four criteria

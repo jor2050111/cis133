@@ -21,11 +21,6 @@ site_url = "https://jor2050111.github.io/cis133/"
 docs_dir = "book"
 site_dir = "site"
 
-# Source repository (powers the header repo link and content edit buttons)
-repo_url = "https://github.com/jor2050111/cis133"
-repo_name = "jor2050111/cis133"
-edit_uri = "edit/main/book/"
-
 copyright = "Copyright &copy; 2026 Jorge Vega, Phoenix College. All rights reserved."
 
 # Brand styling: Sonoran Nightfall design system, synced from ../shared/.
@@ -72,8 +67,6 @@ language = "en"
 
 features = [
   "announce.dismiss",
-  "content.action.edit",
-  "content.action.view",
   "content.code.annotate",
   "content.code.copy",
   "content.code.select",

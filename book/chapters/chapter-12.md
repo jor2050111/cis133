@@ -16,9 +16,9 @@ You will read your first scripts and watch them run. You will hear the server's 
 
 By the end of this chapter, you will be able to:
 
-* **MLO-12.1 (Understand):** Illustrate what scripting adds to a site: client-side behavior in the browser and server-side processing in concept (Sections 12.1-12.2)
-* **MLO-12.2 (Apply):** Perform the full pre-flight check and publish the site to a web server with secure file transfer (Sections 12.3-12.4)
-* **MLO-12.3 (Create):** Produce the complete multi-page club site: the home page, six-page navigation, and every standard the course taught (Sections 12.3-12.4)
+* **12.1 (Understand):** Illustrate what scripting adds to a site: client-side behavior in the browser and server-side processing in concept (Sections 12.1-12.2)
+* **12.2 (Apply):** Perform the full pre-flight check and publish the site to a web server with secure file transfer (Sections 12.3-12.4)
+* **12.3 (Create):** Produce the complete multi-page club site: the home page, six-page navigation, and every standard the course taught (Sections 12.3-12.4)
 
 ### This chapter aligns with the following Course Learning Outcomes
 
@@ -423,7 +423,7 @@ The lab walks the chapter's own path. Part 1 builds the front door and grows Cha
 !!! note
     If live hosting is unavailable, complete the local pre-flight and package the site. Your instructor will identify alternate publication evidence.
 
-### Part 1: Foundation (Aligns with MLO-12.3)
+### Part 1: Foundation (Aligns with Objective 12.3)
 
 1. Create a folder named `skills-lab-12a-lastname` at your `cis133` root. Copy in the whole `starter-site` folder, keeping its name, plus `skills-lab-12a-answers.txt`.
 2. Create `index.html` inside `starter-site` the Chapter 2 way: open an existing page, save as, and keep everything the pages share. Retitle the head, keep the header, nav, and footer, and clear `main` for the new content. Record in answer 1.A why this page, alone on the site, gets its file name chosen by a server convention.
@@ -431,14 +431,14 @@ The lab walks the chapter's own path. Part 1 builds the front door and grows Cha
 4. The officers asked for Home first in the menu on all six pages, so deliver it: add the Home link at the front of every page's navigation bar, in the site plan's order.
 5. Validate all six pages to zero messages. Record the nav update, the pages you touched, and the counts in answer 1.B.
 
-### Part 2: Application (Aligns with MLO-12.1, MLO-12.3)
+### Part 2: Application (Aligns with Objectives 12.1 and 12.3)
 
 1. Copy `footer-year.js` into your `starter-site` folder, beside the pages. Read its comment first: the script states its own contract.
 2. Keep the home page's standard footer paragraph and add a copyright line below it, with the year as an empty span carrying `id="footer-year"`. The script writes the year's digits, never you. Then attach the script with a script element just before `</body>`, where Section 12.1 taught and the contract requires. Only the home page carries the line and the script.
 3. Load the page and confirm the footer shows the current year. Record the span, the script element's location and why it sits there, and what the footer shows in answer 2.A.
 4. Answer 2.B in writing: whose machine computed that year, and what that means for the club's January maintenance. Then write the trace: one join-list sign-up's full trip, the client's half you built in Chapter 11 and the server's half in concept from Section 12.2.
 
-### Part 3: Extension (Aligns with MLO-12.2, MLO-12.3)
+### Part 3: Extension (Aligns with Objectives 12.2 and 12.3)
 
 1. Run the pre-flight on all six pages: one checklist copy per page, checks 1 through 7, audit first. Log every finding before repairing anything, Chapter 9's habit, then repair what you found and re-validate. Record findings, repairs, and final counts in answer 3.A.
 2. Use the hosting details your instructor provides: connect with the secure transfer method the host supports, copy the folder's contents into the server's public folder while keeping the structure, and load the real address.
@@ -459,7 +459,9 @@ This lab is graded with the standard
 [Skills Lab Rubric](../skills-lab-rubric.md): four criteria at
 4 points each, 16 points total. The criteria are Technical Accuracy
 and Efficiency, Output Quality, Documentation Quality, and Analysis,
-Interpretation, and Response to QUESTION(s).
+Interpretation, and Response to QUESTION(s). Your instructor sets
+the point weights in your course. The criteria and levels are the
+same everywhere.
 
 ---
 
@@ -489,6 +491,8 @@ Interpretation, and Response to QUESTION(s).
 
 ---
 
-## Looking Ahead ⏩
+## Course Conclusion: Where You Go from Here
 
-For the first time, no chapter waits after this one. The site plan the officers approved in Chapter 7 is complete: six pages promised, six pages live, at an address anyone can visit. If your course includes an independent project, reuse these moves on your own site and let this published site serve as the working pattern. Twelve chapters ago you learned how a page reaches a screen. Now your pages reach everyone's. The course ends where the web begins.
+For the first time, no chapter waits after this one. The site plan the officers approved in Chapter 7 is complete: six pages promised, six pages live, at an address anyone can visit. If your course includes an independent project, reuse these moves on your own site and let this published site serve as the working pattern. Twelve chapters ago you learned how a page reaches a screen. Now your pages reach everyone's.
+
+Where you go from here is your choice. Publish a site for a club, a family business, or your own portfolio. Learn JavaScript when you are ready to make pages respond to their users, and take the next web course in your program when you want structured depth. You know how to build, validate, and ship accessible sites. Every site you publish from now on carries your name. The course ends where the web begins.

@@ -1,9 +1,32 @@
 # CIS133 Textbook: HANDOFF
 
-**Last updated:** 2026-07-13
+**Last updated:** 2026-07-15 (family template alignment)
 **Repo:** https://github.com/jor2050111/cis133
 **Live site:** https://jor2050111.github.io/cis133/
 **Task list:** cis133-fall26 (`export CLAUDE_CODE_TASK_LIST_ID=cis133-fall26`)
+
+## What was done (2026-07-15): family template alignment
+
+* zensical.toml dropped repo_url/repo_name/edit_uri and the
+  content.action.edit/view features, so the header "Go to repository"
+  link and the per-page view/edit icons are gone, matching CIS215.
+* Chapter 12 now ends with "Course Conclusion: Where You Go from
+  Here" (no icon) instead of "Looking Ahead".
+* The conclusion gained a short next-steps paragraph (publish more
+  sites, learn JavaScript, take the next web course).
+* Converted the published glossary to definition lists with a
+  student-facing preamble. Terms now render in canyon terracotta
+  (light) and Phoenix Gold (dark) through synced brand.css.
+* Chapters 2-12 rubric link blocks now tell students that instructors
+  set the point weights per course. The synced rubric page carries a
+  matching "A note on points" paragraph inside the transcluded block.
+* Learning objectives dropped the MLO- prefix (entries now read
+  `**N.Y (Level):**`), and Skills Lab parts read "Aligns with
+  Objective(s) N.Y". CLAUDE.md, chapter templates, and the
+  consistency-checker agent teach the new format.
+* Left-nav Part labels now render as small uppercase headings (not
+  links) in both color schemes, via synced brand.css.
+* Rebuilt with `zensical build --clean`: No issues found.
 
 ## What Was Done (2026-07-13 Phase 1 publication remediation)
 

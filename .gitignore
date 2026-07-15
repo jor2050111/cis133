@@ -30,6 +30,9 @@ wheels/
 # Local docs toolchain venv
 .venv/
 
+# Local browser QA dependencies
+node_modules/
+
 # Jupyter Notebook
 .ipynb_checkpoints
 */.ipynb_checkpoints/*
@@ -69,9 +72,14 @@ Temporary Items
 build/google-docs/
 *.docx
 
+# Data-pack starter files are committed artifacts (HANDOFF.md law),
+# exempt from the build-output docx rule above
+!assets/code/**/*.docx
 
 # Temporary files
 nul
+test.csv
+.playwright-cli/
 *.tmp
 *.bak
 *~

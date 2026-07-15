@@ -16,9 +16,9 @@ Chapter 7 opens Part III, Design for Every User, and it works differently than t
 
 By the end of this chapter, you will be able to:
 
-* **MLO-7.1 (Analyze):** Differentiate user experience (UX) from user interface (UI) decisions, using the five UX principles: usability, accessibility, consistency, feedback, and responsiveness (Sections 7.1-7.2)
-* **MLO-7.2 (Apply):** Construct a sitemap and wireframes that plan a multi-page site's structure and layout before any code is written (Section 7.3)
-* **MLO-7.3 (Evaluate):** Critique an existing site's navigation and page consistency against UX principles to produce a site plan (Section 7.4)
+* **7.1 (Analyze):** Differentiate user experience (UX) from user interface (UI) decisions, using the five UX principles: usability, accessibility, consistency, feedback, and responsiveness (Sections 7.1-7.2)
+* **7.2 (Apply):** Construct a sitemap and wireframes that plan a multi-page site's structure and layout before any code is written (Section 7.3)
+* **7.3 (Evaluate):** Critique an existing site's navigation and page consistency against UX principles to produce a site plan (Section 7.4)
 
 ### This chapter aligns with the following Course Learning Outcomes
 
@@ -104,7 +104,7 @@ Say the five as questions and they become an audit. Can visitors finish their ta
 
 ### Sorting Decisions into Layers
 
-Here is MLO-7.1's skill in one move. When a design decision lands on your desk, ask two questions: which layer is it, and which principle is at stake? A few decisions, sorted:
+Here is Objective 7.1's skill in one move. When a design decision lands on your desk, ask two questions: which layer is it, and which principle is at stake? A few decisions, sorted:
 
 | Decision | Layer | Principle at stake |
 | --- | --- | --- |
@@ -420,19 +420,19 @@ Answer from memory before checking back through the chapter.
 
 The lab walks the chapter's own path. Part 1 digests the brief and audits the site you just finished building. Part 2 draws the structure and the layouts. Part 3 assembles the stakeholder document and closes with the judgment call no template can make for you.
 
-### Part 1: Foundation (Aligns with MLO-7.1, MLO-7.3)
+### Part 1: Foundation (Aligns with Objectives 7.1 and 7.3)
 
 1. Create a folder named `skills-lab-7a-lastname` at your `cis133` root, and copy `skills-lab-7a-answers.txt` and `ux-audit-worksheet.txt` into it. Read `project-brief.txt` twice: once straight through, once with a pen. Restate the club's goals and its two audiences in your own words in answer 1.A. The officers' sentences are off limits. Prove you understood them.
 2. Audit the provided club site against the five principles. Open the three `club-site/` pages in your browser and the stylesheet in VS Code, then work through the worksheet principle by principle. Follow each what-to-check prompt, and log at least one strength and one gap wherever they exist. Point at pages and regions, not feelings. Everyone audits this shared copy instead of their own Lab 6A build, so every student critiques the same site.
 3. Complete the worksheet's headline finding: the one gap you would fix first, and why it costs the site's visitors the most. Then summarize the audit in answer 1.B: your strongest strength and costliest gap, each tied to its principle, and who feels each one most.
 
-### Part 2: Application (Aligns with MLO-7.2)
+### Part 2: Application (Aligns with Objective 7.2)
 
 1. Construct the six-page sitemap: the three pages the brief keeps plus the three it adds. Draw it as a text tree with a file name beside each page title. Decide which pages sit in the navigation bar, then record the tree, your nav decisions, and a defense of anything you left out of the bar in answer 2.A.
 2. Wireframe the new home page at desktop width and at phone width. Copy and adapt the frames in `wireframe-examples.txt`, or sketch on paper and photograph the result. Label every outer box with the landmark element it will become. No colors, no fonts.
 3. Wireframe one more page of your choice from the tree, at both widths. Then record your frame inventory in answer 2.B: where the wireframes live, the page and width each frame shows, and the landmark labels each one carries.
 
-### Part 3: Extension (Aligns with MLO-7.2, MLO-7.3)
+### Part 3: Extension (Aligns with Objectives 7.2 and 7.3)
 
 1. Write the navigation plan: the bar's labels in order, each defended in one line as a descriptive label (what it leads to, and why a visitor would predict that before clicking). Record the labels and defenses in answer 3.A.
 2. Write the consistency rules every page will follow: the shared regions, the one stylesheet, and anything else that must never vary. Remember the officers' closing constraint. The colors and the logo stay, and the new pages must match.
@@ -453,7 +453,9 @@ This lab is graded with the standard
 [Skills Lab Rubric](../skills-lab-rubric.md): four criteria at
 4 points each, 16 points total. The criteria are Technical Accuracy
 and Efficiency, Output Quality, Documentation Quality, and Analysis,
-Interpretation, and Response to QUESTION(s).
+Interpretation, and Response to QUESTION(s). Your instructor sets
+the point weights in your course. The criteria and levels are the
+same everywhere.
 
 ---
 

@@ -12,7 +12,7 @@ CORE RESPONSIBILITIES:
    - Confirm exactly 3 Module Learning Objectives (MLOs) per chapter
    - Verify verbs are at Apply, Analyze, Evaluate, or Create levels (NOT Remember or Understand for content covered in None (chapters teach from zero))
    - Ensure objectives are measurable and assessable
-   - Validate MLO numbering format: **MLO-N.X (Bloom's Level):** [Verb] [outcome]
+   - Validate objective numbering format: **N.X (Bloom's Level):** [Verb] [outcome]
 
 2. **Chapter Scope and Length Analysis**
    - Target: ~700 lines of markdown (~20 pages)

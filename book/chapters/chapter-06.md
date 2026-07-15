@@ -16,9 +16,9 @@ This chapter pays both debts. You will turn a stacked container into an arranged
 
 By the end of this chapter, you will be able to:
 
-* **MLO-6.1 (Apply):** Arrange page content with flex containers, controlling alignment, spacing, and wrapping along the main and cross axes (Sections 6.1-6.2)
-* **MLO-6.2 (Analyze):** Differentiate elements by tree relationship and interaction state to scope styles with descendant combinators and accessible pseudo-classes (Section 6.3)
-* **MLO-6.3 (Apply):** Construct an accessible navigation bar from the semantic nav list using Flexbox, combinators, and pseudo-classes (Section 6.4)
+* **6.1 (Apply):** Arrange page content with flex containers, controlling alignment, spacing, and wrapping along the main and cross axes (Sections 6.1-6.2)
+* **6.2 (Analyze):** Differentiate elements by tree relationship and interaction state to scope styles with descendant combinators and accessible pseudo-classes (Section 6.3)
+* **6.3 (Apply):** Construct an accessible navigation bar from the semantic nav list using Flexbox, combinators, and pseudo-classes (Section 6.4)
 
 ### This chapter aligns with the following Course Learning Outcomes
 
@@ -435,20 +435,20 @@ Answer from memory before checking back through the chapter.
 
 The lab walks the chapter's own path. Part 1 arranges the header and the gallery into flex lines. Part 2 fixes the inherited footer defect and gives every link region accessible states. Part 3 builds the bar and closes the Part II milestone.
 
-### Part 1: Foundation (Aligns with MLO-6.1)
+### Part 1: Foundation (Aligns with Objective 6.1)
 
 1. Copy the whole `starter-site` folder to your `cis133` root and rename the copy `skills-lab-6a-lastname`. Copy `skills-lab-6a-answers.txt` into it.
 2. Build the header row: one `header` rule that puts the logo and the page title on a flex line, centered against each other on the cross axis, with a gap between them. Let the rule wrap, so each intro paragraph keeps its own full-width line. One rule serves all three pages. Record the rule and its axis reasoning in answer 1.A.
 3. Build the gallery row on the drive gallery page. Give that page's `main` a role-based hook (your Chapter 4 class-versus-id decision rule applies), then make it a wrapping, gapped flex row. Give the gallery's figures a width that seats two per line inside the readable column. The starter's `main` rule reads `max-width: 640px` with `padding: 24px 16px`, so under border-box the column offers 640 minus 16 on each side: 608 pixels of content width. Two figure widths plus one gap must fit inside that. Zero the gallery figures' old margins with a descendant selector so the gap owns the spacing.
 4. Watch the gallery at a wide window and a narrow one, and record the rule and both observations in answer 1.B.
 
-### Part 2: Application (Aligns with MLO-6.2)
+### Part 2: Application (Aligns with Objective 6.2)
 
 1. Fix the inherited defect. Repaint the footer's links with a descendant combinator and a pairing from the palette's passing list, leaving every other link untouched. Log the rule, its reach, and why `footer a` beats a bare `a` for this job in answer 2.A.
 2. Give every link region its states: `:hover` and `:focus` twins for the nav's links and the footer's links, every pairing from the passing list, and no outline removed anywhere. Then put the mouse away, Tab through each page, and log the pass in answer 2.B.
 3. Audit your new rules for reach. If any state or color rule catches links you never meant (the guide's source links in `main` are the easy ones to catch by accident), retarget it with a combinator.
 
-### Part 3: Extension (Aligns with MLO-6.3)
+### Part 3: Extension (Aligns with Objective 6.3)
 
 1. Build the full navigation bar on all three pages. Strip the markers with `list-style`, zero the list's default spacing, lay the items on a gapped flex line, and pad each link into an underline-free block. The hover and focus states are already wired from Part 2. Scope every rule through `nav`.
 2. Make one layout decision of your own: your bar's `justify-content` choice, or a footer or figure arrangement. Copy the declaration into answer 3.A and defend it with the axis vocabulary.
@@ -469,7 +469,9 @@ This lab is graded with the standard
 [Skills Lab Rubric](../skills-lab-rubric.md): four criteria at
 4 points each, 16 points total. The criteria are Technical Accuracy
 and Efficiency, Output Quality, Documentation Quality, and Analysis,
-Interpretation, and Response to QUESTION(s).
+Interpretation, and Response to QUESTION(s). Your instructor sets
+the point weights in your course. The criteria and levels are the
+same everywhere.
 
 ---
 

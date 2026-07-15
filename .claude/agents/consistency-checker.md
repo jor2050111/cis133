@@ -29,7 +29,7 @@ Verify every chapter has these sections in order:
 7. Skills Lab N.6 (3 parts with rubric)
 8. Review Questions N.7 🔄️
 9. Further Reading 📖
-10. Looking Ahead ⏩
+10. Looking Ahead ⏩ (final chapter: "Course Conclusion: Where You Go from Here", no icon)
 
 ## FORMATTING
 - Bullet points: asterisks only (`* `), never dashes (`- `)

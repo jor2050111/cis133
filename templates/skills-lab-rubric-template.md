@@ -31,7 +31,9 @@ This lab is graded with the standard
 [Skills Lab Rubric](../skills-lab-rubric.md): four criteria at
 4 points each, 16 points total. The criteria are Technical Accuracy
 and Efficiency, Output Quality, Documentation Quality, and Analysis,
-Interpretation, and Response to QUESTION(s).
+Interpretation, and Response to QUESTION(s). Your instructor sets
+the point weights in your course. The criteria and levels are the
+same everywhere.
 ```
 
 The transclusion works because `pymdownx.snippets` is enabled in
@@ -45,4 +47,5 @@ Students who take more than one course in this family learn the four
 criteria once: Technical Accuracy and Efficiency, Output Quality,
 Documentation Quality, and Analysis, Interpretation, and Response to
 QUESTION(s). The 16 points split evenly between technical execution
-(8) and transferable skills (8).
+(8) and transferable skills (8). Each course may rescale the
+point weights, and the rubric page tells students so.
