@@ -107,7 +107,8 @@ A rule does nothing until it reaches a page. HTML offers three connection points
 The narrowest connection is an **inline style**, CSS written into one element's `style` attribute:
 
 ```html
-<!-- Step 1: an inline style claims one element and nothing else -->
+<!-- Step 1: decide the reach: this styling touches one element
+     and nothing else -->
 <h1 style="color: #268080;">Copperwind Announcements</h1>
 ```
 
@@ -123,7 +124,8 @@ The middle option is an **internal stylesheet**: real rules, selectors and all, 
 <head>
     <meta charset="UTF-8">
     <title>Copperwind Announcements</title>
-    <!-- Step 2: a style element widens the reach to this whole page -->
+    <!-- Step 2: decide the reach: every matching element, but on
+     this page only -->
     <style>
         h1 {
             color: #268080;  /* copperwind teal, the brand color */
@@ -141,14 +143,15 @@ Internal stylesheets earn their keep on one-page experiments and practice files,
 The professional connection is an **external stylesheet**: a separate file of nothing but CSS, saved with a `.css` extension and connected to each page by a **link element** in the head.
 
 ```html
-<!-- Step 3: a link element hands styling to a file the site shares -->
+<!-- Step 3: decide the reach: one shared file speaks for the
+     whole site -->
 <link rel="stylesheet" href="copperwind-styles.css">
 ```
 
 `<link>` is an empty element, like `<meta>` and `<img>`. Its `rel` attribute names the relationship: the linked file is this page's stylesheet. Its `href` holds the file's address, under the same relative URL rules every `href` and `src` has followed since Chapter 2. The stylesheet itself holds rules and comments and nothing else. No `<style>` tags, no HTML at all:
 
 ```css
-/* Step 4: copperwind-styles.css holds rules and comments only,
+/* Step 4: keep the shared file pure: rules and comments only,
    and it styles every page that links it. */
 body {
     background-color: #fac78d;  /* light sand */
@@ -241,7 +244,8 @@ Element selectors are all-or-nothing. Style `p` and every paragraph obeys. But C
 The opt-in happens in the HTML, through the **class attribute**:
 
 ```html
-<!-- Step 1: opt in the special paragraphs under one role name -->
+<!-- Step 1: the treatment repeats across pages, so opt the
+     paragraphs into one role -->
 <p class="deadline">Volunteer sign-up for the fall drive closes
 Friday, October 2, at 5:00 p.m.</p>
 ```
@@ -249,7 +253,8 @@ Friday, October 2, at 5:00 p.m.</p>
 The rule lives in the stylesheet, with a dot marking the name as a class:
 
 ```css
-/* Step 2: one dot rule reaches every opted-in element, on any page */
+/* Step 2: reuse is the goal: reach everything that opted into
+   the role, on any page */
 .deadline {
     background-color: #f4a259;  /* sunset orange flags the date */
 }
@@ -262,12 +267,14 @@ A class is reusable by design. Any number of elements, on any page of the site, 
 Some elements are one of a kind. For those, HTML offers the **id attribute**, which names a single element, and CSS offers the **id selector**, written with a hash, to match it. An id value may appear on only one element per page. That is a promise you make in the markup, and tools take you at your word.
 
 ```html
-<!-- Step 3: give the page's one-of-a-kind section an id -->
+<!-- Step 3: this section is one of a kind on the page, so name
+     it uniquely -->
 <section id="drop-off-hours">
 ```
 
 ```css
-/* Step 4: the hash rule claims exactly that one element */
+/* Step 4: uniqueness is the goal: claim exactly that one
+   element, nothing else */
 #drop-off-hours {
     background-color: #deb887;  /* sand sets the schedule apart */
 }
@@ -392,14 +399,14 @@ Copperwind's palette ships in your pack as `assets/code/chapter-04/copperwind-pa
 
 | Color | Hex | Where the set uses it |
 | ----- | --- | --------------------- |
-| copperwind teal | `#268080` | The logo disk and every banner |
-| deep teal | `#1a5e5e` | The logo's shading |
-| sunset orange | `#f4a259` | The sky in every outdoor scene |
-| light sand | `#fac78d` | The palest tone, from the sunlit sky |
+| copperwind teal | `#268080` | The logo's ring, the canopy, and the bins |
+| deep teal | `#1a5e5e` | The mountain silhouettes |
+| sunset orange | `#f4a259` | The logo's wind ribbon and the warm sky bands |
+| light sand | `#fac78d` | The palest tone, from the sunlit sand |
 | sand | `#deb887` | The desert ground under every scene |
-| saguaro green | `#5e9959` | The cactus and bin green |
+| saguaro green | `#5e9959` | The cacti, with a sorting bin to match |
 | ink | `#333333` | Text and outlines |
-| white | `#ffffff` | Label plates and the logo's arrows |
+| white | `#ffffff` | Figure plates and the set's highlights |
 
 The file also lists two prop browns from the set, labeled as lookalikes that sit close to sand and earned no job on the site. Choosing sand over them is a design decision, not a coin flip, and Skills Lab 4A's Part 3 stretch hands that judgment to you. Copy values from the file every time. The `teal` versus `#268080` lesson is exactly what retyping from memory costs.
 

@@ -123,7 +123,7 @@ Here is the shape, as a complete body:
         </ul>
     </nav>
     <!-- Step 3: Mark the primary content with the page's single
-         main, the jump menu's first stop -->
+         main landmark -->
     <main>
         <!-- The page's actual content lives here -->
     </main>
@@ -283,7 +283,6 @@ Notice the division of labor. The alt text replaces the chart for someone who ca
 ```text
 Error: Element “figcaption” not allowed as child of element “body”
 in this context. (Suppressing further errors from this subtree.)
-From line 14, column 5; to line 14, column 16
 ```
 
 **Diagnose:** The closing `</figure>` arrives one line too soon. That leaves the caption outside the figure, a stray child of `<body>`. HTML allows `<figcaption>` in one place only: inside a `<figure>`. The browser draws the stray line anyway, tied to nothing. That is why it sits out of line. Note where the validator points: at the caption, while the true defect is the early close one line above. To Devon's screen reader, this figure has no caption at all.

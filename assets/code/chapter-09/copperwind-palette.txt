@@ -14,22 +14,24 @@ They never go into your stylesheet.
 
 [COPPERWIND TEAL]
 #268080
-The Copperwind brand color: the logo disk and every banner in the set.
+The Copperwind brand color: the logo's ring, the drive canopy,
+and the collection bins.
 A strong region background behind white text.
 
 [DEEP TEAL]
 #1a5e5e
-The darker teal from the logo's shading. A heading color on light
+The darker teal of the mountain silhouettes. A heading color on light
 backgrounds, or a background behind white text.
 
 [SUNSET ORANGE]
 #f4a259
-The sky in every outdoor scene. A warm accent background behind
+The logo's wind ribbon and the warm sky bands. A warm accent
+background behind
 dark text.
 
 [LIGHT SAND]
 #fac78d
-The set's palest tone, from the sunlit sky. A page background that
+The set's palest tone, from the sunlit sand. A page background that
 keeps dark text readable.
 
 [SAND]
@@ -39,17 +41,18 @@ behind dark text.
 
 [SAGUARO GREEN]
 #5e9959
-The cactus and bin green. An accent for small touches. Too light to
+The saguaro green, with a sorting bin to match. An accent for
+small touches. Too light to
 sit behind white body text.
 
 [INK]
 #333333
-The dark gray the set uses for text and outlines. The site's body
+The dark gray of the chart text and darkest outlines. The site's body
 text color.
 
 [WHITE]
 #ffffff
-The label plates and the logo's arrows. A page background, or the
+The figure plates and the set's highlights. A page background, or the
 text color on either teal.
 
 ---------------------------------------------------------------------
