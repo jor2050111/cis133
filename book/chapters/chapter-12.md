@@ -1,15 +1,15 @@
 # Chapter 12: Scripting Concepts and Publishing
 
-The join page shipped, and sign-ups already beat the paper scraps. At Tuesday's meeting the officers say thank you, and then they ask the question every stakeholder saves for last: "It works on your machine. When can everyone see it?" The question is fair. Every page you have built lives at a `file://` address, and Chapter 2 named what that address is: your private workshop, readable by exactly one visitor. The club asked for a website, and the web has not met it yet.
+The join page shipped, and sign-ups already beat the paper scraps. Priya Sharma sends her thanks along with one last content brief. Then she asks the question every client saves for last: "It works on your machine. When can everyone see it?" The question is fair. Every page you have built lives at a `file://` address, and Chapter 2 named what that address is: your private workshop, readable by exactly one visitor. Copperwind hired you to build a website, and the web has not met it yet.
 
-This last chapter pays three debts at once. The join page admits the first one right on the page: the officers still owe a behind-the-scenes piece that stores sign-ups. This chapter explains that piece, from the scripts a browser runs to the server work no browser can do. The site plan holds the second debt: Chapter 7 promised six pages, five exist, and the missing one is the front door itself. The whole course carries the third. Chapter 2 promised these files would move to a web server and earn their `https://`, and this is Chapter 12.
+This last chapter pays three debts at once. The join page admits the first one right on the page: the team still owes a behind-the-scenes piece that stores sign-ups. This chapter explains that piece, from the scripts a browser runs to the server work no browser can do. The site plan holds the second debt: Chapter 7 promised six pages, five exist, and the missing one is the front door itself. The whole course carries the third. Chapter 2 promised these files would move to a web server and earn their `https://`, and this is Chapter 12.
 
-You will read your first scripts and watch them run. You will hear the server's half of the web in concept, no server required. You will learn what a web host does, why every link you ever wrote survives the move, and how a pre-flight check protects a site before anything goes public. Then Skills Lab 12A builds the home page, attaches the course's one script, and ships the club's site to a live address. The officers' question gets its answer: everyone, now.
+You will read your first scripts and watch them run. You will hear the server's half of the web in concept, no server required. You will learn what a web host does, why every link you ever wrote survives the move, and how a pre-flight check protects a site before anything goes public. Then Skills Lab 12A builds the home page, attaches the course's one script, and ships Copperwind's site to a live address. Priya's question gets its answer: everyone, now.
 
 ## Module Overview 🧭
 
 * **Estimated time:** 5-6 hours
-* **Prerequisites:** Chapters 1-11 (the client-server model from Chapter 1, the club site the labs have built, the checking stack from Chapters 2, 4, and 9, and Chapter 8's device-mode habit)
+* **Prerequisites:** Chapters 1-11 (the client-server model from Chapter 1, the Copperwind site the labs have built, the checking stack from Chapters 2, 4, and 9, and Chapter 8's device-mode habit)
 * **Deliverables:** Skills Lab 12A deliverable, Quick Checks
 
 ## Learning Objectives 🎯
@@ -18,7 +18,7 @@ By the end of this chapter, you will be able to:
 
 * **12.1 (Understand):** Illustrate what scripting adds to a site: client-side behavior in the browser and server-side processing in concept (Sections 12.1-12.2)
 * **12.2 (Apply):** Perform the full pre-flight check and publish the site to a web server with secure file transfer (Sections 12.3-12.4)
-* **12.3 (Create):** Produce the complete multi-page club site: the home page, six-page navigation, and every standard the course taught (Sections 12.3-12.4)
+* **12.3 (Create):** Produce the complete multi-page Copperwind site: the home page, six-page navigation, and every standard the course taught (Sections 12.3-12.4)
 
 ### This chapter aligns with the following Course Learning Outcomes
 
@@ -53,7 +53,7 @@ The **script element** (`<script>`) attaches the behavior layer to a page. It ca
 
 The placement gets one mention because the lab depends on it. A script acts on the page's elements, and the browser builds the page from the top down. A script element just before `</body>` runs after everything above it exists.
 
-Here is the file that example names: the one script the club's site will ship. Read it before anything runs it.
+Here is the file that example names: the one script the Copperwind site will ship. Read it before anything runs it.
 
 ```js
 /* Writes the current year into the footer, so nobody has to edit
@@ -69,15 +69,20 @@ One line of working code, readable left to right. `document` is the page itself.
 
 And `new Date().getFullYear()` asks the machine running the script for the current year. Put together: find the span, write this year into it.
 
-The script's comment states its contract, and here is the page's half of it, the shape the lab will build. The span is empty on purpose. The script supplies the digits, so the markup never goes stale.
+The script's comment states its contract, and here is the page's half of it, the shape the lab will build. The `&copy;` code is how HTML writes the © mark.
 
 ```html
-<!-- The page's half of the contract: the span the script fills,
-     then the script element that loads the file. The &copy;
-     code is how HTML writes the © mark. -->
+<!-- Step 1: give the script its target: a span carrying the exact
+     id the contract names. The span ships empty on purpose. The
+     script supplies the digits, so the markup never goes stale. -->
 <footer>
-    <p>&copy; <span id="footer-year"></span> PC Computer Club</p>
+    <p>&copy; <span id="footer-year"></span> Copperwind Community</p>
 </footer>
+<!-- Step 2: attach the file. The src is a promise: a file named
+     footer-year.js sits beside this page, and the browser will
+     fetch it and run it on the visitor's machine. -->
+<!-- Step 3: keep the script element just before the closing body
+     tag, so the span above already exists when the file runs. -->
 <script src="footer-year.js"></script>
 ```
 
@@ -130,6 +135,33 @@ The file ships that paragraph reading "If you can read this, the script has not 
 !!! tip
     The playground is this chapter's lab bench. If your copies drift during an experiment, re-save `script-playground.html` and `playground-script.js` from the pack and keep going.
 
+### Fix It 12.1: The Script at the Wrong Address 🔧
+
+A teammate is attaching the course's one shipped script to a Copperwind page. The page already sits on a web server, a head start on Section 12.3. The file `footer-year.js` sits beside the page, right where the pack put it. Out of an old tutorial habit, the teammate writes this above the closing body tag:
+
+```text
+<footer>
+    <p>Copyright <span id="footer-year"></span> Copperwind Community</p>
+</footer>
+<script src="js/footer-year.js"></script>
+```
+
+**Symptom:** The page loads and almost passes. The footer prints "Copyright  Copperwind Community" with a gap where the year belongs. The span is still empty. DevTools says why. The Console logs one failed request, and the Network panel shows it in red, failed. The server's own address stands where the dots are:
+
+```text
+GET .../js/footer-year.js  net::ERR_ABORTED 404 (File not found)
+```
+
+**Diagnose:** Nothing is wrong with the script, and nothing is wrong with the server. Read the src the way the browser did. A src is a path like any other in this course. This one steps down into a folder named `js` before it looks for the file, and no such folder exists. The Console names the exact URL it tried, ending in `/js/footer-year.js`. A 404 is the server's answer for that address: the trip happened, and no file lives there. The file sits beside the page. The address points somewhere else.
+
+**Repair:** Point the src where the file sits, beside the page:
+
+```html
+<script src="footer-year.js"></script>
+```
+
+**Verify:** Reload the page. The Console is clean, and the footer's gap fills with the current year. The script never changed, and neither did its contract. Only the address broke, and one path fixed it. Read every src as carefully as you read the line it loads.
+
 ### The Public Truth
 
 That location has a consequence the next demo turns into a lesson. For your machine to run a script, the server must send the script to your machine, whole. The same goes for the page and the stylesheet.
@@ -138,7 +170,7 @@ Everything sent to the browser is readable by the visitor, and the browser will 
 
 ### Try It Yourself 12.2: The Lock Drawn on the Door 🛠️
 
-**Predict:** The playground's Demo 2 is a members corner: type the pass phrase and press Unlock to read a note meant for officers. No server is involved anywhere on this page. So where must the correct phrase live for the check to work? Could a visitor find it without guessing? Write both answers down.
+**Predict:** The playground's Demo 2 is a members corner: type the pass phrase and press Unlock to read a note meant for team members. No server is involved anywhere on this page. So where must the correct phrase live for the check to work? Could a visitor find it without guessing? Write both answers down.
 
 **Run:** Try any wrong phrase first and watch the answer line. Then find the real phrase without guessing: View Page Source shows the script element and the file it names, and VS Code opens that file. Unlock the note.
 
@@ -154,12 +186,17 @@ Everything sent to the browser is readable by the visitor, and the browser will 
 
 ## 12.2 The Server's Half
 
-Your wrong guess got an answer: "That is not the pass phrase." The right phrase took no guessing, because the whole gate travels in plain text inside the script file:
+Your wrong guess got an answer: "That is not the pass phrase." The right phrase took no guessing. The whole gate travels in plain text inside `playground-script.js`, the pass phrase sitting on line 19 of the file:
 
 ```js
+// Step 1: wait for the click, the same event Demo 1 taught.
 gateButton.addEventListener("click", function () {
-    if (passPhraseBox.value === "cactus-club-2026") {
-        gateAnswer.textContent = "Welcome, officer. The supply closet code is 4141.";
+    // Step 2: compare the box's value against the phrase. For any
+    // comparison to run here, the file must carry the phrase.
+    if (passPhraseBox.value === "copperwind-2026") {
+        // Step 3: write one of two answers into the page. Both
+        // travel with the file, the secret note included.
+        gateAnswer.textContent = "Welcome, team member. The supply closet code is 4141.";
     } else {
         gateAnswer.textContent = "That is not the pass phrase.";
     }
@@ -174,7 +211,7 @@ The web does keep secrets, your passwords among them. They live on the one machi
 
 ### The Missing Mail Carrier
 
-The club's join page has been waiting for this section since you shipped it. It admits, in the officers' own voice, that something is missing: "While the officers finish the behind-the-scenes piece that stores sign-ups, you can also email" the club. Chapter 11 called the same gap a mailbox with no mail carrier.
+The join page has been waiting for this section since you shipped it. It admits, in the outreach team's own voice, that something is missing: "While the team finishes the behind-the-scenes piece that stores sign-ups, you can also email" the program. Chapter 11 called the same gap a mailbox with no mail carrier.
 
 Here is the missing piece, in concept. When the form submits for real someday, its name-value pairs travel to a program running on the server, at the address the form's `action` attribute names. That program checks both pairs again and stores them in a **database**: organized storage a program can query later. Receive, re-check, store. That is the entire behind-the-scenes piece, and every real sign-up on the web ends its trip this way.
 
@@ -204,7 +241,7 @@ A program on the server (the receiver)
     re-checks both pairs, and only then
         |
         v
-The club's database
+Copperwind's database
     stores the sign-up where a later query can find it
 ```
 
@@ -221,23 +258,23 @@ The tutoring center's request form tells the same story. Its receiver would re-c
 
 ### Static Sites and the HTTPS Law
 
-One breath covers the last distinction this course owes you. The club's site is a **static site**: the server hands every visitor the same ready-made files. That is a strength, because static sites are fast, cheap to host, and leave nothing on the server to break. A **dynamic page** is built per request by a server-side program, the way a search results page assembles itself around your query string. The club needs none of that, and knowing why is the point.
+One breath covers the last distinction this course owes you. Copperwind's site is a **static site**: the server hands every visitor the same ready-made files. That is a strength, because static sites are fast, cheap to host, and leave nothing on the server to break. A **dynamic page** is built per request by a server-side program, the way a search results page assembles itself around your query string. The program needs none of that, and knowing why is the point.
 
 And Chapter 1's collection rule returns with its full weight. Whatever travels between client and server carries visitor data. Chapter 1 set the law: "never send private information through a page whose address starts with `http://`, and never ask your visitors to."
 
-The join page collects names and emails, so the club's live site must serve `https://`. Any independent project with a form owes its visitors the same. Chapter 2 promised your addresses would earn that prefix, and the next section starts the move.
+The join page collects names and emails, so Copperwind's live site must serve `https://`. Any independent project with a form owes its visitors the same. Chapter 2 promised your addresses would earn that prefix, and the next section starts the move.
 
 ### Quick Check 12.2 ✅
 
 1. The tutoring center's site has four tasks. Light a menu link under the pointer, refuse an empty required field before the trip, check a returning tutor's password, and store every session request for tomorrow's staff. Assign each task to the client or the server, and name the one that needs no script at all.
 2. A teammate says the join form is safe to connect anywhere "because Chapter 11's required fields already validate everything." In two sentences, correct the claim: what the browser's check is for, and where the trustworthy check runs.
-3. In one sentence, state what a database adds to the club's join story that Chapter 11's query string could not provide.
+3. In one sentence, state what a database adds to the program's join story that Chapter 11's query string could not provide.
 
 ---
 
 ## 12.3 Hosting and the Move
 
-The server's half is someone's job to provide. For a site like the club's, that someone is a **web host**: a business or service that keeps your site's folder on an always-on server with a public address. Hosting is not exotic. You rent a folder the whole world can read, and the host keeps the machine running, connected, and serving `https://`. The options come in a few families:
+The server's half is someone's job to provide. For a site like Copperwind's, that someone is a **web host**: a business or service that keeps your site's folder on an always-on server with a public address. Hosting is not exotic. You rent a folder the whole world can read, and the host keeps the machine running, connected, and serving `https://`. The options come in a few families:
 
 | Option | What you get |
 | --- | --- |
@@ -251,7 +288,7 @@ Which host a section uses is deliberately not written here. Your instructor prov
 
 ### The Secure Transfer Family
 
-Getting the folder there is the file transfer family's work. Chapter 1 made this meeting an appointment: "You will meet the file transfer family again in Chapter 12, when you publish a site to a server using a secure transfer method." **FTP** (File Transfer Protocol) is the family's original name, one row of Chapter 1's protocol table: transfers files between computers.
+Getting the folder there is the file transfer family's work. Chapter 1 made this an appointment: "You will meet the file transfer family again in Chapter 12, when you publish a site to a server using a secure transfer method." **FTP** (File Transfer Protocol) is the family's original name, one row of Chapter 1's protocol table: transfers files between computers.
 
 The original is also showing its age, because plain FTP moves files and credentials unencrypted, the same sin as plain HTTP.
 
@@ -262,42 +299,42 @@ The upload itself is one idea: copy your site folder's contents into the server'
 Pages at the top level stay at the top level, and the images folder rides along whole:
 
 ```text
-Your laptop                        The server's public folder
-site-folder/index.html         ->  index.html
-site-folder/club-styles.css    ->  club-styles.css
-site-folder/images/logo.png    ->  images/logo.png
+Your laptop                                 The server's public folder
+site-folder/index.html                  ->  index.html
+site-folder/copperwind-styles.css       ->  copperwind-styles.css
+site-folder/images/copperwind-logo.png  ->  images/copperwind-logo.png
 ```
 
 Keeping the structure is not neatness. It is what keeps every address true. Leave the images folder behind, or flatten it into the top level, and every src that steps down into `images/` now points at nothing.
 
 ### Why the Site Survives the Move
 
-Now the payoff the course has been arranging since Chapter 2. Why does a site built at `file://` addresses work untouched at `https://`? Because you never wrote an address that mentioned your machine. Every href and src in this course gives directions from the file's own folder: `contact.html`, next door. `images/club-logo.png`, one folder down. Chapter 2 made the promise in these exact words: "Relative links describe files in relation to each other, so they survive the move untouched."
+Now the payoff the course has been arranging since Chapter 2. Why does a site built at `file://` addresses work untouched at `https://`? Because you never wrote an address that mentioned your machine. Every href and src in this course gives directions from the file's own folder: `contact.html`, next door. `images/copperwind-logo.png`, one folder down. Chapter 2 made the promise in these exact words: "Relative links describe files in relation to each other, so they survive the move untouched."
 
 Chapter 3 extended the promise to the whole folder, self-contained enough to zip, move, or publish with every address inside still working. The move keeps the relationships, so the move keeps the links.
 
-Everything travels together. The club's folder carries six pages, one stylesheet, one script, and seven images, and every connection among them survives. The stylesheet publishes along with its pages, exactly as Chapter 4 said it would, and even the borrowed Oswald font rides in each page's head like any other markup.
+Everything travels together. Copperwind's folder carries six pages, one stylesheet, one script, and seven images, and every connection among them survives. The stylesheet publishes along with its pages, exactly as Chapter 4 said it would, and even the borrowed Oswald font rides in each page's head like any other markup.
 
 The address that does not survive is the kind that names a machine:
 
 ```text
-src="images/club-logo.png"                      directions from this file
-src="file:///Users/officer/pictures/photo.png"  one machine's disk, named
+src="images/copperwind-logo.png"                    directions from this file
+src="file:///Users/team-member/pictures/photo.png"  one machine's disk, named
 ```
 
 An absolute local path points at a disk. On every other machine on earth, including the server, that disk does not exist. This course never taught you to write one, and now you know why. Your pack ships a two-photo page that makes the difference visible.
 
 ### Try It Yourself 12.4: The Move Test 🛠️
 
-**Predict:** Open `assets/code/chapter-12/path-test.html` in VS Code and read its two img elements. Their src values differ in one way you can read. Predict which photo will render on your machine, and which would survive an upload to a server. Write one sentence of reasoning for each.
+The pack's `assets/code/chapter-12/path-test.html` is a two-photo page with a planted defect. Photo 1 asks for `volunteer-crew.png`, a neighbor of the page itself. Photo 2 asks for `file:///Users/team-member/pictures/desert-sunset.png`, an address that only ever worked on its author's machine. Your task: rewrite Photo 2's img so its image survives the move to any machine and any host. The sunset photo cannot travel with the site, because you do not own it. The pack put one image beside this page on purpose.
 
-**Run:** Open the page in the browser and grade both predictions. Look closely at what the browser drew where each photo belongs.
+**Predict:** Before touching the file, write the exact src you will give Photo 2, and one sentence on why that address survives every move. Then predict what the shipped page will show where Photo 2 belongs.
 
-**Explain:** In 1-2 sentences, state the rule that makes one address portable, and explain why the broken one fails on your machine today and would fail on a server for the same reason.
+**Run:** Open the page in the browser as shipped. Photo 1 renders. Photo 2 shows the broken-image mark with the saguaro's alt text standing in, Chapter 3's safety net doing its oldest job. Now make your rewrite in VS Code, keep the alt text honest for the image you chose, save, and reload. Both photos render, and they keep rendering on any machine and any host.
 
-Photo 1 asked for `volunteer-crew.png`, a neighbor of the page itself, and it rendered. Photo 2 asked for `file:///Users/club-officer/pictures/desert-sunset.png`, a path on a machine you do not own. The browser drew the broken-image mark with the saguaro's alt text standing in: Chapter 3's safety net doing its oldest job.
+**Explain:** In 1-2 sentences, state the rule that makes your address portable, and explain why the shipped address fails on your machine today and would fail on a server for the same reason.
 
-The second photo is not broken because a file was lost. It is broken because its address names a place instead of a relationship, and the place is not here. Upload the page anywhere and that verdict never changes.
+The second photo was never broken because a file was lost. It was broken because its address named a place instead of a relationship, and the place is not here. Your rewrite names a neighbor, and a neighbor is a neighbor on every machine, the server included.
 
 ### The Front Door's Name
 
@@ -308,11 +345,11 @@ The visitor asks for    https://example.org/
 The server serves       the folder's index.html
 ```
 
-That is why a home page's address never seems to name a file. It does, and the file is index.html. The site plan's missing front door now has its reason and its name. Skills Lab 12A builds the club's home page, the one page whose file name a server convention chooses for you.
+That is why a home page's address never seems to name a file. It does, and the file is index.html. The site plan's missing front door now has its reason and its name. Skills Lab 12A builds Copperwind's home page, the one page whose file name a server convention chooses for you.
 
 ### Quick Check 12.3 ✅
 
-1. Your host offers FTP and SFTP on the same credentials. Pick one for the club's upload, and defend the pick with a rule this course taught before this chapter.
+1. Your host offers FTP and SFTP on the same credentials. Pick one for Copperwind's upload, and defend the pick with a rule this course taught before this chapter.
 2. A visitor types your site's bare address and gets the host's page-not-found screen, yet the same address with `/contact.html` added works. In one sentence, name the missing file and its job.
 3. A classmate's gallery page works at home and shows one broken image on the live site. Its src reads `C:\Users\sam\site\images\photo.png`. Diagnose the break in one sentence and write the repaired src.
 
@@ -358,15 +395,15 @@ Paste the live `https://` address into the validator's address tab, and the vali
 
 ### The Update Cycle and the Dress Rehearsal
 
-One habit turns the publish from an event into a cycle. A live site is not an archive: content changes, and the officers will ask for edits after the site goes up. The update cycle is the pre-flight in miniature. Edit locally, re-run the pre-flight on what changed, re-upload the changed files, verify live.
+One habit turns the publish from an event into a cycle. A live site is not an archive: content changes, and Priya will ask for edits after the site goes up. The update cycle is the pre-flight in miniature. Edit locally, re-run the pre-flight on what changed, re-upload the changed files, verify live.
 
 Nothing edits the server copy directly, because the server holds the copy everyone sees, and the pre-flight is what keeps that copy worthy.
 
-This chapter's lab is also a dress rehearsal. If your course includes an independent project, the site plan and draft pages meet the pre-flight, the publish, and the live verification you are about to perform for the club. Your instructor maps those milestones to the course calendar and provides the hosting details. The club's site is the last site this book builds with you. The next one is yours.
+This chapter's lab is also a dress rehearsal. If your course includes an independent project, the site plan and draft pages meet the pre-flight, the publish, and the live verification you are about to perform for Copperwind. Your instructor maps those milestones to the course calendar and provides the hosting details. The Copperwind site is the last site this book builds with you. The next one is yours.
 
 ### Try It Yourself 12.5: The Five-Minute Pre-Flight 🛠️
 
-**Predict:** Pick one club page from the pack's starter site or your own Chapter 11 lab. Estimate, in minutes, how long checks 1 through 7 will take on that single page. Write the number down before you start.
+**Predict:** Pick one Copperwind page from the pack's starter site or your own Chapter 11 lab. Estimate, in minutes, how long checks 1 through 7 will take on that single page. Write the number down before you start.
 
 **Run:** Time yourself running the seven local checks on that one page, checklist in hand. Note anything a check catches.
 
@@ -386,7 +423,7 @@ This chapter's lab is also a dress rehearsal. If your course includes an indepen
 
 * The web runs on three layers with a clean split: HTML is structure, CSS is presentation, and JavaScript is behavior, the page acting after it loads. The script element attaches the layer, external files win for Chapter 4's reasons, and a script just before `</body>` runs after the elements above it exist.
 * Client-side scripts run on the visitor's machine, the client from Chapter 1's model. They respond to events, change the loaded page, and know visit-time facts such as the date. Everything sent to the browser is readable by the visitor, so a client-side secret is a drawing of a lock.
-* The server's half receives what forms submit: a server-side program re-checks the pairs and stores them in a database. Passwords are checked on the server, secrets live on the server, and client-side validation is help, never security. The club's site is a static site, ready-made files for every visitor, and that is a strength.
+* The server's half receives what forms submit: a server-side program re-checks the pairs and stores them in a database. Passwords are checked on the server, secrets live on the server, and client-side validation is help, never security. Copperwind's site is a static site, ready-made files for every visitor, and that is a strength.
 * A web host keeps your folder on an always-on server with a public address. The upload copies the folder's contents, structure intact, over the secure transfer family, SFTP or FTPS, never plain FTP. Anything a live page collects travels over HTTPS, Chapter 1's law with a live site to govern.
 * Relative addresses describe relationships, so the site that worked at `file://` works at `https://` unchanged. An absolute local path names a disk and dies everywhere else. index.html is the web's default name for a folder's home page, served automatically for the bare address.
 * The pre-flight check runs the whole stack on every page before anything publishes: both validators, the link walk, the Chapter 9 audit, the Tab walk, device mode, and a second browser. The live-URL verify runs after the upload, and publishing becomes a cycle: edit locally, re-run the pre-flight, re-upload, verify live.
@@ -406,17 +443,17 @@ Answer from memory before checking back through the chapter.
 
 1. Recite the three layers, each one's job, and the element that attaches the third.
 2. Explain from memory why a client-side script can never keep a secret, and name the machine that can.
-3. Name the secure transfer family's two members, and recite the Chapter 1 rule that disqualifies their older sibling.
-4. Recite the pre-flight's eight checks, and name the one that runs after the upload.
-5. Explain from memory why every link this course wrote survives the move to a server, and describe the one kind of address that dies.
+3. Recite the pre-flight's eight checks, and name the one that runs after the upload.
+4. From Chapter 2: Recite the relative-links promise, and explain why an address that describes a relationship survives the move to a server.
+5. From Chapter 10: Explain why a data table marks its headers with `th` and a `scope` value, and name what a screen reader builds from that markup.
 
 ---
 
 ## 12.6 Skills Lab 12A: The Site Ships
 
-**Goal:** Produce and publish the complete six-page club site: build the home page the plan promised, pass the pre-flight on every page, and put the site live at a real `https://` address.
+**Goal:** Produce and publish the complete six-page Copperwind site: build the home page the plan promised, pass the pre-flight on every page, and put the site live at a real `https://` address.
 
-**Dataset:** Provided files in `assets/code/chapter-12/` from the course data pack. `starter-site/` holds the club's five pages, the `images` folder, and `club-styles.css` exactly as Skills Lab 11A finished them. `home-content.txt` is the officers' front-door content: the headline, the what-the-club-is paragraph, three what-we-do blocks, three links with their destinations, and the standing meeting line, so you copy wording instead of inventing it. `footer-year.js` is the lab's one script, finished and readable, with its contract in its own comment. `script-playground.html`, `playground-script.js`, `path-test.html`, and `volunteer-crew.png` are the chapter's Try It Yourself files and stay out of the submission. `pre-flight-checklist.txt` is the publishing instrument, copied once per page. `club-palette.txt` travels with every CSS chapter, and the home page needs no color the site does not already wear. `skills-lab-12a-answers.txt` is your written answers file. Part 3 reuses `accessibility-checklist.txt` from the Chapter 9 pack. The folder's README documents every file. Work at the extracted `cis133` root.
+**Dataset:** Provided files in `assets/code/chapter-12/` from the course data pack. `starter-site/` holds the Copperwind site's five pages, the `images` folder, and `copperwind-styles.css` exactly as Skills Lab 11A finished them. `home-content.txt` is Priya Sharma's front-door content: the headline, the what-the-program-is paragraph, three what-we-do blocks, three links with their destinations, and the standing drop-in line, so you copy wording instead of inventing it. `footer-year.js` is the lab's one script, finished and readable, with its contract in its own comment. `script-playground.html`, `playground-script.js`, `path-test.html`, and `volunteer-crew.png` are the chapter's Try It Yourself files and stay out of the submission. `pre-flight-checklist.txt` is the publishing instrument, copied once per page. `copperwind-palette.txt` travels with every CSS chapter, and the home page needs no color the site does not already wear. `skills-lab-12a-answers.txt` is your written answers file. Part 3 reuses `accessibility-checklist.txt` from the Chapter 9 pack. The folder's README documents every file. Work at the extracted `cis133` root.
 
 The lab walks the chapter's own path. Part 1 builds the front door and grows Chapter 6's navigation bar to its final six links. Part 2 attaches the script and traces the server's half on paper. Part 3 runs the pre-flight, publishes, and closes the site plan.
 
@@ -427,8 +464,8 @@ The lab walks the chapter's own path. Part 1 builds the front door and grows Cha
 
 1. Create a folder named `skills-lab-12a-lastname` at your `cis133` root. Copy in the whole `starter-site` folder, keeping its name, plus `skills-lab-12a-answers.txt`.
 2. Create `index.html` inside `starter-site` the Chapter 2 way: open an existing page, save as, and keep everything the pages share. Retitle the head, keep the header, nav, and footer, and clear `main` for the new content. Record in answer 1.A why this page, alone on the site, gets its file name chosen by a server convention.
-3. Build the page from `home-content.txt`, block by block. The headline is the page's `h1`, with the what-the-club-is paragraph beside it in the header. The three what-we-do blocks get their own headings. The three links name their destinations the Chapter 7 way, and the standing meeting line sits where a visitor cannot miss it. The officers wrote the words and you decide the markup. Log where each block landed in answer 1.A.
-4. The officers asked for Home first in the menu on all six pages, so deliver it: add the Home link at the front of every page's navigation bar, in the site plan's order.
+3. Build the page from `home-content.txt`, block by block. The headline is the page's `h1`, with the what-the-program-is paragraph right under it in the header. The three what-we-do blocks get their own headings. The three links name their destinations the Chapter 7 way, and the standing drop-in line sits where a visitor cannot miss it. Priya wrote the words and you decide the markup. Log where each block landed in answer 1.A.
+4. Priya asked for Home first in the menu on all six pages, so deliver it: add the Home link at the front of every page's navigation bar, in the site plan's order.
 5. Validate all six pages to zero messages. Record the nav update, the pages you touched, and the counts in answer 1.B.
 
 ### Part 2: Application (Aligns with Objectives 12.1 and 12.3)
@@ -436,7 +473,7 @@ The lab walks the chapter's own path. Part 1 builds the front door and grows Cha
 1. Copy `footer-year.js` into your `starter-site` folder, beside the pages. Read its comment first: the script states its own contract.
 2. Keep the home page's standard footer paragraph and add a copyright line below it, with the year as an empty span carrying `id="footer-year"`. The script writes the year's digits, never you. Then attach the script with a script element just before `</body>`, where Section 12.1 taught and the contract requires. Only the home page carries the line and the script.
 3. Load the page and confirm the footer shows the current year. Record the span, the script element's location and why it sits there, and what the footer shows in answer 2.A.
-4. Answer 2.B in writing: whose machine computed that year, and what that means for the club's January maintenance. Then write the trace: one join-list sign-up's full trip, the client's half you built in Chapter 11 and the server's half in concept from Section 12.2.
+4. Answer 2.B in writing: whose machine computed that year, and what that means for the program's January maintenance. Then write the trace: one join-list sign-up's full trip, the client's half you built in Chapter 11 and the server's half in concept from Section 12.2.
 
 ### Part 3: Extension (Aligns with Objectives 12.2 and 12.3)
 
@@ -449,9 +486,9 @@ The lab walks the chapter's own path. Part 1 builds the front door and grows Cha
 Answer both questions in the answers file. These answers carry significant rubric weight.
 
 1. Pick one interactive moment on the finished site: the footer's year, the join form's refusal of an empty required field, or a nav link lighting under the pointer. Trace it across the client-server line: what traveled from the server, what ran or rendered on the client, and which parts of the moment needed no server at all. Cite your own pages as evidence.
-2. The officers read your pre-flight log and ask a reasonable question: "It found almost nothing. Can we skip it for next month's update?" Judge the request: name what each layer of the pre-flight guards, weigh what the "almost" would have cost the club live, and state the update policy you would set for the club's next edit.
+2. Priya reads your pre-flight log and asks a reasonable question: "It found almost nothing. Can we skip it for next month's update?" Judge the request: name what each layer of the pre-flight guards, weigh what the "almost" would have cost the program live, and state the update policy you would set for the site's next edit.
 
-**Submission:** Zip your `skills-lab-12a-lastname` folder and submit it as `skills-lab-12a-lastname.zip`. It contains the updated `starter-site` folder (six pages, `club-styles.css`, `footer-year.js`, and `images`), your completed checklist copies, and `skills-lab-12a-answers.txt` with the live URL or alternate publication evidence your instructor requires. Every page and the stylesheet must validate with zero messages, and every answer must sit under its numbered prompt.
+**Submission:** Zip your `skills-lab-12a-lastname` folder and submit it as `skills-lab-12a-lastname.zip`. It contains the updated `starter-site` folder (six pages, `copperwind-styles.css`, `footer-year.js`, and `images`), your completed checklist copies, and `skills-lab-12a-answers.txt` with the live URL or alternate publication evidence your instructor requires. Every page and the stylesheet must validate with zero messages, and every answer must sit under its numbered prompt.
 
 ### Rubric: Skills Lab 12A
 
@@ -493,6 +530,6 @@ same everywhere.
 
 ## Course Conclusion: Where You Go from Here
 
-For the first time, no chapter waits after this one. The site plan the officers approved in Chapter 7 is complete: six pages promised, six pages live, at an address anyone can visit. If your course includes an independent project, reuse these moves on your own site and let this published site serve as the working pattern. Twelve chapters ago you learned how a page reaches a screen. Now your pages reach everyone's.
+For the first time, no chapter waits after this one. The site plan Copperwind approved in Chapter 7 is complete: six pages promised, six pages live, at an address anyone can visit. If your course includes an independent project, reuse these moves on your own site and let this published site serve as the working pattern. Twelve chapters ago you learned how a page reaches a screen. Now your pages reach everyone's.
 
-Where you go from here is your choice. Publish a site for a club, a family business, or your own portfolio. Learn JavaScript when you are ready to make pages respond to their users, and take the next web course in your program when you want structured depth. You know how to build, validate, and ship accessible sites. Every site you publish from now on carries your name. The course ends where the web begins.
+Where you go from here is your choice. Publish a site for a neighborhood group, a family business, or your own portfolio. Learn JavaScript when you are ready to make pages respond to their users, and take the next web course in your program when you want structured depth. You know how to build, validate, and ship accessible sites. Every site you publish from now on carries your name. The course ends where the web begins.

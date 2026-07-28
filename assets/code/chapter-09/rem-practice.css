@@ -1,0 +1,15 @@
+/* Chapter 9 practice stylesheet: the food pantry's volunteer-page
+   type, set in px. Try It Yourself 9.5 converts all three rules to
+   rem so the type follows each visitor's chosen default size. */
+
+body {
+    font-size: 18px;
+}
+
+h1 {
+    font-size: 28px;
+}
+
+.pantry-note {
+    font-size: 12px;
+}

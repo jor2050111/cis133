@@ -60,7 +60,7 @@ can reach with a relative path.
 
 The outreach team's content for the home page: the headline, the
 what-the-program-is paragraph, three what-we-do blocks, three links
-with their target pages, and the standing meeting line. The blocks
+with their target pages, and the standing drop-in line. The blocks
 map one-to-one onto what Skills Lab 12A builds, so you copy wording
 instead of inventing it.
 

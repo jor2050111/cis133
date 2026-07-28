@@ -23,6 +23,7 @@ color comes from the palette file's passing list.
 | `contrast-cards.txt` | Three fresh text-on-background pairings for prediction practice | Chapter Try It Yourself exercises |
 | `rem-demo.html` | Standalone demo page for the px and rem experiment | Chapter Try It Yourself exercises |
 | `rem-demo.css` | Demo stylesheet beside its page | Chapter Try It Yourself exercises |
+| `rem-practice.css` | Three px rules the chapter's rem conversion exercise rewrites | Chapter Try It Yourself exercises |
 | `accessibility-checklist.txt` | The human audit instrument: seven checks with blank findings lines | Parts 1-3 |
 | `skills-lab-9a-answers.txt` | Plain text answer file (travels in the submission folder) | Parts 1-3, Questions & Analysis |
 
@@ -92,6 +93,13 @@ each naming its own rule. In-page instructions walk through raising
 the browser's default font size and watching what follows. The page
 validates with zero messages and carries the viewport tag, the
 course's document skeleton since Chapter 8.
+
+**rem-practice.css** is the conversion exercise's working file: the
+food pantry's volunteer-page type in exactly three px rules, a body
+size, a heading size, and a note size. Students rewrite all three
+in rem so the type follows a visitor's chosen default size. The
+file validates with zero messages, before the conversion and after
+an accurate one.
 
 **accessibility-checklist.txt** is the chapter's human audit
 instrument: seven checks no automated tool can run for you, each

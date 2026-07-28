@@ -36,10 +36,11 @@ All four pages and the stylesheet validate with zero messages.
 `session-request.html` is the Campus Tutoring Center's session
 request form, finished and correctly labeled. The chapter's Try It
 Yourself exercises do not build it. They experiment on it: you
-predict what a click, a submit, or an edit will do, then run the
-experiment and explain the result. One exercise asks you to break
-the form on purpose and restore it, so keep a clean copy or re-save
-from the pack if yours drifts. `request-styles.css` gives the form
+predict what a click, a submit, or a typed word will do, then run
+the experiment and explain the result. One exercise has you build
+and break a small radio group in a separate file of your own, so
+the practice form itself stays clean. If your copy drifts anyway,
+re-save it from the pack. `request-styles.css` gives the form
 readable type and stacked labels and deliberately stops there. The
 chapter and the lab make the styling decisions it leaves out.
 

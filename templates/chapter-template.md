@@ -98,6 +98,29 @@ def analyze_cohort_retention(
 
 ---
 
+### Fix It N.1: [Descriptive Title] 🔧
+
+[One sentence of scenario context, Copperwind or a neutral cover
+story. Exactly ONE Fix It per chapter, placed as an H3 inside the
+main content section the spec names, after that section's named Try
+It Yourself. The bug must not recycle any probe, message, or answer
+already used in this chapter.]
+
+**Symptom:** [What was tried and what went wrong. Broken code AND
+its REAL captured evidence (validator message, console/network
+record, or rendered symptom from a real run, never invented) in
+`text` fences.]
+
+**Diagnose:** [Prompt: name the cause in one sentence before
+touching anything.]
+
+**Repair:** [Prompt: fix it. State what changed.]
+
+**Verify:** [Prompt: how do you know it is fixed? The re-run result
+or check. Never use Predict/Run/Explain labels inside a Fix It.]
+
+---
+
 ## N.2 [Second Major Topic]
 
 [Follow the same pattern as N.1:]
@@ -142,11 +165,17 @@ See course glossary for full definitions
 
 ### Retrieval Practice
 
+[Exactly 5 items. In chapters 2-12 the final 1-2 items reach back to
+earlier chapters, labeled exactly `From Chapter N:` and answerable
+from memory (spaced roughly N-2 and N-4). At least 3 items stay
+same-chapter. Cumulative items replace same-chapter items rather
+than appending past 5.]
+
 1. [Active recall question at the course's base Bloom's level, answered without looking back]
 2. [Question requiring explanation or comparison from memory]
 3. [Question requiring application or justification of a decision]
-4. [Optional fourth question for deeper processing]
-5. [Optional fifth question if the chapter is dense]
+4. From Chapter N: [reach-back question answerable from memory]
+5. From Chapter N: [second reach-back, or a same-chapter item]
 
 ---
 
@@ -249,7 +278,17 @@ LENGTH GUIDELINES:
 * 4-5 main sections (N.1 through N.4)
 * 8-15 code examples total
 * Each code example: 5-25 lines max (shorter for introductory courses)
-* Try It Yourself: 1-2 per section
+* Try It Yourself: 1-2 per section. One TIY per chapter is FADED:
+  a completion problem in chapters 5-8 (1-3 gaps as `____` in a
+  `text` fence plus the real expected outcome) or problem-first in
+  chapters 9-12 (task plus real expected outcome, minimal scaffold).
+  Conversions keep the heading, number, title, and all three
+  Predict/Run/Explain labels, and fade support while keeping the
+  original observation or reasoning goal
+* Subgoal labels: the chapter's two most complex worked examples
+  carry 3-5 numbered decision comments (`<!-- Step k: ... -->`,
+  `/* Step k: ... */`, `// Step k: ...`, or `[Step k: ...]` inside
+  text-fence diagrams), naming decisions, never syntax
 * Quick Checks: 2-3 questions per section
 
 COURSE-SPECIFIC REQUIREMENTS (adapt each to HTML5, CSS3, VS Code, browser DevTools):

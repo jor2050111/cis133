@@ -38,12 +38,14 @@ stylesheet validate with zero messages.
 
 `table-practice.html` holds the spring drive results with a header
 row and nothing more. It carries no caption, no tbody tags, and no
-table styling. The chapter's Try It Yourself exercises supply each
-missing piece in turn: one adds the caption, one inspects the
-markup in DevTools, and one adds a stripe rule to the stylesheet.
-Every exercise begins with a prediction, and what the browser does
-with each missing piece is the discovery. Do not read ahead by
-completing the file early.
+table styling. The chapter's Try It Yourself exercises work through
+the gaps in turn: one inspects the markup in DevTools, one builds a
+completed copy (caption, grouping, and scope) saved as
+`table-complete.html`, and one adds a stripe rule to the
+stylesheet. Every exercise begins with a prediction, and what the
+browser does with each missing piece is the discovery. Do not read
+ahead by completing the file early: the stripe exercise needs the
+original exactly as it ships.
 
 `wide-practice.html` is the opposite case: structurally complete
 (caption, thead, tbody, scope on every header cell) but seven
