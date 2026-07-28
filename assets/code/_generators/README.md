@@ -1,5 +1,21 @@
 # Data Pack Generators
 
+## Current scripts (pedagogy upgrade, 2026-07-28)
+
+* `generate_chart_images.py`: renders the two chart PNGs into
+  `../chapter-03/` (Pillow 12.3.0, deterministic, byte-identical on
+  rerun, data asserted in code).
+* `propagate_pack_images.py`: copies the nine chapter-03 masters to
+  every downstream folder and asserts byte identity.
+* `IMAGE-MANIFEST.md`: provenance and SHA-256 checksums for all nine
+  images, including the seven AI-generated illustrations (Codex CLI,
+  model gpt-5.6-sol). AI masters are canonical files, not
+  seed-reproducible; the manifest is the record.
+* Retired: `generate_chapter03_images.py` (the club-era Pillow
+  illustration generator) lives in `../../../cis133-archive/` and in
+  git history.
+
+
 Scripts in this folder rebuild every derived file in the course data
 pack. Follow the pattern the existing textbooks use:
 

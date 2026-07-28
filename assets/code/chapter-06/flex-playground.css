@@ -10,8 +10,8 @@
     box-sizing: border-box;
 }
 
-/* The club's own base: ink text on light sand, in the site's
-   body stack, so the playground feels like club work. */
+/* The site's own base: ink text on light sand, in the site's
+   body stack, so the playground feels like Copperwind work. */
 body {
     background-color: #fac78d;  /* light sand */
     color: #333333;             /* ink */
@@ -41,7 +41,7 @@ h1, h2, h3 {
    experiment honest. */
 .announcement-card {
     background-color: #ffffff;  /* white card on the sand board */
-    border: 3px solid #268080;  /* club teal frames each card */
+    border: 3px solid #268080;  /* copperwind teal frames each card */
     padding: 12px;
     width: 220px;
 }

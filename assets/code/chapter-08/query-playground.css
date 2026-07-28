@@ -11,7 +11,7 @@
     box-sizing: border-box;
 }
 
-/* The club's own base: ink text on light sand, in the site's
+/* The site's own base: ink text on light sand, in the site's
    body stack. margin: 0 keeps the banner and the card row
    flush with the window edges, so the widths you read in
    DevTools line up with the numbers in the queries. */
@@ -65,7 +65,7 @@ body {
    a query below overrides on small screens. */
 .update-card {
     background-color: #ffffff;  /* white card on the sand board */
-    border: 3px solid #268080;  /* club teal frames each card */
+    border: 3px solid #268080;  /* copperwind teal frames each card */
     padding: 20px;
     width: 260px;
 }

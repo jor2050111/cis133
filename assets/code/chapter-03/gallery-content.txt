@@ -16,18 +16,16 @@ point of the exercise.
 ---------------------------------------------------------------------
 
 [BROWSER TAB TITLE]
-Spring Drive Gallery | PC Computer Club
+Spring Drive Gallery | Copperwind Community
 
 [MAIN HEADING - there is exactly one of these]
 Spring Drive Gallery
 
 [INTRO PARAGRAPH]
-The club's spring recycling drive filled a Saturday morning with
-donated devices and busy volunteers. These pictures from the club's
-illustration set tell the story of the day.
+Copperwind's spring recycling drive filled a Saturday morning with donated devices and busy volunteers. These pictures from the program's illustration set tell the story of the day.
 
 [PICTURE 1 - file: sorting-station.png]
-Caption: Volunteers sorted every donation into labeled bins within
+Caption: Volunteers sorted every donation into bins within
 an hour of opening.
 
 [PICTURE 2 - file: donation-boxes.png]
@@ -39,11 +37,10 @@ Caption: The volunteer crew that ran the welcome table, still
 smiling at closing time.
 
 [FOOTER PARAGRAPH - reuse the email link pattern from the guide]
-The PC Computer Club runs a collection table once a month. Email
-the club at computer-club@example.org with questions.
+Copperwind Community runs a collection table once a month. Email the team at copperwind-community@example.org with questions.
 
 [EMAIL ADDRESS FOR THE EMAIL LINK]
-computer-club@example.org
+copperwind-community@example.org
 
 =====================================================================
 END OF CONTENT FILE

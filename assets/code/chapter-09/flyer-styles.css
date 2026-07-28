@@ -1,5 +1,5 @@
 /* Drive Day flyer styles. A warm sand-and-tan look picked by eye
-   to match the desert scenes, with the club's deep teal on the
+   to match the desert scenes, with the program's deep teal on the
    banner and footer. */
 
 * {
@@ -9,7 +9,7 @@
 body {
     background-color: #fdeecd;  /* warm sand, picked by eye */
     color: #c99b66;             /* light tan, matches the ground
-                                   in the club's illustrations */
+                                   in the Copperwind illustrations */
     margin: 0;
     font-family: Verdana, Arial, sans-serif;
     font-size: 11px;            /* small type fits the whole pitch
@@ -18,7 +18,7 @@ body {
 }
 
 header {
-    background-color: #1a5e5e;  /* deep teal, the club's color */
+    background-color: #1a5e5e;  /* deep teal, the site's dark anchor */
     color: #ffffff;
     padding: 24px 16px;
     text-align: center;

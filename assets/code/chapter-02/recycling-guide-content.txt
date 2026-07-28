@@ -12,21 +12,16 @@ notes to you. They never go into your page.
 ---------------------------------------------------------------------
 
 [BROWSER TAB TITLE]
-Recycle Your Electronics | PC Computer Club
+Recycle Your Electronics | Copperwind Community
 
 [MAIN HEADING - there is exactly one of these]
 Recycle Your Old Electronics
 
 [INTRO PARAGRAPH 1]
-Old phones, dead laptops, and tangled chargers pile up in drawers
-because nobody knows what to do with them. The PC Computer Club
-collects unwanted electronics every semester and delivers everything
-to a certified recycler.
+Old phones, dead laptops, and tangled chargers pile up in drawers because nobody knows what to do with them. Copperwind Community collects unwanted electronics all year and delivers everything to a certified recycler.
 
 [INTRO PARAGRAPH 2]
-This guide explains why electronics deserve better than the trash,
-how to prepare a device before you hand it over, and what the club
-accepts.
+This guide explains why electronics deserve better than the trash, how to prepare a device before you hand it over, and what the program accepts.
 
 [SECTION HEADING]
 Why It Matters
@@ -48,11 +43,10 @@ Back up anything you want to keep, such as photos, documents, and
 saved game data.
 Sign out of every account on the device, then perform a factory
 reset so none of your personal data travels with it.
-Remove any SIM card or memory card. The club recycles the device,
-not your accounts or your cards.
+Remove any SIM card or memory card. The program recycles the device, not your accounts or your cards.
 
 [SECTION HEADING]
-What the Club Accepts
+What the Program Accepts
 
 [INTRO LINE FOR THE ITEM LIST]
 Bring any item on this list to a collection event.
@@ -71,8 +65,7 @@ Small electronics such as cameras and handheld games
 Learn More
 
 [PARAGRAPH]
-The club vetted its sources before publishing this guide. These two
-earned the club's trust.
+The outreach team vetted its sources before publishing this guide. These two earned the team's trust.
 
 [LINK 1 - the link text, then the address it points to]
 Link text: EPA guide to electronics donation and recycling
@@ -82,16 +75,15 @@ Address:   https://www.epa.gov/recycle/electronics-donation-and-recycling
 Link text: City of Phoenix household hazardous waste collection
 Address:   https://www.phoenix.gov/administration/departments/publicworks/residential-trash-recycling/household-hazardous-waste-collection.html
 
-[FOOTER PARAGRAPH - "Email the club" is an email link. Part 3 adds
+[FOOTER PARAGRAPH - "Email the team" is an email link. Part 3 adds
 a second link here to your contact page.]
-The PC Computer Club runs a collection table once a month. Email
-the club at computer-club@example.org with questions.
+Copperwind Community runs a collection table once a month. Email the team at copperwind-community@example.org with questions.
 
 [EMAIL ADDRESS FOR THE EMAIL LINK]
-computer-club@example.org
+copperwind-community@example.org
 
 [PART 3 LINK TEXT - links to contact.html]
-Visit the club's contact page
+Visit the program's contact page
 
 =====================================================================
 END OF CONTENT FILE

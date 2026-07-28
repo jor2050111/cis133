@@ -1,7 +1,7 @@
 # Chapter 8 Data Pack: Skills Lab 8A Files
 
-Starter files for Skills Lab 8A: The Club Site Meets Every Screen.
-Students take the club's finished three-page site and retrofit it
+Starter files for Skills Lab 8A: The Copperwind Site Meets Every Screen.
+Students take Copperwind's finished three-page site and retrofit it
 for phones: the viewport meta tag on every page, a small-screen
 media query at a breakpoint the site's own content demands, and one
 more query of their own choosing. Every page then proves itself at
@@ -15,9 +15,9 @@ provided content, and every color still comes from the palette file.
 | `starter-site/recycling-guide.html` | Valid HTML, links the Oswald font and the site stylesheet | Parts 1-3 |
 | `starter-site/drive-gallery.html` | Valid HTML, links the Oswald font and the site stylesheet | Parts 1-3 |
 | `starter-site/contact.html` | Valid HTML, links the Oswald font and the site stylesheet | Parts 1-3 |
-| `starter-site/club-styles.css` | Valid CSS, the site stylesheet as Skills Lab 6A finished it | Parts 1-3 |
+| `starter-site/copperwind-styles.css` | Valid CSS, the site stylesheet as Skills Lab 6A finished it | Parts 1-3 |
 | `starter-site/images/` | 7 PNG images, see the image table below | Parts 1-3 |
-| `club-palette.txt` | Plain text palette with exact hex values and contrast notes | Parts 2-3 |
+| `copperwind-palette.txt` | Plain text palette with exact hex values and contrast notes | Parts 2-3 |
 | `query-playground.html` | Standalone chapter practice page | Chapter Try It Yourself exercises |
 | `query-playground.css` | Practice stylesheet beside its page | Chapter Try It Yourself exercises |
 | `no-viewport.html` | Standalone demo page, head carries no viewport tag | Chapter Try It Yourself exercises |
@@ -26,7 +26,7 @@ provided content, and every color still comes from the palette file.
 
 ## The starter site
 
-`starter-site/` holds the club's site exactly as Skills Lab 6A
+`starter-site/` holds the Copperwind site exactly as Skills Lab 6A
 finished it: three pages, one external stylesheet, and the full
 Flexbox layout. It is a byte-identical copy of the site Chapter 7's
 lab audited, which Lab 7A studied and never edited. All three pages
@@ -45,14 +45,14 @@ one of the mechanisms responsive design is built from.
 ## Image files
 
 All seven images are PNG and share one flat-illustration style:
-the fictional club's matching design set. Their alt text is
+the fictional Copperwind design set. Their alt text is
 already written into the pages. The table exists so the `width`
 and `height` attributes can be checked against the files' true
 pixels.
 
 | File | Pixels | Contents |
 | ---- | ------ | -------- |
-| `club-logo.png` | 240 x 240 | Club logo: a monitor circled by recycling arrows on a teal disk. Transparent background |
+| `copperwind-logo.png` | 240 x 240 | Copperwind logo: a saguaro, mountains, and a copper wind ribbon in a teal ring. Transparent background |
 | `recycling-drive.png` | 800 x 450 | Outdoor collection table scene with labeled bins and students |
 | `devices-collected-chart.png` | 640 x 400 | Bar chart of items collected at the spring drive, five categories |
 | `desert-divider.png` | 800 x 24 | Thin decorative strip of alternating diamonds |
@@ -62,7 +62,7 @@ pixels.
 
 ## File details
 
-**club-palette.txt** travels with every CSS chapter, copied
+**copperwind-palette.txt** travels with every CSS chapter, copied
 byte-identical from the Chapter 6 pack (Chapter 7's wireframe work
 was deliberately grayscale, so the palette sat that chapter out).
 It maps the design set's colors to exact hex values with a usage
@@ -73,7 +73,7 @@ passing list, so no new contrast math enters this chapter.
 
 **query-playground.html and query-playground.css** travel as a
 pair. The page links the stylesheet with a bare relative href, so
-both files must stay in the same folder. The page is the club's
+both files must stay in the same folder. The page is the program's
 bulletin: a deep teal banner, a wrapping row of four cards numbered
 ONE through FOUR, and a centered reading column. Unlike Chapter 6's
 playground, this one ships with its media queries already written
@@ -109,9 +109,7 @@ folder unrenamed.
 
 ## Source and license
 
-Written for CIS133 by the course author. The PC Computer Club and
-its events are fictional, and the club's email address uses the
-reserved example.org domain. All seven images are original
+Written for CIS133 by the course author. Copperwind IT Services is a fictional company created for this textbook. All names, clients, and records are synthetic. Any resemblance to a real company or person is coincidental. The program's email address uses the reserved example.org domain. All seven images are original
 illustrations rendered by the course's seeded generator script
 (`assets/code/_generators/generate_chapter03_images.py`), so they
 carry no third-party license. The starter site is the Chapter 6

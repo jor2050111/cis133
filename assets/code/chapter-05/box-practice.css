@@ -4,7 +4,7 @@
    at the bottom is cramped on purpose. */
 
 body {
-    background-color: #fac78d;  /* light sand, from club-palette.txt */
+    background-color: #fac78d;  /* light sand, from copperwind-palette.txt */
     color: #333333;             /* ink, a passing pairing */
 }
 
@@ -13,7 +13,7 @@ body {
 .event-notice {
     width: 300px;
     padding: 24px;
-    border: 3px solid #268080;  /* club teal frames the event */
+    border: 3px solid #268080;  /* copperwind teal frames the event */
     margin-bottom: 16px;
     background-color: #ffffff;
 }

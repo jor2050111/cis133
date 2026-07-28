@@ -7,7 +7,7 @@ Name:
 Date:
 
 This file travels inside your submission folder along with the
-updated club site (four pages now), the extended stylesheet, and
+updated Copperwind site (four pages now), the extended stylesheet, and
 your checklist copy. Type your answers directly below each numbered
 prompt. Keep the headings and numbering in place so your grader can
 follow your work.
@@ -38,7 +38,7 @@ PART 1: FOUNDATION (the table and the nav)
 PART 2: APPLICATION (the table style block)
 ---------------------------------------------------------------------
 
-2.A  Log the style block you added to club-styles.css: the
+2.A  Log the style block you added to copperwind-styles.css: the
      border-collapse decision, where the borders and padding
      landed, and the alignment call you made for header and data
      cells.

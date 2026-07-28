@@ -1,8 +1,7 @@
 # Chapter 4 Data Pack: Skills Lab 4A Files
 
-Starter files for Skills Lab 4A: Dress the Club's Site in Its Own
-Colors. Students connect one external stylesheet to the club's
-finished three-page site, style it with the club's own palette
+Starter files for Skills Lab 4A: Dress Copperwind's Site in Its Own
+Colors. Students connect one external stylesheet to Copperwind's finished three-page site, style it with the Copperwind palette
 using element, class, and id selectors, and validate both markup
 and styles to zero messages. They never retype provided content,
 and they copy every hex value from the palette file.
@@ -15,7 +14,7 @@ and they copy every hex value from the palette file.
 | `starter-site/drive-gallery.html` | Valid HTML, carries one leftover inline style | Parts 1-3 |
 | `starter-site/contact.html` | Valid HTML, the finished Lab 3A contact page | Parts 1-3 |
 | `starter-site/images/` | 7 PNG images, see the image table below | Parts 1-3 |
-| `club-palette.txt` | Plain text palette with exact hex values and contrast notes | Try It Yourself 4.4, Parts 1-3 |
+| `copperwind-palette.txt` | Plain text palette with exact hex values and contrast notes | Try It Yourself 4.4, Parts 1-3 |
 | `selector-practice.html` | Standalone chapter practice page | Try It Yourself 4.3 |
 | `cascade-practice.html` | Chapter practice page linked to its stylesheet | Try It Yourself 4.2 and 4.5 |
 | `practice-styles.css` | Small valid stylesheet beside its page | Try It Yourself 4.2, 4.4, and 4.5 |
@@ -23,7 +22,7 @@ and they copy every hex value from the palette file.
 
 ## The starter site
 
-`starter-site/` holds the club's finished Chapter 3 site: three
+`starter-site/` holds Copperwind's finished Chapter 3 site: three
 pages with full landmarks, working navigation, placed images, and
 written alt text. All three pages validate with zero messages.
 Students copy the whole folder into their lab folder and style it
@@ -39,14 +38,14 @@ which is the lesson.
 ## Image files
 
 All seven images are PNG and share one flat-illustration style:
-the fictional club's matching design set. Their alt text is
+the fictional Copperwind design set. Their alt text is
 already written into the pages. The table exists so the `width`
 and `height` attributes can be checked against the files' true
 pixels.
 
 | File | Pixels | Contents |
 | ---- | ------ | -------- |
-| `club-logo.png` | 240 x 240 | Club logo: a monitor circled by recycling arrows on a teal disk. Transparent background |
+| `copperwind-logo.png` | 240 x 240 | Copperwind logo: a saguaro, mountains, and a copper wind ribbon in a teal ring. Transparent background |
 | `recycling-drive.png` | 800 x 450 | Outdoor collection table scene with labeled bins and students |
 | `devices-collected-chart.png` | 640 x 400 | Bar chart of items collected at the spring drive, five categories |
 | `desert-divider.png` | 800 x 24 | Thin decorative strip of alternating diamonds |
@@ -56,7 +55,7 @@ pixels.
 
 ## File details
 
-**club-palette.txt** maps the design set's colors to exact hex
+**copperwind-palette.txt** maps the design set's colors to exact hex
 values with a usage note per color. The values were extracted from
 the set's generator script, and every recommended text-on-background
 pairing was checked against the WCAG AA minimum of 4.5 to 1 for
@@ -84,9 +83,7 @@ section. It travels inside the submission folder unrenamed.
 
 ## Source and license
 
-Written for CIS133 by the course author. The PC Computer Club and
-its events are fictional, and the club's email address uses the
-reserved example.org domain. All seven images are original
+Written for CIS133 by the course author. Copperwind IT Services is a fictional company created for this textbook. All names, clients, and records are synthetic. Any resemblance to a real company or person is coincidental. The program's email address uses the reserved example.org domain. All seven images are original
 illustrations rendered by the course's seeded generator script
 (`assets/code/_generators/generate_chapter03_images.py`), so they
 carry no third-party license. The starter pages are the Chapter 3

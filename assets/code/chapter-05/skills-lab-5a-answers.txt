@@ -1,5 +1,5 @@
 =====================================================================
-CIS133 SKILLS LAB 5A: GIVE THE CLUB'S SITE BREATHING ROOM
+CIS133 SKILLS LAB 5A: GIVE COPPERWIND'S SITE BREATHING ROOM
 Written Answers
 =====================================================================
 
@@ -7,7 +7,7 @@ Name:
 Date:
 
 This file travels inside your submission folder along with your
-three HTML pages, your images folder, and club-styles.css. Type
+three HTML pages, your images folder, and copperwind-styles.css. Type
 your answers directly below each numbered prompt. Keep the headings
 and numbering in place so your grader can follow your work.
 
@@ -18,7 +18,7 @@ PART 1: FOUNDATION (spacing the landmarks)
 1.A  Pick one region you spaced in Part 1 (the header, the nav, the
      footer, or a section). Describe how it looked before your rule
      and after, and copy the rule that made the difference exactly
-     as it appears in club-styles.css.
+     as it appears in copperwind-styles.css.
 
      Region you chose:
      Before:
@@ -26,7 +26,7 @@ PART 1: FOUNDATION (spacing the landmarks)
      The rule:
 
 1.B  Copy the one shorthand declaration you wrote for Part 1
-     exactly as it appears in club-styles.css, then expand it:
+     exactly as it appears in copperwind-styles.css, then expand it:
      write the four individual declarations (top, right, bottom,
      left) it stands for.
 
@@ -38,7 +38,7 @@ PART 2: APPLICATION (the readable column and the site's type)
 ---------------------------------------------------------------------
 
 2.A  State the max-width you gave main, exactly as it appears in
-     club-styles.css. Then justify the number: what happens to a
+     copperwind-styles.css. Then justify the number: what happens to a
      line of text when the window is wider than your column, and
      why is that better for the reader?
 
@@ -71,7 +71,7 @@ PART 3: EXTENSION (the diagnosis and the validators)
 
 3.B  Log your validator results: the HTML validator's final
      message count for each page, and the CSS validator's final
-     result for club-styles.css. Then name one thing either
+     result for copperwind-styles.css. Then name one thing either
      validator caught along the way and what you changed. If both
      stayed clean the whole time, say so. Finish with the critique
      no validator can make: one thing about your spacing or
@@ -81,7 +81,7 @@ PART 3: EXTENSION (the diagnosis and the validators)
      recycling-guide.html:
      drive-gallery.html:
      contact.html:
-     club-styles.css:
+     copperwind-styles.css:
      One thing a validator caught:
      One thing you would still improve, and why:
 
@@ -92,7 +92,7 @@ QUESTIONS & ANALYSIS
 Q1.  Judge your finished site against the chapter's four-point
      readability checklist: contrast, size, line height, and line
      length. Cite one checklist item your work satisfied, name the
-     exact rule in club-styles.css that satisfied it, and explain
+     exact rule in copperwind-styles.css that satisfied it, and explain
      how the page reads differently because of it.
 
      Your answer:

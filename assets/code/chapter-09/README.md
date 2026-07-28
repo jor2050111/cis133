@@ -1,8 +1,8 @@
 # Chapter 9 Data Pack: Skills Lab 9A Files
 
-Starter files for Skills Lab 9A: The Club Site Passes the Audit.
-Students audit a clubmate's Drive Day flyer against WCAG Level AA,
-repair it, then verify the whole club site with an accessibility
+Starter files for Skills Lab 9A: The Copperwind Site Passes the Audit.
+Students audit a teammate's Drive Day flyer against WCAG Level AA,
+repair it, then verify the whole Copperwind site with an accessibility
 evaluator and the chapter's human checklist, closing the Part III
 milestone. Students never retype provided content, and every repair
 color comes from the palette file's passing list.
@@ -13,13 +13,13 @@ color comes from the palette file's passing list.
 | ---- | ---- | ------- |
 | `drive-day-flyer.html` | The audit target, broken on purpose (see the disclosure below) | Parts 1-3 |
 | `flyer-styles.css` | Valid CSS whose choices carry barriers of their own | Parts 1-3 |
-| `flyer-images/` | 2 PNG images, byte-identical copies from the club site | Parts 1-2 |
+| `flyer-images/` | 2 PNG images, byte-identical copies from the Copperwind site | Parts 1-2 |
 | `starter-site/recycling-guide.html` | Valid HTML, links the Oswald font and the site stylesheet | Parts 2-3, chapter Try It Yourself exercises |
 | `starter-site/drive-gallery.html` | Valid HTML, links the Oswald font and the site stylesheet | Parts 2-3, chapter Try It Yourself exercises |
 | `starter-site/contact.html` | Valid HTML, links the Oswald font and the site stylesheet | Parts 2-3 |
-| `starter-site/club-styles.css` | Valid CSS, the site stylesheet as Skills Lab 8A finished it | Parts 2-3 |
+| `starter-site/copperwind-styles.css` | Valid CSS, the site stylesheet as Skills Lab 8A finished it | Parts 2-3 |
 | `starter-site/images/` | 7 PNG images, unchanged from the Chapter 8 pack | Parts 2-3 |
-| `club-palette.txt` | Plain text palette with exact hex values and contrast notes | Part 2 |
+| `copperwind-palette.txt` | Plain text palette with exact hex values and contrast notes | Part 2 |
 | `contrast-cards.txt` | Three fresh text-on-background pairings for prediction practice | Chapter Try It Yourself exercises |
 | `rem-demo.html` | Standalone demo page for the px and rem experiment | Chapter Try It Yourself exercises |
 | `rem-demo.css` | Demo stylesheet beside its page | Chapter Try It Yourself exercises |
@@ -28,8 +28,7 @@ color comes from the palette file's passing list.
 
 ## The flyer ships broken on purpose
 
-`drive-day-flyer.html` and `flyer-styles.css` announce the club's
-Drive Day, written in a hurry by an enthusiastic clubmate. The pair
+`drive-day-flyer.html` and `flyer-styles.css` announce Copperwind's Drive Day, written in a hurry by an enthusiastic teammate. The pair
 carries **8 planted accessibility barriers**, counting a barrier
 once even where it strikes twice, and finding and repairing all 8
 is the lab's work. Until it is repaired, the flyer
@@ -41,15 +40,15 @@ barriers, because its sins are decisions, not syntax. Audit first.
 Do not fix anything until your checklist says why.
 
 The flyer's images live in `flyer-images/`, byte-identical copies
-of two images from the club site's `images` folder. The copies keep
+of two images from the Copperwind site's `images` folder. The copies keep
 the flyer self-contained, so it renders correctly wherever the
 folder travels.
 
 ## The starter site
 
-`starter-site/` holds the club's site exactly as Skills Lab 8A
+`starter-site/` holds the Copperwind site exactly as Skills Lab 8A
 finished it: the Lab 8A model solution. Every page's head now
-carries the viewport meta tag, and the bottom of `club-styles.css`
+carries the viewport meta tag, and the bottom of `copperwind-styles.css`
 holds the small-screen query block at the site's own 640-pixel
 breakpoint. The block gives the gallery figures the full row,
 tightens `main`'s side padding, grows the nav links into
@@ -61,8 +60,7 @@ messages.
 
 ## Image files
 
-All images are PNG and share one flat-illustration style: the
-fictional club's matching design set. The seven files in
+All images are PNG and share one flat-illustration style: the fictional Copperwind design set. The seven files in
 `starter-site/images/` are unchanged from the Chapter 8 pack, and
 their alt text is already written into the site's pages. The two
 files in `flyer-images/` are copies of images from that set. What
@@ -75,7 +73,7 @@ the flyer's markup does with them is part of the audit.
 
 ## File details
 
-**club-palette.txt** travels with every CSS chapter, copied
+**copperwind-palette.txt** travels with every CSS chapter, copied
 byte-identical from the Chapter 8 pack. It maps the design set's
 colors to exact hex values and records every text-on-background
 pairing that passes the WCAG AA minimum of 4.5 to 1 for body text.
@@ -110,9 +108,7 @@ folder unrenamed.
 
 ## Source and license
 
-Written for CIS133 by the course author. The PC Computer Club, its
-events, and the clubmate who rushed the flyer are fictional, and
-the club's email address uses the reserved example.org domain. All
+Written for CIS133 by the course author. Copperwind IT Services is a fictional company created for this textbook. All names, clients, and records are synthetic. Any resemblance to a real company or person is coincidental. The teammate who rushed the flyer is fictional too, and the program's email address uses the reserved example.org domain. All
 images are original illustrations rendered by the course's seeded
 generator script
 (`assets/code/_generators/generate_chapter03_images.py`), so they
