@@ -1,6 +1,6 @@
 # Chapter 6: Layout with Flexbox
 
-Skills Lab 5A sent the club's site back to the president wearing space and chosen type, and the pages finally read like pages. Stand back from the screen, though, and one old habit shows. Every element still stacks in a single column, one box per line, exactly as blocks have stacked since Chapter 2. The logo sits above the title. The gallery's figures wait in a patient tower. And the nav is still a bulleted list wearing site colors, even though Chapter 4 promised it would become a real navigation bar.
+Skills Lab 5A sent Copperwind's site back to Priya Sharma wearing space and chosen type, and the pages finally read like pages. Stand back from the screen, though, and one old habit shows. Every element still stacks in a single column, one box per line, exactly as blocks have stacked since Chapter 2. The logo sits above the title. The gallery's figures wait in a patient tower. And the nav is still a bulleted list wearing site colors, even though Chapter 4 promised it would become a real navigation bar.
 
 There is also a defect on the record, in the lab's own paperwork. Lab 5A's critique line, the one thing no validator can see, named the footer's links. They render the browser's default link blue on deep teal, a pairing that fails the accessibility bar by a wide margin. The site has carried that wart since Lab 4A. Chapter 5 could not fix it honestly, because the selectors you owned would repaint every link on the site to reach three of them.
 
@@ -9,7 +9,7 @@ This chapter pays both debts. You will turn a stacked container into an arranged
 ## Module Overview 🧭
 
 * **Estimated time:** 5-6 hours
-* **Prerequisites:** Chapters 4-5 (selectors and stylesheets, the box model, and the club site's styled pages)
+* **Prerequisites:** Chapters 4-5 (selectors and stylesheets, the box model, and the Copperwind site's styled pages)
 * **Deliverables:** Skills Lab 6A deliverable, Quick Checks
 
 ## Learning Objectives 🎯
@@ -38,7 +38,7 @@ Every layout you have shipped so far used the browser's one built-in arrangement
 ```css
 /* The parent becomes the container. Its direct children, and
    only those, become the items it arranges. */
-.officer-roster {
+.volunteer-roster {
     display: flex;
 }
 ```
@@ -54,7 +54,7 @@ A flex container lays its items along its **main axis**. Perpendicular to it run
 ```css
 /* row is the default: you get it without writing it. column
    turns the main axis vertical. */
-.officer-roster {
+.volunteer-roster {
     display: flex;
     flex-direction: column;
 }
@@ -62,9 +62,9 @@ A flex container lays its items along its **main axis**. Perpendicular to it run
 
 With `row`, the main axis runs horizontally and the cross axis runs vertically. With `column`, the two trade places. Every control in the next section speaks this axis language instead of saying left, right, top, or bottom. That is why the vocabulary comes first: learn it for rows and you already own it for columns.
 
-### The Practice Bench: The Announcement Board
+### The Practice Bench: The Copperwind Announcement Board
 
-Your data pack ships this chapter's bench: `assets/code/chapter-06/flex-playground.html` and `flex-playground.css`, which sit side by side so the page's relative `href` finds the stylesheet. The page is the club's announcement board, a `div` carrying the class `announcement-board` and holding four `section` cards headed ONE through FOUR. The board's title sits outside the div on purpose, so the container has exactly four children. Each card is 220 pixels wide under the border-box baseline, and the cards carry no margins. TWO holds the longest text and FOUR the shortest, which will matter soon.
+Your data pack ships this chapter's bench: `assets/code/chapter-06/flex-playground.html` and `flex-playground.css`, which sit side by side so the page's relative `href` finds the stylesheet. The page is the Copperwind announcement board, a `div` carrying the class `announcement-board` and holding four `section` cards headed ONE through FOUR. The board's title sits outside the div on purpose, so the container has exactly four children. Each card is 220 pixels wide under the border-box baseline, and the cards carry no margins. TWO holds the longest text and FOUR the shortest, which will matter soon.
 
 The board's rule ships with a background, a border, padding, and no layout declarations at all. Every experiment in this chapter starts by adding one there.
 
@@ -76,11 +76,38 @@ The board's rule ships with a background, a border, padding, and no layout decla
 
 **Explain:** In 1-2 sentences, describe what the row did to the cards' heights, and explain why the column version looked so familiar.
 
+### Fix It 6.1: The Row That Never Forms 🔧
+
+A teammate is building the soccer league's sponsors page. Four sponsor names sit in a `ul`, one `li` each, and the plan is a single line of names across the top. The teammate reaches for this chapter's switch:
+
+```text
+/* The aim: four sponsor names on one line. */
+li {
+    display: flex;
+}
+```
+
+**Symptom:** The line never forms. The four names keep stacking, one per line, exactly where they stood before the edit. Only the bullets vanish. No error appears anywhere. The stylesheet is legal CSS, and the browser draws the page without complaint.
+
+**Diagnose:** The vanished bullets are the tell. Inspect a sponsor's `li`, and the rule sits in its Styles panel, matched and applied. Each `li` accepted the new display value, and its bullet rode away with the old one. So this is not Chapter 4's missing rule. The rule arrived. It landed on the wrong role. `display: flex` is a contract the parent signs: the element carrying it becomes the container, and its direct children become the items it arranges. This rule signs the contract on every `li`, so each list item becomes a container in charge of its own contents: one line of text apiece, nothing to arrange. Nobody signed for the `ul`. The list never became a container, its four children never became flex items, and boxes that are nobody's flex items stack the way blocks have stacked since Chapter 2.
+
+**Repair:** Move the declaration to the parent that holds all four items. Delete the `li` rule and sign the `ul` instead:
+
+```css
+/* The parent signs: the list becomes the container, and its
+   four list items become the flex items it arranges. */
+ul {
+    display: flex;
+}
+```
+
+**Verify:** Refresh. The four sponsor names leave their stack and share one line, pressed shoulder to shoulder, because nothing spaces the line yet. The next section's `gap` owns that job, and Section 6.4's `list-style` retires the markers when the real bar gets built. Read the result with this section's vocabulary to lock it in: the `ul` is now the container, its four `li` children are the items, and the main axis runs along the row.
+
 ### Quick Check 6.1 ✅
 
 1. A page's `main` holds three `section` elements, and the first section holds two paragraphs. `display: flex` lands on `main`. Which elements become flex items, and why do the paragraphs stay put?
-2. The officers page lists its members in a column (`flex-direction: column`). A clubmate wants the whole stack pushed toward the container's bottom edge. Which property does that job here, `justify-content` or `align-items`, and why?
-3. A clubmate adds `display: flex` to each announcement card instead of the board, and nothing lines up. Diagnose the mistake with the container and item vocabulary.
+2. A page lists Copperwind's volunteer crew in a column (`flex-direction: column`). A teammate wants the whole stack pushed toward the container's bottom edge. Which property does that job here, `justify-content` or `align-items`, and why?
+3. A teammate adds `display: flex` to each announcement card instead of the board. The cards keep stacking, even though each card's own contents now sit on one line. Diagnose the mistake with the container and item vocabulary.
 
 ---
 
@@ -121,9 +148,20 @@ Between the two properties, remember the split. `justify-content` answers "where
 
 ### Try It Yourself 6.2: The Alignment Drill 🛠️
 
-**Predict:** The board's rule carries `display: flex;` from TIY 6.1 and nothing else. Three edits are coming, and your job is to call each result before running it. First, `justify-content: center;`: where do the four cards sit, and where does the leftover space go? Second, the value changes to `flex-end`. Third, `align-items: center;` joins the rule: what happens to the four heights, remembering TWO's long text?
+**Predict:** The board's rule carries `display: flex;` from TIY 6.1 and nothing else. The drill's finished rule set is below with the two property names blanked. Each comment states the goal its declaration must deliver:
 
-**Run:** Make the three edits one at a time, saving and refreshing after each, and check every prediction against the screen before the next edit. When you finish, delete both alignment declarations, leaving `display: flex;` alone for the next exercise.
+```text
+.announcement-board {
+    display: flex;
+    ____: flex-end;   /* gather the four cards at the line's end */
+    ____: center;     /* stop stretching: center each card at its
+                         own height instead */
+}
+```
+
+Commit before you edit. Name the property that fills each blank, and name the axis each one works along. Then call the board both edits produce: where the four cards sit, where the leftover space goes, and what happens to the four heights, remembering TWO's long text.
+
+**Run:** Complete the rule in `flex-playground.css` one blank at a time. Fill the first, save, refresh, and check the cards' placement against your prediction. Then fill the second, save, refresh, and check the four heights. When you finish, delete both alignment declarations, leaving `display: flex;` alone for the next exercise.
 
 **Explain:** In 1-2 sentences, name the axis each property worked along, and state which edit ended the height matching and why.
 
@@ -134,7 +172,7 @@ Chapter 5 spaced neighbors with margins, one element at a time, each box claimin
 ```css
 /* One declaration on the container, and every pair of roster
    cards gets the same 24 pixels between them. */
-.officer-roster {
+.volunteer-roster {
     display: flex;
     gap: 24px;
 }
@@ -232,7 +270,7 @@ The space matches descendants at any depth. Its stricter sibling, the **child co
    list items inside the list. */
 nav a { color: #268080; }
 
-/* Child: matches nothing on the club's pages, because every
+/* Child: matches nothing on Copperwind's pages, because every
    anchor sits three levels below the nav, not one. */
 nav > a { color: #268080; }
 ```
@@ -268,7 +306,7 @@ Two habits enforce the law:
 
 This one runs on the real site: the pack's `assets/code/chapter-06/starter-site/` folder.
 
-**Predict:** You are about to add this section's `footer a` rule to `club-styles.css`. Take a census first. Across all three pages, list every link the rule will catch and every link it will leave alone, page by page. The contact page deserves a second look before you commit.
+**Predict:** You are about to add this section's `footer a` rule to `copperwind-styles.css`. Take a census first. Across all three pages, list every link the rule will catch and every link it will leave alone, page by page. The contact page deserves a second look before you commit.
 
 **Run:** Add `footer a { color: #fac78d; }` to the stylesheet, refresh all three pages, and check your census against what changed. Then give the same links a state block: write a `footer a:hover, footer a:focus` rule using another pairing from the palette's passing list for deep teal (white is sitting right there). Put the mouse away and press Tab until focus reaches a footer link, and watch your style announce the stop. Undo every edit when you finish, because Skills Lab 6A makes this fix for keeps in your own copy.
 
@@ -291,8 +329,9 @@ Time to pay the oldest debt. The nav has worn the same disguise since Chapter 3:
 The bullets and the 40-pixel indent are browser default styles, the same authorship Chapter 4 exposed. **list-style** controls a list's markers, and its `none` value removes them. The indent is the list's default padding, and Chapter 5 taught you to zero what you did not ask for. Then this chapter's opener lays the items on a line:
 
 ```css
-/* The bar: strip the browser's list dressing (the bullets and
-   the 40-pixel indent), then lay the items on one line. */
+/* Step 1: scope the rule to the bar with the descendant
+   combinator, strip the browser's list dressing (the bullets
+   and the 40-pixel indent), then lay the items on one line. */
 nav ul {
     list-style: none;
     margin: 0;
@@ -302,13 +341,14 @@ nav ul {
 }
 ```
 
-Look at the selector before the declarations. `nav ul` is Section 6.3 at work: only lists inside the nav lose their dressing. The contact page's meeting-times list keeps its bullets, which a bare `ul` rule would have stripped along with everything else.
+Look at the selector before the declarations. `nav ul` is Section 6.3 at work: only lists inside the nav lose their dressing. The contact page's drop-off-hours list keeps its bullets, which a bare `ul` rule would have stripped along with everything else.
 
 ### Step 2: The Links Become Blocks
 
 ```css
-/* Padded blocks make bigger targets, in the brand teal that
-   passes on the bar's white. */
+/* Step 2: promote each link to a padded block, so the whole
+   rectangle is the target, in the brand teal that passes on
+   the bar's white. */
 nav a {
     display: block;
     padding: 8px 12px;
@@ -326,9 +366,9 @@ Three decisions live in that rule.
 ### Step 3: The States
 
 ```css
-/* Hover and focus, equal citizens: the same signal for the
-   mouse and the keyboard. White on club teal is on the
-   palette's passing list. */
+/* Step 3: wire the states as twins, one signal for mouse and
+   keyboard alike. White on copperwind teal is on the palette's
+   passing list. */
 nav a:hover,
 nav a:focus {
     background-color: #268080;
@@ -343,12 +383,15 @@ Each block inverts on contact: teal text on white becomes white on teal. And not
 The header still stacks its logo above its title. One rule fixes all three pages:
 
 ```css
-/* Logo and title share the line, centered against each other on
-   the cross axis. wrap keeps each intro paragraph on its own
-   full-width line instead of squeezing it into a column. */
+/* Step 1: one wrapping flex line. The logo and the title share
+   it, and each wide intro paragraph drops whole onto a fresh
+   full-width line instead of squeezing into a column. */
 header {
     display: flex;
     flex-wrap: wrap;
+    /* Step 2: cross-axis polish. Center the title against the
+       logo's height, and let the container own the space
+       between the pair. */
     align-items: center;
     gap: 16px;
 }
@@ -359,8 +402,9 @@ The logo and the `h1` fit the first line together, so they sit side by side, cen
 One old comment can retire too. The `.page-divider` rule has said since Lab 5A that centering the strip needs tools Chapter 6 teaches. Here they are:
 
 ```css
-/* An image is inline until told otherwise, and auto margins
-   center a block. The Chapter 5 comment can finally retire. */
+/* Step 3: center the strip. An image is inline until told
+   otherwise, and auto margins center a block. The Chapter 5
+   comment can finally retire. */
 .page-divider {
     display: block;
     margin: 32px auto;
@@ -381,7 +425,7 @@ The finished bar is a review of the course so far. Name where each ingredient ca
 
 ### Try It Yourself 6.5: One Change at a Time 🛠️
 
-**Predict:** Copy this section's three nav rules into the pack starter site's `club-styles.css` and refresh any page: the bar appears, links resting at the line's start. Now call three variations before running them. On `nav ul`, what does `justify-content: center` show? What does `space-between` show, with only three links and a wide white bar? What does `flex-end` show?
+**Predict:** Copy this section's three nav rules into the pack starter site's `copperwind-styles.css` and refresh any page: the bar appears, links resting at the line's start. Now call three variations before running them. On `nav ul`, what does `justify-content: center` show? What does `space-between` show, with only three links and a wide white bar? What does `flex-end` show?
 
 **Run:** Add each value in turn, saving and refreshing between edits, and judge each bar against what a visitor expects from a navigation bar. Pick the one you would ship. Then undo all your edits, because the lab builds the bar for keeps in your own copy.
 
@@ -391,7 +435,7 @@ The finished bar is a review of the course so far. Name where each ingredient ca
 
 1. The tutoring center strips its menu's bullets with `ul { list-style: none; }` and finds its study-tips list went bald too. Name the one-word change that scopes the rule to the menu, and the chapter vocabulary that explains why it works.
 2. The tutoring center's header stacks its logo above its title. Write the declarations that put them on one line, centered against each other, with breathing room between.
-3. A clubmate deletes `text-decoration: none` from the nav rule because "Chapter 5 said underlines carry meaning." Make the counter-case for this context: name what still tells a visitor the bar's items are links.
+3. A teammate deletes `text-decoration: none` from the nav rule because "Chapter 5 said underlines carry meaning." Make the counter-case for this context: name what still tells a visitor the bar's items are links.
 
 ---
 
@@ -419,19 +463,19 @@ See course glossary for full definitions
 
 Answer from memory before checking back through the chapter.
 
-1. State what `display: flex` does to the element that carries it and to that element's direct children, and name the two axes it creates.
-2. Name the container property that controls each of these: placement along the main axis, placement along the cross axis, space between items, and line breaking.
-3. Explain the difference in reach between `a` and `footer a`, and state which rule wins when both match the same link.
-4. Recite the two accessibility laws this chapter attached to link states.
-5. List the ingredients of the navigation bar in build order, naming the chapter that taught each one.
+1. Name the container property that controls each of these: placement along the main axis, placement along the cross axis, space between items, and line breaking.
+2. Recite the two accessibility laws this chapter attached to link states.
+3. List the ingredients of the navigation bar in build order, naming the chapter that taught each one.
+4. From Chapter 4: State the decision rule that chooses between a class selector and an id selector, and give one styling job that fits each.
+5. From Chapter 2: Explain why a navigation menu's links are marked up as a list instead of a run of loose anchors.
 
 ---
 
-## 6.6 Skills Lab 6A: The Club Site Gets Its Layout
+## 6.6 Skills Lab 6A: The Copperwind Site Gets Its Layout
 
-**Goal:** Give the club's site its layout: a flex header row, a wrapping gallery row, region-scoped link styling with accessible hover and focus states, and the navigation bar owed since Chapter 4.
+**Goal:** Give Copperwind's site its layout: a flex header row, a wrapping gallery row, region-scoped link styling with accessible hover and focus states, and the navigation bar owed since Chapter 4.
 
-**Dataset:** Provided files in `assets/code/chapter-06/` from the course data pack. `starter-site/` holds the club's three pages, the `images` folder, and `club-styles.css` exactly as Skills Lab 5A finished them: spaced, typeset, and validating with zero messages. The footer-link defect is still in place, documented in the folder's README. `club-palette.txt` travels with every CSS chapter, copied unchanged from the Chapter 5 pack. `flex-playground.html` and `flex-playground.css` are the chapter's practice pair. `skills-lab-6a-answers.txt` is your written answers file. Work at the extracted `cis133` root and copy every hex value from the palette file.
+**Dataset:** Provided files in `assets/code/chapter-06/` from the course data pack. `starter-site/` holds Copperwind's three pages, the `images` folder, and `copperwind-styles.css` exactly as Skills Lab 5A finished them: spaced, typeset, and validating with zero messages. The footer-link defect is still in place, documented in the folder's README. `copperwind-palette.txt` travels with every CSS chapter, copied unchanged from the Chapter 5 pack. `flex-playground.html` and `flex-playground.css` are the chapter's practice pair. `skills-lab-6a-answers.txt` is your written answers file. Work at the extracted `cis133` root and copy every hex value from the palette file.
 
 The lab walks the chapter's own path. Part 1 arranges the header and the gallery into flex lines. Part 2 fixes the inherited footer defect and gives every link region accessible states. Part 3 builds the bar and closes the Part II milestone.
 
@@ -452,7 +496,7 @@ The lab walks the chapter's own path. Part 1 arranges the header and the gallery
 
 1. Build the full navigation bar on all three pages. Strip the markers with `list-style`, zero the list's default spacing, lay the items on a gapped flex line, and pad each link into an underline-free block. The hover and focus states are already wired from Part 2. Scope every rule through `nav`.
 2. Make one layout decision of your own: your bar's `justify-content` choice, or a footer or figure arrangement. Copy the declaration into answer 3.A and defend it with the axis vocabulary.
-3. Validate everything: all three pages through the W3C HTML validator and `club-styles.css` through the CSS validator, repairing until every report shows zero messages. Log the results in answer 3.B with the critique no validator can make: one thing about your layout you would still improve, and why. Then run the Part II milestone check. Confirm the site shows all four milestone properties, and name where a grader can see each: a multi-section site, one external stylesheet, controlled spacing and type, and a Flexbox navigation bar.
+3. Validate everything: all three pages through the W3C HTML validator and `copperwind-styles.css` through the CSS validator, repairing until every report shows zero messages. Log the results in answer 3.B with the critique no validator can make: one thing about your layout you would still improve, and why. Then run the Part II milestone check. Confirm the site shows all four milestone properties, and name where a grader can see each: a multi-section site, one external stylesheet, controlled spacing and type, and a Flexbox navigation bar.
 
 ### Questions & Analysis 🤔
 
@@ -461,7 +505,7 @@ Answer both questions in the answers file. These answers carry significant rubri
 1. Pick one flex container you built in this lab. Name its main axis and its cross axis. Then explain what one `justify-content` or `align-items` change did to its items, citing what you observed in the browser. Contrast that with what the same value on the other property would have done, and why the axes make those outcomes differ.
 2. The accessibility case for `:focus`. Tab through your own nav bar by keyboard alone and describe the experience with your focus styles, then without them. Who does the focus style serve? Devon's screen reader travels the same links without a mouse, and so does every visitor who cannot steer one. What would removing focus outlines without a replacement cost those visitors?
 
-**Submission:** Zip your `skills-lab-6a-lastname` folder containing your three HTML pages, your `images` folder, `club-styles.css`, and `skills-lab-6a-answers.txt`, and submit it as `skills-lab-6a-lastname.zip`. All three pages and the stylesheet must validate with zero messages, and every answer must sit under its numbered prompt.
+**Submission:** Zip your `skills-lab-6a-lastname` folder containing your three HTML pages, your `images` folder, `copperwind-styles.css`, and `skills-lab-6a-answers.txt`, and submit it as `skills-lab-6a-lastname.zip`. All three pages and the stylesheet must validate with zero messages, and every answer must sit under its numbered prompt.
 
 ### Rubric: Skills Lab 6A
 
@@ -499,4 +543,4 @@ same everywhere.
 
 ## Looking Ahead ⏩
 
-Part II is complete. You connected styles to pages, you controlled every box's space and type, and now you arrange the boxes themselves: connect, control, arrange, done. The club's site shows all four milestone properties, and you can build any layout you can sketch. That last word is the point. Chapter 7 opens Part III, Design for Every User, by teaching you to sketch deliberately: user experience, sitemaps, and wireframes. An optional independent project's site plan can begin there.
+Part II is complete. You connected styles to pages, you controlled every box's space and type, and now you arrange the boxes themselves: connect, control, arrange, done. Copperwind's site shows all four milestone properties, and you can build any layout you can sketch. That last word is the point. Chapter 7 opens Part III, Design for Every User, by teaching you to sketch deliberately: user experience, sitemaps, and wireframes. An optional independent project's site plan can begin there.

@@ -1,15 +1,15 @@
 # Chapter 8: Responsive Design and Media Queries
 
-Skills Lab 7A ended with a site plan the club's officers could read and approve: six pages, a navigation plan, and wireframes for every page at two widths. The desktop frames were easy to trust, because you have been building their layouts since Chapter 6. The phone frames were promises. Nav labels stacked into a column, regions narrowed, and type stepped down, all below some chosen width. Chapter 7 admitted the debt in its final paragraph: your toolbox could not fully keep those promises yet.
+Skills Lab 7A ended with a site plan the Copperwind outreach team could read and approve: six pages, a navigation plan, and wireframes for every page at two widths. The desktop frames were easy to trust, because you have been building their layouts since Chapter 6. The phone frames were promises. Nav labels stacked into a column, regions narrowed, and type stepped down, all below some chosen width. Chapter 7 admitted the debt in its final paragraph: your toolbox could not fully keep those promises yet.
 
 The debt is older than the wireframes. When Chapter 6's announcement board learned to wrap, the book called that trick "half of responsive design." Rows that break, images that never overflow, and a column that stops growing all bend to whatever window they are given. Not one of them can change a value because the screen changed. The padding you tuned for a laptop stays laptop-sized on a phone. So does every font size, every gap, and every link target. Bending is not adapting.
 
-This chapter delivers the other half. You will teach every page to report its true width with one line in the head. You will test phone layouts in browser DevTools device mode without owning a drawer of phones. You will write media queries, style rules that switch on at the widths you choose. And you will organize a stylesheet as base styles plus overrides, so one file serves every screen your visitors bring. Skills Lab 8A puts all of it to work on the club's site, which returns as this chapter's starter exactly as Chapter 7's audit left it.
+This chapter delivers the other half. You will teach every page to report its true width with one line in the head. You will test phone layouts in browser DevTools device mode without owning a drawer of phones. You will write media queries, style rules that switch on at the widths you choose. And you will organize a stylesheet as base styles plus overrides, so one file serves every screen your visitors bring. Skills Lab 8A puts all of it to work on the Copperwind site, which returns as this chapter's starter exactly as Chapter 7's audit left it.
 
 ## Module Overview 🧭
 
 * **Estimated time:** 4-5 hours
-* **Prerequisites:** Chapters 5-7 (the box model, Flexbox, the club site's stylesheet, and the phone-width wireframes from Lab 7A)
+* **Prerequisites:** Chapters 5-7 (the box model, Flexbox, the Copperwind site's stylesheet, and the phone-width wireframes from Lab 7A)
 * **Deliverables:** Skills Lab 8A deliverable, Quick Checks
 
 ## Learning Objectives 🎯
@@ -28,13 +28,13 @@ By the end of this chapter, you will be able to:
 
 ## 8.1 One Site, Every Screen
 
-The club's site reads beautifully in a laptop window. That is the width it grew up at, across three labs of colors, spacing, and layout. Around half of the web's traffic arrives on a phone, though, and a phone offers a fraction of that width. No club officer will accept "works on my laptop" as done.
+Copperwind's site reads beautifully in a laptop window. That is the width it grew up at, across three labs of colors, spacing, and layout. Around half of the web's traffic arrives on a phone, though, and a phone offers a fraction of that width. No one at Copperwind will accept "works on my laptop" as done.
 
 **Responsive design** is the practice of building one page that adapts its layout to every screen size. One URL, one HTML file, one stylesheet, every screen. This section takes inventory of how far the site already gets on that promise, and names exactly what is missing.
 
 ### The Inventory: What Already Bends
 
-You have been building responsiveness without the name since Part II. Three mechanisms in `club-styles.css` already answer a narrow window, and each one pays a debt this book has carried.
+You have been building responsiveness without the name since Part II. Three mechanisms in `copperwind-styles.css` already answer a narrow window, and each one pays a debt this book has carried.
 
 First, rows that break. `flex-wrap` lets the header's flex line and the gallery's row drop items onto new lines when the width runs out. Chapter 6 built both and called the trick half of responsive design.
 
@@ -72,7 +72,7 @@ Line up your Chapter 7 phone frames against the toolbox and the gap shows plainl
 
 Chapter 7 had you draw the phone frame for every page, and that order was deliberate. **Mobile-first** design starts every decision at the narrow screen: plan the phone layout first, then let wider screens be the enhancement. The narrow frame forces the hard calls, because width is scarce and every region must earn its place. Widen from there and the page grows generous. Work the other direction, shrinking a finished desktop design, and you spend the afternoon deciding what to take away.
 
-Mobile-first is an order of operations, not a law. Section 8.4 shows both directions inside a stylesheet, because the club's own stylesheet grew up at laptop width, and the honest path from there runs the other way.
+Mobile-first is an order of operations, not a law. Section 8.4 shows both directions inside a stylesheet, because Copperwind's own stylesheet grew up at laptop width, and the honest path from there runs the other way.
 
 If your course includes an independent project, this chapter turns its
 phone wireframes into responsive pages. Your instructor can place that
@@ -82,15 +82,15 @@ One more connection before the tools arrive. Chapter 7's principle list named re
 
 ### Try It Yourself 8.1: Two Sites, One Narrow Window 🛠️
 
-**Predict:** You are about to squeeze two pages: the Wikipedia article you audited in Chapter 7, and the club's own starter page. Predict what each page will do as the window narrows. Does either one change its layout plan outright, with regions moving or disappearing? Does either keep a single plan and bend it? Commit to one specific expectation per page.
+**Predict:** You are about to squeeze two pages: the Wikipedia article you audited in Chapter 7, and Copperwind's own starter page. Predict what each page will do as the window narrows. Does either one change its layout plan outright, with regions moving or disappearing? Does either keep a single plan and bend it? Commit to one specific expectation per page.
 
 **Run:** Open `https://en.wikipedia.org/wiki/Recycling` in one browser window and the pack's `assets/code/chapter-08/starter-site/recycling-guide.html` in another. Drag each window's edge slowly from full laptop width to as narrow as it will go, twice each. Watch regions, not words: what moves, what shrinks, what rearranges, what disappears.
 
-**Explain:** In 1-2 sentences, report what each page did, and tie the club page's changes to this section's inventory: name the mechanism behind each change you saw.
+**Explain:** In 1-2 sentences, report what each page did, and tie the Copperwind page's changes to this section's inventory: name the mechanism behind each change you saw.
 
 ### Quick Check 8.1 ✅
 
-1. A clubmate declares the site phone-ready because "the images shrink and the rows wrap." Using this section's inventory, name what those mechanisms do, and the one thing neither of them can do.
+1. A teammate declares the site phone-ready because "the images shrink and the rows wrap." Using this section's inventory, name what those mechanisms do, and the one thing neither of them can do.
 2. Chapter 7's phone wireframes stacked the nav labels and narrowed every region "below a chosen width." Explain why no tool from Chapters 1-6 can honor the words "below a chosen width."
 3. Responsive design pays the responsiveness principle by definition. Name one more of Chapter 7's five UX principles that a phone-ready layout serves, with one small-screen example.
 
@@ -126,8 +126,8 @@ The tag belongs in the head of every page, next to the charset line. From this c
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Recycling Guide | PC Computer Club</title>
-    <link rel="stylesheet" href="club-styles.css">
+    <title>Recycle Your Electronics | Copperwind Community</title>
+    <link rel="stylesheet" href="copperwind-styles.css">
 </head>
 ```
 
@@ -155,7 +155,7 @@ Device mode is an emulation, and emulation is not the last word. Chapter 12's pr
 
 1. A page validates with zero messages and still renders as tiny, shrunken text on every phone. Reconcile the two facts, and name the line that fixes the rendering without changing the validator's report.
 2. State what most phone browsers do with a page whose head carries no viewport tag, then translate the tag's two settings into plain words.
-3. A clubmate tests phone layouts by dragging their laptop's browser window narrow and calls device mode unnecessary. Name one thing the narrow window shows honestly, and one thing only device mode can show.
+3. A teammate tests phone layouts by dragging their laptop's browser window narrow and calls device mode unnecessary. Name one thing the narrow window shows honestly, and one thing only device mode can show.
 
 ---
 
@@ -163,7 +163,7 @@ Device mode is an emulation, and emulation is not the last word. Chapter 12's pr
 
 The tag makes phones honest about their width. Now the stylesheet needs a way to act on the number.
 
-Your pack ships this chapter's practice bench: `query-playground.html` and `query-playground.css` in `assets/code/chapter-08/`, side by side so the page's relative `href` finds the stylesheet. The page is the club's bulletin: a deep teal banner, a wrapping row of four update cards, and a centered reading column. Its head already carries the viewport tag, because the skeleton rule starts now. Unlike Chapter 6's bench, this one arrives with its queries already written at the bottom of the stylesheet. Your work in this section is to read each one, predict what it does, and check yourself against the screen.
+Your pack ships this chapter's practice bench: `query-playground.html` and `query-playground.css` in `assets/code/chapter-08/`, side by side so the page's relative `href` finds the stylesheet. The page is the program's bulletin: a deep teal banner, a wrapping row of four update cards, and a centered reading column. Its head already carries the viewport tag, because the skeleton rule starts now. Unlike Chapter 6's bench, this one arrives with its queries already written at the bottom of the stylesheet. Your work in this section is to read each one, predict what it does, and check yourself against the screen.
 
 ### The Anatomy of a Media Query
 
@@ -209,34 +209,83 @@ Two media features carry this course, and they are mirror images. `max-width` as
 
 Each feature includes the width it names. That is why TIY 8.3's flip landed exactly on the boundary instead of one pixel inside it. Bank one consequence now: a `max-width: 600px` query and a `min-width: 600px` query would both fire at a 600-pixel window. When two queries must split every width cleanly between them, their numbers differ by one, and Section 8.4 shows the pair.
 
-The playground's banner title carries a matched pair, one of each:
+The playground's banner title carries a matched pair, one of each. A pair like this can leave a stretch of widths where neither condition is true and neither block applies. A width the queries leave alone is not an error. It is the base rule doing its job. The exercise below hands you the pair with its two breakpoints hidden. You engineer the numbers yourself.
 
-```css
-/* The banner title's two adjustments. The base rule above the
-   queries sets 28px. One query steps the title down on narrow
-   windows, the other steps it up on wide ones. */
-@media (max-width: 500px) {
+### Try It Yourself 8.4: Three Widths, One Title 🛠️
+
+Here is the banner title's rule set as the playground ships it, with both breakpoint values gapped. DevTools reports these computed sizes for `.banner-title`: 22px at a 400-pixel window, 28px at 700, and 36px at 1000.
+
+```text
+.banner-title {
+    font-size: 28px;
+}
+
+@media (max-width: ____px) {
     .banner-title {
         font-size: 22px;
     }
 }
 
-@media (min-width: 900px) {
+@media (min-width: ____px) {
     .banner-title {
         font-size: 36px;
     }
 }
 ```
 
-Look carefully at the pair's numbers. A pair like this can leave a stretch of widths where neither condition is true and neither block applies. A width the queries leave alone is not an error. It is the base rule doing its job, and the next exercise makes you find that stretch and prove it.
+**Predict:** Before filling either gap, commit to the logic. Which block must catch 400? Which must catch 1000? And which rule must be the only one standing at 700? Then write a value into each gap that produces all three sizes.
 
-### Try It Yourself 8.4: Three Widths, One Title 🛠️
+**Run:** Open `query-playground.css` and compare your two values against the shipped pair at the bottom of the file. Then prove the sizes in the browser: set each width in turn, right-click the title, choose Inspect, and read its computed `font-size` in DevTools.
 
-**Predict:** Using the pair above and the base rule, predict the banner title's computed `font-size` at three window widths: 400, 700, and 1000 pixels. One of the three is caught by neither query. Name which, and say what size it gets instead.
+**Explain:** In 1-2 sentences, name the band of widths the shipped pair leaves to neither query. Then state which rule supplies the title's size across that whole band.
 
-**Run:** Set each width in turn, dragging the window against the width readout or typing the width into device mode. At each stop, right-click the title, choose Inspect, and read its computed `font-size` in DevTools.
+### Fix It 8.1: The Queries That Traded Places 🔧
 
-**Explain:** In 1-2 sentences, name the width that fell in the gap between the queries, and state which rule supplied its size.
+A teammate is retrofitting the soccer league's schedule page. The plan is sound: tighten `.match-schedule` on phones, and give it more room on wide screens. Their stylesheet ends with this pair:
+
+```text
+/* Meant for phones: tighter padding, smaller type. */
+@media (min-width: 521px) {
+    .match-schedule {
+        padding: 8px;
+        font-size: 15px;
+    }
+}
+
+/* Meant for wide screens: a generous cushion. */
+@media (max-width: 520px) {
+    .match-schedule {
+        padding: 24px 48px;
+        font-size: 18px;
+    }
+}
+```
+
+**Symptom:** Test the page in DevTools device mode at two widths. At 380 pixels the phone gets the wide-screen treatment. The computed padding reads `24px 48px`, and the cushion crowds the narrow column. At 1200 pixels the schedule huddles at 8 pixels of padding, cramped in a window with room to spare. No error appears anywhere. Both queries are legal CSS, so the validator lets the file through.
+
+**Diagnose:** Read each query aloud, the way this section taught. `min-width: 521px` says "at least 521 pixels wide." That is a wide-screen condition. It is wrapped around the phone styles. `max-width: 520px` says "at most 520 pixels wide," a phone condition holding the wide-screen cushion. The two conditions are swapped. Each block fires exactly where its styles do not belong. No tool can object, because the browser applied both queries exactly as written.
+
+**Repair:** Swap the two conditions back, so each block names the widths its styles serve:
+
+```css
+/* Phones, at most 520px wide: tighter padding, smaller type. */
+@media (max-width: 520px) {
+    .match-schedule {
+        padding: 8px;
+        font-size: 15px;
+    }
+}
+
+/* Wide screens, at least 521px: a generous cushion. */
+@media (min-width: 521px) {
+    .match-schedule {
+        padding: 24px 48px;
+        font-size: 18px;
+    }
+}
+```
+
+**Verify:** Re-test both widths in device mode. At 380 pixels the computed padding now reads `8px`, and at 1200 pixels the schedule wears its `24px 48px` cushion. Say each repaired query aloud one more time. Now the words match the screens the styles serve.
 
 ### Where Breakpoints Come From
 
@@ -246,7 +295,21 @@ The wrong answer is a chart. Lists of popular device widths circulate online, wi
 
 The right answer is a test you already know how to run: resize until the layout embarrasses itself, and read the width where it happens. The playground's card row shows how concrete that number is. Each update card is 260 pixels wide, the gaps between cards are 20, and the row's own padding and borders take 44 pixels of the window in total. Two cards plus one gap need 540 pixels of row content, and 540 plus 44 is 584. Drag the playground across that line and watch: at 584 the row seats two cards, and at 583 it drops to one. The same arithmetic seats three cards from 864 and four from 1144.
 
-That drop at 584 is the content talking. If the one-card row looked cramped and you wanted a query to restyle it, 584 would be your breakpoint, derived from your own boxes instead of copied from a chart. Skills Lab 8A asks you to derive a breakpoint from the club site's content exactly this way: find where the layout stops fitting, and let the width you read become the number you write.
+Here is the same math as steps you can rerun on any layout:
+
+```text
+[Step 1: measure the content unit] One update card is 260px wide.
+[Step 2: assemble the line you want to protect] Two cards plus
+one 20px gap need 540px of row content.
+[Step 3: charge the row's own frame] Padding and borders take
+44px of window, so 540 + 44 = 584.
+[Step 4: confirm the number on screen] At 584 the row seats two
+cards. At 583 it drops to one.
+[Step 5: let the reading become the breakpoint] The width your
+own content hands you is the number your query gets.
+```
+
+That drop at 584 is the content talking. If the one-card row looked cramped and you wanted a query to restyle it, 584 would be your breakpoint, derived from your own boxes instead of copied from a chart. Skills Lab 8A asks you to derive a breakpoint from the Copperwind site's content exactly this way: find where the layout stops fitting, and let the width you read become the number you write.
 
 !!! tip
     Name breakpoints after content events in your comments: "where the card row drops to one" travels better than "tablet width." Devices retire every year. Your content stays yours.
@@ -254,7 +317,7 @@ That drop at 584 is the content talking. If the one-card row looked cramped and 
 ### Quick Check 8.3 ✅
 
 1. Read `@media (min-width: 860px)` aloud as a sentence, and state whether its rules apply at a window exactly 860 pixels wide.
-2. In `@media (max-width: 480px) { .club-note { padding: 8px; } }`, point out the at-rule, the media feature, and the ordinary rule, naming each part.
+2. In `@media (max-width: 480px) { .clinic-note { padding: 8px; } }`, point out the at-rule, the media feature, and the ordinary rule, naming each part.
 3. A teammate picks 1024 pixels as a breakpoint because a chart of device widths recommends it. State where this chapter says breakpoints come from, and describe the test that finds one for any page.
 
 ---
@@ -268,16 +331,17 @@ You can now write a query. This section teaches you where queries live in a styl
 The architecture has two layers. The rules outside every query are the stylesheet's **base styles**, and they serve every screen, whatever its width. The rules inside a query are **overrides**, and they carry only the differences for the widths the query names. An override never repeats what the base already says. The playground's card padding is the model:
 
 ```css
-/* The base rule, trimmed to the declaration that changes: a
-   card's padding at every width the queries leave alone. */
+/* Step 1: write the base rule to serve every screen, trimmed
+   here to the declaration that changes: a card's padding. */
 .update-card {
     padding: 20px;
 }
 
-/* The small-screen override: only the difference. At 600 pixels
-   and below the padding tightens, and every other declaration
-   in the base rule still applies. */
+/* Step 2: name the widths that need a different value. At most
+   600 pixels means the override owns 600 and everything below. */
 @media (max-width: 600px) {
+    /* Step 3: write only the difference. Every other declaration
+       in the base rule still applies at every width. */
     .update-card {
         padding: 10px;
     }
@@ -330,7 +394,7 @@ Desktop-first order runs the retrofit direction: the base rules describe the wid
 
 The two numbers differ by one on purpose. "At most 699" and "at least 700" split every whole-pixel width between them, with no overlap. A zoomed browser can report a fractional width that slips between the two, a corner case to know about, not to design around.
 
-Which direction should you write? Starting a stylesheet from nothing, professionals usually go mobile-first. The reason is Chapter 7's: the narrow layout is the harder discipline, so it should be the foundation, not the afterthought. The club's stylesheet is not starting from nothing. It grew up at laptop width across three labs, it works there, and rewriting it narrow-first would cost hours and teach little. So the lab retrofits: the desktop-grown sheet stays the base, and `max-width` overrides tighten the small screens. Retrofit is honest, common industry work. Many of the stylesheets you will meet in the wild were desktop sites once.
+Which direction should you write? Starting a stylesheet from nothing, professionals usually go mobile-first. The reason is Chapter 7's: the narrow layout is the harder discipline, so it should be the foundation, not the afterthought. Copperwind's stylesheet is not starting from nothing. It grew up at laptop width across three labs, it works there, and rewriting it narrow-first would cost hours and teach little. So the lab retrofits: the desktop-grown sheet stays the base, and `max-width` overrides tighten the small screens. Retrofit is honest, common industry work. Many of the stylesheets you will meet in the wild were desktop sites once.
 
 ### Reading a Responsive Stylesheet
 
@@ -374,7 +438,7 @@ One boundary of this chapter, marked on the way out: width is not the only quest
 
 1. A query block copies all five declarations from the base rule it adjusts and changes only one. Name the pattern rule this breaks, and describe what happens when the base rule changes next month.
 2. A stylesheet's small-screen query block sits at the top of the file, above the base rules, and none of its overrides ever show. Diagnose the defect using Chapter 4's tie-breaker, and state the fix.
-3. Contrast mobile-first order with desktop-first order in one sentence each, then name which order Skills Lab 8A uses on the club's stylesheet and why.
+3. Contrast mobile-first order with desktop-first order in one sentence each, then name which order Skills Lab 8A uses on the Copperwind stylesheet and why.
 
 ---
 
@@ -382,7 +446,7 @@ One boundary of this chapter, marked on the way out: width is not the only quest
 
 ### Key Concepts
 
-* Responsive design serves every screen from one page, one stylesheet, one URL. The club's stylesheet already bends: rows wrap (`flex-wrap`), images stay fluid (`max-width: 100%` with `height: auto`, the pack rule finally explained), and the readable column's `max-width` is a ceiling narrow windows duck under. None of those can change a value at a chosen width. That is the media query's job.
+* Responsive design serves every screen from one page, one stylesheet, one URL. Copperwind's stylesheet already bends: rows wrap (`flex-wrap`), images stay fluid (`max-width: 100%` with `height: auto`, the pack rule finally explained), and the readable column's `max-width` is a ceiling narrow windows duck under. None of those can change a value at a chosen width. That is the media query's job.
 * Most phone browsers lay a silent page onto a make-believe canvas about 980 pixels wide and shrink the picture to fit. The viewport meta tag (`width=device-width, initial-scale=1`) opts out, and it belongs in every head from now on. The validator never requires it: valid and phone-ready are different standards.
 * Device mode is DevTools' phone emulation view. It renders a page as a chosen phone would, reports the rendered width, and shows what the missing tag costs, which a narrow desktop window can never show.
 * A media query is the course's first at-rule: `@media`, a media feature in parentheses, and a block of ordinary rules that apply only while the condition holds. `max-width` means at most, `min-width` means at least, and each includes the width it names. Widths no query catches fall back to the base rules.
@@ -403,18 +467,18 @@ See course glossary for full definitions
 Answer from memory before checking back through the chapter.
 
 1. Recite the viewport meta tag, and state what most phone browsers do to a page that lacks it.
-2. Say `@media (max-width: 800px)` and `@media (min-width: 800px)` aloud in words, and state what each does at a window exactly 800 pixels wide.
-3. State where this course says breakpoints come from, and describe the resize test that finds one.
-4. Explain why a query block must sit below the base rules it adjusts, naming the cascade tie-breaker that makes it so.
-5. Name the two halves of responsive design as this book taught them, with the chapter that delivered each half.
+2. Explain why a query block must sit below the base rules it adjusts, naming the cascade tie-breaker that makes it so.
+3. Name the two halves of responsive design as this book taught them, with the chapter that delivered each half.
+4. From Chapter 6: State what `flex-wrap` does for a full flex row when the window runs out of width.
+5. From Chapter 4: Explain why an external stylesheet beats inline styles for a multi-page site.
 
 ---
 
-## 8.6 Skills Lab 8A: The Club Site Meets Every Screen
+## 8.6 Skills Lab 8A: The Copperwind Site Meets Every Screen
 
-**Goal:** Retrofit the club's site for every screen: the viewport meta tag on every page, a content-driven small-screen query block, and one more query of your own, proven at three widths in device mode.
+**Goal:** Retrofit the Copperwind site for every screen: the viewport meta tag on every page, a content-driven small-screen query block, and one more query of your own, proven at three widths in device mode.
 
-**Dataset:** Provided files in `assets/code/chapter-08/` from the course data pack. `starter-site/` holds the club's three pages, the `images` folder, and `club-styles.css`, exactly as Skills Lab 6A finished them and Chapter 7's audit left them. The pages validate with zero messages, and no head carries a viewport tag. `club-palette.txt` travels with every CSS chapter, copied unchanged from the Chapter 6 pack. `query-playground.html` and `query-playground.css` are the chapter's practice pair. `no-viewport.html` and `viewport.html` are TIY 8.2's matched pair, one page in two head states. `skills-lab-8a-answers.txt` is your written answers file. The folder's README documents every file. Work at the extracted `cis133` root and copy every hex value from the palette file.
+**Dataset:** Provided files in `assets/code/chapter-08/` from the course data pack. `starter-site/` holds Copperwind's three pages, the `images` folder, and `copperwind-styles.css`, exactly as Skills Lab 6A finished them and Chapter 7's audit left them. The pages validate with zero messages, and no head carries a viewport tag. `copperwind-palette.txt` travels with every CSS chapter, copied unchanged from the Chapter 6 pack. `query-playground.html` and `query-playground.css` are the chapter's practice pair. `no-viewport.html` and `viewport.html` are TIY 8.2's matched pair, one page in two head states. `skills-lab-8a-answers.txt` is your written answers file. The folder's README documents every file. Work at the extracted `cis133` root and copy every hex value from the palette file.
 
 The lab walks the chapter's own path. Part 1 gives every page the tag and gathers the diagnosis. Part 2 turns the diagnosis into the site's first query block. Part 3 adds a query of your own and proves the site at three widths.
 
@@ -428,23 +492,23 @@ The lab walks the chapter's own path. Part 1 gives every page the tag and gather
 ### Part 2: Application (Aligns with Objectives 8.2 and 8.3)
 
 1. Derive the breakpoint. One page in your diagnosis hands you a number. Drag the gallery page inward and find the exact width where its figures stop sharing a line, pinning it down the way TIY 8.3 pinned the flip. Defend the number with content evidence in answer 2.A: what stops fitting there, and what observation or arithmetic produced it. The gallery row's own widths can confirm the number, the way Section 8.3's card arithmetic confirmed 584.
-2. Write the small-screen block. At the bottom of `club-styles.css`, below every base rule, open a `max-width` query at your breakpoint with a comment naming its job. Give it three overrides. The gallery's figures span the full row width. `main`'s side padding tightens, because the laptop cushion spends width a phone cannot spare. And the nav links' padding grows into targets a thumb can hit, which serves Chapter 7's accessibility principle.
+2. Write the small-screen block. At the bottom of `copperwind-styles.css`, below every base rule, open a `max-width` query at your breakpoint with a comment naming its job. Give it three overrides. The gallery's figures span the full row width. `main`'s side padding tightens, because the laptop cushion spends width a phone cannot spare. And the nav links' padding grows into targets a thumb can hit, which serves Chapter 7's accessibility principle.
 3. Prove it fired. Check each page below your breakpoint in device mode and confirm all three overrides show. Then copy the whole block, comment included, into answer 2.A.
 
 ### Part 3: Extension (Aligns with Objective 8.3)
 
 1. Write one more query of your own choosing and defend it in answer 3.A. Two directions are worth the work. A wide-screen enhancement: a `min-width` query that seats three gallery figures when the window offers the room, with your arithmetic shown. Or a further small-screen refinement: a heading that steps down, or a header that stacks its logo above its title. Whichever you choose, the block carries only differences and sits below the rules it adjusts.
 2. Run the three-width verification pass: every page at your phone, mid, and laptop widths from Part 1, in device mode. At each stop confirm the layout you shipped: nothing overflows, nothing crowds, every target is comfortable.
-3. Validate everything: all three pages through the W3C HTML validator and `club-styles.css` through the CSS validator, repairing until every report shows zero messages. Log the results in answer 3.B. Then run the Part III milestone check for the responsive leg: name where a grader sees the site adapt, as a page, a width to set, and a visible change.
+3. Validate everything: all three pages through the W3C HTML validator and `copperwind-styles.css` through the CSS validator, repairing until every report shows zero messages. Log the results in answer 3.B. Then run the Part III milestone check for the responsive leg: name where a grader sees the site adapt, as a page, a width to set, and a visible change.
 
 ### Questions & Analysis 🤔
 
 Answer both questions in the answers file. These answers carry significant rubric weight.
 
-1. Before this lab, `club-styles.css` never asked the window its width, and the site still bent on narrow screens. Name two mechanisms already in the stylesheet that adapt without a query, and explain what your Part 2 block does that neither of them could. Cite one observation from your own Part 1 diagnosis as evidence.
-2. A clubmate skipped the diagnosis and set their breakpoint at 768 pixels because a chart of device widths named it. Defend your Part 2 breakpoint against theirs: what makes a breakpoint right for this site in particular, and what happens to each approach when next year's phones arrive at new sizes?
+1. Before this lab, `copperwind-styles.css` never asked the window its width, and the site still bent on narrow screens. Name two mechanisms already in the stylesheet that adapt without a query, and explain what your Part 2 block does that neither of them could. Cite one observation from your own Part 1 diagnosis as evidence.
+2. A teammate skipped the diagnosis and set their breakpoint at 768 pixels because a chart of device widths named it. Defend your Part 2 breakpoint against theirs: what makes a breakpoint right for this site in particular, and what happens to each approach when next year's phones arrive at new sizes?
 
-**Submission:** Zip your `skills-lab-8a-lastname` folder containing your three HTML pages, your `images` folder, `club-styles.css`, and `skills-lab-8a-answers.txt`, and submit it as `skills-lab-8a-lastname.zip`. All three pages and the stylesheet must validate with zero messages, and every answer must sit under its numbered prompt.
+**Submission:** Zip your `skills-lab-8a-lastname` folder containing your three HTML pages, your `images` folder, `copperwind-styles.css`, and `skills-lab-8a-answers.txt`, and submit it as `skills-lab-8a-lastname.zip`. All three pages and the stylesheet must validate with zero messages, and every answer must sit under its numbered prompt.
 
 ### Rubric: Skills Lab 8A
 
@@ -482,4 +546,4 @@ same everywhere.
 
 ## Looking Ahead ⏩
 
-The club's site now answers every screen size a visitor can bring. Chapter 9 asks the harder question: does it answer every visitor? The accessibility habits you have carried since Chapter 3 (honest alt text, landmarks, focus styles no rule removes) come from a written standard called WCAG, with four principles of its own. You will meet the contrast math behind the palette's passing list, and you will learn what the `rem` unit does for visitors who resize their type. Device mode tested widths. Chapter 9 tests everything else.
+The Copperwind site now answers every screen size a visitor can bring. Chapter 9 asks the harder question: does it answer every visitor? The accessibility habits you have carried since Chapter 3 (honest alt text, landmarks, focus styles no rule removes) come from a written standard called WCAG, with four principles of its own. You will meet the contrast math behind the palette's passing list, and you will learn what the `rem` unit does for visitors who resize their type. Device mode tested widths. Chapter 9 tests everything else.

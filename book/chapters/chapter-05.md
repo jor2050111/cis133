@@ -1,15 +1,15 @@
 # Chapter 5: The Box Model and Typography
 
-Skills Lab 4A sent the club's site to the meeting wearing its own colors, and the president studied every page. The verdict came in two parts. The colors are right. "But it still looks like a form, not a site." Look once and you see the complaint. Heading text presses against the edges of the teal header. The reminder hugs its orange panel. Lines of body text run the full width of the window. Every region ends exactly where its words do, and nothing gets room to breathe.
+Skills Lab 4A sent Copperwind's site back to Priya Sharma wearing its own colors. Priya studied every page. Her verdict came in two parts. The colors are right. "But it still looks like a form, not a site." Look once and you see the complaint. Heading text presses against the edges of the teal header. The reminder hugs its orange panel. Lines of body text run the full width of the window. Every region ends exactly where its words do, and nothing gets room to breathe.
 
-Chapter 4's Looking Ahead promised this chapter would fix that, and the fix starts with a change of eyesight. The browser treats every element you have ever written as a rectangular box with four measurable layers, and CSS sets each layer by name. Space is not something the browser dispenses on a whim. It is a property you declare. The same goes for the site's type, because the club's pages still speak in the browser's default font at the browser's default sizes. Those are two more defaults you now know how to override.
+Chapter 4's Looking Ahead promised this chapter would fix that, and the fix starts with a change of eyesight. The browser treats every element you have ever written as a rectangular box with four measurable layers, and CSS sets each layer by name. Space is not something the browser dispenses on a whim. It is a property you declare. The same goes for the site's type, because Copperwind's pages still speak in the browser's default font at the browser's default sizes. Those are two more defaults you now know how to override.
 
-This chapter works in that order. You will read a box from the inside out and X-ray any element with the browser DevTools box-model diagram. You will space the club's regions with padding and margin, written one side at a time or in shorthand. You will build font stacks that survive any visitor's machine and set sizes that respect the reader. You will finish with a four-point checklist that turns "readable" from an opinion into a diagnosis. Same three pages, same `club-styles.css`. One chapter of space and type.
+This chapter works in that order. You will read a box from the inside out and X-ray any element with the browser DevTools box-model diagram. You will space Copperwind's regions with padding and margin, written one side at a time or in shorthand. You will build font stacks that survive any visitor's machine and set sizes that respect the reader. You will finish with a four-point checklist that turns "readable" from an opinion into a diagnosis. Same three pages, same `copperwind-styles.css`. One chapter of space and type.
 
 ## Module Overview 🧭
 
 * **Estimated time:** 5-6 hours
-* **Prerequisites:** Chapter 4 (CSS rules and selectors, external stylesheets, the club palette, and the CSS validator habit)
+* **Prerequisites:** Chapter 4 (CSS rules and selectors, external stylesheets, the Copperwind palette, and the CSS validator habit)
 * **Deliverables:** Skills Lab 5A deliverable, Quick Checks
 
 ## Learning Objectives 🎯
@@ -37,13 +37,13 @@ Start at the center. The content is the text or image the box exists to hold. Ar
 
 One fact makes the layers easy to tell apart on screen. An element's background color paints its content and its padding, runs on beneath the border to its outer edge, and never touches the margin. A `solid` border hides that last strip of paint, so the background appears to stop where the border starts. Padding is space inside the paint. Margin is space outside it.
 
-The numbers are yours to set. Your data pack ships a practice pair for this chapter, `assets/code/chapter-05/box-practice.html` and `box-practice.css`, which styles three club announcements as boxes you can measure. Here is the first box's rule, exactly as shipped:
+The numbers are yours to set. Your data pack ships a practice pair for this chapter, `assets/code/chapter-05/box-practice.html` and `box-practice.css`, which styles three Copperwind announcements as boxes you can measure. Here is the first box's rule, exactly as shipped:
 
 ```css
 .event-notice {
     width: 300px;
     padding: 24px;
-    border: 3px solid #268080;  /* club teal frames the event */
+    border: 3px solid #268080;  /* copperwind teal frames the event */
     margin-bottom: 16px;
     background-color: #ffffff;
 }
@@ -115,7 +115,10 @@ Single-side properties shine when you mean one side. The practice file's `margin
 A **shorthand property** sets several longhand properties in one declaration. For padding and margin, the shorthand is the bare property name with up to four values. Four values travel clockwise from the top, the way a clock's hand sweeps: top, right, bottom, left.
 
 ```css
-/* Clockwise from the top: 24 top, 32 right, 16 bottom, 32 left. */
+/* Step 1: all four sides need room, so one shorthand line does
+   the work of four longhand declarations. */
+/* Step 2: the sides differ, so spell out all four values,
+   clockwise from the top: 24 top, 32 right, 16 bottom, 32 left. */
 main {
     padding: 24px 32px 16px 32px;
 }
@@ -124,7 +127,9 @@ main {
 Two shorter forms cover most declarations you will write. When top matches bottom and left matches right, two values do the work: vertical first, then horizontal. When all four sides match, one value sets them all, which is what the first box's `padding: 24px` did.
 
 ```css
-/* Two values: 8 top and bottom, 20 left and right. */
+/* Step 3: top matches bottom and left matches right, so two
+   values carry the design: vertical first, then horizontal,
+   8 top and bottom, 20 left and right. */
 .callout {
     padding: 8px 20px;
 }
@@ -154,14 +159,14 @@ figure {
 
 ```css
 /* An accent along one edge only. */
-#meeting-times {
-    border-left: 6px solid #268080;  /* club teal marks the schedule */
+#drop-off-hours {
+    border-left: 6px solid #268080;  /* copperwind teal marks the schedule */
 }
 ```
 
 ### The Readable Column and the Width Surprise
 
-Block-level elements claim the full width of their container, which is why the club's text runs edge to edge on a wide monitor. Long lines exhaust readers, because every line ends with an eye trip back across the screen. The `width` property sets an exact width, and it is usually the wrong tool for text: a box fixed at 640 pixels overflows a phone screen nowhere near that wide. **max-width** makes the promise you mean. Never wider than this, and free to shrink.
+Block-level elements claim the full width of their container, which is why Copperwind's text runs edge to edge on a wide monitor. Long lines exhaust readers, because every line ends with an eye trip back across the screen. The `width` property sets an exact width, and it is usually the wrong tool for text: a box fixed at 640 pixels overflows a phone screen nowhere near that wide. **max-width** makes the promise you mean. Never wider than this, and free to shrink.
 
 Pair it with a margin trick. The value `auto` asks the browser to compute a margin for you, and `margin: 0 auto` (zero top and bottom, auto left and right) splits the leftover horizontal space evenly. The box centers itself.
 
@@ -188,23 +193,69 @@ Developers spent years doing that arithmetic backward from broken layouts, and C
 }
 ```
 
-The `*` at the front is the **universal selector**, which matches every element on the page, and delivering this one rule is most of what you will ever see it do. With the rule in place, all three practice boxes render an even 300 pixels wide, and padding carves space inside that total instead of growing it. Skills Lab 5A makes this rule the first line of the club's stylesheet, and every stylesheet you write from now on should start the same way.
+The `*` at the front is the **universal selector**, which matches every element on the page, and delivering this one rule is most of what you will ever see it do. With the rule in place, all three practice boxes render an even 300 pixels wide, and padding carves space inside that total instead of growing it. Skills Lab 5A makes this rule the first line of Copperwind's stylesheet, and every stylesheet you write from now on should start the same way.
 
 ### Try It Yourself 5.2: The Width Surprise 🛠️
 
 **Predict:** `.volunteer-call` declares the same `width: 300px` as `.event-notice`, but carries 12 of padding and 6 of border per side. Compute its total rendered width. Will the two boxes render the same?
 
-**Run:** Inspect both boxes and read their box-model diagrams against your math. Then add the `* { box-sizing: border-box; }` rule to the top of `box-practice.css`, save, refresh, and measure both boxes again. Leave the rule in place, since the lab makes the same move on the club's site.
+**Run:** Inspect both boxes and read their box-model diagrams against your math. Then add the `* { box-sizing: border-box; }` rule to the top of `box-practice.css`, save, refresh, and measure both boxes again. Leave the rule in place, since the lab makes the same move on Copperwind's site.
 
 **Explain:** In 1-2 sentences, explain what `width` measured before the rule and what it measures after, using the diagram's numbers as evidence.
 
 ### Try It Yourself 5.3: Prove the Clock 🛠️
 
-**Predict:** The third box's rule says `padding: 12px 24px` and `margin: 16px 32px`. Write the four-line longhand expansion of each declaration, all eight values.
+**Predict:** The third box's rule says `padding: 12px 24px` and `margin: 16px 32px`. Write the four-line longhand expansion of each declaration, all eight values. Commit before you read on.
 
-**Run:** Inspect the third announcement box and read the diagram's padding and margin layers, side by side against your predictions.
+**Run:** Here is the expansion with two values missing:
 
-**Explain:** In 1-2 sentences, state the rule that maps two shorthand values onto four sides, and name which sides each value reached.
+```text
+padding-top: 12px;
+padding-right: ____;
+padding-bottom: 12px;
+padding-left: 24px;
+
+margin-top: 16px;
+margin-right: 32px;
+margin-bottom: ____;
+margin-left: 32px;
+```
+
+Fill both gaps from your prediction. Then inspect the third announcement box. Read the diagram's padding and margin layers against all eight values.
+
+**Explain:** In 1-2 sentences, state the rule that maps two shorthand values onto four sides, and name which of the two values each gap took.
+
+### Fix It 5.1: The Values That Traded Places 🔧
+
+A teammate is styling `.workshop-note`, the panel for Copperwind's fall workshops. The design wants 24 pixels of padding above and below the text. It wants 16 at the sides. The teammate writes the shorthand from memory:
+
+```text
+.workshop-note {
+    padding: 16px 24px;
+}
+```
+
+**Symptom:** Nothing errors. The stylesheet validates. Padding arrived on all four sides. Yet the panel looks squat. It has more room at its sides than above its text. The box-model diagram reports the padding ring like this:
+
+```text
+            16
+    24   content   24
+            16
+```
+
+The design put 24 above and below. The diagram shows the 24s on the left and right.
+
+**Diagnose:** Recall the two-value rule: vertical first, then horizontal. The first value sets top and bottom. The second sets left and right. So `padding: 16px 24px` means 16 above and below, and 24 at the sides. The two numbers are crossed. The browser did exactly what the rule said. No validator can hear what the author meant.
+
+**Repair:** Swap the values so the vertical number comes first:
+
+```css
+.workshop-note {
+    padding: 24px 16px;  /* 24 above and below, 16 at the sides */
+}
+```
+
+**Verify:** Save, refresh, and re-read the box-model diagram. The padding ring now reports 24 top and bottom, 16 left and right. Those are the numbers the design asked for. A silent bug leaves no message to check, so the diagram is the proof.
 
 ### Quick Check 5.2 ✅
 
@@ -216,7 +267,7 @@ The `*` at the front is the **universal selector**, which matches every element 
 
 ## 5.3 Choosing Fonts
 
-Space was half the president's complaint. The other half is type. Every page you have shipped so far speaks in the browser's default font, one more default style you have now learned to see. The property that changes it is `font-family`, and its value has a shape worth understanding before you write one.
+Space was half of Priya's complaint. The other half is type. Every page you have shipped so far speaks in the browser's default font, one more default style you have now learned to see. The property that changes it is `font-family`, and its value has a shape worth understanding before you write one.
 
 ### Font Stacks: First Choice, Backup, Safety Net
 
@@ -265,16 +316,23 @@ Stacks built on installed fonts limit you to a short shared list. Google Fonts (
 ```html
 <head>
     <meta charset="UTF-8">
-    <title>Contact | PC Computer Club</title>
+    <title>Contact | Copperwind Community</title>
+    <!-- Step 1: borrow the heading font through one link, a
+     stylesheet Google hosts for you -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400..700&display=swap">
-    <link rel="stylesheet" href="club-styles.css">
+    <!-- Step 2: keep the site's own stylesheet linked beside it,
+     because the borrowed font changes nothing by itself -->
+    <link rel="stylesheet" href="copperwind-styles.css">
 </head>
 ```
 
 Google's embed panel currently hands out a three-link version of the same connection. Both forms work, and the single link keeps the lesson in one line. The link delivers the font, and your stack decides to use it. Keep the stack honest: back a borrowed font with installed fonts of the same character, so the design degrades gracefully if the download ever fails.
 
 ```css
-/* Oswald is a condensed sans, so its backups stay sans. */
+/* Step 3: the link only delivers the font, so a font stack
+   must opt the headings in by name. */
+/* Step 4: Oswald is a condensed sans, so its backups stay sans
+   and the design degrades gracefully if the download fails. */
 h1, h2 {
     font-family: "Oswald", Arial, sans-serif;
 }
@@ -331,7 +389,7 @@ a {
 }
 ```
 
-Resist, at least for links inside body text. The underline there is not decoration. It is the signal that says "this is a link," and it works for every visitor, including colorblind visitors a color change alone would strand. Strip it and your links dress like ordinary words. Navigation bars may drop underlines by convention, because their position announces what they are, and Chapter 6 styles the club's nav properly. (The club's footer links still wear the browser's default blue on deep teal, a pairing Chapter 6's sharper selectors will finally fix.)
+Resist, at least for links inside body text. The underline there is not decoration. It is the signal that says "this is a link," and it works for every visitor, including colorblind visitors a color change alone would strand. Strip it and your links dress like ordinary words. Navigation bars may drop underlines by convention, because their position announces what they are, and Chapter 6 styles Copperwind's nav properly. (The site's footer links still wear the browser's default blue on deep teal, a pairing Chapter 6's sharper selectors will finally fix.)
 
 ### line-height: Room Between Lines
 
@@ -372,7 +430,7 @@ The practice page saves its worst region for last, and it is cramped on purpose.
 ### Quick Check 5.4 ✅
 
 1. A teammate wants clean edges on both sides of every paragraph and proposes `text-align: justify`. Predict the result on the web, and name what it costs the reader.
-2. The club wants its short section headings in caps. Compare typing the headings in caps in the HTML against `text-transform: uppercase` in the stylesheet: which survives a redesign, and why?
+2. Copperwind wants its short section headings in caps. Compare typing the headings in caps in the HTML against `text-transform: uppercase` in the stylesheet: which survives a redesign, and why?
 3. A page passes every contrast pairing, yet readers on wide monitors complain they keep losing their place between lines. Which two checklist points do you examine first, and which property fixes each?
 
 ---
@@ -401,27 +459,27 @@ See course glossary for full definitions
 
 Answer from memory before checking back through the chapter.
 
-1. List the box model's four layers from the inside out, and state which layers an element's background color paints.
-2. Expand `padding: 12px 24px` into its four longhand declarations, then state the order in which four-value shorthand travels.
-3. Explain how a box declaring `width: 300px` can render 354 pixels wide, and write the rule that prevents the surprise site-wide.
-4. Write a body font stack from memory that ends in a generic family, and state the job of each position in it.
-5. Recite the four-point readability checklist and pair each point with the CSS property that controls it.
+1. Expand `padding: 12px 24px` into its four longhand declarations, then state the order in which four-value shorthand travels.
+2. Write a body font stack from memory that ends in a generic family, and state the job of each position in it.
+3. Recite the four-point readability checklist and pair each point with the CSS property that controls it.
+4. From Chapter 3: Name the generic block-level container and the generic inline container. Then say how block-level and inline elements behave, one sentence each.
+5. From Chapter 1: State what HTTPS protects that plain HTTP does not.
 
 ---
 
-## 5.6 Skills Lab 5A: Give the Club's Site Breathing Room
+## 5.6 Skills Lab 5A: Give Copperwind's Site Breathing Room
 
-**Goal:** Space the club's site with the box model and set its typography so every page reads comfortably, diagnosing your own spacing with the DevTools box-model diagram.
+**Goal:** Space Copperwind's site with the box model and set its typography so every page reads comfortably, diagnosing your own spacing with the DevTools box-model diagram.
 
-**Dataset:** Provided files in `assets/code/chapter-05/` from the course data pack. `starter-site/` holds the club's three pages (`recycling-guide.html`, `drive-gallery.html`, `contact.html`), the stylesheet Skills Lab 4A built (`club-styles.css`), and the `images` folder, all validating with zero messages. `club-palette.txt` travels with every CSS chapter, copied unchanged from the Chapter 4 pack. `skills-lab-5a-answers.txt` is your written answers file, and the folder's README documents every file. Work at the extracted `cis133` root and copy every hex value from the palette file.
+**Dataset:** Provided files in `assets/code/chapter-05/` from the course data pack. `starter-site/` holds Copperwind's three pages (`recycling-guide.html`, `drive-gallery.html`, `contact.html`), the stylesheet Skills Lab 4A built (`copperwind-styles.css`), and the `images` folder, all validating with zero messages. `copperwind-palette.txt` travels with every CSS chapter, copied unchanged from the Chapter 4 pack. `skills-lab-5a-answers.txt` is your written answers file, and the folder's README documents every file. Work at the extracted `cis133` root and copy every hex value from the palette file.
 
 The lab walks the chapter's own path. Part 1 spaces the regions, Part 2 builds the readable column and sets the site's type, and Part 3 borrows a heading font and closes with a DevTools diagnosis.
 
 ### Part 1: Foundation (Aligns with Objective 5.1)
 
 1. Copy the whole `starter-site` folder to your `cis133` root and rename the copy `skills-lab-5a-lastname`. Copy `skills-lab-5a-answers.txt` into it.
-2. Set the site's sizing baseline: add `* { box-sizing: border-box; }` at the top of `club-styles.css`, below the file comment, with a comment saying what it makes `width` mean.
-3. Space the regions. Give the header, nav, and footer padding so their text stops pressing against their colored edges. Pad the `.reminder` and `#meeting-times` panels the same way. Give the figures margins where they crowd their neighbors.
+2. Set the site's sizing baseline: add `* { box-sizing: border-box; }` at the top of `copperwind-styles.css`, below the file comment, with a comment saying what it makes `width` mean.
+3. Space the regions. Give the header, nav, and footer padding so their text stops pressing against their colored edges. Pad the `.reminder` and `#drop-off-hours` panels the same way. Give the figures margins where they crowd their neighbors.
 4. Write at least one of those rules with a two-value or four-value shorthand, and say in a comment which sides it reaches.
 5. Record one region's before and after in answer 1.A, with the rule that made the difference, and your shorthand's four-line expansion in answer 1.B.
 
@@ -436,16 +494,16 @@ The lab walks the chapter's own path. Part 1 spaces the regions, Part 2 builds t
 
 1. Borrow one Google Font for the site's headings using the single-link form from Section 5.3, back it with an honest fallback stack, and defend the pick in a CSS comment above the rule.
 2. Run a diagnosis. Find one element on any page whose spacing still looks wrong, transcribe its box-model diagram numbers into answer 3.A, name the layer at fault, and fix it with the fewest declarations that solve it.
-3. Validate everything: all three pages through the W3C HTML validator and `club-styles.css` through the CSS validator, repairing until every report shows zero messages. Log the results in answer 3.B and finish with the critique no validator can make: one thing about your styling you would still improve, and why.
+3. Validate everything: all three pages through the W3C HTML validator and `copperwind-styles.css` through the CSS validator, repairing until every report shows zero messages. Log the results in answer 3.B and finish with the critique no validator can make: one thing about your styling you would still improve, and why.
 
 ### Questions & Analysis 🤔
 
 Answer both questions in the answers file. These answers carry significant rubric weight.
 
-1. Judge your finished site against the chapter's four-point readability checklist: contrast, size, line height, and line length. Cite one checklist item your work satisfies, name the exact rule in `club-styles.css` that satisfies it, and explain how the page reads differently because of it.
+1. Judge your finished site against the chapter's four-point readability checklist: contrast, size, line height, and line length. Cite one checklist item your work satisfies, name the exact rule in `copperwind-styles.css` that satisfies it, and explain how the page reads differently because of it.
 2. Tell the story of your Part 3 diagnosis: what the box-model diagram showed for your chosen element, and why the browser was doing exactly what your CSS told it to do. Close with what the diagram gave you that guess-and-refresh could not.
 
-**Submission:** Zip your `skills-lab-5a-lastname` folder containing your three HTML pages, your `images` folder, `club-styles.css`, and `skills-lab-5a-answers.txt`, and submit it as `skills-lab-5a-lastname.zip`. All three pages and the stylesheet must validate with zero messages, and every answer must sit under its numbered prompt.
+**Submission:** Zip your `skills-lab-5a-lastname` folder containing your three HTML pages, your `images` folder, `copperwind-styles.css`, and `skills-lab-5a-answers.txt`, and submit it as `skills-lab-5a-lastname.zip`. All three pages and the stylesheet must validate with zero messages, and every answer must sit under its numbered prompt.
 
 ### Rubric: Skills Lab 5A
 
@@ -467,7 +525,7 @@ same everywhere.
 
 3. **Apply:** The tutoring center's site from earlier chapters wants breathing room too, and three requests came in. The pages need a centered reading column no wider than 640 pixels. Body text needs comfortable room between lines. The "bring your student ID" reminder needs space between its text and the edges of its highlight panel. Write the rule or declaration that answers each request, inventing role-based names where needed, and give one reason apiece.
 
-4. **Analyze:** A clubmate complains: "I gave the announcement box `margin: 24px`, and the text still touches the box's edge." The box-model diagram shows content 300 wide, padding 0 on every side, border 3, margin 24. Diagnose the defect: name the layer they aimed at, the layer their complaint is about, and the fix. Then explain what the diagram settled that another round of guess-and-refresh could not.
+4. **Analyze:** A teammate complains: "I gave the announcement box `margin: 24px`, and the text still touches the box's edge." The box-model diagram shows content 300 wide, padding 0 on every side, border 3, margin 24. Diagnose the defect: name the layer they aimed at, the layer their complaint is about, and the fix. Then explain what the diagram settled that another round of guess-and-refresh could not.
 
 ---
 
@@ -483,4 +541,4 @@ same everywhere.
 
 ## Looking Ahead ⏩
 
-The club's site can breathe now, and its type is chosen instead of inherited. One structure is still wearing a disguise: the nav is a bulleted list in colors, and Chapter 4 promised it would become a real navigation bar. Chapter 6 pays that oldest debt with Flexbox, CSS's system for arranging boxes side by side, plus selectors sharp enough to style the links inside one region without touching another's. You can space and dress boxes now. Next you arrange them.
+Copperwind's site can breathe now, and its type is chosen instead of inherited. One structure is still wearing a disguise: the nav is a bulleted list in colors, and Chapter 4 promised it would become a real navigation bar. Chapter 6 pays that oldest debt with Flexbox, CSS's system for arranging boxes side by side, plus selectors sharp enough to style the links inside one region without touching another's. You can space and dress boxes now. Next you arrange them.

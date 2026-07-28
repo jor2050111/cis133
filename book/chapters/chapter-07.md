@@ -1,8 +1,8 @@
 # Chapter 7: UX and Web Design
 
-Skills Lab 6A sent the club's site out the door with its Part II milestone complete. Three pages share one stylesheet, the header lays its logo and title on a flex line, and the navigation bar answers the mouse and the keyboard alike. Notice the fact hiding inside that success: you never drew a plan. You never needed one. Three pages fit in one head, and every decision could wait until your cursor was already in the file.
+Skills Lab 6A sent Copperwind's site out the door with its Part II milestone complete. Three pages share one stylesheet, the header lays its logo and title on a flex line, and the navigation bar answers the mouse and the keyboard alike. Notice the fact hiding inside that success: you never drew a plan. You never needed one. Three pages fit in one head, and every decision could wait until your cursor was already in the file.
 
-That approach stops working the moment a site wants to grow, and the club's site wants to grow. This chapter's Skills Lab opens with a brief from the club's officers asking for more, and asking to see a plan before anyone writes markup. The request is standard practice, not caution. Professionals plan on paper first because the costs are lopsided. A sketch changes in minutes. Built pages change in hours, and the hours multiply across every page the change touches.
+That approach stops working the moment a site wants to grow, and Copperwind's site wants to grow. This chapter's Skills Lab opens with a brief from Priya Sharma, the program's outreach coordinator. She asks for three new pages, and she asks to see a plan before anyone writes markup. The request is standard practice, not caution. Professionals plan on paper first because the costs are lopsided. A sketch changes in minutes. Built pages change in hours, and the hours multiply across every page the change touches.
 
 Chapter 7 opens Part III, Design for Every User, and it works differently than the chapters before it: more drawing than typing. You will turn goals and audiences into pages. You will separate user experience from user interface and measure both with five principles. You will draw sitemaps and wireframes, and discover that every box in them is something you already own. By the end you will assemble all of it into a site plan, the same document you can use to launch an independent project.
 
@@ -29,7 +29,7 @@ By the end of this chapter, you will be able to:
 
 ## 7.1 Plan Before You Code
 
-Every chapter so far started at the keyboard, and for good reason: you had elements, rules, and tools to learn, and the club's site stayed small enough to design as you typed. Professional sites do not start there. They start with questions on paper, because of one lopsided piece of arithmetic. Changing a sketch costs minutes. Changing built pages costs hours, and the cost multiplies by the number of pages the change touches. Add one page to a three-page site and every page's navigation bar needs an edit. Discover after building that the pages themselves are the wrong pages, and the bill covers everything.
+Every chapter so far started at the keyboard, and for good reason: you had elements, rules, and tools to learn, and Copperwind's site stayed small enough to design as you typed. Professional sites do not start there. They start with questions on paper, because of one lopsided piece of arithmetic. Changing a sketch costs minutes. Changing built pages costs hours, and the cost multiplies by the number of pages the change touches. Add one page to a three-page site and every page's navigation bar needs an edit. Discover after building that the pages themselves are the wrong pages, and the bill covers everything.
 
 Planning does not require new software. It requires answers to three questions, in order: what the site must accomplish, who it serves, and what those people will do there. This section asks the questions. The rest of the chapter turns the answers into diagrams a developer can build from.
 
@@ -111,12 +111,12 @@ Here is Objective 7.1's skill in one move. When a design decision lands on your 
 | The navigation bar keeps one label order on every page | UX | consistency |
 | A link inverts its colors under the pointer and the Tab key | UI | feedback |
 | The gallery row wraps on a narrow window instead of squeezing | UX | responsiveness |
-| Meeting times sit one click away from every page | UX | usability |
+| Drop-off hours sit one click away from every page | UX | usability |
 | Every page's headings render in the same Oswald stack | UI | consistency |
 
 Read the middle column and the pattern shows: UI rows pick the paint, and UX rows shape the visit. Both matter. The principle column is what connects them, because a UI choice earns its place by serving a principle. The inverted link colors are paint, chosen so the feedback is visible.
 
-The principles also argue with each other, and sorting helps there too. Suppose a clubmate proposes a navigation bar that hides itself until the pointer reaches the top of the window. The screen gains room, which is a usability point on small displays. But the bar stops being findable, keyboard visitors may never summon it, and no other page on the site behaves that way. One UI idea picked fights with usability, accessibility, and consistency at once. Design is deciding which principle wins, on purpose, and writing the decision down.
+The principles also argue with each other, and sorting helps there too. Suppose a teammate proposes a navigation bar that hides itself until the pointer reaches the top of the window. The screen gains room, which is a usability point on small displays. But the bar stops being findable, keyboard visitors may never summon it, and no other page on the site behaves that way. One UI idea picked fights with usability, accessibility, and consistency at once. Design is deciding which principle wins, on purpose, and writing the decision down.
 
 ### Try It Yourself 7.2: A Field Audit in Five Principles 🛠️
 
@@ -130,7 +130,7 @@ The principles also argue with each other, and sorting helps there too. Suppose 
 
 1. Two decisions arrive for review: (a) the site's search box sits in the same corner of every page, and (b) the search button shows a magnifying glass icon in the site's brand color. Sort each into UX or UI and name the principle at stake.
 2. A site's links change color under the pointer and give nothing to the Tab key. Which principle is only half-served, and which visitors pay for the missing half?
-3. A clubmate calls accessibility "the Chapter 9 topic." Correct the timeline: name two techniques from earlier chapters that already serve that principle.
+3. A classmate calls accessibility "the Chapter 9 topic." Correct the timeline: name two techniques from earlier chapters that already serve that principle.
 
 ---
 
@@ -143,9 +143,12 @@ With goals, audiences, and principles in hand, you can draw the plan itself. Two
 A **sitemap** is a diagram of a site's structure: every page, branching from the home page, with connections showing how the pages relate. Section 7.1 already turned the tutoring center's audiences into pages. The sitemap arranges those pages into a tree and records how they connect:
 
 ```text
+[Step 1: start the tree at Home, the file name Chapter 3 banked]
 Home (index.html)
+[Step 2: give each page a visitor action earned a top-level branch]
  +-- Subjects (subjects.html)
  +-- Hours and Booking (hours.html)
+ |    [Step 3: nest the FAQ under the page its questions belong to]
  |    +-- FAQ (faq.html)
  +-- Study Tips (study-tips.html)
  +-- Contact (contact.html)
@@ -205,13 +208,18 @@ The boxes carry content notes, not content. "Math card" stands for whatever that
 Chapter 6 closed with a promise: you can build any layout you can sketch, once you learn to sketch deliberately. Here is the payment. Read the wireframe's labels again. Every outer box is a landmark you have written since Chapter 3, and every row of side-by-side boxes is a flex line you built in Chapter 6:
 
 ```text
+[Step 1: match every outer box to a Chapter 3 landmark]
 wireframe box            what you already own
 -------------            ----------------------------------------
 header                   <header> holding the logo and site title
 nav                      <nav> holding the list of links
+[Step 2: seat the page heading at the top of main]
 h1: page heading         <h1> at the top of <main>
+[Step 3: read every side-by-side row as a Chapter 6 flex line]
 row of three cards       a flex container and its three cards
+[Step 4: give a one-page region a section with an id to style]
 sign-up banner           a <section> with an id, styled once
+[Step 5: close with the footer landmark every page shares]
 footer                   <footer> holding the closing links
 ```
 
@@ -296,11 +304,32 @@ One artifact exists past the wireframe, and you should recognize its name. A **p
 
 ### Try It Yourself 7.4: Wireframe a Page You Did Not Build 🛠️
 
-**Predict:** Return to the article page from TIY 7.2, this time for its layout. Before drawing, predict two counts: how many outer regions the page stacks from top to bottom, and how many boxes sit side by side at laptop width.
+Return to the article page from TIY 7.2, this time for its layout. Most of its laptop-width wireframe is already drawn below. Two region labels are blanked:
 
-**Run:** Draw the article page as a wireframe: boxes and labels only, on paper or in keyboard characters. Label every box you can with the landmark element it would be, and mark each side-by-side row as a flex line.
+```text
++---------------------------------------------------------------+
+| ____                                                          |
+|  [ logo ]  [ search box ]  [ account links ]                  |
++---------------------------------------------------------------+
+| main                                                          |
+|  +------------------+  +---------------------------------+    |
+|  | ____             |  | article body                    |    |
+|  |  list of links   |  |  h1: article title              |    |
+|  |  to this         |  |  text sections with figures     |    |
+|  |  article's       |  |                                 |    |
+|  |  sections        |  |                                 |    |
+|  +------------------+  +---------------------------------+    |
++---------------------------------------------------------------+
+| footer                                                        |
+|  license line and site links                                  |
++---------------------------------------------------------------+
+```
 
-**Explain:** In 1-2 sentences, name the boxes that mapped cleanly onto landmarks you own, and the one box that resisted a label.
+**Predict:** Commit to a landmark label for each blank before you open the page, and defend each call with the box-to-landmark mapping. Which element owns the strip of site-wide tools at the top, and which element owns a box whose whole job is a list of links?
+
+**Run:** Open the article and check both calls against the page. Then complete the wireframe: write your two labels into the blanks, and mark the one side-by-side row as a flex line.
+
+**Explain:** In 1-2 sentences, report whether the page confirmed both calls, and name one box in the frame that resists a landmark label.
 
 ### Quick Check 7.3 ✅
 
@@ -324,7 +353,7 @@ A **navigation label** is the visible text of a navigation bar link, and it live
 | Resources | borderline | Promises a page exists without saying what it holds |
 | Learn More | fail | More about what? The label only works mid-sentence |
 
-The club's own bar passes this test today. Recycling Guide, Spring Drive Gallery, and Contact the Club each name their destination, which is one reason the site's three pages have needed no instructions.
+Copperwind's own bar passes this test today. Recycling Guide, Spring Drive Gallery, and Contact the Team each name their destination, which is one reason the site's three pages have needed no instructions.
 
 The bar itself follows two more conventions. It keeps the same labels, in the same order, in the same place on every page, which is the consistency principle doing quiet work. And every page should answer "where am I now": the page's `h1` and its `title` carry that answer today, and many sites also mark the current page's label in the bar. On the tutoring center's plan, the hours page would answer with an `h1` of Hours and Booking, the Chapter 2 pairing doing navigation work. Deep sites add breadcrumbs, a trail of links tracing the path from the home page to the current one. Your sites run two levels deep, so a clear bar and honest headings cover the question.
 
@@ -337,7 +366,7 @@ Layout has one more audience fact worth planning around. Readers of left-to-righ
 
 ### Consistency Across Pages, on Purpose
 
-Look at what the club's site already does right. Every page shares the same header, the same navigation bar, the same footer, and the one stylesheet behind them all. A visitor who learns one page has learned all three. None of that happened by luck. It happened because one file owns the look and every page loads it. A site plan writes such rules down as promises: the shared regions, the one stylesheet, whatever must never vary from page to page. Breaking a written rule later is still allowed. It becomes a design decision that needs a reason, instead of an accident nobody catches.
+Look at what Copperwind's site already does right. Every page shares the same header, the same navigation bar, the same footer, and the one stylesheet behind them all. A visitor who learns one page has learned all three. None of that happened by luck. It happened because one file owns the look and every page loads it. A site plan writes such rules down as promises: the shared regions, the one stylesheet, whatever must never vary from page to page. Breaking a written rule later is still allowed. It becomes a design decision that needs a reason, instead of an accident nobody catches.
 
 ### Test the Plan on a Person
 
@@ -362,7 +391,7 @@ In one document, the plan does two jobs. It is the builder's blueprint, specific
 
 If your course includes an independent multi-page project, use this chapter's process to plan it. Your topic, audience, sitemap, wireframes, navigation plan, and consistency rules belong in one site plan. Your instructor can assign that milestone wherever it fits the course calendar without changing this chapter.
 
-Choose the topic with the remaining chapters in mind. It needs enough content for several pages, an audience you can name, and at least one person you can hand the plan to for the ten-minute test. A club you belong to, a hobby you can teach, or a cause you can document all carry that weight.
+Choose the topic with the remaining chapters in mind. It needs enough content for several pages, an audience you can name, and at least one person you can hand the plan to for the ten-minute test. A group you belong to, a hobby you can teach, or a cause you can document all carry that weight.
 
 ### Try It Yourself 7.5: The Label Audit 🛠️
 
@@ -371,6 +400,47 @@ Choose the topic with the remaining chapters in mind. It needs enough content fo
 **Run:** Click through all five labels, one at a time. Grade each label pass or fail: pass means the page matches what a first-time visitor would predict from the label alone.
 
 **Explain:** In 1-2 sentences, name the label that earned its pass most clearly and the one you would rewrite, with the label text you would ship instead.
+
+### Fix It 7.1: The Plan That Fails Its Own Audit 🔧
+
+A classmate is planning a community garden's site and sends over the draft plan's structure sections for a second pair of eyes. Here is the fragment:
+
+```text
+SITEMAP
+Home (index.html)
+ +-- Plot Signup (plot-signup.html)
+ +-- Garden Calendar (calendar.html)
+ +-- Contact (contact.html)
+
+NAVIGATION PLAN
+Home | Click Here | More | Contact | Donate
+```
+
+**Symptom:** Run this section's label audit before anything gets built. Read the bar the way a screen reader's link list reads it: labels alone, in order, with no page around them:
+
+```text
+Home, Click Here, More, Contact, Donate
+```
+
+Two announcements predict nothing. Click Here leads where? More of what? The bar also promises a fifth page, Donate, and the audit cannot find its destination anywhere in the plan.
+
+**Diagnose:** Name both defects before you touch the plan. First, Click Here and More break the label law. Each one only works mid-sentence, so it fails any visitor who meets it out of context, which is exactly how Devon's screen reader serves links. Second, the navigation plan and the sitemap disagree. The bar lists Donate, and the tree never names a Donate page. Remember the working rule: a page that is not in the tree does not exist. One of the two sections is lying, and the plan cannot say which.
+
+**Repair:** Rewrite the two vague labels to name their destinations. The classmate meant Click Here for the signup page and More for the calendar, so each link takes its page's own name. Then settle Donate's fate. The garden confirms it wants the page, so Donate earns a place in the tree, with a file name:
+
+```text
+SITEMAP
+Home (index.html)
+ +-- Plot Signup (plot-signup.html)
+ +-- Garden Calendar (calendar.html)
+ +-- Donate (donate.html)
+ +-- Contact (contact.html)
+
+NAVIGATION PLAN
+Home | Plot Signup | Garden Calendar | Donate | Contact
+```
+
+**Verify:** Re-run the label audit on the repaired plan. Read the bar as an isolated list again: Home, Plot Signup, Garden Calendar, Donate, Contact. Every label now predicts its page, and every promised page lives in the tree with a file name. Both defects died at sketch cost, minutes instead of hours, before a single file existed.
 
 ### Quick Check 7.4 ✅
 
@@ -406,24 +476,24 @@ Answer from memory before checking back through the chapter.
 
 1. Name the five UX principles, and pair each with one technique from Chapters 3-6 that already serves it.
 2. List the six sections of a site plan in order, and state in one line what question each section answers.
-3. Explain what a sitemap decides that a wireframe cannot, and what a wireframe decides that a sitemap cannot.
-4. Recite the label law for navigation bars, and name the test every label must pass before it ships.
-5. Describe what changes between a desktop wireframe and its phone twin, and name the one change you can already build with Chapter 6 tools.
+3. Describe what changes between a desktop wireframe and its phone twin, and name the one change you can already build with Chapter 6 tools.
+4. From Chapter 5: Recite the four-point readability checklist that turns "readable" from an opinion into a diagnosis.
+5. From Chapter 3: Name the landmark element that holds a page's unique content, and state how many of them one page may hold.
 
 ---
 
-## 7.6 Skills Lab 7A: The Club Site Grows Up
+## 7.6 Skills Lab 7A: The Copperwind Site Grows Up
 
-**Goal:** Produce a stakeholder-ready site plan that grows the club's three-page site into the six-page site its officers asked for.
+**Goal:** Produce a stakeholder-ready site plan that grows Copperwind's three-page site into the six-page site the outreach team asked for.
 
-**Dataset:** Provided files in `assets/code/chapter-07/` from the course data pack. This lab ships planning artifacts instead of starter code. `project-brief.txt` is the expansion brief from the club's officers and the lab's founding document. `club-site/` holds the club's finished site exactly as Skills Lab 6A leaves it (three pages, `club-styles.css`, and the `images` folder), and it is the shared audit target, documented in the folder's README. `ux-audit-worksheet.txt` turns the five principles into an audit instrument. `site-plan-template.txt` is the plan document's skeleton, and the same template supports Independent Project Milestone 1. `wireframe-examples.txt` holds copy-and-adapt text frames at both widths. `skills-lab-7a-answers.txt` is your written answers file. Work at the extracted `cis133` root, and leave `club-site/` unedited: it returns as Chapter 8's starter site.
+**Dataset:** Provided files in `assets/code/chapter-07/` from the course data pack. This lab ships planning artifacts instead of starter code. `project-brief.txt` is the lab's founding document: the expansion brief from Priya Sharma, the program's outreach coordinator. It keeps the three existing pages, asks for a home page, an events page, and a join page, and names two audiences: neighbors with a drawer full of electronics, and prospective volunteers. Its goals are the checkable kind Section 7.1 asked for, down to a number: ten new volunteers by December. `copperwind-site/` holds Copperwind's finished site exactly as Skills Lab 6A leaves it (three pages, `copperwind-styles.css`, and the `images` folder), and it is the shared audit target, documented in the folder's README. `ux-audit-worksheet.txt` turns the five principles into an audit instrument. `site-plan-template.txt` is the plan document's skeleton, and the same template supports Independent Project Milestone 1. `wireframe-examples.txt` holds copy-and-adapt text frames at both widths. `skills-lab-7a-answers.txt` is your written answers file. Work at the extracted `cis133` root, and leave `copperwind-site/` unedited: it returns as Chapter 8's starter site.
 
 The lab walks the chapter's own path. Part 1 digests the brief and audits the site you just finished building. Part 2 draws the structure and the layouts. Part 3 assembles the stakeholder document and closes with the judgment call no template can make for you.
 
 ### Part 1: Foundation (Aligns with Objectives 7.1 and 7.3)
 
-1. Create a folder named `skills-lab-7a-lastname` at your `cis133` root, and copy `skills-lab-7a-answers.txt` and `ux-audit-worksheet.txt` into it. Read `project-brief.txt` twice: once straight through, once with a pen. Restate the club's goals and its two audiences in your own words in answer 1.A. The officers' sentences are off limits. Prove you understood them.
-2. Audit the provided club site against the five principles. Open the three `club-site/` pages in your browser and the stylesheet in VS Code, then work through the worksheet principle by principle. Follow each what-to-check prompt, and log at least one strength and one gap wherever they exist. Point at pages and regions, not feelings. Everyone audits this shared copy instead of their own Lab 6A build, so every student critiques the same site.
+1. Create a folder named `skills-lab-7a-lastname` at your `cis133` root, and copy `skills-lab-7a-answers.txt` and `ux-audit-worksheet.txt` into it. Read `project-brief.txt` twice: once straight through, once with a pen. Restate the program's goals and its two audiences in your own words in answer 1.A. The team's sentences are off limits. Prove you understood them.
+2. Audit the provided Copperwind site against the five principles. Open the three `copperwind-site/` pages in your browser and the stylesheet in VS Code, then work through the worksheet principle by principle. Follow each what-to-check prompt, and log at least one strength and one gap wherever they exist. Point at pages and regions, not feelings. Everyone audits this shared copy instead of their own Lab 6A build, so every student critiques the same site.
 3. Complete the worksheet's headline finding: the one gap you would fix first, and why it costs the site's visitors the most. Then summarize the audit in answer 1.B: your strongest strength and costliest gap, each tied to its principle, and who feels each one most.
 
 ### Part 2: Application (Aligns with Objective 7.2)
@@ -435,8 +505,8 @@ The lab walks the chapter's own path. Part 1 digests the brief and audits the si
 ### Part 3: Extension (Aligns with Objectives 7.2 and 7.3)
 
 1. Write the navigation plan: the bar's labels in order, each defended in one line as a descriptive label (what it leads to, and why a visitor would predict that before clicking). Record the labels and defenses in answer 3.A.
-2. Write the consistency rules every page will follow: the shared regions, the one stylesheet, and anything else that must never vary. Remember the officers' closing constraint. The colors and the logo stay, and the new pages must match.
-3. Assemble the full site plan from `site-plan-template.txt`, addressed to the club's officers, with every section complete. Then close with the self-critique in answer 3.B: the two biggest UX risks in your own plan, and the one-user test you would run for each risk before building anything.
+2. Write the consistency rules every page will follow: the shared regions, the one stylesheet, and anything else that must never vary. Remember the brief's closing constraint. The colors and the logo stay, and the new pages must match.
+3. Assemble the full site plan from `site-plan-template.txt`, addressed to Copperwind's outreach team, with every section complete. Then close with the self-critique in answer 3.B: the two biggest UX risks in your own plan, and the one-user test you would run for each risk before building anything.
 
 ### Questions & Analysis 🤔
 
@@ -483,4 +553,4 @@ same everywhere.
 
 ## Looking Ahead ⏩
 
-Your phone-width wireframes made promises this chapter's toolbox cannot fully keep. `flex-wrap` lets full rows break, and that is half of responsive design. Chapter 8 delivers the other half, media queries: style rules that switch on at chosen screen widths, so one stylesheet serves every frame you drew. The club's site returns as that chapter's starter files, and your narrow sketches stop being promises.
+Your phone-width wireframes made promises this chapter's toolbox cannot fully keep. `flex-wrap` lets full rows break, and that is half of responsive design. Chapter 8 delivers the other half, media queries: style rules that switch on at chosen screen widths, so one stylesheet serves every frame you drew. Copperwind's site returns as that chapter's starter files, and your narrow sketches stop being promises.

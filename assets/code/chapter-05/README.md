@@ -35,7 +35,7 @@ The stylesheet's design, for orientation: ink text on a light sand
 base, a copperwind teal header with white text, a white nav bar, a deep
 teal footer, deep teal h2 headings and figure captions, a reminder
 class on sunset orange used on two pages, one id on the contact
-page's meeting schedule with a sand panel, and white plates behind
+page's drop-off schedule with a sand panel, and white plates behind
 the figures. Every text-on-background pairing appears on the
 palette file's passing list.
 
