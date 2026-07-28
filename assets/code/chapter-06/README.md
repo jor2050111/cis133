@@ -60,12 +60,12 @@ pixels.
 | File | Pixels | Contents |
 | ---- | ------ | -------- |
 | `copperwind-logo.png` | 240 x 240 | Copperwind logo: a saguaro, mountains, and a copper wind ribbon in a teal ring. Transparent background |
-| `recycling-drive.png` | 800 x 450 | Outdoor collection table scene with labeled bins and students |
+| `recycling-drive.png` | 800 x 450 | Outdoor collection drive: a canopy table, a volunteer, neighbors carrying devices, icon-marked bins |
 | `devices-collected-chart.png` | 640 x 400 | Bar chart of items collected at the spring drive, five categories |
-| `desert-divider.png` | 800 x 24 | Thin decorative strip of alternating diamonds |
-| `sorting-station.png` | 640 x 360 | Volunteer sorting donations into three labeled bins |
-| `donation-boxes.png` | 640 x 360 | Three cardboard boxes filled with coiled cables |
-| `volunteer-crew.png` | 640 x 360 | Four volunteers behind the drive's welcome table |
+| `desert-divider.png` | 800 x 24 | Thin desert horizon strip: mountain silhouettes and tiny saguaros |
+| `sorting-station.png` | 640 x 360 | A volunteer sorting phones, laptops, and cables into bins, seen from above |
+| `donation-boxes.png` | 640 x 360 | Open cardboard boxes filled with donated electronics |
+| `volunteer-crew.png` | 640 x 360 | Six volunteers, one using a wheelchair, standing near the collection bins |
 
 ## File details
 
@@ -103,8 +103,8 @@ folder unrenamed.
 ## Source and license
 
 Written for CIS133 by the course author. Copperwind IT Services is a fictional company created for this textbook. All names, clients, and records are synthetic. Any resemblance to a real company or person is coincidental. The program's email address uses the reserved example.org domain. All seven images are original
-illustrations rendered by the course's seeded generator script
-(`assets/code/_generators/generate_chapter03_images.py`), so they
+course artwork (chart generator plus AI-generated
+illustrations, see `assets/code/_generators/IMAGE-MANIFEST.md`), so they
 carry no third-party license. The starter pages and stylesheet are
 the Chapter 5 Skills Lab model solution, so Lab 6A does not punish
 a weak Lab 5A twice.

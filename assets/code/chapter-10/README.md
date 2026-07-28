@@ -88,8 +88,8 @@ and that table applies to these copies unchanged.
 ## Source and license
 
 Written for CIS133 by the course author. Copperwind IT Services is a fictional company created for this textbook. All names, clients, and records are synthetic. Any resemblance to a real company or person is coincidental. The program's email address uses the reserved example.org domain. All images are
-original illustrations rendered by the course's seeded generator
-script (`assets/code/_generators/generate_chapter03_images.py`), so
+original course artwork (chart generator plus AI-generated
+illustrations, see `assets/code/_generators/IMAGE-MANIFEST.md`), so
 they carry no third-party license. The starter site is the Chapter
 9 Skills Lab model solution, so Lab 10A does not punish a weak Lab
 9A twice.

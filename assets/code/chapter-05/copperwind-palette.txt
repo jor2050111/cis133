@@ -3,7 +3,7 @@ CIS133 SKILLS LAB 4A: THE COPPERWIND DESIGN SET PALETTE
 =====================================================================
 
 Every color below comes straight from the Copperwind illustration set,
-the same set that drew the logo, the charts, and the drive scenes.
+the recorded design set behind the logo, the charts, and the drive scenes.
 The hex values are exact. Copy them from this file into your CSS
 instead of retyping them from memory.
 

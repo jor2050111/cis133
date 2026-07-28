@@ -1,8 +1,8 @@
 # Chapter 2: Basic HTML Elements
 
-At the end of Chapter 1's lab, you sent the campus computer club a memo naming the sources it could trust for its electronics recycling page. The club president read it and replied with one line: "Great. Now build the page." That reply changes your seat. In Chapter 1 you watched pages arrive from servers and judged them. Starting now, you write the files the servers will send.
+At the end of Chapter 1's lab, you sent Copperwind IT Services a memo naming the sources its recycling guide could trust. Priya Sharma runs outreach for Copperwind's community program. She replied with one line: "Great. Now build the page." That reply changes your seat. In Chapter 1 you watched pages arrive from servers and judged them. Starting now, you write the files the servers will send.
 
-Every page on the web, from a campus club page to a streaming giant's home screen, starts the same way: as a plain text file full of HTML. HTML is the structure layer of the web. It tells the browser what each piece of content is: a heading, a paragraph, a list, a link. Get the structure right and every browser, every screen reader, and every search engine can read your page correctly. That skill is the start of CLO V, creating web pages, and this chapter also begins CLO IV, checking your markup with a validator instead of guessing.
+Every page on the web, from a one-page guide to a streaming giant's home screen, starts the same way: as a plain text file full of HTML. HTML is the structure layer of the web. It tells the browser what each piece of content is: a heading, a paragraph, a list, a link. Get the structure right and every browser, every screen reader, and every search engine can read your page correctly. That skill is the start of CLO V, creating web pages, and this chapter also begins CLO IV, checking your markup with a validator instead of guessing.
 
 This chapter walks you through your first build. You will set up VS Code and learn the edit-save-refresh cycle every developer lives in. You will write a complete HTML document from its first line to its last. You will structure text with headings, paragraphs, and lists, and connect pages with links. Then you will run your markup through the W3C validator, the referee Chapter 1 promised you. No prior coding experience is expected. Every step is shown.
 
@@ -70,7 +70,7 @@ One warning about step 2: an unsaved edit does not exist yet as far as the brows
 ### Quick Check 2.1 ✅
 
 1. A classmate writes a page in Google Docs and renames the file `page.html`. It looks wrong in every browser. Using this section's terms, explain the mistake.
-2. Which of these file names will cause trouble in a URL, and why: `Club Page.html`, `club-page.html`?
+2. Which of these file names will cause trouble in a URL, and why: `Contact Page.html`, `contact-page.html`?
 3. You open your page and the address bar reads `file:///Users/maria/cis133/two-lines.html`. Using Chapter 1's client and server roles, explain who delivered this page.
 
 ---
@@ -84,13 +84,13 @@ Your `two-lines.html` experiment proved that a browser ignores your typing habit
 An **element** is one piece of page structure: a paragraph, a heading, a list. Most elements are written as a pair of tags with content between them. A **tag** is the markup itself: the element's name inside angle brackets. The opening tag starts the element, and the closing tag, which adds a forward slash, ends it.
 
 ```html
-<p>Meetings pause during finals week.</p>
+<p>Drop-in clinics pause during the holidays.</p>
 ```
 
 Read it in three parts:
 
 * `<p>` is the opening tag. It says "a paragraph starts here."
-* `Meetings pause during finals week.` is the content, the part visitors see.
+* `Drop-in clinics pause during the holidays.` is the content, the part visitors see.
 * `</p>` is the closing tag. The slash says "the paragraph ends here."
 
 A few elements carry no content at all. An **empty element** has a single tag and no closing tag, because there is nothing to wrap. You will meet two in this section: `<meta>` and the line break `<br>`.
@@ -105,15 +105,19 @@ The `lang` attribute declares the page's language. Screen readers use it to pick
 
 ### The Required Skeleton
 
-Every HTML document you will ever write starts from the same skeleton. Here it is, followed by the complete first page it becomes:
+Every HTML document you will ever write starts from the same skeleton. Here it is as a complete first page. Numbered Step comments mark the four choices that build it:
 
 ```html
+<!-- Step 1: Declare modern HTML before anything else -->
 <!DOCTYPE html>
+<!-- Step 2: Open one root element and name the page's language -->
 <html lang="en">
+<!-- Step 3: Fill the head with information about the page -->
 <head>
     <meta charset="UTF-8">
     <title>My Study Log</title>
 </head>
+<!-- Step 4: Put everything visitors will see inside the body -->
 <body>
     <!-- CIS133 Chapter 2 practice page -->
     <h1>My Study Log</h1>
@@ -166,7 +170,7 @@ Comments are your documentation channel: name the file's purpose, author, and da
 
 **Predict:** In the skeleton above, the title element says `My Study Log` and the h1 says the same. If you change only the title's text and refresh, where will the change appear, and where will nothing change?
 
-**Run:** Type the twelve-line page above into a new file named `study-log.html` in your `cis133` folder. Type it by hand this once, so every line passes through your fingers. Save it, open it in your browser, then change the title's text to something new, save, and refresh.
+**Run:** Type the page above into a new file named `study-log.html` in your `cis133` folder, leaving out the four numbered Step comments. Type the twelve remaining lines by hand this once, so every line passes through your fingers. Save it, open it in your browser, then change the title's text to something new, save, and refresh.
 
 **Explain:** In 1-2 sentences, explain the result using the head and body's division of labor.
 
@@ -197,7 +201,7 @@ HTML provides six heading levels, `<h1>` down to `<h6>`. They are the outline of
 ```html
 <h1>Recycle Your Old Electronics</h1>
 <h2>Why It Matters</h2>
-<h2>What the Club Accepts</h2>
+<h2>What the Program Accepts</h2>
 ```
 
 Two rules keep an outline honest. Use exactly one `<h1>` per page. And never skip levels on the way down: an `<h3>` belongs inside an `<h2>` section, not directly under the `<h1>`. This textbook follows the same rules, which is why every chapter has one title and numbered sections beneath it.
@@ -219,7 +223,7 @@ This is liberating, not annoying. You may break and indent your markup however r
 For the rare spot where a line break IS the content, use the empty element `<br>`: the line turns in a street address or a poem. Do not use `<br>` to push paragraphs apart. Spacing between elements is presentation, and CSS owns it (Chapter 5).
 
 ```html
-<p>PC Computer Club<br>
+<p>Copperwind IT Services<br>
 1202 W Thomas Rd<br>
 Phoenix, AZ 85013</p>
 ```
@@ -309,7 +313,7 @@ Why not write absolute addresses everywhere? Because your site moves. Right now 
 One more `href` trick from Chapter 1's protocol family: begin the value with `mailto:` and a click opens the visitor's mail app with the address filled in. A **mailto link** is how a plain page offers one-click email.
 
 ```html
-<a href="mailto:computer-club@example.org">Email the club</a>
+<a href="mailto:copperwind-community@example.org">Email the team</a>
 ```
 
 ### Link Text Is Content
@@ -338,17 +342,20 @@ The validator answers with a report. Each message names the problem and points t
 Here are the real messages the validator produces for a page whose eighth line reads `<p>Bring <em>working chargers to the drive.</p>`, with the closing `</em>` tag missing:
 
 ```text
+[Step 1: Start at the top. The parser hit </p> while something was still open.]
 Error: End tag "p" seen, but there were open elements.
 From line 8, column 48; to line 8, column 51
 
+[Step 2: Find the message that names a defect. The em element never closed.]
 Error: Unclosed element "em".
 From line 8, column 14; to line 8, column 17
 
+[Step 3: Suspect a cascade. Line 9 is blameless, so repair Step 2's defect and revalidate.]
 Error: End tag for "body" seen, but there were unclosed elements.
 From line 9, column 1; to line 9, column 7
 ```
 
-One missing tag, three messages, and only the middle one names the defect. The last message blames line 9, a line with nothing wrong on it. That is why you fix top to bottom.
+The bracketed Step lines are notes from this book, not validator output. They number the reading order a repair follows. One missing tag, three messages, and only the middle one names the defect. The last message blames line 9, a line with nothing wrong on it. That is why you fix top to bottom.
 
 The validator checks grammar, not judgment. Your recipe steps marked as an unordered list sail through validation, wrong meaning and all. Try It Yourself 2.4 was a test no machine runs. Validation is the floor, and your element choices are the craft above it.
 
@@ -362,6 +369,51 @@ The validator checks grammar, not judgment. Your recipe steps marked as an unord
 **Run:** Delete `</title>`, save, and refresh. Note what the browser shows and check the tab's text. Then paste the whole file into the validator's Direct Input tab and read the report. Finally, restore the tag, save, and validate again.
 
 **Explain:** In 1-2 sentences, contrast how the browser handled the defect with how the validator handled it. Which one told you what was wrong?
+
+### Fix It 2.1: The Link That Swallowed a Sentence 🔧
+
+Priya Sharma asks for a one-page announcement for the Fall Kickoff Drive. A teammate drafts `announcement.html` and hands it to you:
+
+```text
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fall Kickoff Drive | Copperwind Community</title>
+</head>
+<body>
+    <h1>Fall Kickoff Drive</h1>
+    <p>The drive returns Saturday, September 12, at the Copperwind HQ parking lot.</p>
+    <p><a href="contact.html>Contact the team</a> with questions.</p>
+    <p>Read the <a href="recycling-guide.html">recycling guide</a> before you come.</p>
+</body>
+</html>
+```
+
+**Symptom:** The browser shows the heading, the first paragraph, and then "recycling guide before you come." The sentence "Contact the team with questions." has vanished, link and all. The browser reports no error.
+
+**Diagnose:** Paste the file into the validator's Direct Input tab. The report lists four errors:
+
+```text
+Error: No space between attributes.
+From line 11, column 26
+
+Error: Quote “"” in attribute name. Probable cause: Matching quote missing somewhere earlier.
+From line 11, column 46
+
+Error: Bad value “contact.html>Contact the team</a> with questions.</p>
+    <p>Read the <a href=” for attribute “href” on element “a”: Illegal character in path segment: “>” is not allowed.
+From line 10, column 8; to line 11, column 47
+
+Error: Attribute “recycling-guide.html"” not allowed on element “a” at this point.
+From line 10, column 8; to line 11, column 47
+```
+
+The second message names the likely cause: a matching quote missing somewhere earlier. Line 10's `href` value opens a quote and never closes it. The browser reads everything up to the next quote, half of line 11 included, as one long address. The third message even shows the swallowed sentence sitting inside the `href` value.
+
+**Repair:** Close the quote. On line 10, change `<a href="contact.html>` to `<a href="contact.html">`.
+
+**Verify:** Validate again: the report comes back with no messages. Refresh the page: the contact sentence returns, and both links work.
 
 ### Quick Check 2.4 ✅
 
@@ -395,18 +447,20 @@ See course glossary for full definitions
 Answer from memory before checking back through the chapter.
 
 1. Write the required document skeleton from memory: doctype, html, head with its two standard children, and body.
-2. Explain the difference between an element and an attribute, with one example of each.
-3. State the one question that decides between an ordered and an unordered list, and give one example on each side.
-4. A link needs to reach another page in your own site. State which address form you use and why it will keep working after the site is published in Chapter 12.
-5. Describe what the browser does with invalid markup, what the validator does with it, and why the difference makes validation a habit.
+2. State the one question that decides between an ordered and an unordered list, and give one example on each side.
+3. A link needs to reach another page in your own site. State which address form you use and why it will keep working after the site is published in Chapter 12.
+4. Describe what the browser does with invalid markup, what the validator does with it, and why the difference makes validation a habit.
+5. From Chapter 1: Describe the round trip from memory. What does the browser do, and what does the server do, between pressing Enter and seeing the page?
 
 ---
 
-## 2.6 Skills Lab 2A: Build the Club's Recycling Guide
+## 2.6 Skills Lab 2A: Build Copperwind's Recycling Guide
 
-**Goal:** Build and validate the recycling guide page your Chapter 1 research approved, then repair the club's broken contact page and connect the two.
+Copperwind IT Services is a managed IT company in Phoenix. It runs a free community program: e-waste recycling drives, device refurbishment and donation, and drop-in tech help clinics. Copperwind has hired you to build the program's website. This lab lays the site's first two pages.
 
-**Dataset:** Provided files in `assets/code/chapter-02/` from the course data pack: `recycling-guide-content.txt` (every piece of the page's text, labeled), `broken-contact.html` (the club's contact page, with planted markup errors), and `skills-lab-2a-answers.txt` (your written answers file). Work at the extracted `cis133` root. Copy text from the content file instead of retyping it: you type only the markup.
+**Goal:** Build and validate the recycling guide page your Chapter 1 research approved, then repair the program's broken contact page and connect the two.
+
+**Dataset:** Provided files in `assets/code/chapter-02/` from the course data pack: `recycling-guide-content.txt` (every piece of the page's text, labeled), `broken-contact.html` (the program's contact page, with planted markup errors), and `skills-lab-2a-answers.txt` (your written answers file). Work at the extracted `cis133` root. Copy text from the content file instead of retyping it: you type only the markup.
 
 ### Part 1: Foundation (Aligns with Objective 2.1)
 
@@ -475,4 +529,4 @@ same everywhere.
 
 ## Looking Ahead ⏩
 
-You can now build a valid page: structured text, working links, and a clean validator report. Chapter 3 raises the standard from valid to meaningful. You will mark up pages with semantic elements that name each region's purpose, give `<strong>` and `<em>` their full story, and add images with alt text that serves every visitor, sighted or not. The club's pages you built in this chapter are about to get their pictures.
+You can now build a valid page: structured text, working links, and a clean validator report. Chapter 3 raises the standard from valid to meaningful. You will mark up pages with semantic elements that name each region's purpose, give `<strong>` and `<em>` their full story, and add images with alt text that serves every visitor, sighted or not. The Copperwind pages you built in this chapter are about to get their pictures.

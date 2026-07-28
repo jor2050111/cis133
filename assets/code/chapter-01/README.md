@@ -25,7 +25,9 @@ URLs with and without paths, and two query strings. The dissection
 task uses only the text of each URL. Students do not visit them.
 
 **source-profiles.txt** describes five web sources (A-E) about
-electronics recycling for the Part 3 evaluation task. The profiles
+electronics recycling for the Part 3 evaluation task. In the lab
+scenario, the Copperwind outreach team found these sources while
+researching the program's recycling resource page. The profiles
 vary deliberately in authorship, host type, currency, purpose, and
 evidence so each of the chapter's five evaluation questions does
 work. Profile D carries the unverifiable "free images" claim that
@@ -33,11 +35,14 @@ task 3.3 asks about.
 
 ## Source and license
 
-Written for CIS133 by the course author. The five source profiles
-are fictional composites created for practice. The organizations,
-people, and URLs in `source-profiles.txt` are invented, and the
-profile URLs are not meant to resolve. URLs in `url-inventory.txt`
-point at real sites but the lab never requires visiting them.
+Written for CIS133 by the course author. Copperwind IT Services is
+a fictional company created for this textbook. All names, clients,
+and records are synthetic. Any resemblance to a real company or
+person is coincidental. The five source profiles are fictional
+composites created for practice. The organizations, people, and
+URLs in `source-profiles.txt` are invented, and the profile URLs
+are not meant to resolve. URLs in `url-inventory.txt` point at real
+sites but the lab never requires visiting them.
 
 Copyright 2026 Jorge Vega, Phoenix College. Provided to enrolled
 students for coursework.

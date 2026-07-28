@@ -172,7 +172,7 @@ source-profiles.txt.
 
 
 3.3  One profile offers images the program wants to reuse on its page.
-     Using the chapter's copyright section, tell the president
+     Using the chapter's copyright section, tell the outreach coordinator
      whether the program may use them, and what the program must do if it
      does.
 

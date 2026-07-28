@@ -68,8 +68,8 @@ the flyer's markup does with them is part of the audit.
 
 | File | Pixels | Contents |
 | ---- | ------ | -------- |
-| `flyer-images/recycling-drive.png` | 800 x 450 | Outdoor collection table scene with labeled bins and students |
-| `flyer-images/desert-divider.png` | 800 x 24 | Thin decorative strip of alternating diamonds |
+| `flyer-images/recycling-drive.png` | 800 x 450 | Outdoor collection drive: a canopy table, a volunteer, neighbors carrying devices, icon-marked bins |
+| `flyer-images/desert-divider.png` | 800 x 24 | Thin desert horizon strip: mountain silhouettes and tiny saguaros |
 
 ## File details
 
@@ -109,9 +109,8 @@ folder unrenamed.
 ## Source and license
 
 Written for CIS133 by the course author. Copperwind IT Services is a fictional company created for this textbook. All names, clients, and records are synthetic. Any resemblance to a real company or person is coincidental. The teammate who rushed the flyer is fictional too, and the program's email address uses the reserved example.org domain. All
-images are original illustrations rendered by the course's seeded
-generator script
-(`assets/code/_generators/generate_chapter03_images.py`), so they
+images are original course artwork (chart generator plus AI-generated
+illustrations, see `assets/code/_generators/IMAGE-MANIFEST.md`), so they
 carry no third-party license. The starter site is the Chapter 8
 Skills Lab model solution, so Lab 9A does not punish a weak Lab 8A
 twice.

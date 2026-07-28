@@ -100,9 +100,8 @@ and that table applies to these copies unchanged.
 
 Written for CIS133 by the course author. Copperwind IT Services is a fictional company created for this textbook. All names, clients, and records are synthetic. Any resemblance to a real company or person is coincidental. The program's email address uses the reserved example.org domain. The pass phrase and
 the supply closet code in the playground are fictional teaching
-props. All images are original illustrations rendered by the
-course's seeded generator script
-(`assets/code/_generators/generate_chapter03_images.py`), so they
+props. All images are original course artwork (chart generator plus AI-generated
+illustrations, see `assets/code/_generators/IMAGE-MANIFEST.md`), so they
 carry no third-party license. The starter site is the Chapter 11
 Skills Lab model solution, so Lab 12A does not punish a weak Lab
 11A twice.

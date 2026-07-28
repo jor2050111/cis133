@@ -82,10 +82,14 @@ Put the pieces together and follow one request from start to finish:
 The exchange at the center of that trip looks like a short conversation:
 
 ```text
+[Step 1: the browser names the page it wants]
 Browser request:  GET /academics/programs
+[Step 2: the browser names the server that should answer]
                   Host: www.phoenixcollege.edu
 
+[Step 3: the server reports that it found the page]
 Server response:  200 OK
+[Step 4: the server sends the page for the browser to render]
                   (the HTML for the page follows)
 ```
 
@@ -154,10 +158,15 @@ With domains in hand, you can read a complete web address. A **URL** (Uniform Re
 ```text
 https://www.phoenixcollege.edu/degrees-certificates
 
+[Step 1: choose the rules for talking to the server]
 https://              protocol: how to talk to the server
+
+[Step 2: name the server, so DNS can find its address]
 www                   subdomain
 phoenixcollege        domain name
 .edu                  top-level domain
+
+[Step 3: ask that server for one specific page]
 /degrees-certificates path: which page on the server
 ```
 
@@ -189,6 +198,26 @@ Section 1.1. Stop each path at the first failed step and label the result
 
 **Explain:** In 1-2 sentences, explain how far each request travels and
 why only one request reaches a web server.
+
+### Fix It 1.1: The Link That Does Nothing 🔧
+
+A classmate shares a link to the college's site, but this is what they typed:
+
+```text
+htps://www.phoenixcollege.edu
+```
+
+**Symptom:** Clicking the link does nothing at all. No page loads, no error appears, and the address bar does not change. The browser refuses in silence.
+
+**Diagnose:** Before you fix anything, name the cause. Which of the URL's parts is wrong here, and what job does that part do for the browser? Say why a missing letter leaves the browser with no rules to follow.
+
+**Repair:** Correct the protocol so the link reads:
+
+```text
+https://www.phoenixcollege.edu
+```
+
+**Verify:** Click the repaired link. The Phoenix College home page loads over a secure connection. Want to see the browser complain instead of staying silent? Open the original broken link in a new tab. Chrome answers with its `ERR_UNKNOWN_URL_SCHEME` error page, which names the problem you diagnosed.
 
 ### Quick Check 1.2 ✅
 
@@ -360,7 +389,7 @@ Answer from memory before checking back through the chapter.
 
 ## 1.6 Skills Lab 1A: Trace the Web, Then Judge It
 
-**Goal:** Trace how pages reach your browser, break real URLs into their parts, and recommend trustworthy sources for a campus club's website project.
+**Goal:** Trace how pages reach your browser, break real URLs into their parts, and recommend trustworthy sources for your employer's community recycling page.
 
 **Dataset:** Provided files in `assets/code/chapter-01/` from the course data pack: `skills-lab-1a-worksheet.txt` (your answer file), `url-inventory.txt` (12 URLs to dissect), and `source-profiles.txt` (five source profiles for Part 3). Download the data pack from Canvas, extract it, and work at the extracted `cis133` root. Open each file in any text editor. Never retype the file contents.
 
@@ -380,11 +409,11 @@ Work in `skills-lab-1a-worksheet.txt`, which contains numbered spaces for every 
 
 ### Part 3: Extension (Aligns with Objective 1.3)
 
-Your campus computer club is building a resource page about recycling old electronics, and the club president asked you to vet the research. `source-profiles.txt` describes five web sources the club found.
+Your employer, Copperwind IT Services, is building a resource page about recycling old electronics for its community program. The outreach coordinator asked you to vet the research. `source-profiles.txt` describes the five sources the team found.
 
 1. Choose three of the five profiles. Score each one against the chapter's five evaluation questions (author, host, currency, purpose, evidence), one short line per question, in the worksheet's evaluation grid.
-2. Write a recommendation memo to the club president (about 150-200 words): name the source(s) the club should use, the source(s) it should reject, and the evidence that decided each call.
-3. One profile offers images the club wants to reuse on its page. Using this chapter's copyright section, tell the president whether the club may use them, and what the club must do if it does.
+2. Write your recommendation memo to the outreach coordinator (about 150-200 words). Name the source(s) the program should use, the source(s) it should reject, and the evidence that decided each call.
+3. One profile offers images the program wants to reuse on its page. Using the chapter's copyright section, tell the outreach coordinator whether the program may use them, and what the program must do if it does.
 
 ### Questions & Analysis 🤔
 
