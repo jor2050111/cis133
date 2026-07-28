@@ -107,7 +107,7 @@ ul {
 
 1. A page's `main` holds three `section` elements, and the first section holds two paragraphs. `display: flex` lands on `main`. Which elements become flex items, and why do the paragraphs stay put?
 2. A page lists Copperwind's volunteer crew in a column (`flex-direction: column`). A teammate wants the whole stack pushed toward the container's bottom edge. Which property does that job here, `justify-content` or `align-items`, and why?
-3. A teammate adds `display: flex` to each announcement card instead of the board. The cards keep stacking, even though each card's own contents now sit on one line. Diagnose the mistake with the container and item vocabulary.
+3. The board is a flex container and its cards are its items. One card now wants its own icon and heading side by side inside it. What must that card itself become, and does the change alter how the board treats it? Answer with the container and item vocabulary.
 
 ---
 
@@ -390,9 +390,10 @@ header {
     display: flex;
     flex-wrap: wrap;
     /* Step 2: cross-axis polish. Center the title against the
-       logo's height, and let the container own the space
-       between the pair. */
+       logo's height. */
     align-items: center;
+    /* Step 3: let the container own the space between the pair,
+       instead of margins on either one. */
     gap: 16px;
 }
 ```
@@ -402,9 +403,9 @@ The logo and the `h1` fit the first line together, so they sit side by side, cen
 One old comment can retire too. The `.page-divider` rule has said since Lab 5A that centering the strip needs tools Chapter 6 teaches. Here they are:
 
 ```css
-/* Step 3: center the strip. An image is inline until told
-   otherwise, and auto margins center a block. The Chapter 5
-   comment can finally retire. */
+/* Center the strip. An image is inline until told otherwise,
+   and auto margins center a block. The Chapter 5 comment can
+   finally retire. */
 .page-divider {
     display: block;
     margin: 32px auto;

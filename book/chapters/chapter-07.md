@@ -304,7 +304,7 @@ One artifact exists past the wireframe, and you should recognize its name. A **p
 
 ### Try It Yourself 7.4: Wireframe a Page You Did Not Build 🛠️
 
-Return to the article page from TIY 7.2, this time for its layout. Most of its laptop-width wireframe is already drawn below. Two region labels are blanked:
+Return to the article page from TIY 7.2, this time for its layout. Most of its laptop-width wireframe is already drawn below. The top strip's label is blanked, and the left box is blank in full: no label, no contents:
 
 ```text
 +---------------------------------------------------------------+
@@ -314,10 +314,10 @@ Return to the article page from TIY 7.2, this time for its layout. Most of its l
 | main                                                          |
 |  +------------------+  +---------------------------------+    |
 |  | ____             |  | article body                    |    |
-|  |  list of links   |  |  h1: article title              |    |
-|  |  to this         |  |  text sections with figures     |    |
-|  |  article's       |  |                                 |    |
-|  |  sections        |  |                                 |    |
+|  |                  |  |  h1: article title              |    |
+|  |                  |  |  text sections with figures     |    |
+|  |                  |  |                                 |    |
+|  |                  |  |                                 |    |
 |  +------------------+  +---------------------------------+    |
 +---------------------------------------------------------------+
 | footer                                                        |
@@ -325,9 +325,9 @@ Return to the article page from TIY 7.2, this time for its layout. Most of its l
 +---------------------------------------------------------------+
 ```
 
-**Predict:** Commit to a landmark label for each blank before you open the page, and defend each call with the box-to-landmark mapping. Which element owns the strip of site-wide tools at the top, and which element owns a box whose whole job is a list of links?
+**Predict:** Before you open the page, commit twice. Label the top strip from its contents alone, defending the call with the box-to-landmark mapping. Then predict what the empty left box will hold on the live page, and which landmark that content will earn.
 
-**Run:** Open the article and check both calls against the page. Then complete the wireframe: write your two labels into the blanks, and mark the one side-by-side row as a flex line.
+**Run:** Open the article and check both calls against the page. Then complete the wireframe: write the top label, fill the left box with what you found and its label, and mark the one side-by-side row as a flex line.
 
 **Explain:** In 1-2 sentences, report whether the page confirmed both calls, and name one box in the frame that resists a landmark label.
 
@@ -422,7 +422,7 @@ Home | Click Here | More | Contact | Donate
 Home, Click Here, More, Contact, Donate
 ```
 
-Two announcements predict nothing. Click Here leads where? More of what? The bar also promises a fifth page, Donate, and the audit cannot find its destination anywhere in the plan.
+Two labels predict nothing. Click Here leads where? More of what? The bar also promises a fifth page, Donate, and the audit cannot find its destination anywhere in the plan.
 
 **Diagnose:** Name both defects before you touch the plan. First, Click Here and More break the label law. Each one only works mid-sentence, so it fails any visitor who meets it out of context, which is exactly how Devon's screen reader serves links. Second, the navigation plan and the sitemap disagree. The bar lists Donate, and the tree never names a Donate page. Remember the working rule: a page that is not in the tree does not exist. One of the two sections is lying, and the plan cannot say which.
 
@@ -444,7 +444,7 @@ Home | Plot Signup | Garden Calendar | Donate | Contact
 
 ### Quick Check 7.4 ✅
 
-1. A food truck's navigation bar reads Home, Info, Stuff, Click Here. The truck posts its menu, its weekly locations, and a catering request page. Grade the last three labels against this section's law and rewrite each one.
+1. A food truck's five pages appear in one order in its sitemap, but the draft bar lists them in a different order on every page. Name the principle that breaks, and state the single site-plan decision that repairs it everywhere at once.
 2. A visitor lands on an inner page straight from a search result. Name two signals the page can give so the visitor knows where they are, using only techniques this book has taught.
 3. The site plan's last section writes down consistency rules everyone already intends to follow. Using this section's language, what does writing them down buy?
 

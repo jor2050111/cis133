@@ -68,8 +68,8 @@ pixels.
 lab's founding document. It states the program's goals, describes two
 audiences, and keeps the three existing pages. It asks for three
 new ones: a home page, an events page with the fall schedule as
-raw content, and a join page that collects interested students'
-names and emails. The brief describes content needs in the team's own
+raw content, and a join page that collects names and
+emails from anyone who wants program updates. The brief describes content needs in the team's own
 voice and never prescribes markup. Deciding how to build what it
 asks for is the work of Chapters 8 through 12.
 
