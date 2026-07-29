@@ -468,7 +468,7 @@ Answer from memory before checking back through the chapter.
 2. Recite the two accessibility laws this chapter attached to link states.
 3. List the ingredients of the navigation bar in build order, naming the chapter that taught each one.
 4. From Chapter 4: State the decision rule that chooses between a class selector and an id selector, and give one styling job that fits each.
-5. From Chapter 2: Explain why a navigation menu's links are marked up as a list instead of a run of loose anchors.
+5. From Chapter 3: Explain why a navigation menu's links are marked up as a list inside a nav landmark instead of a run of loose anchors.
 
 ---
 

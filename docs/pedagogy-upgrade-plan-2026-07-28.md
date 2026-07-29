@@ -381,7 +381,7 @@ replacement set keeps EXACT dimensions and placement:
 
 | Image | Size | Source |
 | --- | --- | --- |
-| `copperwind-logo.png` | 240x240 RGBA, transparency kept | Codex native image generation |
+| `copperwind-logo.png` | 240x240, alpha-transparent (palette PNG with full alpha) | Codex native image generation |
 | `cactus-garden.png` | 400x400 | Codex |
 | `recycling-drive.png` | 800x450 | Codex |
 | `sorting-station.png` | 640x360 | Codex |
@@ -407,8 +407,8 @@ Rules:
   (Codex may write it, Claude verifies).
 * **Executable acceptance gates (review finding 11):** a new
   `tools/check_images.py` asserts, for the shipped masters: exact
-  dimensions per the table, RGBA mode and transparent corners for the
-  logo, file-size ordering (the flat logo is the smallest file; the
+  dimensions per the table, a real source alpha layer (RGBA, or palette mode with
+  transparency) and transparent corners for the logo, file-size ordering (the flat logo is the smallest file; the
   scenes exceed it: the TIY 3.5 teaching point), chart pixel checks
   (the generator's own data asserts), and palette-role presence
   (dominant tones sampled from the palette family). It runs in Phase
@@ -561,3 +561,36 @@ Review: gpt-5.6-sol at xhigh, read-only, verdict REJECT (2 BLOCKER,
 | 14 | validator.nu cannot verify the flyer claim | ACCEPTED: flyer claim pinned to validator.w3.org; nu supplementary (§7.4, §9) |
 | 15 | No structure checker; Phase 6 records implicit | ACCEPTED: checker built and baselined in Phase 3 (§2); Phase 6 deliverables enumerated (§10) |
 | 16 | ch1/ch12 subgoal mechanism undefined | ACCEPTED: `[Step k:]` text-fence syntax defined; ch12 retargeted to real HTML and JS listings (§6) |
+
+## Addendum B: wave and final review dispositions (2026-07-28)
+
+Codex (gpt-5.6-sol, xhigh) reviewed every wave read-only and the
+whole branch at the end. Findings and dispositions, all same-day:
+
+* Wave 1 (chapters 1-4): 6 findings. Volunteer-crew alt corrected to
+  the six-person image chain-wide, the online drop-off line became
+  the HQ parking lot, ch4 subgoal comments rewritten to decisions,
+  palette usage notes rederived from the final art, ch3's jump-menu
+  claim removed per WCAG H101, the Fix It capture's unreproducible
+  location line dropped.
+* Wave 2 (chapters 5-8): 8 findings. QC 6.1 q3 and QC 7.4 q1
+  replaced (no Fix It parallels), TIY 7.4 refaded so the live-page
+  observation returns, ch6 subgoal chain made coherent, box-practice
+  aligned to the canonical Oct 10 Mesa event, ch7 README join
+  description matched to the brief, bulletin cards TWO and FOUR
+  replaced with canonical activities, "announcements" became
+  "labels".
+* Wave 3 (chapters 9-12): 6 findings. ch9's false no-background
+  claim corrected (5.03 and 8.36 counter-ratios verified), ch12's
+  Fix It pastes the complete captured console line, TIY 12.4's
+  named-solution hint removed, the CLAUDE.md retrieval example
+  expanded to five prompts, the faded-TIY checklist split by fading
+  level, one template filler word removed.
+* Final branch review: 4 findings. Program canon unified
+  (refurbish-and-donate plus recycle, cadence "a few times a
+  year"), two cumulative retrieval items re-sourced to the chapters
+  that teach them, the logo's palette-with-alpha mode stated
+  honestly in manifest/spec/checker with a source-alpha assertion,
+  and the join-form publish-policy decision recorded in HANDOFF as
+  Mr. Vega's pre-term ruling (the in-fiction sign-up claim was
+  corrected to the program inbox).

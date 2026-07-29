@@ -31,7 +31,7 @@ resemblance to a real company or person is coincidental.
 
 | File | Pixels | Bytes | SHA-256 |
 | ---- | ------ | ----- | ------- |
-| `copperwind-logo.png` | 240 x 240 (RGBA-transparent) | 4,059 | b34329ab3ee7e966e0eb4e403c6138c120b244b4ff3e1738acbd1ac7ca78fdb8 |
+| `copperwind-logo.png` | 240 x 240 (palette PNG with full alpha, transparent background) | 4,059 | b34329ab3ee7e966e0eb4e403c6138c120b244b4ff3e1738acbd1ac7ca78fdb8 |
 | `workshop-signups-chart.png` | 640 x 400 | 8,953 | 36e806852ea977553cca98b2b1495a2bdd719d8abadde7ee9bc0d264d6f87c6c |
 | `devices-collected-chart.png` | 640 x 400 | 11,623 | ff062aee2ac73b9ce261d2d2133bbc6937f0f0cb0ec9c1cc53bb7290c29ba92a |
 | `desert-divider.png` | 800 x 24 | 12,635 | 02f340ee41a4d2b7e11afd24fcb9e0ff000e3baeb00fcf47765d203866f6743b |

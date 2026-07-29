@@ -67,8 +67,13 @@ def main() -> None:
         if sizes[name] >= 200_000:
             errors.append(f"{name}: {sizes[name]} bytes exceeds 200 KB")
 
-    # Logo transparency: corners fully transparent
-    logo = Image.open(MASTERS / "copperwind-logo.png").convert("RGBA")
+    # Logo transparency: real alpha in the SOURCE mode, then
+    # corner checks on the RGBA view
+    logo_src = Image.open(MASTERS / "copperwind-logo.png")
+    if not (logo_src.mode == "RGBA"
+            or (logo_src.mode == "P" and "transparency" in logo_src.info)):
+        errors.append(f"logo source mode {logo_src.mode} carries no alpha")
+    logo = logo_src.convert("RGBA")
     w, h = logo.size
     for corner in [(0, 0), (w - 1, 0), (0, h - 1), (w - 1, h - 1)]:
         if logo.getpixel(corner)[3] != 0:

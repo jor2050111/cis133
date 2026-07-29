@@ -455,7 +455,7 @@ Answer from memory before checking back through the chapter.
 1. Pick the control for four data shapes from memory: one choice among three, any of five options, one choice among forty, and a paragraph-length answer.
 2. Trace the submit trip from memory: what the browser bundles, what a control without a name contributes, and where the bundle appears under GET.
 3. Recite the collection promise Chapter 1 made and this chapter paid, and name the two fields Priya's notes declared required.
-4. From Chapter 9: Explain why a label must be programmatically tied to its control, not just placed near it, and name the visitor the tie serves.
+4. From Chapter 9: Name the CSS mistake that takes the keyboard user's visible focus ring away, and state the repair rule the audit enforces.
 5. From Chapter 7: Name which of the site plan's three requested pages the join form realizes, and state which request still waits to be built.
 
 ---
