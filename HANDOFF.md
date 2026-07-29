@@ -1,6 +1,6 @@
 # CIS133 Textbook: HANDOFF
 
-**Last updated:** 2026-07-28 (pedagogy upgrade: Copperwind spine)
+**Last updated:** 2026-07-29 (pedagogy upgrade merged and deployed)
 **Repo:** https://github.com/jor2050111/cis133
 **Live site:** https://jor2050111.github.io/cis133/
 **Task list:** cis133-fall26 (`export CLAUDE_CODE_TASK_LIST_ID=cis133-fall26`)
@@ -17,8 +17,8 @@ Services' community tech program), from the same fictional universe
 as CIS215. The chat-only decision recorded in auto-memory is now
 repo law in the spec.
 
-**State: ON BRANCH `pedagogy-upgrade`, NOT merged, NOT pushed.** Mr.
-Vega reviews side-by-side first (a push to `main` deploys). The
+**State: approved by Mr. Vega on 2026-07-29, merged to `main`, and
+pushed the same day.** The push deploys to GitHub Pages. The
 pre-upgrade book is preserved two ways: commit `00c482d` on `main`,
 and the frozen working copy at `../cis133-archive/` (ARCHIVE-README
 has serve instructions for ports 8000/8001).
