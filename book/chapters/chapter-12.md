@@ -146,10 +146,10 @@ A teammate is attaching the course's one shipped script to a Copperwind page. Th
 <script src="js/footer-year.js"></script>
 ```
 
-**Symptom:** The page loads and almost passes. The footer prints "Copyright  Copperwind Community" with a gap where the year belongs. The span is still empty. DevTools says why. The Console logs one failed request, and the Network panel shows it in red, failed. The server's own address stands where the dots are:
+**Symptom:** The page loads and almost passes. The footer prints "Copyright  Copperwind Community" with a gap where the year belongs. The span is still empty. DevTools says why. The Console logs one failed request, and the Network panel shows it in red, failed. Here is the line, captured from a test server that serves the page from its site folder (your own server's address and folders stand in the middle):
 
 ```text
-GET .../js/footer-year.js  net::ERR_ABORTED 404 (File not found)
+GET http://localhost:8133/site/js/footer-year.js net::ERR_ABORTED 404 (File not found)
 ```
 
 **Diagnose:** Nothing is wrong with the script, and nothing is wrong with the server. Read the src the way the browser did. A src is a path like any other in this course. This one steps down into a folder named `js` before it looks for the file, and no such folder exists. The Console names the exact URL it tried, ending in `/js/footer-year.js`. A 404 is the server's answer for that address: the trip happened, and no file lives there. The file sits beside the page. The address points somewhere else.
@@ -326,7 +326,7 @@ An absolute local path points at a disk. On every other machine on earth, includ
 
 ### Try It Yourself 12.4: The Move Test 🛠️
 
-The pack's `assets/code/chapter-12/path-test.html` is a two-photo page with a planted defect. Photo 1 asks for `volunteer-crew.png`, a neighbor of the page itself. Photo 2 asks for `file:///Users/team-member/pictures/desert-sunset.png`, an address that only ever worked on its author's machine. Your task: rewrite Photo 2's img so its image survives the move to any machine and any host. The sunset photo cannot travel with the site, because you do not own it. The pack put one image beside this page on purpose.
+The pack's `assets/code/chapter-12/path-test.html` is a two-photo page with a planted defect. Photo 1 asks for its image with a relative address, and it renders. Photo 2 asks for `file:///Users/team-member/pictures/desert-sunset.png`, an address that only ever worked on its author's machine. Your task: rewrite Photo 2's img so its image survives the move to any machine and any host. The sunset photo cannot travel with the site, because you do not own it. The page's own folder holds what you need. Open the folder and look.
 
 **Predict:** Before touching the file, write the exact src you will give Photo 2, and one sentence on why that address survives every move. Then predict what the shipped page will show where Photo 2 belongs.
 

@@ -321,7 +321,7 @@ body {
 
 **Symptom:** The page does look better, and everyone who glances at it agrees. Then the teammate runs the new pairing through the WebAIM contrast checker to collect the passing grade. The checker reports 2.51 to 1. The AA bar for body text is 4.5 to 1. The pairing still fails.
 
-**Diagnose:** Looking better and passing are different standards, and only the second one is WCAG. The white background did raise the ratio, but the tan text is so light that no background can carry it past the bar. A contrast ratio is one measurement of two colors. Improving one color proves nothing until the checker grades the pair.
+**Diagnose:** Looking better and passing are different standards, and only the second one is WCAG. The white background did raise the ratio, and the pair still falls short. Text this light needs a much darker partner than white before the math clears the bar. A contrast ratio is one measurement of two colors. Improving one color proves nothing until the checker grades the pair.
 
 **Repair:** Stop adjusting by eye and take a pairing that already passed. The palette's passing list offers ink on white:
 

@@ -466,6 +466,8 @@ attributes (`<center>`, `<font>`, `align=`), even in teaching code.
 1. [Active recall prompt at a course-target Bloom's level]
 2. [Active recall prompt at a course-target Bloom's level]
 3. [Active recall prompt at a course-target Bloom's level]
+4. From Chapter N: [reach-back prompt answerable from memory]
+5. From Chapter N: [second reach-back, or a same-chapter prompt]
 ```
 
 **Retrieval Practice law (pedagogy upgrade, 2026-07-28):** exactly 5
@@ -705,7 +707,7 @@ Before considering a chapter complete, verify:
 - [ ] All "Try It Yourself" use Predict-Run-Explain pattern
 - [ ] Quick Checks after each major section (2-3 questions each)
 - [ ] Exactly one Fix It N.1 block (Symptom/Diagnose/Repair/Verify, real captured evidence, no Predict/Run/Explain inside)
-- [ ] The chapter's faded TIY (ch 5-12) keeps its heading, number, and all three labels, gaps in text fences only
+- [ ] The chapter's faded TIY keeps its heading, number, and all three labels (completion gaps as `____` in text fences in chapters 5-8; problem-first task plus real expected outcome in chapters 9-12)
 - [ ] Subgoal step comments on the two flagship worked examples name decisions, not syntax
 - [ ] Skills Lab with 3 parts (Foundation/Application/Extension)
 - [ ] Rubric follows the single-source pattern (chapter 1 transcludes, chapters 2-12 link)

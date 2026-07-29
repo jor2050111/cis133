@@ -168,8 +168,8 @@ See course glossary for full definitions
 [Exactly 5 items. In chapters 2-12 the final 1-2 items reach back to
 earlier chapters, labeled exactly `From Chapter N:` and answerable
 from memory (spaced roughly N-2 and N-4). At least 3 items stay
-same-chapter. Cumulative items replace same-chapter items rather
-than appending past 5.]
+same-chapter. Cumulative items replace same-chapter items and never
+push the total past 5.]
 
 1. [Active recall question at the course's base Bloom's level, answered without looking back]
 2. [Question requiring explanation or comparison from memory]
