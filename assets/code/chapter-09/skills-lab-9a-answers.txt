@@ -1,5 +1,5 @@
 =====================================================================
-CIS133 SKILLS LAB 9A: THE CLUB SITE PASSES THE AUDIT
+CIS133 SKILLS LAB 9A: THE COPPERWIND SITE PASSES THE AUDIT
 Written Answers
 =====================================================================
 
@@ -7,7 +7,7 @@ Name:
 Date:
 
 This file travels inside your submission folder along with the
-repaired flyer and its stylesheet, the updated club site, and your
+repaired flyer and its stylesheet, the updated Copperwind site, and your
 completed checklist copies. Type your answers directly below each
 numbered prompt. Keep the headings and numbering in place so your
 grader can follow your work.
@@ -45,7 +45,7 @@ PART 2: APPLICATION (perceivable content)
      Alt decisions and the jobs behind them:
 
 2.B  Record your type conversion in flyer-styles.css and
-     club-styles.css: the px sizes you found, the rem values that
+     copperwind-styles.css: the px sizes you found, the rem values that
      replaced them, and the base size your math used. Then state
      in one or two sentences who the conversion serves.
 
@@ -63,7 +63,7 @@ PART 3: EXTENSION (the evaluator and the milestone)
      Evaluator, pages, and flags:
      What the evaluator could not see:
 
-3.B  Log your human-check results for the club site's three pages
+3.B  Log your human-check results for the Copperwind site's three pages
      and your validation pass (final message counts for every page
      and stylesheet). Then close the Part III milestone: name
      where a grader sees each leg (the plan from Lab 7A, the

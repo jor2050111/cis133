@@ -1,5 +1,5 @@
 =====================================================================
-CIS133 SKILLS LAB 3A: GIVE THE CLUB'S SITE STRUCTURE AND PICTURES
+CIS133 SKILLS LAB 3A: GIVE COPPERWIND'S SITE STRUCTURE AND PICTURES
 Written Answers
 =====================================================================
 
@@ -18,7 +18,7 @@ PART 1: FOUNDATION (landmark map)
 1.A  List every landmark element you added to recycling-guide.html,
      in page order. For each one, name the content it now wraps.
      Example form:
-     header - the club logo, the h1, and the two intro paragraphs
+     header - the Copperwind logo, the h1, and the two intro paragraphs
 
      Your landmark map:
 
@@ -36,7 +36,7 @@ PART 2: APPLICATION (alt text log)
      Copy each alt value exactly as it appears in your markup. An
      empty alt is written alt="" and that counts as a decision.
 
-     File: club-logo.png
+     File: copperwind-logo.png
        Your alt value:
        Purpose (informative or decorative):
 
@@ -78,7 +78,7 @@ PART 3: EXTENSION (gallery and format decisions)
        Your alt value:
        What the caption adds:
 
-3.B  The club plans three new pieces of media for next semester.
+3.B  The program plans three new pieces of media for the winter.
      Choose one file format for each (from Section 3.4) and justify
      each choice in one sentence, naming the format property that
      decided it.
@@ -86,7 +86,7 @@ PART 3: EXTENSION (gallery and format decisions)
      A camera photo of the fall drive's crowd:
        Format and reason:
 
-     A redrawn club logo that must stay sharp at any size:
+     A redrawn program logo that must stay sharp at any size:
        Format and reason:
 
      A three-second animated loop of the sorting line:

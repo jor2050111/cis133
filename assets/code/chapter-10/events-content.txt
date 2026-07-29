@@ -1,9 +1,9 @@
 =====================================================================
-PC COMPUTER CLUB: FALL 2026 EVENTS
+COPPERWIND COMMUNITY: FALL 2026 EVENTS
 Content for the events page (Skills Lab 10A)
 =====================================================================
 
-These six events repeat the officers' planning notes from the
+These six events repeat the outreach team's planning notes from the
 Chapter 7 site expansion brief (project-brief.txt), word for word.
 The brief published them as prose. Your job is to publish them as a
 table. Copy the values below into your cells instead of retyping
@@ -14,46 +14,46 @@ Each event lists the same five fields. The fields are your columns.
 ---------------------------------------------------------------------
 
 EVENT 1
-Event:    Fall Welcome Meeting
-Date:     Tuesday, September 1
-Time:     3:00 to 4:30 p.m.
-Location: Computer Commons
-Details:  New members welcome, no device required.
+Event:    Fall Kickoff Drive
+Date:     Saturday, September 12
+Time:     9:00 a.m. to noon
+Location: Copperwind HQ parking lot
+Details:  Bring any item on the accepted list.
 
 EVENT 2
-Event:    September Drop-Off Day
-Date:     Tuesday, September 15
-Time:     3:00 to 4:30 p.m.
-Location: Computer Commons
-Details:  Bring phones, laptops, cables, and chargers.
+Event:    Repair Clinic
+Date:     Saturday, September 26
+Time:     10:00 a.m. to 1:00 p.m.
+Location: Copperwind HQ training room
+Details:  Watch a repair, or bring a device that needs one.
 
 EVENT 3
-Event:    October Drop-Off Day
-Date:     Tuesday, October 13
-Time:     3:00 to 4:30 p.m.
-Location: Computer Commons
-Details:  Bring phones, laptops, cables, and chargers.
+Event:    Device Drop-Off Day
+Date:     Saturday, October 10
+Time:     9:00 a.m. to noon
+Location: Mesa Community Center
+Details:  Drive up, drop off, done in minutes.
 
 EVENT 4
-Event:    Fix-It Workshop
-Date:     Saturday, October 24
-Time:     10:00 a.m. to noon
-Location: Computer Commons
-Details:  Learn to test and wipe donated devices.
+Event:    Digital Safety Workshop
+Date:     Thursday, October 22
+Time:     6:00 to 7:30 p.m.
+Location: Online
+Details:  Passwords, backups, and safe browsing.
 
 EVENT 5
-Event:    Fall Recycling Drive
+Event:    Volunteer Orientation
 Date:     Saturday, November 7
-Time:     9:00 a.m. to 1:00 p.m.
-Location: Student Union lawn
-Details:  Our biggest event of the term.
+Time:     10:00 to 11:30 a.m.
+Location: Copperwind HQ training room
+Details:  New volunteers welcome, no experience required.
 
 EVENT 6
-Event:    Semester Wrap Meeting
-Date:     Tuesday, November 17
-Time:     3:00 to 4:30 p.m.
-Location: Computer Commons
-Details:  Drive results and spring plans.
+Event:    Fall Wrap Drive
+Date:     Saturday, November 21
+Time:     9:00 a.m. to noon
+Location: Copperwind HQ parking lot
+Details:  Last drop-off day before the holidays.
 
 =====================================================================
 END OF EVENTS CONTENT

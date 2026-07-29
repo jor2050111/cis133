@@ -1,15 +1,15 @@
 # Chapter 11: HTML Forms
 
-Watch the last ten minutes of any drive the PC Computer Club runs. Interested students crowd the table, and an officer collects names on whatever paper is handy. By the next meeting, half the scraps are gone. The officers named this problem in their Chapter 7 brief. Their third request asked for a join page: "collect the name and email of every student who wants to hear from us, so an officer can invite them to the next meeting." The events page shipped in Chapter 10. The join page is the site plan's second promised addition, and this chapter builds it.
+Watch the last ten minutes of any drive Copperwind runs. Interested neighbors crowd the sorting station, and a team member collects names on whatever paper is handy. By the next event, half the scraps are gone. Priya Sharma named this problem in her Chapter 7 brief. Its third request asked for a join page: "collect the name and email of everyone who wants to hear from us, so a team member can invite them to the next event." The events page shipped in Chapter 10. The join page is the site plan's second promised addition, and this chapter builds it.
 
 The page needs something no page in this book has carried. Every element you own presents content to visitors: headings announce, images show, tables answer questions. A form is the first element that listens back. It hands the visitor the keyboard, collects what they type and pick, and sends the answers on a trip this chapter teaches you to read. That trip runs on a term you met in Chapter 1 and have not needed since. The query string comes home in this chapter.
 
-You will build the listening machinery first: inputs, choices, menus, and the label contract Chapter 9 promised by name. Then you will follow the data after the button press, and learn what the browser checks before the trip even starts. You will style the form with tools you already own, because the course's selector set is complete. Skills Lab 11A designs the club's join page, wires it into every page's navigation, and defends every field it collects.
+You will build the listening machinery first: inputs, choices, menus, and the label contract Chapter 9 promised by name. Then you will follow the data after the button press, and learn what the browser checks before the trip even starts. You will style the form with tools you already own, because the course's selector set is complete. Skills Lab 11A designs the program's join page, wires it into every page's navigation, and defends every field it collects.
 
 ## Module Overview 🧭
 
 * **Estimated time:** 4-5 hours
-* **Prerequisites:** Chapters 2-10 (HTML structure, CSS selectors and states, the accessibility standard, and the club site the labs have built)
+* **Prerequisites:** Chapters 2-10 (HTML structure, CSS selectors and states, the accessibility standard, and the Copperwind site the labs have built)
 * **Deliverables:** Skills Lab 11A deliverable, Quick Checks
 
 ## Learning Objectives 🎯
@@ -18,7 +18,7 @@ By the end of this chapter, you will be able to:
 
 * **11.1 (Apply):** Construct labeled form controls: text and email inputs, radio groups, checkboxes, select menus, textareas, and a submit button (Sections 11.1-11.2)
 * **11.2 (Apply):** Demonstrate how submitted form data travels: name-value pairs, GET and the query string, POST, and the server's role in concept (Section 11.3)
-* **11.3 (Create):** Design the club's join page: an accessible, styled signup form that collects only what it needs (Section 11.4)
+* **11.3 (Create):** Design the program's join page: an accessible, styled signup form that collects only what it needs (Section 11.4)
 
 ### This chapter aligns with the following Course Learning Outcomes
 
@@ -54,6 +54,50 @@ The pairing buys Devon the announcement the bare box denied. Focus lands on the 
 **Explain:** In 1-2 sentences, name the contract's two beneficiaries: who your mouse served a moment ago, and who the announcement from this section serves.
 
 Name what your clicks proved: a paired label is part of its control's click target. The visible words operate the control they announce, so a small circle or box grows a target the size of its label. Chapter 7 asked for generous touch targets when it made design serve every visitor, and the contract delivers them for free. One contract, two beneficiaries, zero pixels changed, which should ring the Chapter 3 bell: meaning first, looks later.
+
+### Fix It 11.1: The Click That Lands in the Wrong Box 🔧
+
+Diego Ramos wants a short check-in page for the September Repair Clinic: a visitor's name, and the device they are bringing. A teammate builds the second field by copying the first, and hands you the draft:
+
+```text
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Repair Clinic Check-In | Copperwind Community</title>
+</head>
+<body>
+    <h1>Repair Clinic Check-In</h1>
+    <form>
+        <label for="visitor-name">Your name</label>
+        <input type="text" id="visitor-name" name="visitor-name">
+
+        <label for="visitor-name">Device you are bringing</label>
+        <input type="text" id="visitor-name" name="device">
+
+        <button>Check in</button>
+    </form>
+</body>
+</html>
+```
+
+**Symptom:** Run the click test you just proved. Clicking "Your name" drops the cursor into the first box, as the contract promises. Clicking "Device you are bringing" drops the cursor into the first box too. The device box sits under words no click can reach, and the browser reports no error.
+
+**Diagnose:** Paste the draft into the validator's Direct Input tab. The report answers with one error and one pointed warning:
+
+```text
+Error: Duplicate ID “visitor-name”.
+From line 14, column 9; to line 14, column 59
+
+Warning: The first occurrence of ID “visitor-name” was here.
+From line 11, column 9; to line 11, column 65
+```
+
+The copy carried the first input's `id` along, so two controls now share one. An `id` must be unique on its page, because everything that hunts by `id` stops at the first match. Both labels say `for="visitor-name"`, both find the first box, and the device box is left with no label of its own. Devon's screen reader meets it as the unnamed box this section opened with.
+
+**Repair:** Give the device pair its own value. Change the second input to `id="visitor-device"` and the label above it to `for="visitor-device"`.
+
+**Verify:** Validate again: the report comes back with no messages. Then rerun the click test on both fields. "Your name" lands in the name box, "Device you are bringing" lands in the device box, and each label operates the control it announces.
 
 One attribute in the example still has no story. The `id` serves the label. The **name attribute** serves the data: it is the label the control's answer will travel under when the form submits. Section 11.3 tells that story in full. Until then, give every control a `name` attribute and a paired label, and both jobs are covered.
 
@@ -93,23 +137,28 @@ name="session-type" value="appointment">
 
 Other questions invite any number of answers. The **checkbox**, `type="checkbox"`, gives each option its own independent yes or no, and checking one box never releases another. A set of related checkboxes may share a `name` the way radios do, each box keeping its own `value`. Only a checked box sends its answer when the form submits.
 
-A group of circles or boxes creates a naming problem one label cannot solve. Each option's label names that option: Monday, Drop-in, Appointment. Nothing yet names the question the whole group answers. Two elements share that job. The **fieldset element** (`<fieldset>`) wraps the group and draws its boundary, and the **legend element** (`<legend>`), written first inside it, names the group's question. Read the pair as the group's own label contract. A screen reader announces the legend alongside each option, so Devon hears "Session type, Drop-in" instead of a bare "Drop-in." One structural habit rides along: wrap each choice in its own paragraph, and the choices stack one per line with no new selector needed.
+A group of circles or boxes creates a naming problem one label cannot solve. Each option's label names that option: Drop-off days, Drop-in, Appointment. Nothing yet names the question the whole group answers. Two elements share that job. The **fieldset element** (`<fieldset>`) wraps the group and draws its boundary, and the **legend element** (`<legend>`), written first inside it, names the group's question. Read the pair as the group's own label contract. A screen reader announces the legend alongside each option, so Devon hears "Session type, Drop-in" instead of a bare "Drop-in." One structural habit rides along: wrap each choice in its own paragraph, and the choices stack one per line with no new selector needed.
 
 ```html
-<!-- The group's own label contract: the legend names the
-     question, and every option inside answers it. One box
-     per paragraph stacks the choices one per line. -->
+<!-- Step 1: the fieldset draws the group's boundary, so related
+     choices read as one question. -->
 <fieldset>
-    <legend>Which days can you meet?</legend>
+    <!-- Step 2: the legend names the shared question, spoken
+         with every option inside. -->
+    <legend>What are you interested in?</legend>
+    <!-- Step 3: one paragraph per choice stacks the options one
+         per line, each box paired with its own label. -->
     <p>
-        <input type="checkbox" id="day-monday"
-        name="meeting-day" value="monday">
-        <label for="day-monday">Monday</label>
+        <input type="checkbox" id="interest-drop-off"
+        name="interest" value="drop-off-days">
+        <label for="interest-drop-off">Drop-off days</label>
     </p>
     <p>
-        <input type="checkbox" id="day-wednesday"
-        name="meeting-day" value="wednesday">
-        <label for="day-wednesday">Wednesday</label>
+        <!-- Step 4: the shared name keeps the answers together,
+             and each value is the answer one box stands for. -->
+        <input type="checkbox" id="interest-repair"
+        name="interest" value="repair-clinics">
+        <label for="interest-repair">Repair clinics</label>
     </p>
 </fieldset>
 ```
@@ -118,11 +167,13 @@ The practice form wraps its session-type radios in the same two elements. The fi
 
 ### Try It Yourself 11.2: Breaking the Group 🛠️
 
-**Predict:** The practice form's two session-type radios share `name="session-type"`. Suppose you edit one radio's name to `appointment-type`, save, and reload. Both circles still sit in the same fieldset, under the same legend, with the same labels. What will the form now let you do that it would not before? Write your prediction.
+The library's Friday movie night offers three showtimes: 4:00, 6:30, and 9:00. Its signup form must let a visitor pick exactly one. Build that group from the requirement alone, then break it on purpose.
 
-**Run:** Make the edit in VS Code, save, reload, and click both radio labels. Watch what stays selected. Then undo the edit and confirm the old behavior returns, or re-save the file from the pack.
+**Predict:** Before you type, commit to a plan in writing. List the elements you will use for the three options and for the question they share, and name the one attribute value all three controls must share. State the rule: what makes picking a second showtime release the first?
 
-**Explain:** In 1-2 sentences, state what the shared name declares that the shared fieldset and the matching labels cannot.
+**Run:** Build the page in a new file, `movie-night.html`, using only this section's elements. Click all three labels: one shared `name` should make the circles exclusive, each new pick releasing the last. Now split the group: change the third radio's `name` to `showtime-late`, save, and reload. Click 6:30, then 9:00: with split names, both circles should sit checked at once.
+
+**Explain:** In 1-2 sentences, state what the shared name declares that a shared fieldset and matching labels cannot.
 
 !!! tip
     The practice form is your lab bench for the whole chapter. If your copy drifts during an experiment, re-save `session-request.html` from the pack and keep going.
@@ -236,9 +287,9 @@ The second is `autocomplete`. Give it a standard token such as `"name"` or `"ema
 
 **Explain:** In 1-2 sentences, name what the browser checked without one line of your CSS and without any server. Then name one thing about the visitor's answer this checking can never verify.
 
-The browser refused twice, and the trip never started: no query string, no page change, only the form insisting. Current Chrome words the first refusal "Please fill out this field.", and every browser words it in its own way. Name what you watched: the browser checked your markup's claims before anything left the machine. Practitioners call that client-side validation, and it always works beside a partner, because a browser can confirm an email's shape but never that the visitor owns it. Real sites re-check everything on the server after the trip. The club's form gets the client's half in this chapter, and the server's half belongs to Chapter 12's story.
+The browser refused twice, and the trip never started: no query string, no page change, only the form insisting. Current Chrome words the first refusal "Please fill out this field.", and every browser words it in its own way. Name what you watched: the browser checked your markup's claims before anything left the machine. Practitioners call that client-side validation, and it always works beside a partner, because a browser can confirm an email's shape but never that the visitor owns it. Real sites re-check everything on the server after the trip. Copperwind's form gets the client's half in this chapter, and the server's half belongs to Chapter 12's story.
 
-One more rule belongs here, because it governs what should travel at all. Chapter 1 made this chapter a promise to keep: "every field you add is a promise to handle someone's information responsibly. Collect only what the page needs, and say what you will do with it." The officers' notes honor that rule from their side. They ask for a name and an email, they wrote an explicit "and nothing else" list, and they supplied the one-sentence promise the page must display. The lab will hand you a chance to break the rule, and Part 3 asks you to defend refusing it.
+One more rule belongs here, because it governs what should travel at all. Chapter 1 made this chapter a promise to keep: "every field you add is a promise to handle someone's information responsibly. Collect only what the page needs, and say what you will do with it." Priya Sharma's join-page notes honor that rule from the program's side. They ask for a name and an email, and they carry an explicit "and nothing else" section. They also supply the one-sentence promise the page must display: "We use what you share here only to email you about program events." The lab will hand you a chance to break the rule, and Part 3 asks you to defend refusing it.
 
 ### Quick Check 11.3 ✅
 
@@ -250,19 +301,20 @@ One more rule belongs here, because it governs what should travel at all. Chapte
 
 ## 11.4 The Accessible, Styled Form
 
-Open the practice form beside the club's pages and the gap is plain. The controls work, and nothing about them says they belong to anyone. The join page has to match the site, and the styling takes no new machinery at all. Chapter 10 declared `:nth-child()` the course's last new selector, and that promise holds. Element selectors you have owned since Chapter 4, plus the `:hover` and `:focus` pair from Chapter 6, style everything a form needs.
+Open the practice form beside the Copperwind pages and the gap is plain. The controls work, and nothing about them says they belong to anyone. The join page has to match the site, and the styling takes no new machinery at all. Chapter 10 declared `:nth-child()` the course's last new selector, and that promise holds. Element selectors you have owned since Chapter 4, plus the `:hover` and `:focus` pair from Chapter 6, style everything a form needs.
 
 Start with geometry. A form reads best as one column: each label on its own line above its control, eyes then fingers, straight down. Labels render inline by default, so one declaration builds the column. The exception lives inside the fieldset, where each choice's word belongs beside its own circle or box, and one more rule keeps a checkbox at its own small size instead of the column's width.
 
 ```css
-/* Labels above controls: one question per line, with air
-   between questions. */
+/* Step 1: give every label its own line above its control,
+   with air between questions. */
 label {
     display: block;
     margin: 16px 0 4px;
 }
 
-/* Inside the fieldset, a choice's word stays beside its box. */
+/* Step 2: carve the exception. Inside the fieldset, a choice's
+   word stays beside its own circle or box. */
 fieldset label {
     display: inline;
     margin: 0;
@@ -272,18 +324,20 @@ fieldset label {
 The controls take the other half of the geometry: full column width, padded, and told what type to wear.
 
 ```css
-/* Controls fill the readable column, and padding keeps typed
-   text off the walls. Form controls ignore the page's font
-   settings unless told, so the type is restated on purpose. */
+/* Step 3: let the controls fill the readable column, padded so
+   typed text sits off the walls. */
 input, select, textarea {
     width: 100%;
     padding: 8px;
     border: 1px solid #333333;
+    /* Step 4: restate the site's type. Form controls ignore the
+       page's font settings until a rule speaks to them directly. */
     font-family: Verdana, Arial, sans-serif;
     font-size: 1rem;
 }
 
-/* A checkbox needs its own small box, not the column. */
+/* Step 5: the second exception. A checkbox keeps its own small
+   box instead of claiming the column. */
 fieldset input {
     width: auto;
 }
@@ -311,22 +365,22 @@ fieldset p {
 }
 ```
 
-Now the law this course will not bend. Tab into any control on the unstyled practice form and the browser draws its own focus ring, no CSS required. That default is the signal keyboard visitors steer by. Chapter 6 wrote the rule for links, and it covers form controls unchanged: never remove the signal without a replacement at least as visible. On the club's site, the replacement earns its keep by wearing the palette.
+Now the law this course will not bend. Tab into any control on the unstyled practice form and the browser draws its own focus ring, no CSS required. That default is the signal keyboard visitors steer by. Chapter 6 wrote the rule for links, and it covers form controls unchanged: never remove the signal without a replacement at least as visible. On the Copperwind site, the replacement earns its keep by wearing the palette.
 
 ```css
-/* Focus made visible on every control: a club-teal ring
+/* Focus made visible on every control: a copperwind-teal ring
    replaces the browser's default instead of removing it. */
 input:focus, select:focus, textarea:focus {
     outline: 2px solid #268080;
 }
 ```
 
-Club teal on white sits on the passing list at 4.69 to 1. Against the site's light sand page background, the ring computes 3.04 to 1, past the 3 to 1 minimum WCAG sets for non-text marks. Measured, never eyeballed, as always.
+Copperwind teal on white sits on the passing list at 4.69 to 1. Against the site's light sand page background, the ring computes 3.04 to 1, past the 3 to 1 minimum WCAG sets for non-text marks. Measured, never eyeballed, as always.
 
-The button is the page's call to action, and it dresses like one. White on club teal carries the passing list's 4.69 to 1. Hover and focus are equal citizens, Chapter 6's oldest law, and the swap reads like the nav links' inversion turned around. One trick keeps the button steady: the border matches the background, so the edge exists in both states and the button never changes size.
+The button is the page's call to action, and it dresses like one. White on copperwind teal carries the passing list's 4.69 to 1. Hover and focus are equal citizens, Chapter 6's oldest law, and the swap reads like the nav links' inversion turned around. One trick keeps the button steady: the border matches the background, so the edge exists in both states and the button never changes size.
 
 ```css
-/* The call to action: white on club teal, with hover and
+/* The call to action: white on copperwind teal, with hover and
    focus twins. The border matches the background so the
    button keeps its exact size in both states. */
 button {
@@ -398,51 +452,51 @@ See course glossary for full definitions
 
 Answer from memory before checking back through the chapter.
 
-1. Recite the label contract: the two elements, the two attributes, what must match, and the two beneficiaries.
-2. Pick the control for four data shapes from memory: one choice among three, any of five options, one choice among forty, and a paragraph-length answer.
-3. Trace the submit trip from memory: what the browser bundles, what a control without a name contributes, and where the bundle appears under GET.
-4. State when GET fits and when POST fits, one example each, and recite the Chapter 1 rule about collecting over plain HTTP.
-5. Recite the collection promise Chapter 1 made and this chapter paid, and name the two fields the officers' notes declared required.
+1. Pick the control for four data shapes from memory: one choice among three, any of five options, one choice among forty, and a paragraph-length answer.
+2. Trace the submit trip from memory: what the browser bundles, what a control without a name contributes, and where the bundle appears under GET.
+3. Recite the collection promise Chapter 1 made and this chapter paid, and name the two fields Priya's notes declared required.
+4. From Chapter 9: Name the CSS mistake that takes the keyboard user's visible focus ring away, and state the repair rule the audit enforces.
+5. From Chapter 7: Name which of the site plan's three requested pages the join form realizes, and state which request still waits to be built.
 
 ---
 
 ## 11.6 Skills Lab 11A: The Join Page
 
-**Goal:** Design the club's join page: an accessible signup form that collects only what the officers asked for, styled from the palette's passing list. Linking it from every page's navigation closes the site plan's second promised addition.
+**Goal:** Design the program's join page: an accessible signup form that collects only what Priya's notes ask for, styled from the palette's passing list. Linking it from every page's navigation closes the site plan's second promised addition.
 
-**Dataset:** Provided files in `assets/code/chapter-11/` from the course data pack. `starter-site/` holds the club's four pages, the `images` folder, and `club-styles.css` exactly as Skills Lab 10A finished them. The events page is live in the nav, and the stylesheet carries the table block with the query block below it. `join-page-notes.txt` is the officers' field list for the join page: the two required fields, the optional menu, checkboxes, and question box, the "and nothing else" rule, and the data-promise sentence the page must display. `club-palette.txt` travels with every CSS chapter, and its passing list supplies every color this lab's form wears. `session-request.html` and `request-styles.css` are the chapter's Try It Yourself files and stay out of the submission. `skills-lab-11a-answers.txt` is your written answers file. Part 3 reuses `accessibility-checklist.txt` from the Chapter 9 pack. The folder's README documents every file. Work at the extracted `cis133` root.
+**Dataset:** Provided files in `assets/code/chapter-11/` from the course data pack. `starter-site/` holds the Copperwind site's four pages, the `images` folder, and `copperwind-styles.css` exactly as Skills Lab 10A finished them. The events page is live in the nav, and the stylesheet carries the table block with the query block below it. `join-page-notes.txt` is Priya Sharma's field list for the join page: the two required fields, the optional menu, checkboxes, and questions box, the "and nothing else" rule, and the data-promise sentence the page must display. `copperwind-palette.txt` travels with every CSS chapter, and its passing list supplies every color this lab's form wears. `session-request.html` and `request-styles.css` are the chapter's Try It Yourself files and stay out of the submission. `skills-lab-11a-answers.txt` is your written answers file. Part 3 reuses `accessibility-checklist.txt` from the Chapter 9 pack. The folder's README documents every file. Work at the extracted `cis133` root.
 
 The lab walks the chapter's own path. Part 1 builds the page and its labeled controls. Part 2 adds the helping attributes and the style block. Part 3 demonstrates the trip, passes the Chapter 9 habit, and defends what the form refuses to collect.
 
 ### Part 1: Foundation (Aligns with Objective 11.1)
 
 1. Create a folder named `skills-lab-11a-lastname` at your `cis133` root. Copy in the whole `starter-site` folder, keeping its name, plus `join-page-notes.txt` and `skills-lab-11a-answers.txt`.
-2. Create `join.html` inside `starter-site` the Chapter 2 way: open an existing page, save as, and keep everything the pages share. Retitle the head, keep the header, nav, and footer, and clear `main` down to one short intro paragraph you write.
-3. Build the form from the officers' notes, one control per item. Use labeled text and email inputs for the two required fields. Open the how-did-you-hear select with Section 11.3's empty-value neutral option, then the notes' five choices. Wrap the four interest checkboxes in a fieldset with a legend you write, stacked one per paragraph and sharing one `name`. Finish with the questions textarea and a submit button whose text names the action. Pair every label through the contract, and record the build in answer 1.A.
-4. Put the officers' data-promise sentence on the page, word for word, where a visitor reads it before typing.
+2. Create `join.html` inside `starter-site` the Chapter 2 way: open an existing page, save as, and keep everything the pages share. Retitle the head, reword the header's h1 to `Join the Program`, keep the nav and footer, and clear `main` down to one short intro paragraph you write.
+3. Build the form from Priya's notes, one control per item. Use labeled text and email inputs for the two required fields. Open the how-did-you-hear select with Section 11.3's empty-value neutral option, then the notes' five choices. Wrap the four interest checkboxes in a fieldset with a legend you write, stacked one per paragraph and sharing one `name`. Finish with the questions textarea and a submit button whose text names the action. Pair every label through the contract, and record the build in answer 1.A.
+4. Put the notes' data-promise sentence on the page, word for word, where a visitor reads it before typing.
 5. Add the join link to the navigation bar on all five pages, between the events link and the contact link, the site plan's order. Choose the link text yourself, and let Chapter 7's label law choose with you.
 6. Validate all five pages to zero messages. Record the nav update, the promise sentence's location, and the counts in answer 1.B.
 
 ### Part 2: Application (Aligns with Objectives 11.3 and 11.1)
 
-1. Add the helping attributes: `required` on the two fields the officers cannot work without, `autocomplete="name"` and `autocomplete="email"` on the matching inputs, and the word "(required)" in each of those labels, in text. Decide whether any control earns a placeholder, and hold the law: a hint, never a label. Record every decision in answer 2.A.
-2. In `club-styles.css`, add a commented form block below the table block and above the query block, so the query block keeps the bottom of the file. Stack the labels above their controls, size and pad the controls to the column, keep the fieldset's boxes at their own size, and restate the site's type on the controls. Record the block's decisions in answer 2.B.
+1. Add the helping attributes: `required` on the two fields the outreach team cannot work without, `autocomplete="name"` and `autocomplete="email"` on the matching inputs, and the word "(required)" in each of those labels, in text. Decide whether any control earns a placeholder, and hold the law: a hint, never a label. Record every decision in answer 2.A.
+2. In `copperwind-styles.css`, add a commented form block below the table block and above the query block, so the query block keeps the bottom of the file. Stack the labels above their controls, size and pad the controls to the column, keep the fieldset's boxes at their own size, and restate the site's type on the controls. Record the block's decisions in answer 2.B.
 3. Make focus visible on every control, and dress the button as the page's call to action with hover and focus twins. Shop every pairing from the palette's passing list, and quote each ratio in answer 2.B. Validate the stylesheet to zero messages.
 
 ### Part 3: Extension (Aligns with Objectives 11.2 and 11.3)
 
 1. The demonstration: fill in your form, check any two interest boxes, press the button, and read the address bar. Log in answer 3.A what you typed, the URL the browser wrote, which name-value pairs traveled, and whether any control stayed home. Audit first: log everything before you repair anything a missing pair reveals.
-2. Run the Chapter 9 habit on the new page: a checklist copy, the Tab walk, and both validators to zero messages. Then answer in 3.B where the pairs would go if the club had a server, and why the page as shipped makes no promise it cannot keep.
-3. Close with the collection defense in answer 3.B: name one field a lesser form would have added, and defend the refusal with Chapter 1's promise and the officers' own "and nothing else" rule.
+2. Run the Chapter 9 habit on the new page: a checklist copy, the Tab walk, and both validators to zero messages. Then answer in 3.B where the pairs would go if Copperwind had a server, and why the page as shipped makes no promise it cannot keep.
+3. Close with the collection defense in answer 3.B: name one field a lesser form would have added, and defend the refusal with Chapter 1's promise and the notes' own "and nothing else" rule.
 
 ### Questions & Analysis 🤔
 
 Answer both questions in the answers file. These answers carry significant rubric weight.
 
 1. Your finished form carries the label contract on every control, a legend over the interest group, a visible focus signal, and required fields marked in text. Assign each feature one visitor it serves and one failure it prevents, citing your own page as evidence.
-2. The officers could have asked for a phone number, a student ID, and a class schedule "to know members better." Judge that request against Chapter 1's promise and this chapter's collection rule. Then write the two-sentence reply you would send the officers.
+2. Priya could have asked for a phone number, a birthday, and an account number "to know the neighbors better." Judge that request against Chapter 1's promise and this chapter's collection rule. Then write the two-sentence reply you would send the outreach team.
 
-**Submission:** Zip your `skills-lab-11a-lastname` folder containing the updated `starter-site` folder (five pages, `club-styles.css`, and `images`), your completed checklist copy, and `skills-lab-11a-answers.txt`, and submit it as `skills-lab-11a-lastname.zip`. Every page and the stylesheet must validate with zero messages, and every answer must sit under its numbered prompt.
+**Submission:** Zip your `skills-lab-11a-lastname` folder containing the updated `starter-site` folder (five pages, `copperwind-styles.css`, and `images`), your completed checklist copy, and `skills-lab-11a-answers.txt`, and submit it as `skills-lab-11a-lastname.zip`. Every page and the stylesheet must validate with zero messages, and every answer must sit under its numbered prompt.
 
 ### Rubric: Skills Lab 11A
 

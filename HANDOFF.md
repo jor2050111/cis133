@@ -1,9 +1,191 @@
 # CIS133 Textbook: HANDOFF
 
-**Last updated:** 2026-07-15 (family template alignment)
+**Last updated:** 2026-07-29 (pedagogy upgrade merged and deployed)
 **Repo:** https://github.com/jor2050111/cis133
 **Live site:** https://jor2050111.github.io/cis133/
 **Task list:** cis133-fall26 (`export CLAUDE_CODE_TASK_LIST_ID=cis133-fall26`)
+
+## What was done (2026-07-28): pedagogy upgrade (Copperwind spine)
+
+CIS133 is the second book through the five-upgrade workflow in
+`../PEDAGOGY-UPGRADE-PLAYBOOK-V1.md` (V1.1), after the CIS215 pilot.
+The binding course spec is `docs/pedagogy-upgrade-plan-2026-07-28.md`
+(revision 2, after a Codex adversarial review). The scenario changed
+with it: the PC Computer Club retires, and students now build the
+**Copperwind Community** website (the public site of Copperwind IT
+Services' community tech program), from the same fictional universe
+as CIS215. The chat-only decision recorded in auto-memory is now
+repo law in the spec.
+
+**State: approved by Mr. Vega on 2026-07-29, merged to `main`, and
+pushed the same day.** The push deploys to GitHub Pages. The
+pre-upgrade book is preserved two ways: commit `00c482d` on `main`,
+and the frozen working copy at `../cis133-archive/` (ARCHIVE-README
+has serve instructions for ports 8000/8001).
+
+**The scenario change (U1, the spine).** The Skills Lab thread IS the
+spine: per-chapter starter states, all converted. Site identity:
+h1 "Copperwind Community" (20 chars, length-parity with the old h1),
+nav labels Recycling Guide / Spring Drive Gallery / Fall Events /
+Join the Program / Contact the Team, email
+copperwind-community@example.org, passphrase copperwind-2026,
+#drop-off-hours (was #meeting-times). Renames: copperwind-styles.css,
+copperwind-palette.txt, copperwind-site/, copperwind-logo.png,
+workshop-signups-chart.png. Palette hex values unchanged (every
+verified contrast ratio survives). The chart data thread is
+unchanged (64/38/21/17/14 = 154; 18 to 39). Canonical fall 2026
+event roster (six events, dates calendar-verified) threads the ch7
+brief, ch10 events file and table, and ch12 home content. Cast:
+CIS215's eight technicians; Priya Sharma is the outreach
+coordinator and client voice. Varied cover stories (tutoring
+center, soccer league, community garden, food pantry, library)
+stay varied. Devon remains the accessibility anchor.
+
+**The five upgrades, applied to all 12 chapters:**
+
+* **Fix It N.1 (U4)** in every chapter, Symptom/Diagnose/Repair/
+  Verify, every message captured from a real run: silent htps://
+  link (ch1, browser-captured), unquoted href 4-error Nu cascade
+  (ch2), orphaned figcaption (ch3), FIVE silent bugs (.galery
+  selector ch4, two-value shorthand swap ch5, display:flex on the
+  items ch6, swapped min/max queries ch8, plus ch7's plan that
+  fails its own label audit), the repair that still fails AA at a
+  real 2.51 ratio (ch9), thead-after-tbody (ch10), duplicate id
+  with browser-confirmed first-match clicks (ch11), script 404
+  with the full captured console line (ch12).
+* **Fading (U2):** completion problems in ch5-8 (TIY 5.3, 6.2, 7.4,
+  8.4), problem-first in ch9-12 (TIY 9.5 on the new
+  rem-practice.css, 10.4 save-as table, 11.2 radio group, 12.4 move
+  test). All conversions keep headings, numbers, and the three
+  labels; TIY counts and numbering never changed (the labs are the
+  spine, so no renumbering was ever needed).
+* **Cumulative retrieval (U3)** by REPLACEMENT (the family 3-5 cap
+  holds): every chapter 2-12 ends Retrieval Practice with 1-2
+  "From Chapter N:" items, totals stay at exactly 5.
+* **Subgoal labels (U5):** step comments on the two flagship worked
+  examples per chapter, naming decisions (with the [Step k:]
+  text-fence syntax for diagram chapters 1 and 7).
+
+**Images.** The nine club-era Pillow masters retire (archive keeps
+them, generator removed from the branch). Nine new masters in
+`assets/code/chapter-03/`: seven flat-illustration scenes generated
+with the Codex CLI (model gpt-5.6-sol, native image_gen tool), one
+coherent Sonoran design system, no baked text, and two charts from
+the new deterministic `generate_chart_images.py` (Pillow, data
+asserted, byte-identical rerun verified). The logo is 4,059 bytes
+and the smallest file in the pack, preserving TIY 3.5's ranking
+lesson. Provenance and SHA-256s: `_generators/IMAGE-MANIFEST.md`;
+propagation script asserts 66 byte-identical downstream copies;
+`tools/check_images.py` gates dimensions, transparency, ordering,
+palette share, and copy identity. Full generation report:
+`docs/image-generation-report-2026-07-28.md`.
+
+**Codex leverage (gpt-5.6-sol at xhigh throughout; no --model flag
+ever passed, confirmed against a live session rollout).** Adversarial
+spec review (verdict REJECT, 16 findings, all dispositioned into
+spec rev 2), three read-only wave reviews (6, 8, and 6 findings, all
+accepted and fixed in disposition commits), image and chart
+generation, and a final whole-branch review. Every finding
+disposition is its own commit with the review verdict quoted.
+
+**Verification at session end (all run on the final state):**
+
+* Structure checker (new `tools/check_course_structure.py`, encoding
+  the full post-upgrade contract): 0 errors on all 12 chapters.
+  Baselined green on the pre-upgrade book first.
+* Sentence length: 0 flagged across all chapters. Em dashes: 0.
+  Dash bullets: 0. Banned vocabulary and filler: 0.
+* Club residue (word-boundary, book + pack): 0, with two sanctioned
+  provenance exceptions in `_generators/` docs that describe the
+  retirement itself.
+* Validation: 62 pack files at Nu/Jigsaw zero; broken-contact.html
+  exactly 8 messages (contract preserved through the rename);
+  drive-day-flyer exactly 2 messages on the PINNED validator.w3.org
+  engine (captured verbatim; validator.nu returns 1, documented,
+  never substituted); all 8 flyer barriers inventoried by line.
+  Both JS files pass node --check.
+* Readability, same tool on archive vs branch: EVERY chapter equal
+  or improved (66.9/66.9, 69.4/69.5, 64.0/64.0, 69.5/69.5,
+  68.4/68.4, 67.9/68.3, 67.7/67.7, 70.5/70.5, 64.7/65.4, 68.9/69.0,
+  69.9/70.2, 71.1/71.3). Zero regressions.
+* Browser-verified (probe matrix): gallery 296px figures two per
+  line, h1 40/32px step at 640/641, playground title 22/28/36px at
+  400/700/1000 with the 600/601 background flip boundary exact,
+  bulletin card TWO tallest and FOUR shortest after the canon
+  rewrite, no horizontal overflow at 375 anywhere checked, label
+  first-match click behavior on the ch11 Fix It forms, the ch12
+  script-404 record and year-less footer, the gate strings and the
+  line-19 passphrase claim.
+* Chart generator byte-identical rerun verified; image gates 0
+  errors; propagation 66/66 identical; glossary byte-identical to
+  the archive (the spine added no terms, per spec).
+* `zensical build --clean`: No issues found.
+* Data pack rebuilt: `build/cis133-data-pack.zip`, 224 files,
+  integrity passes, SHA-256
+  `0100ef9a63edab02415cbe492eb9c3c65e6a68e6a2a231736d66155cbced1ddc`.
+  NOT uploaded to Canvas (Mr. Vega uploads zips manually).
+
+**CLAUDE.md** gained the Pedagogy Upgrade Law and the
+retrieval-by-replacement law; `templates/chapter-template.md` gained
+the Fix It block, the five-item retrieval pattern, and the fading
+and subgoal rules.
+
+**Final Codex branch review (gpt-5.6-sol, xhigh, whole 223-file
+diff):** 1 blocker, 3 major, 0 minor, plus this overall assessment:
+"the branch reaches much of the CIS215 pilot bar. The Fix Its are
+distinct, the fading sequence progresses correctly, the starter
+handoffs and event roster hold, structural checks pass, readability
+improves, and I found no material whole-book voice drift." All four
+findings were dispositioned the same session:
+
+* Program canon unified (major): devices that can be saved are
+  refurbished and donated, the rest goes to a certified recycler.
+  Swept through the guide sentence in 11 page copies plus the
+  content file, the home content, and the viewport pair (bodies
+  still byte-identical, all re-validated at Nu zero). Drive cadence
+  corrected to "a few times a year."
+* Two cumulative retrieval items re-sourced (major): ch6's
+  nav-as-list item now cites Chapter 3 (where the rationale is
+  taught), and ch11's Chapter 9 item now retrieves the
+  focus-ring law Chapter 9 actually teaches.
+* Image-mode honesty (major): the logo ships as a palette PNG with
+  full alpha (that is what keeps it the pack's smallest file), so
+  the manifest, spec, and checker now say exactly that, and
+  check_images.py asserts a real source alpha layer instead of
+  converting silently.
+* The join-form blocker: the false in-fiction claim that form
+  sign-ups succeeded is fixed (the home content and ch12 intro now
+  credit the program inbox, which the join page really offers). The
+  remaining design question is COURSE-LEVEL and pre-dates this
+  branch: the published join page ships an action-less form whose
+  default GET would put a name and email in the URL and store
+  nothing. See Pending item 2 for the decision this needs from Mr.
+  Vega before the term's publish step.
+
+**Pending / next steps:**
+
+1. Mr. Vega reviews the branch side-by-side (per
+   `../cis133-archive/ARCHIVE-README.md`) and decides on merge.
+   Merging to `main` deploys.
+2. BEFORE THE TERM'S PUBLISH STEP, decide the join-form policy
+   (raised by the final Codex review; the design pre-dates this
+   branch): the shipped join page is an action-less form that
+   stores nothing, and a real visitor pressing the button gets a
+   default GET that echoes their name and email into the URL.
+   Options: provision the course host's form receiver (pairs with
+   the existing pre-term hosting task), have Lab 12A publish the
+   button disabled with the email path primary, or accept as-is
+   with the honest no-server sentence. Chapter 11's teaching
+   already tells the truth about it.
+3. After merge: upload the rebuilt data pack zip to Canvas
+   (manual, per policy).
+4. Re-score under the family rubric (V2.1 or later): the
+   publication gate. Expect movement on C5, C7, C9 per the
+   playbook's scoring rule.
+5. Prior open items unchanged: G6 license decision, the two
+   deferred G7 banned-word hits (`book/glossary.md:187`,
+   `book/chapters/chapter-03.md:45`) predate this branch, Pillow
+   pin.
 
 ## What was done (2026-07-15): family template alignment
 

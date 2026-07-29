@@ -135,9 +135,7 @@ PART 2: APPLICATION
 PART 3: EXTENSION
 ---------------------------------------------------------------------
 
-Scenario: your campus computer club is building a resource page
-about recycling old electronics. The club president asked you to vet
-the research. The five sources the club found are described in
+Scenario: your employer, Copperwind IT Services, is building a resource page about recycling old electronics for its community program. The outreach coordinator asked you to vet the research. The five sources the team found are described in
 source-profiles.txt.
 
 3.1  Choose three of the five profiles. Score each one against the
@@ -165,17 +163,17 @@ source-profiles.txt.
        Purpose:
        Evidence:
 
-3.2  Write your recommendation memo to the club president
-     (about 150-200 words). Name the source(s) the club should use,
+3.2  Write your recommendation memo to the outreach coordinator
+     (about 150-200 words). Name the source(s) the program should use,
      the source(s) it should reject, and the evidence that decided
      each call.
 
      Memo:
 
 
-3.3  One profile offers images the club wants to reuse on its page.
-     Using the chapter's copyright section, tell the president
-     whether the club may use them, and what the club must do if it
+3.3  One profile offers images the program wants to reuse on its page.
+     Using the chapter's copyright section, tell the outreach coordinator
+     whether the program may use them, and what the program must do if it
      does.
 
      Your answer:

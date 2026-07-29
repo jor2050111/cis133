@@ -1,10 +1,10 @@
 # Chapter 3: Semantic HTML and Images
 
-The recycling guide you built in Chapter 2 works. It validates with zero errors, its links resolve, and the club president approved it. Then a club member named Devon sent the officers an email. Devon uses a screen reader, and reaching the drop-off steps means listening through everything above them, every visit, because the page offers no way to skip ahead. The validator never flagged that. Valid markup and meaningful markup are two different standards, and this chapter raises your work to the second one.
+The recycling guide you built in Chapter 2 works. It validates with zero errors, and its links resolve. Priya Sharma, Copperwind's outreach coordinator, approved it. Then a neighbor named Devon sent the outreach team an email. Devon uses a screen reader, and reaching the drop-off steps means listening through everything above them, every visit, because the page offers no way to skip ahead. The validator never flagged that. Valid markup and meaningful markup are two different standards, and this chapter raises your work to the second one.
 
 Here is the surprising part: the fix changes almost nothing on screen. HTML has a set of elements whose whole job is to name what each region of a page IS, the way `<ol>` already names a sequence. Screen readers like Devon's use those names to jump straight to the content a visitor wants. Search engines use them to decide which part of your page is the part worth indexing, a ranking audience you met in Chapter 1. This is the deeper half of CLO V, creating well-structured pages, and it begins CLO VIII, building accessibility into everything you ship.
 
-The president also had a request: "The pages look bare. Add some pictures." So this chapter delivers the images Chapter 2 promised. You will place images with the `img` element and write the alt text that keeps them meaningful for every visitor. You will pick file formats the way developers do, by matching format properties to the image's content. And you will organize a real multi-file site, because pages plus pictures equals folders to manage.
+Priya also had a request: "The pages look bare. Add some pictures." So this chapter delivers the images Chapter 2 promised. You will place images with the `img` element and write the alt text that keeps them meaningful for every visitor. You will pick file formats the way developers do, by matching format properties to the image's content. And you will organize a real multi-file site, because pages plus pictures equals folders to manage.
 
 ## Module Overview 🧭
 
@@ -48,7 +48,7 @@ The `<strong>` element marks content of **strong importance**: a warning, a dead
 
 ```html
 <p>Drop-offs end <em>this</em> Friday.</p>
-<p><strong>Back up your data before the reset.</strong> The club
+<p><strong>Back up your data before the reset.</strong> The team
 cannot recover it afterward.</p>
 ```
 
@@ -109,20 +109,28 @@ Here is the shape, as a complete body:
 
 ```html
 <body>
+    <!-- Step 1: Introduce the page in a header, the region a
+         screen reader announces as the banner -->
     <header>
         <h1>Recycle Your Old Electronics</h1>
     </header>
+    <!-- Step 2: Add the nav between header and main, holding the
+         site links in a list -->
     <nav>
         <ul>
             <li><a href="recycling-guide.html">Recycling Guide</a></li>
-            <li><a href="contact.html">Contact the Club</a></li>
+            <li><a href="contact.html">Contact the Team</a></li>
         </ul>
     </nav>
+    <!-- Step 3: Mark the primary content with the page's single
+         main landmark -->
     <main>
         <!-- The page's actual content lives here -->
     </main>
+    <!-- Step 4: Close with a footer so even the sign-off content
+         says what it is -->
     <footer>
-        <p>Email the club with questions.</p>
+        <p>Email the team with questions.</p>
     </footer>
 </body>
 ```
@@ -147,7 +155,7 @@ The two confuse everyone at first, so use the tests in order. Could it stand alo
         <p>Electronics contain metals worth recovering.</p>
     </section>
     <section>
-        <h2>What the Club Accepts</h2>
+        <h2>What the Program Accepts</h2>
         <p>Bring any item on the list to a collection event.</p>
     </section>
 </main>
@@ -168,14 +176,14 @@ A caution before the lab: adding these structural elements changes almost nothin
 ### Quick Check 3.2 ✅
 
 1. A classmate wraps their entire page, banner and footer included, in `<main>` because "it is all the main page." What does that markup claim, and what does a screen reader user lose?
-2. The club wants to publish meeting recaps that members share by direct link. Choose `<section>` or `<article>` for each recap and defend the choice with this section's test.
+2. Copperwind wants to publish drive recaps that neighbors share by direct link. Choose `<section>` or `<article>` for each recap and defend the choice with this section's test.
 3. In the landmark skeleton above, name one parent-child pair and state which element is which.
 
 ---
 
 ## 3.3 Images and Alt Text
 
-Structure delivered. Now the pictures. The club's design team drew a matching set of flat illustrations for the site, and they ship in your data pack's `chapter-03` folder. Everything in this section works with those files.
+Structure delivered. Now the pictures. Copperwind's design team drew a matching set of flat illustrations for the site, and they ship in your data pack's `chapter-03` folder. Everything in this section works with those files.
 
 ### The img Element
 
@@ -186,10 +194,11 @@ The **img element** (`<img>`) embeds an image into a page. It is an empty elemen
 
 ```html
 <img src="assets/code/chapter-03/cactus-garden.png"
-alt="Three green cacti in a gravel garden under an orange sky">
+alt="A saguaro, a flowering prickly pear, and barrel cacti
+in a sandy garden before desert mountains">
 ```
 
-Save a practice page with that line at your `cis133` root and the browser displays the club's cactus illustration. A screen reader reads the alt text aloud, then says "image." What happens when the pixels cannot arrive at all? The next exercise breaks the path on purpose. The validator's opinion hints at the stakes: it treats a missing `alt` as an error, not a style complaint.
+Save a practice page with that line at your `cis133` root and the browser displays Copperwind's cactus illustration. A screen reader reads the alt text aloud, then says "image." What happens when the pixels cannot arrive at all? The next exercise breaks the path on purpose. The validator's opinion hints at the stakes: it treats a missing `alt` as an error, not a style complaint.
 
 `<img>` has one more surprise: it is an inline element. Chapter 2's rule still holds. An image flows along inside a line of text like one oversized character, and it starts no new line on its own.
 
@@ -207,7 +216,8 @@ Two more attributes declare the image's dimensions in pixels.
 
 ```html
 <img src="assets/code/chapter-03/cactus-garden.png"
-alt="Three green cacti in a gravel garden under an orange sky"
+alt="A saguaro, a flowering prickly pear, and barrel cacti
+in a sandy garden before desert mountains"
 width="400" height="400">
 ```
 
@@ -227,32 +237,73 @@ Where do the true numbers come from? Your data pack's README lists every image's
 
 The `alt` attribute is required. Good alt text is a judgment call, and the judgment starts with one question: what job is this image doing on this page?
 
-* An **informative image** carries content. Describe what matters, in about a sentence, the way you would over the phone. For the cactus garden you placed earlier: `alt="Three green cacti in a gravel garden under an orange sky"`. Not "image of a garden" (the screen reader already says "image") and not a pixel-by-pixel inventory.
-* A **decorative image** carries no content. The club's diamond divider strip separates sections the way a horizontal line would. Write `alt=""`, empty and deliberate. A screen reader skips the image entirely, which is the kind choice: forcing Devon to hear "decorative border, decorative border" between sections helps no one. Never omit the attribute. Empty alt is a decision, and a missing alt is an error.
-* A **functional image** does a job, usually inside a link. Describe the destination, not the picture: a logo linking home gets `alt="PC Computer Club home"`, not a description of the logo's arrows.
+* An **informative image** carries content. Describe what matters, in about a sentence, the way you would over the phone. For the cactus garden you placed earlier: `alt="A saguaro, a flowering prickly pear, and barrel cacti in a sandy garden before desert mountains"`. Not "image of a garden" (the screen reader already says "image") and not a pixel-by-pixel inventory.
+* A **decorative image** carries no content. Copperwind's desert divider strip separates sections the way a horizontal line would. Write `alt=""`, empty and deliberate. A screen reader skips the image entirely, which is the kind choice: forcing Devon to hear "decorative border, decorative border" between sections helps no one. Never omit the attribute. Empty alt is a decision, and a missing alt is an error.
+* A **functional image** does a job, usually inside a link. Describe the destination, not the picture: a logo linking home gets `alt="Copperwind Community home"`, not a description of the logo's saguaro and wind ribbon.
 
 The same image can be informative on one page and decorative on another. The cactus garden as a page's only illustration of desert planting is informative. The same file used as page decoration deserves `alt=""`. Alt text describes a purpose, not a file, which is why no tool can write it for you.
 
 ### Complex Images: figure and figcaption
 
-Some images need more than a sentence, and some deserve a visible caption. The **figure element** (`<figure>`) wraps self-contained illustrative content, and the **figcaption element** (`<figcaption>`) supplies its visible caption. The pack's membership chart wants both:
+Some images need more than a sentence, and some deserve a visible caption. The **figure element** (`<figure>`) wraps self-contained illustrative content, and the **figcaption element** (`<figcaption>`) supplies its visible caption. The pack's chart of workshop signups wants both:
 
 ```html
+<!-- Step 1: Wrap the chart and its caption in one figure so
+     they travel as a unit -->
 <figure>
-    <img src="assets/code/chapter-03/membership-chart.png"
-    alt="Bar chart of club membership across four semesters,
-    growing every term from 18 to 39 members."
+    <!-- Step 2: Hand the alt the chart's finding, and declare
+         the true 640 by 400 -->
+    <img src="assets/code/chapter-03/workshop-signups-chart.png"
+    alt="Line chart of workshop signups across four months,
+    growing every month from 18 to 39."
     width="640" height="400">
-    <figcaption>The club keeps growing. Recruiting at the fall
-    involvement fair drove most of the gain.</figcaption>
+    <!-- Step 3: Let the figcaption comment on the chart without
+         repeating the alt -->
+    <figcaption>The workshops keep filling. Word of mouth at the
+    spring drive drove most of the gain.</figcaption>
 </figure>
 ```
 
-Notice the division of labor. The alt text replaces the chart for someone who cannot see it, so it delivers the finding: growth every semester, 18 to 39. The figcaption is visible to everyone and comments on the chart without repeating it. Caption and alt text answering the same question word for word is the telltale of alt text written without thought.
+Notice the division of labor. The alt text replaces the chart for someone who cannot see it, so it delivers the finding: growth every month, 18 to 39. The figcaption is visible to everyone and comments on the chart without repeating it. Caption and alt text answering the same question word for word is the telltale of alt text written without thought.
+
+### Fix It 3.1: The Caption That Fell Out 🔧
+
+**Symptom:** A teammate captioned the cactus garden on a practice page. The result looks close to right. The caption sits below the image, but flush at the page's left edge, out of line with its picture. The validator knows why:
+
+```text
+<figure>
+    <img src="assets/code/chapter-03/cactus-garden.png"
+    alt="A saguaro, a flowering prickly pear, and barrel cacti
+    in a sandy garden before desert mountains"
+    width="400" height="400">
+</figure>
+<figcaption>Copperwind's cactus garden in spring bloom.</figcaption>
+```
+
+```text
+Error: Element “figcaption” not allowed as child of element “body”
+in this context. (Suppressing further errors from this subtree.)
+```
+
+**Diagnose:** The closing `</figure>` arrives one line too soon. That leaves the caption outside the figure, a stray child of `<body>`. HTML allows `<figcaption>` in one place only: inside a `<figure>`. The browser draws the stray line anyway, tied to nothing. That is why it sits out of line. Note where the validator points: at the caption, while the true defect is the early close one line above. To Devon's screen reader, this figure has no caption at all.
+
+**Repair:** Move the caption up one line, inside the figure, as its last child:
+
+```html
+<figure>
+    <img src="assets/code/chapter-03/cactus-garden.png"
+    alt="A saguaro, a flowering prickly pear, and barrel cacti
+    in a sandy garden before desert mountains"
+    width="400" height="400">
+    <figcaption>Copperwind's cactus garden in spring bloom.</figcaption>
+</figure>
+```
+
+**Verify:** Validate again: zero messages. Refresh: the caption now renders with its image, inside the figure's box. Inspect shows the `<figcaption>` back inside the `<figure>`. Every reader of the file can pair the two again.
 
 ### Quick Check 3.3 ✅
 
-1. Write the alt attribute for the club logo in two situations: sitting unlinked in a page header, and serving as the link to the home page.
+1. Write the alt attribute for the Copperwind logo in two situations: sitting unlinked in a page header, and serving as the link to the home page.
 2. A teammate declares `width="800" height="450"` for an image that is truly 800 by 533. Describe what visitors see and name the one source of truth for those numbers.
 3. Your page's chart has `alt="Chart of drive results"` and a figcaption reading "Chart of drive results." Diagnose both problems.
 
@@ -270,14 +321,14 @@ Photographs are raster by nature, because cameras capture pixels. Logos, icons, 
 
 ### The Four Formats You Will Choose Between
 
-* **PNG (Portable Network Graphics):** raster, with **lossless compression**, meaning the file shrinks without discarding any pixel data. PNG supports **transparency**, so an image can have see-through regions that let the page background show. The club logo uses exactly that: its corners are transparent, so the round logo sits cleanly on any background color. PNG is the workhorse for screenshots, illustrations with flat color, and anything needing transparency.
+* **PNG (Portable Network Graphics):** raster, with **lossless compression**, meaning the file shrinks without discarding any pixel data. PNG supports **transparency**, so an image can have see-through regions that let the page background show. The Copperwind logo uses exactly that: its corners are transparent, so the round logo sits cleanly on any background color. PNG is the workhorse for screenshots, illustrations with flat color, and anything needing transparency.
 * **JPEG:** raster, with **lossy compression**, meaning it shrinks files by permanently discarding detail your eye is unlikely to miss. For photographs, the trade is spectacular: a fraction of the file size for nearly identical appearance. Two costs travel with it: no transparency, and quality that degrades a little more with each re-save.
 * **GIF:** raster, limited to 256 colors, and capable of simple frame-by-frame animation. That color limit makes it a poor choice for photos, and PNG beats it for flat graphics. It survives on animation convenience alone.
 * **SVG (Scalable Vector Graphics):** the web's vector format. Logos, icons, and diagrams built as SVG stay sharp at every size, and the files are often tiny. It is the wrong tool for photographs, which have no shapes to describe.
 
 One name you will meet in the wild: WebP, a modern raster format that compresses smaller than PNG and JPEG and handles transparency and animation. Evergreen browsers support it, and you will see it constantly in DevTools on commercial sites.
 
-So why does your data pack ship only PNGs? The club's images are flat-color illustrations, PNG's sweet spot, and the logo needs its transparent corners. One format, honestly chosen. When the club starts posting camera photos of real drives, that choice gets revisited, and that is one of your Skills Lab questions.
+So why does your data pack ship only PNGs? Copperwind's images are flat-color illustrations, PNG's sweet spot, and the logo needs its transparent corners. One format, honestly chosen. When the program starts posting camera photos of real drives, that choice gets revisited, and that is one of your Skills Lab questions.
 
 | Format | Family | Compression | Transparency | Animation | Reach for it when |
 | ------ | ------ | ----------- | ------------ | --------- | ----------------- |
@@ -290,11 +341,11 @@ File size is the recurring stake in every row. Chapter 1 traced a page request a
 
 ### Try It Yourself 3.5: The File Size Detective 🛠️
 
-**Predict:** Rank these three pack images by file size, largest first: `club-logo.png` (240 by 240), `recycling-drive.png` (800 by 450), `devices-collected-chart.png` (640 by 400). What did you base the ranking on?
+**Predict:** Rank these three pack images by file size, largest first: `copperwind-logo.png` (240 by 240), `recycling-drive.png` (800 by 450), `devices-collected-chart.png` (640 by 400). What did you base the ranking on?
 
 **Run:** Find the three files in your `cis133` folder and check their sizes in your file manager (List view on Mac, Details view on Windows).
 
-**Explain:** Your file manager just handed you the true ranking. In 1-2 sentences, explain what besides pixel count drives a PNG's size, using the pair whose order surprised you most.
+**Explain:** Your file manager just handed you the true sizes. In 1-2 sentences, explain what besides pixel count drives a PNG's size, using the pair whose size gap surprised you most.
 
 ### Organizing a Real Site
 
@@ -306,7 +357,7 @@ skills-lab-3a-ortiz/
 ├── contact.html
 ├── drive-gallery.html
 └── images/
-    ├── club-logo.png
+    ├── copperwind-logo.png
     ├── desert-divider.png
     ├── devices-collected-chart.png
     └── recycling-drive.png
@@ -325,7 +376,7 @@ One more convention to bank for later: the web's default name for a site's home 
 
 ### Quick Check 3.4 ✅
 
-1. The club has four files to publish: a phone photo of the fall drive, a logo that must stay sharp at every size, a three-second animated demo, and a screenshot of the sign-up form. Assign each a format and one property that justifies it.
+1. Copperwind has four files to publish: a phone photo of the fall drive, a logo that must stay sharp at every size, a three-second animated demo, and a screenshot of the sign-up form. Assign each a format and one property that justifies it.
 2. A classmate's page at the top of their site folder shows a broken image with `src="C:\Users\sam\site\images\logo.png"`. Explain both what breaks when the site is zipped and shared, and what the src should be.
 3. Why does a 4,000-pixel-wide photo straight off a phone camera make a bad web image even when it looks fine on screen?
 
@@ -357,14 +408,14 @@ Answer from memory before checking back through the chapter.
 1. Sketch the four-landmark page skeleton from memory: the elements in order inside `<body>`, and the one landmark that may appear only once.
 2. State the decision rule that separates `<strong>` and `<em>` from `<b>` and `<i>`, and give one sentence where `<em>` changes the meaning.
 3. An image's alt text should depend on the image's job on the page. Name the three jobs from this chapter and the alt approach each one gets.
-4. A photograph, a logo, and a short animation need formats. Assign one each and name the property that decided it.
-5. Explain why `src="images/logo.png"` keeps working after the site folder is zipped and moved, while an absolute path to your own disk does not.
+4. From Chapter 1: List the parts of a URL in order, and state the job each part does.
+5. From Chapter 2: State what the validator checks when it reports zero errors, and name one problem it can never catch.
 
 ---
 
-## 3.6 Skills Lab 3A: Give the Club's Site Structure and Pictures
+## 3.6 Skills Lab 3A: Give Copperwind's Site Structure and Pictures
 
-**Goal:** Retrofit the club's two finished pages with semantic landmarks, place the club's images with alt text you write yourself, and build the site's new gallery page.
+**Goal:** Retrofit Copperwind's two finished pages with semantic landmarks, place the Copperwind images with alt text you write yourself, and build the site's new gallery page.
 
 **Dataset:** Provided files in `assets/code/chapter-03/` from the course data pack: `recycling-guide-start.html` and `contact-start.html` (the finished Chapter 2 pages), `gallery-content.txt` (every piece of the gallery page's text, labeled), and `skills-lab-3a-answers.txt` (your written answers file). Nine PNG images ship in the same folder, documented in its README. Work at the extracted `cis133` root. Copy provided text instead of retyping it: you type only the markup.
 
@@ -373,13 +424,13 @@ Answer from memory before checking back through the chapter.
 1. Create a folder named `skills-lab-3a-lastname` at your `cis133` root with an `images` folder inside it, and copy `skills-lab-3a-answers.txt` into it.
 2. Copy `recycling-guide-start.html` into your lab folder and rename it `recycling-guide.html`. Update the comment at the top of the body with the lab number, your name, and the date.
 3. Wrap the page's regions in landmarks: a `header` for the title and intro paragraphs, a `main` for the page's content, and a `footer` for the closing paragraph. Add one `section` per themed block inside the main. Indent one extra level, as Chapter 2 taught, so the new nesting stays readable.
-4. Add a `nav` between the header and the main, holding a list of three links: Recycling Guide (`recycling-guide.html`), Spring Drive Gallery (`drive-gallery.html`), and Contact the Club (`contact.html`). Two of the three pages do not exist yet. Part 3 pays that debt.
+4. Add a `nav` between the header and the main, holding a list of three links: Recycling Guide (`recycling-guide.html`), Spring Drive Gallery (`drive-gallery.html`), and Contact the Team (`contact.html`). Two of the three pages do not exist yet. Part 3 pays that debt.
 5. Give two phrases their text-level elements: the phrase "in order" in the drop-off instructions, and the word "not" in the Why It Matters paragraph. Choose between `<strong>` and `<em>` for each by meaning.
 6. Record your landmark map in answer 1.A and your hardest landmark call in answer 1.B. Validate the page and fix anything the validator reports.
 
 ### Part 2: Application (Aligns with Objective 3.2)
 
-1. Copy `club-logo.png`, `recycling-drive.png`, `devices-collected-chart.png`, and `desert-divider.png` from the data pack into your lab site's `images` folder.
+1. Copy `copperwind-logo.png`, `recycling-drive.png`, `devices-collected-chart.png`, and `desert-divider.png` from the data pack into your lab site's `images` folder.
 2. Place the logo at the top of the header, the collection-scene illustration inside the Why It Matters section, and the divider between the main and the footer. Every `src` uses the short relative form from Section 3.4.
 3. Write each image's alt text yourself, matching it to the image's job on this page. At least one image on the finished page should carry a deliberate `alt=""`.
 4. Add `devices-collected-chart.png` inside a `figure` in the Why It Matters section, with alt text that delivers the chart's finding and a `figcaption` you write that adds to it without repeating it.
@@ -392,7 +443,7 @@ Answer from memory before checking back through the chapter.
 2. Copy the three gallery images into your `images` folder. Present each as a `figure` with its provided caption as the `figcaption` and alt text you write yourself. The content file gives you no alt text on purpose.
 3. Copy `contact-start.html` in as `contact.html` and give it the same landmarks and the same nav. This page has no closing paragraph, so it earns no footer, and that absence is a semantic decision too.
 4. Test the site as a site: starting from the guide, reach every page and return using only your nav links. Then validate all three pages until each reports zero messages.
-5. Answer 3.A (your gallery alt text log) and 3.B (format choices for the club's three planned media files) in the answers file.
+5. Answer 3.A (your gallery alt text log) and 3.B (format choices for the program's three planned media files) in the answers file.
 
 ### Questions & Analysis 🤔
 
@@ -439,4 +490,4 @@ same everywhere.
 
 ## Looking Ahead ⏩
 
-Your pages now say what every region and image means, and the club's site finally looks like a site, if a plain one. Chapter 4 hands you CSS, the language that controls how all of it looks: colors, type, and the styling that Chapter 2 told you to stop faking with heading levels. The landmarks you built in this chapter become the exact hooks your stylesheets grab first. Structure comes first. Presentation comes next.
+Your pages now say what every region and image means, and the Copperwind site finally looks like a site, if a plain one. Chapter 4 hands you CSS, the language that controls how all of it looks: colors, type, and the styling that Chapter 2 told you to stop faking with heading levels. The landmarks you built in this chapter become the exact hooks your stylesheets grab first. Structure comes first. Presentation comes next.

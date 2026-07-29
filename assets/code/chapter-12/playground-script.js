@@ -16,8 +16,8 @@ const gateButton = document.getElementById("gate-button");
 const gateAnswer = document.getElementById("gate-answer");
 
 gateButton.addEventListener("click", function () {
-    if (passPhraseBox.value === "cactus-club-2026") {
-        gateAnswer.textContent = "Welcome, officer. The supply closet code is 4141.";
+    if (passPhraseBox.value === "copperwind-2026") {
+        gateAnswer.textContent = "Welcome, team member. The supply closet code is 4141.";
     } else {
         gateAnswer.textContent = "That is not the pass phrase.";
     }

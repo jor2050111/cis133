@@ -1,10 +1,10 @@
 # Chapter 10: HTML Tables
 
-The officers' expansion brief has waited three chapters to be paid. Its second request was an events page: visitors keep asking when the next drop-off is, so publish the fall schedule. A helpful clubmate took a first pass and pasted the six events into a draft page as six paragraphs. Now try to answer one visitor's question: when is the Fix-It Workshop? You read all six paragraphs to find out. The officers' notes have structure the paragraphs threw away. Every event answers the same five questions: its name, date, time, location, and one detail worth knowing.
+Priya Sharma's expansion brief has waited three chapters to be paid. Its second request was an events page: visitors keep asking when the next drop-off is, so publish the fall schedule. A helpful volunteer took a first pass and pasted the six events into a draft page as six paragraphs. Now try to answer one visitor's question: when is the Digital Safety Workshop? You read all six paragraphs to find out. Priya's notes have structure the paragraphs threw away. Every event answers the same five questions: its name, date, time, location, and one detail worth knowing.
 
 The draft also marks a turn in the course. Part III designed for every user: you planned the site, adapted it to every screen, and audited it against WCAG. Part IV builds the pages the site plan promised, starting here. The tool this chapter adds is the HTML table, the element that gives every fact two addresses: its row and its column. A visitor hunting the workshop date reads down one column and across one row, and the answer waits at the intersection. No full read required.
 
-You will learn to tell table data from everything else, and to refuse tables that only want to arrange boxes. You will build the grid from its elements, then make it announce itself honestly to every tool, because Devon is still a member and Chapter 9's work never pauses. You will style the grid until a schedule reads at a glance, and teach a wide table to behave on a phone. Skills Lab 10A publishes the fall schedule at last and adds the events page to every page's navigation. The same pattern supports Independent Project Milestone 2, a set of draft pages for your own site.
+You will learn to tell table data from everything else, and to refuse tables that only want to arrange boxes. You will build the grid from its elements, then make it announce itself honestly to every tool, because Devon still reads every page and Chapter 9's work never pauses. You will style the grid until a schedule reads at a glance, and teach a wide table to behave on a phone. Skills Lab 10A publishes the fall schedule at last and adds the events page to every page's navigation. The same pattern supports Independent Project Milestone 2, a set of draft pages for your own site.
 
 ## Module Overview 🧭
 
@@ -18,7 +18,7 @@ By the end of this chapter, you will be able to:
 
 * **10.1 (Analyze):** Differentiate data that belongs in a table from content that belongs in lists or layout, justifying the choice (Section 10.1)
 * **10.2 (Apply):** Construct accessible data tables with rows, header and data cells, captions, and header scope (Sections 10.2-10.3)
-* **10.3 (Create):** Produce the club's events page: a styled, readable schedule table integrated into the site (Section 10.4)
+* **10.3 (Create):** Produce Copperwind's events page: a styled, readable schedule table integrated into the site (Section 10.4)
 
 ### This chapter aligns with the following Course Learning Outcomes
 
@@ -154,6 +154,66 @@ Two powers get named once and set aside. Cells can span several columns or rows 
 
 **Explain:** In 1-2 sentences, name what the browser built without asking, and state why writing that structure yourself keeps your file honest with the page the browser serves. Section 10.4 pays this discovery.
 
+### Fix It 10.1: Right Render, Wrong Order 🔧
+
+Malik Johnson runs Copperwind's sorting station at every drive, and he wants a reference card for it: a small table mapping each category to its bin. He builds the data rows first and files the header group last, because labels feel like a finishing touch. His table reads:
+
+```text
+<table>
+    <tbody>
+        <tr>
+            <td>Phones</td>
+            <td>Blue tub</td>
+        </tr>
+        <tr>
+            <td>Laptops</td>
+            <td>Gray cart</td>
+        </tr>
+        <tr>
+            <td>Cables</td>
+            <td>Wire barrel</td>
+        </tr>
+    </tbody>
+    <thead>
+        <tr>
+            <th>Category</th>
+            <th>Bin</th>
+        </tr>
+    </thead>
+</table>
+```
+
+**Symptom:** The browser shows nothing wrong. Category and Bin draw at the top of the grid, exactly where labels belong. The zero-messages habit tells another story. Fed the page, the HTML checker answers with one error:
+
+```text
+Error: Element "thead" not allowed as child of element "table"
+in this context. (Suppressing further errors from this subtree.)
+```
+
+**Diagnose:** The table's contract fixes the order of its groups: caption first, then `<thead>`, then the row groups. Malik broke that order, and the browser covered for him. It met a header group filed last and drew it where headers belong. Expand the table in the DevTools Elements panel. The tree still lists `<thead>` after `<tbody>`. The favor happened in the drawing, not in the tree. TIY 10.3 watched the browser make this kind of quiet repair, and here is the cost. The picture stops matching the markup, and only the checker says so.
+
+**Repair:** Move the header group above `<tbody>`. The namers come first, the named follow, the same order every schedule in this chapter wrote:
+
+```html
+<table>
+    <thead>
+        <tr>
+            <th>Category</th>
+            <th>Bin</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Phones</td>
+            <td>Blue tub</td>
+        </tr>
+        <!-- the other data rows, unchanged -->
+    </tbody>
+</table>
+```
+
+**Verify:** Run the repaired page through the checker: zero messages. Then confirm the repair moved no data. Section 10.4 will scope its row styling to `<tbody>`, and this fix moved only the header group. The data rows never left the body group, so any rule that counts the tbody's rows counts the same rows it always did.
+
 ### Quick Check 10.2 ✅
 
 1. In one sentence each, state the claim a `<td>` makes about its content and the claim a `<th>` makes.
@@ -205,9 +265,15 @@ Column headers the schedule has. Row headers it has been hiding. Each subject na
 <!-- The finished schedule: column headers govern down, and
      each subject cell is a row header governing across. -->
 <table>
+    <!-- Step 1: the title rides inside the table, first child
+         by law, so it travels wherever the grid goes. -->
     <caption>Fall drop-in tutoring schedule</caption>
+    <!-- Step 2: group the namers apart from the named.
+         Section 10.4 pays this split. -->
     <thead>
         <tr>
+            <!-- Step 3: each column header declares what it
+                 governs: everything below it. -->
             <th scope="col">Subject</th>
             <th scope="col">Day</th>
             <th scope="col">Hours</th>
@@ -215,6 +281,8 @@ Column headers the schedule has. Row headers it has been hiding. Each subject na
         </tr>
     </thead>
     <tbody>
+        <!-- Step 4: promote each row's namer. Chemistry is not
+             a fact about the row, it is the row's name. -->
         <!-- The other subjects' rows follow the same pattern. -->
         <tr>
             <th scope="row">Chemistry</th>
@@ -230,9 +298,11 @@ With scope in place, the opening announcement assembles itself. Devon lands on a
 
 ### Try It Yourself 10.4: The Caption Arrives 🛠️
 
-**Predict:** The practice table still has no caption, and its data still restates Chapter 3's chart. You will add this exact line as the table's first child: `<caption>Spring Drive Results: 154 items collected</caption>`. Predict where the text will render relative to the grid, and in what type: body-plain, bold, centered, something else?
+The practice table still restates Chapter 3's chart, and it still lacks everything this section teaches. This time you get the goal, not the steps. Save a copy of `table-practice.html` as `table-complete.html`, and leave the original untouched: TIY 10.5 needs it exactly as it ships. Give the copy the full treatment: a caption naming the tally, the namers grouped apart from the named, and scope on every header in both directions. A correct copy validates to zero messages, and its caption renders just above the grid.
 
-**Run:** Add the line directly after the opening `<table>` tag in `table-practice.html`, save, and reload.
+**Predict:** Before editing, write the caption text you plan to ship and name the one position inside the table the caption is allowed to hold. Then predict which cells deserve promotion to row headers, and say why.
+
+**Run:** Build the copy, check the render against the outcomes above, and feed the file to the HTML checker.
 
 **Explain:** In 1-2 sentences, name who receives this title that a paragraph above the table would deny, and state what the first-child law guarantees about the title and its grid.
 
@@ -270,9 +340,10 @@ Read the division of labor before moving on. The collapse rides on the table, be
 Wide tables ask the eye to hold a line across many columns, and **zebra striping** is the standing aid: a soft background tint on every other data row. The selector that builds it is new, and it is deliberately the last new selector of the course. Chapter 6's `:hover` and `:focus` matched elements by state, what is happening to them right now. A **structural pseudo-class** matches by position instead: where an element sits among its siblings. **`:nth-child()`** is the one this course teaches, and its `even` and `odd` keywords select alternating siblings.
 
 ```css
-/* Tint every even data row. Scoping to tbody starts the count
-   at the first data row, because the header row lives in thead,
-   outside the count. */
+/* Step 1: pick rows by position, not state: the even keyword
+   tints every other sibling. */
+/* Step 2: scope the count to tbody, so it starts at the first
+   data row and the header row never joins it. */
 tbody tr:nth-child(even) {
     background-color: #f2f2f2;
 }
@@ -283,17 +354,17 @@ The tutoring schedule wrote its `<thead>` and `<tbody>` in Section 10.3, so its 
 One more reading aid costs one rule: light the row under the pointer. The selector reuses Chapter 6's `:hover`, and its placement matters more than its color:
 
 ```css
-/* The reading aid under the pointer. This rule sits after the
-   stripe rule on purpose: the two selectors tie on specificity,
-   so the later rule wins and the highlight shows on striped
-   rows too (Chapter 4's tie-breaker at work). */
+/* Step 3: place the pointer highlight after the stripe rule
+   on purpose: the two selectors tie on specificity, so the
+   later rule wins and the highlight shows on striped rows too
+   (Chapter 4's tie-breaker at work). */
 tbody tr:hover {
     background-color: #e0e0e0;
 }
 ```
 
 !!! tip
-    A stripe is a background behind body text, so the pairing must clear the same contrast bar as any text on the site. The grays above are teaching stand-ins. The club palette's passing list carries stripe-ready pairings, and the lab shops from it.
+    A stripe is a background behind body text, so the pairing must clear the same contrast bar as any text on the site. The grays above are teaching stand-ins. The Copperwind palette's passing list carries stripe-ready pairings, and the lab shops from it.
 
 ### Try It Yourself 10.5: Stripe the Results 🛠️
 
@@ -380,17 +451,17 @@ Answer from memory before checking back through the chapter.
 
 1. Recite the grid's anatomy: the element that wraps it, the element for a row, the two kinds of cells, and the two grouping elements.
 2. State the two-axes test, then apply it from memory to a bus schedule and to a recipe's steps.
-3. Write the zebra stripe rule from memory and explain why it is scoped to `tbody`.
-4. A seven-column table meets a phone. Recite the repair: the wrapper, its one rule, and the law it protects.
-5. Name the two pieces of table markup that exist for tools, not for pixels, and what a screen reader does with each.
+3. A seven-column table meets a phone. Recite the repair: the wrapper, its one rule, and the law it protects.
+4. From Chapter 8: Recite what the viewport meta tag tells the phone, and describe what a phone does with a page that omits it.
+5. From Chapter 3: A border strip between sections is pure decoration. State the alt text it earns, and what a screen reader does when it meets it.
 
 ---
 
 ## 10.6 Skills Lab 10A: The Events Page
 
-**Goal:** Produce the club's events page: the officers' fall schedule as an accessible, styled table, linked from every page's navigation, closing the site plan's first promised addition.
+**Goal:** Produce Copperwind's events page: the outreach team's fall schedule as an accessible, styled table, linked from every page's navigation, closing the site plan's first promised addition.
 
-**Dataset:** Provided files in `assets/code/chapter-10/` from the course data pack. `starter-site/` holds the club's three pages, the `images` folder, and `club-styles.css` exactly as Skills Lab 9A finished them: the pages are unchanged, and the stylesheet's type now speaks rem. `events-content.txt` carries the six fall events with labeled fields, word for word from the Chapter 7 brief's planning notes, so you copy values instead of retyping prose. `club-palette.txt` travels with every CSS chapter, and its passing list supplies every color this lab's table wears. `table-practice.html`, `wide-practice.html`, and `practice-styles.css` are the chapter's Try It Yourself files and stay out of the submission. `skills-lab-10a-answers.txt` is your written answers file. Part 3 reuses `accessibility-checklist.txt` from the Chapter 9 pack. The folder's README documents every file. Work at the extracted `cis133` root.
+**Dataset:** Provided files in `assets/code/chapter-10/` from the course data pack. `starter-site/` holds Copperwind's three pages, the `images` folder, and `copperwind-styles.css` exactly as Skills Lab 9A finished them: the pages are unchanged, and the stylesheet's type now speaks rem. `events-content.txt` carries the six fall events with labeled fields, word for word from the Chapter 7 brief's planning notes, so you copy values instead of retyping prose. `copperwind-palette.txt` travels with every CSS chapter, and its passing list supplies every color this lab's table wears. `table-practice.html`, `wide-practice.html`, and `practice-styles.css` are the chapter's Try It Yourself files and stay out of the submission. `skills-lab-10a-answers.txt` is your written answers file. Part 3 reuses `accessibility-checklist.txt` from the Chapter 9 pack. The folder's README documents every file. Work at the extracted `cis133` root.
 
 The lab walks the chapter's own path. Part 1 builds the page and its table and wires the navigation. Part 2 styles the grid from the palette's passing list. Part 3 survives the phone, passes the Chapter 9 habit, and supplies a pattern for Independent Project Milestone 2.
 
@@ -404,7 +475,7 @@ The lab walks the chapter's own path. Part 1 builds the page and its table and w
 
 ### Part 2: Application (Aligns with Objectives 10.3 and 10.2)
 
-1. In `club-styles.css`, add a commented table block below the base rules and above the query block, so the query block keeps the bottom of the file. Set the collapse, the cell borders and padding, the table's width, and your alignment call. Record the block's decisions in answer 2.A.
+1. In `copperwind-styles.css`, add a commented table block below the base rules and above the query block, so the query block keeps the bottom of the file. Set the collapse, the cell borders and padding, the table's width, and your alignment call. Record the block's decisions in answer 2.A.
 2. Dress the grid from the palette's passing list: one pairing for the header row, one for the zebra stripe. Both calls are yours to make and defend. Quote each pairing's ratio from the list in answer 2.B, along with any pairing you considered and rejected.
 3. Stretch, here or in Part 3: the row hover from Section 10.4, placed after the stripe rule. Validate the stylesheet to zero messages.
 
@@ -419,9 +490,9 @@ The lab walks the chapter's own path. Part 1 builds the page and its table and w
 Answer both questions in the answers file. These answers carry significant rubric weight.
 
 1. Your finished table carries a caption, header cells with scope, and a stripe from the passing list. Assign each of those features one visitor it serves, name what each replaces or prevents, and cite your own page as evidence.
-2. The officers' notes already published this schedule as readable prose in the Chapter 7 brief. Using the two axes of meaning, argue what the table version answers that the prose version cannot. Then name one content block on the club's site that must never become a table, and defend the refusal.
+2. The outreach team's notes already published this schedule as readable prose in the Chapter 7 brief. Using the two axes of meaning, argue what the table version answers that the prose version cannot. Then name one content block on the Copperwind site that must never become a table, and defend the refusal.
 
-**Submission:** Zip your `skills-lab-10a-lastname` folder containing the updated `starter-site` folder (four pages, `club-styles.css`, and `images`), your completed checklist copy, and `skills-lab-10a-answers.txt`, and submit it as `skills-lab-10a-lastname.zip`. Every page and the stylesheet must validate with zero messages, and every answer must sit under its numbered prompt.
+**Submission:** Zip your `skills-lab-10a-lastname` folder containing the updated `starter-site` folder (four pages, `copperwind-styles.css`, and `images`), your completed checklist copy, and `skills-lab-10a-answers.txt`, and submit it as `skills-lab-10a-lastname.zip`. Every page and the stylesheet must validate with zero messages, and every answer must sit under its numbered prompt.
 
 ### Rubric: Skills Lab 10A
 
@@ -479,4 +550,4 @@ same everywhere.
 
 ## Looking Ahead ⏩
 
-The site plan promised three additions, and the first is now live in the nav. The home page waits for Chapter 12, when the whole site publishes behind a full pre-flight check. Next comes the join page: the officers want to collect the name and email of every interested student, and collecting input is the job of HTML forms. Chapter 11 builds that page on the partnership Chapter 9 promised, the contract between every input and the label that announces it.
+The site plan promised three additions, and the first is now live in the nav. The home page waits for Chapter 12, when the whole site publishes behind a full pre-flight check. Next comes the join page: the outreach team wants to collect the name and email of every prospective volunteer, and collecting input is the job of HTML forms. Chapter 11 builds that page on the partnership Chapter 9 promised, the contract between every input and the label that announces it.

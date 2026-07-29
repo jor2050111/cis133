@@ -466,7 +466,59 @@ attributes (`<center>`, `<font>`, `align=`), even in teaching code.
 1. [Active recall prompt at a course-target Bloom's level]
 2. [Active recall prompt at a course-target Bloom's level]
 3. [Active recall prompt at a course-target Bloom's level]
+4. From Chapter N: [reach-back prompt answerable from memory]
+5. From Chapter N: [second reach-back, or a same-chapter prompt]
 ```
+
+**Retrieval Practice law (pedagogy upgrade, 2026-07-28):** exactly 5
+items per chapter. In chapters 2-12 the final 1-2 items reach back to
+earlier chapters, labeled exactly `From Chapter N:`, answerable from
+memory, spaced roughly N-2 and N-4. At least 3 items stay
+same-chapter. Cumulative items REPLACE same-chapter items (never
+append past 5): retire the item most redundant with a Quick Check.
+
+### Pedagogy Upgrade Law (2026-07-28)
+
+Binding spec: `docs/pedagogy-upgrade-plan-2026-07-28.md`. Family
+workflow: `../PEDAGOGY-UPGRADE-PLAYBOOK-V1.md`. Summary:
+
+* **Copperwind spine:** students build the Copperwind Community
+  website (the public site of Copperwind IT Services' community tech
+  program) across the Skills Lab thread, with per-chapter starter
+  states so chapters stay independently assignable. Canonical facts
+  (cast, site identity, nav labels, the fall 2026 event roster) live
+  in the spec Sections 1.1-1.5. Never invent conflicting facts.
+  Varied cover stories (tutoring center, soccer league) stay varied.
+* **Fix It blocks:** one `### Fix It N.1: [Title] 🔧` per chapter,
+  H3 inside a main content section, labels `**Symptom:**`
+  `**Diagnose:**` `**Repair:**` `**Verify:**` exactly once each.
+  Never Predict/Run/Explain inside a Fix It. Broken code and its
+  REAL captured evidence live in `text` fences: a validator message,
+  a console/network record, or a rendered symptom, captured from a
+  real run, never invented. A Fix It never recycles a probe, message,
+  or answer already used in its own chapter.
+* **Fading:** one TIY per chapter is a completion problem in
+  chapters 5-8 (gaps as `____` in a `text` fence) and problem-first
+  in chapters 9-12 (task plus real expected outcome). Conversions
+  keep the heading, number, title, and all three
+  Predict/Run/Explain labels, and fade SUPPORT while keeping the
+  original exercise's observation or reasoning goal.
+* **Subgoal labels:** the two most complex worked examples per
+  chapter carry numbered decision comments (`<!-- Step k: ... -->`,
+  `/* Step k: ... */`, `// Step k: ...`, or `[Step k: ...]` inside
+  text-fence diagrams). 3-5 steps naming decisions, never syntax.
+  Comments only: the code itself never changes.
+* **Checker contract:** TIY counts are locked (5 per chapter, 6 in
+  chapters 9 and 10), Quick Checks exactly 4, Retrieval exactly 5,
+  equal Predict/Run/Explain counts, anatomy N.1-N.7. Run
+  `python3 tools/check_course_structure.py --all` (and
+  `tools/check_images.py` when images change) before any commit.
+* **Images:** nine canonical masters in `assets/code/chapter-03/`
+  (seven AI-generated flat illustrations plus two chart PNGs from
+  the seeded generator). Provenance and checksums:
+  `assets/code/_generators/IMAGE-MANIFEST.md`. Propagate with
+  `_generators/propagate_pack_images.py`. The flat logo stays the
+  smallest file in the pack (a TIY 3.5 teaching invariant).
 
 ### Markdown Formatting
 
@@ -626,6 +678,7 @@ colors do not transfer, and list numbering can restart after code blocks.
 - `/docs/blooms-taxonomy-reference.md` - Learning objective guidance
 - `/docs/part-structure.md` - 12-chapter organization into 4 Parts
 - `/docs/CIS133_CLOs.md` - Authoritative course reference (CLOs, district competencies, course outline, chapter mapping)
+- `/docs/pedagogy-upgrade-plan-2026-07-28.md` - The binding pedagogy-upgrade spec (spine canon, Fix It, fading, retrieval, subgoal law)
 
 ## Quality Checklist
 
@@ -653,6 +706,9 @@ Before considering a chapter complete, verify:
 - [ ] "Try It Yourself" exercises embedded in sections (1-2 per major section)
 - [ ] All "Try It Yourself" use Predict-Run-Explain pattern
 - [ ] Quick Checks after each major section (2-3 questions each)
+- [ ] Exactly one Fix It N.1 block (Symptom/Diagnose/Repair/Verify, real captured evidence, no Predict/Run/Explain inside)
+- [ ] The chapter's faded TIY keeps its heading, number, and all three labels (completion gaps as `____` in text fences in chapters 5-8; problem-first task plus real expected outcome in chapters 9-12)
+- [ ] Subgoal step comments on the two flagship worked examples name decisions, not syntax
 - [ ] Skills Lab with 3 parts (Foundation/Application/Extension)
 - [ ] Rubric follows the single-source pattern (chapter 1 transcludes, chapters 2-12 link)
 - [ ] Questions & Analysis (2 questions) after Part 3, before Submission
@@ -673,7 +729,7 @@ Before considering a chapter complete, verify:
 
 - [ ] Summary includes Key Concepts + Key Terms + Retrieval Practice
 - [ ] Key Terms reference glossary (not duplicate definitions)
-- [ ] Retrieval Practice has 3-5 active recall prompts
+- [ ] Retrieval Practice has exactly 5 prompts (final 1-2 are "From Chapter N:" reach-backs in chapters 2-12)
 - [ ] Review questions span the course's target Bloom's levels
 - [ ] Further Reading has 3-6 curated resources
 

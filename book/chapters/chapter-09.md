@@ -1,10 +1,10 @@
 # Chapter 9: Web Accessibility
 
-A clubmate could not wait for the next meeting. They built a Drive Day flyer between classes, linked it to the club's pages, and posted it in the group chat: bright teal and sand, an eager pitch, every date and detail in place. Then Devon replied. Devon, whose email about the recycling guide opened Chapter 3, tried to read the flyer with a screen reader and gave up halfway down. The flyer is loud, cheerful, and closed to one of the club's own members.
+A teammate on Copperwind's outreach team could not wait for the next brief. They rushed out a Drive Day flyer, linked it into the program's pages, and posted it in the team chat: bright teal and sand, an eager pitch, every date and detail in place. Then Devon replied. Devon, whose email about the recycling guide opened Chapter 3, tried to read the flyer with a screen reader and gave up halfway down. The flyer is loud, cheerful, and closed to one of the neighbors it was made for.
 
-Chapter 8 ended on a question, and this chapter is the answer. The club's site now serves every screen size a visitor can bring. Does it serve every visitor? Here is the surprising part: you have been building the answer since Chapter 1. Honest alt text, landmarks Devon jumps by, focus outlines no rule may remove, navigation labels that predict their pages, a palette whose pairings pass a contrast bar. Every one of those habits comes from a single written standard this book has never named. This chapter names it.
+Chapter 8 ended on a question, and this chapter is the answer. The Copperwind site now serves every screen size a visitor can bring. Does it serve every visitor? Here is the surprising part: you have been building the answer since Chapter 1. Honest alt text, landmarks Devon jumps by, focus outlines no rule may remove, navigation labels that predict their pages, a palette whose pairings pass a contrast bar. Every one of those habits comes from a single written standard this book has never named. This chapter names it.
 
-You will meet WCAG, its four POUR principles, and the conformance level this course tests against. You will audit structure the way a screen reader reads it. You will decode the contrast math the palette file has promised since Chapter 4, and learn what `rem` buys a visitor who resizes their type. Then you will add the last tool in the course's checking stack, an accessibility evaluator, and learn which checks belong to no tool at all. Skills Lab 9A repairs the flyer, audits the whole club site, and closes Part III.
+You will meet WCAG, its four POUR principles, and the conformance level this course tests against. You will audit structure the way a screen reader reads it. You will decode the contrast math the palette file has promised since Chapter 4, and learn what `rem` buys a visitor who resizes their type. Then you will add the last tool in the course's checking stack, an accessibility evaluator, and learn which checks belong to no tool at all. Skills Lab 9A repairs the flyer, audits the whole Copperwind site, and closes Part III.
 
 ## Module Overview 🧭
 
@@ -70,7 +70,7 @@ One AA expectation is close enough to test right now. Pages must survive zoom, m
 
 ### Try It Yourself 9.1: The Zoom Test 🛠️
 
-**Predict:** At 200 percent zoom, the stylesheet will see about half your window's width. Check your window width with the DevTools readout, halve it, and predict whether the club stylesheet's own small-screen query will fire. Then predict what you will see either way: readable text, or sideways scrolling?
+**Predict:** At 200 percent zoom, the stylesheet will see about half your window's width. Check your window width with the DevTools readout, halve it, and predict whether the site stylesheet's own small-screen query will fire. Then predict what you will see either way: readable text, or sideways scrolling?
 
 **Run:** Open `assets/code/chapter-09/starter-site/recycling-guide.html`. Press Ctrl and plus (Cmd and plus on Mac) until the browser reports 200 percent, then walk the page top to bottom: text, line lengths, nav links, any sideways scroll. Reset with Ctrl and 0 (Cmd and 0) when you finish.
 
@@ -78,7 +78,7 @@ One AA expectation is close enough to test right now. Pages must survive zoom, m
 
 ### Quick Check 9.1 ✅
 
-1. A clubmate declares the site accessible "because every page validates and the device-mode test passes." Name the standard neither check consulted, and give one barrier both checks would miss.
+1. A teammate declares the site accessible "because every page validates and the device-mode test passes." Name the standard neither check consulted, and give one barrier both checks would miss.
 2. Sort three habits you already own under their POUR principles: alt text on the gallery figures, the nav links' `:focus` style, and validating every page before submission.
 3. State the difference between Level A and Level AA in one sentence each, then name the level this course tests against.
 
@@ -124,7 +124,7 @@ Chapter 3 built the landmark skeleton and admitted its payoff was real but invis
 * A single keystroke jumps to `<main>`, skipping the banner and menu that repeat on every page. That jump was the whole ask in Devon's Chapter 3 email.
 * `<footer>` is announced as content info, where every tool expects contact lines and fine print to live.
 
-The club's pages have carried all four since Lab 3A. That is why the exercises below are confirmation walks, not repair jobs.
+Copperwind's pages have carried all four since Lab 3A. That is why the exercises below are confirmation walks, not repair jobs.
 
 ### Links That Name Their Destination
 
@@ -165,6 +165,12 @@ The walk is also the cheapest test you own. It needs no install, no upload, and 
 ```css
 /* REPAIRED: if the default outline fights the design, replace
    the signal instead of deleting it. */
+/* Step 1: style :focus itself, so the new signal appears at
+   exactly the stops the old outline marked. */
+/* Step 2: replace, never remove. A 3px solid outline clears
+   the at-least-as-visible bar. */
+/* Step 3: pick the outline color from the palette, one that
+   stands out against the page background. */
 .study-links a:focus {
     outline: 3px solid #268080;
 }
@@ -174,7 +180,7 @@ The replacement does not have to be an outline. Chapter 6 answered `:focus` with
 
 ### Try It Yourself 9.2: The Heading Outline Read 🛠️
 
-**Predict:** You have edited the club's recycling guide since Chapter 2. From memory, write its heading outline: how many headings, at which levels, in what order?
+**Predict:** You have edited Copperwind's recycling guide since Chapter 2. From memory, write its heading outline: how many headings, at which levels, in what order?
 
 **Run:** Open `assets/code/chapter-09/starter-site/recycling-guide.html`, open DevTools, and search the Elements panel for `<h` with Ctrl+F (Cmd+F on Mac), Chapter 3's trick. Read the headings in order with their levels.
 
@@ -182,7 +188,7 @@ The replacement does not have to be an outline. Chapter 6 answered `:focus` with
 
 ### Try It Yourself 9.3: The Tab Walk 🛠️
 
-**Predict:** Stay on the recycling guide. Write the order in which you expect focus to travel through the nav's three links. Then state what visible signal should mark every stop, and name the rule in `club-styles.css` you expect to provide part of it.
+**Predict:** Stay on the recycling guide. Write the order in which you expect focus to travel through the nav's three links. Then state what visible signal should mark every stop, and name the rule in `copperwind-styles.css` you expect to provide part of it.
 
 **Run:** Click once at the top of the page, put the mouse away, and press Tab through the whole page, into the footer and out. Watch the order and the signal at every stop.
 
@@ -232,6 +238,13 @@ Contrast has a sibling rule. Color may decorate a signal, but it can never be th
 
 <!-- REPAIRED: a text label carries the signal, and the color
      is free to keep decorating it. -->
+<!-- Step 1: find every message the page trusts to color alone.
+     Here it is "shown in red are full." -->
+<!-- Step 2: add a text label that says what the color says, so
+     the signal survives glare, color blindness, and a screen
+     reader's flat announcement. -->
+<!-- Step 3: keep the class and the red it paints. The repair
+     adds a second carrier and removes nothing. -->
 <li class="session-full">Algebra, Tuesday 3:00 (full)</li>
 ```
 
@@ -241,7 +254,9 @@ The same rule guards a habit from Chapter 5. Links inside body text are told apa
 
 ### Type a Visitor Can Resize
 
-Chapter 5 introduced `px` and `rem` as two different promises and saved the payoff for now. A pixel value is a fixed promise: `16px` renders the same for every visitor, whatever their settings say. A `rem` is a proportional promise: `1rem` means the root element's text size. That size comes from the visitor's own browser default (16 pixels until the visitor raises it) as long as no stylesheet resets the root. Here is why the two promises matter: many low-vision visitors raise that default once and leave it raised, and the two units answer that request differently. The rem experiment at the end of this section stages the difference so you can watch it.
+Chapter 5 introduced `px` and `rem` as two different promises and saved the payoff for now. A pixel value is a fixed promise: `16px` renders the same for every visitor, whatever their settings say. A `rem` is a proportional promise: `1rem` means the root element's text size. That size comes from the visitor's own browser default (16 pixels until the visitor raises it) as long as no stylesheet resets the root. Here is why the two promises matter: many low-vision visitors raise that default once and leave it raised, and the two units answer that request differently. The demo below stages the difference so you can watch it.
+
+Watch it before you convert anything. The pack page `assets/code/chapter-09/rem-demo.html` holds three bordered paragraphs that name their own rules: `16px`, `1rem`, and `1.5rem`. Follow its numbered instructions: raise the browser's default font size, return to the page, and compare. The two rem paragraphs grow with the setting, and the px paragraph ignores it. That is both promises, kept side by side. Set the default back to Medium (16) when you finish.
 
 Zoom does not make the setting redundant. Zoom is a per-page chore repeated on every site, while the default size is set once and follows the visitor everywhere. Converting is one division, the `px` value over 16:
 
@@ -257,7 +272,7 @@ body {
 }
 ```
 
-One neighbor scales for free. The unitless `line-height` from Chapter 5 multiplies whatever size the element ends up at, so converted text keeps its breathing room. Skills Lab 9A runs this exact conversion on the club's own stylesheet, base rules and query block alike.
+One neighbor scales for free. The unitless `line-height` from Chapter 5 multiplies whatever size the element ends up at, so converted text keeps its breathing room. Skills Lab 9A runs this exact conversion on the Copperwind site's own stylesheet, base rules and query block alike.
 
 ### Four Jobs, Four Alt Decisions
 
@@ -283,23 +298,51 @@ Functional images earn the new paragraph, because an image inside a link changes
 </a>
 ```
 
-Complex images you have already met: Chapter 3's membership chart shipped alt text that delivered the finding while the `figcaption` commented beside it. One honesty rule covers all four jobs. Alt text describes the image's purpose on this page, and software can detect a missing `alt` attribute in an instant but can never grade a dishonest one. Hold that thought. It is the whole plot of Section 9.4.
+Complex images you have already met: Chapter 3's chart of workshop signups shipped alt text that delivered the finding while the `figcaption` commented beside it. One honesty rule covers all four jobs. Alt text describes the image's purpose on this page, and software can detect a missing `alt` attribute in an instant but can never grade a dishonest one. Hold that thought. It is the whole plot of Section 9.4.
 
 ### Try It Yourself 9.4: Three Contrast Calls 🛠️
 
-**Predict:** Open `assets/code/chapter-09/contrast-cards.txt`: three text-on-background pairings, none from the club's palette. For each card, predict pass or fail against the 4.5 to 1 body-text bar, by eye alone, and write all three predictions on the card's lines before checking anything.
+**Predict:** Open `assets/code/chapter-09/contrast-cards.txt`: three text-on-background pairings, none from the Copperwind palette. For each card, predict pass or fail against the 4.5 to 1 body-text bar, by eye alone, and write all three predictions on the card's lines before checking anything.
 
 **Run:** Run each card's two hex values through the WebAIM contrast checker and record the ratio it reports next to your prediction.
 
 **Explain:** In 1-2 sentences, report which predictions held, and state what the closest call says about eyeballing contrast versus measuring it.
 
+### Fix It 9.1: The Repair That Looked Better 🔧
+
+News of Devon's reply spreads, and a teammate drafts a quick rescue for the flyer's faint body text. Their proposal keeps the light tan text and swaps the sand background to white:
+
+```text
+body {
+    background-color: #ffffff;  /* was the sand #fdeecd */
+    color: #c99b66;             /* the same light tan, kept */
+}
+```
+
+**Symptom:** The page does look better, and everyone who glances at it agrees. Then the teammate runs the new pairing through the WebAIM contrast checker to collect the passing grade. The checker reports 2.51 to 1. The AA bar for body text is 4.5 to 1. The pairing still fails.
+
+**Diagnose:** Looking better and passing are different standards, and only the second one is WCAG. The white background did raise the ratio, and the pair still falls short. Text this light needs a much darker partner than white before the math clears the bar. A contrast ratio is one measurement of two colors. Improving one color proves nothing until the checker grades the pair.
+
+**Repair:** Stop adjusting by eye and take a pairing that already passed. The palette's passing list offers ink on white:
+
+```css
+body {
+    background-color: #ffffff;
+    color: #333333;             /* ink, from the passing list */
+}
+```
+
+**Verify:** Run the repaired pairing through the checker: 12.63 to 1, past the bar with room to spare. Deep teal `#1a5e5e` on white also passes, at 7.48 to 1, if the page wants color instead. The moral travels beyond this flyer. Eyes report better or worse. Only the checker reports pass or fail.
+
 ### Try It Yourself 9.5: The rem Experiment 🛠️
 
-**Predict:** Open `assets/code/chapter-09/rem-demo.html`. Its three bordered paragraphs name their own sizing rules: `16px`, `1rem`, and `1.5rem`. Predict which paragraphs will grow when you raise the browser's default font size, and whether any two match before you change anything.
+The pack file `assets/code/chapter-09/rem-practice.css` sets the food pantry's volunteer-page type with three px rules: body text at `18px`, the page heading at `28px`, and a fine-print note at `12px`. Convert all three to `rem` so a change to the root size scales them together. Two checkpoints grade the conversion. At the default 16-pixel root, the three sizes must stay exactly 18, 28, and 12 pixels. At a raised 20-pixel root, they must compute to 22.5, 35, and 15 pixels.
 
-**Run:** Follow the page's own numbered instructions: raise the default font size in your browser's settings, return to the page, and compare the three paragraphs. Set the default back to Medium (16) when you finish.
+**Predict:** Before touching the file, commit to the three rem values with the divide-by-16 math, and write down the division that produces each one.
 
-**Explain:** In 1-2 sentences, explain the split you observed using this section's two promises, and name a visitor the growing paragraphs serve.
+**Run:** Write the three converted rules into the file. Then run both checkpoints on paper: multiply each rem value by 16, then by 20, and compare against the targets above. A missed target points back at the division that produced it.
+
+**Explain:** In 1-2 sentences, explain why the original px rules would have ignored the raised root, and name a visitor the converted sheet serves that the px sheet failed.
 
 ### Quick Check 9.3 ✅
 
@@ -350,7 +393,7 @@ The human half of the audit is a checklist you already own move by move. Its sev
 
 A few field names, offered once. VoiceOver is the screen reader built into every Mac and iPhone, and NVDA is a free standard on Windows: an afternoon spent hearing your own pages through one is humbling and worth it. ARIA is an attribute toolkit for describing complex widgets that HTML's own elements cannot, and this course never needs it, because the semantic elements you build with carry their meaning for free.
 
-One contract waits for later. Forms carry accessibility rules of their own, built on the partnership between every input and the label that announces it, and Chapter 11 teaches that contract when it builds the club's join form.
+One contract waits for later. Forms carry accessibility rules of their own, built on the partnership between every input and the label that announces it, and Chapter 11 teaches that contract when it builds the program's join form.
 
 ### Triage: Not All Findings Weigh the Same
 
@@ -394,17 +437,17 @@ Answer from memory before checking back through the chapter.
 
 1. Recite POUR's four principles, each with one technique from an earlier chapter that serves it.
 2. State the contrast scale's two anchors and the two Level AA thresholds, with the text sizes they apply to.
-3. Explain what `1rem` measures, what raising the browser's default size does to rem text and to px text, and who the difference serves.
-4. List as many of the seven human checks as you can, and name one thing they judge that no tool can.
-5. Name the four automated layers of the checking stack in the order the course taught them, with one defect each can catch.
+3. List as many of the seven human checks as you can, and name one thing they judge that no tool can.
+4. From Chapter 5: State the promise a `px` font size makes and the promise a `rem` font size makes, one sentence each.
+5. From Chapter 7: Name the five UX principles, and say which one this chapter turned into a measured standard.
 
 ---
 
-## 9.6 Skills Lab 9A: The Club Site Passes the Audit
+## 9.6 Skills Lab 9A: The Copperwind Site Passes the Audit
 
-**Goal:** Audit and repair a clubmate's Drive Day flyer against WCAG Level AA, then verify the whole club site with an accessibility evaluator and the human checklist, closing the Part III milestone.
+**Goal:** Audit and repair a teammate's Drive Day flyer against WCAG Level AA, then verify the whole Copperwind site with an accessibility evaluator and the human checklist, closing the Part III milestone.
 
-**Dataset:** Provided files in `assets/code/chapter-09/` from the course data pack. `drive-day-flyer.html` and `flyer-styles.css` are the audit target, written in a hurry by an enthusiastic clubmate, and they ship broken on purpose: 8 planted accessibility barriers, disclosed in the folder's README. The flyer fails HTML validation with exactly 2 messages, and its stylesheet validates clean, because its sins are decisions, not syntax. `flyer-images/` holds the flyer's two images, byte-identical copies from the club's set, so the flyer renders wherever the folder travels. `starter-site/` holds the club's three pages, `images` folder, and `club-styles.css` exactly as Skills Lab 8A finished them: every head carries the viewport tag, and the stylesheet ends in the small-screen query block. `club-palette.txt` travels with every CSS chapter, and its passing list supplies every repair color this lab needs. `contrast-cards.txt`, `rem-demo.html`, and `rem-demo.css` are the chapter's Try It Yourself files. `accessibility-checklist.txt` is the human audit instrument: seven checks with blank findings lines, copied once per page you audit. `skills-lab-9a-answers.txt` is your written answers file. The README documents every file. Work at the extracted `cis133` root.
+**Dataset:** Provided files in `assets/code/chapter-09/` from the course data pack. `drive-day-flyer.html` and `flyer-styles.css` are the audit target, written in a hurry by an enthusiastic teammate, and they ship broken on purpose: 8 planted accessibility barriers, disclosed in the folder's README. The flyer fails HTML validation with exactly 2 messages, and its stylesheet validates clean, because its sins are decisions, not syntax. `flyer-images/` holds the flyer's two images, byte-identical copies from the Copperwind set, so the flyer renders wherever the folder travels. `starter-site/` holds the Copperwind site's three pages, `images` folder, and `copperwind-styles.css` exactly as Skills Lab 8A finished them: every head carries the viewport tag, and the stylesheet ends in the small-screen query block. `copperwind-palette.txt` travels with every CSS chapter, and its passing list supplies every repair color this lab needs. `contrast-cards.txt`, `rem-demo.html`, `rem-demo.css`, and `rem-practice.css` are the chapter's Try It Yourself files. `accessibility-checklist.txt` is the human audit instrument: seven checks with blank findings lines, copied once per page you audit. `skills-lab-9a-answers.txt` is your written answers file. The README documents every file. Work at the extracted `cis133` root.
 
 The lab walks the chapter's own path. Part 1 audits the flyer and repairs its structure. Part 2 repairs what perceivability demands: color, type, and images. Part 3 brings in the evaluator and the checklist, proves the whole site, and closes Part III.
 
@@ -419,13 +462,13 @@ The lab walks the chapter's own path. Part 1 audits the flyer and repairs its st
 1. Run the contrast spot checks: measure the flyer's text-on-background pairings with the WebAIM checker until you find the pairing that fails, and log the ratio it reports. Repair it with a pairing from the palette's passing list, and record the before and after ratios in answer 2.A.
 2. Find the message the flyer carries in color alone, and give it a text label that survives without the color. Log the finding and the fix in answer 2.A.
 3. Run the alt honesty read and make both calls the four-jobs table demands: write the missing alt text yourself, and empty the alt that decoration never needed. Log both decisions in answer 2.A with the image job that justifies each.
-4. Convert the type. In `flyer-styles.css`, replace the hard px body size with a rem value that restores readable body text (the club site's own body size is a fine model). In `club-styles.css`, convert the body and heading sizes to rem with the divide-by-16 math, in the base rules and in the query block. Record the px values found, the rem values shipped, the base your math used, and who the conversion serves in answer 2.B.
+4. Convert the type. In `flyer-styles.css`, replace the hard px body size with a rem value that restores readable body text (the Copperwind site's own body size is a fine model). In `copperwind-styles.css`, convert the body and heading sizes to rem with the divide-by-16 math, in the base rules and in the query block. Record the px values found, the rem values shipped, the base your math used, and who the conversion serves in answer 2.B.
 
 ### Part 3: Extension (Aligns with Objective 9.3)
 
-1. Run WAVE on the repaired flyer and on one club site page: the browser extension for local files, or `wave.webaim.org` if you have a hosted copy. Log the tool, the pages, and every flag in answer 3.A. Then name at least one problem you repaired that no tool flagged, and the human check that caught it.
-2. Run the full seven-check checklist on each of the club site's three pages, one checklist copy per page. Repair anything a check surfaces, and log the human-check results in answer 3.B.
-3. Validate everything: the flyer and all three club pages through the HTML validator, both stylesheets through the CSS validator, repairing until every report shows zero messages. Log the final counts in answer 3.B.
+1. Run WAVE on the repaired flyer and on one Copperwind page: the browser extension for local files, or `wave.webaim.org` if you have a hosted copy. Log the tool, the pages, and every flag in answer 3.A. Then name at least one problem you repaired that no tool flagged, and the human check that caught it.
+2. Run the full seven-check checklist on each of the Copperwind site's three pages, one checklist copy per page. Repair anything a check surfaces, and log the human-check results in answer 3.B.
+3. Validate everything: the flyer and all three Copperwind pages through the HTML validator, both stylesheets through the CSS validator, repairing until every report shows zero messages. Log the final counts in answer 3.B.
 4. Close the Part III milestone in answer 3.B. Name where a grader sees each leg: the site plan from Lab 7A, the responsive behavior from Lab 8A, and this lab's WCAG evaluation. Then hand down your triage call: of your 8 repairs, the one you would ship first if you could ship only one, defended in two or three sentences.
 
 ### Questions & Analysis 🤔

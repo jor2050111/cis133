@@ -1,6 +1,6 @@
 # Chapter 2 Data Pack: Skills Lab 2A Files
 
-Starter files for Skills Lab 2A: Build the Club's Recycling Guide.
+Starter files for Skills Lab 2A: Build Copperwind's Recycling Guide.
 Students copy text out of the content file and repair the broken
 page. They never retype provided content.
 
@@ -20,7 +20,7 @@ paragraphs, list items, link text, and addresses. Labels in
 [BRACKETS] describe each piece so students can match content to the
 right element. Students copy the text and type only the markup.
 
-**broken-contact.html** is the club's contact page with exactly
+**broken-contact.html** is the program's contact page with exactly
 four planted markup errors for the Part 3 validator repair task.
 One defect can cascade into several messages, so the W3C
 validator reports exactly 8 messages on the file as shipped. Students copy it into their lab folder as `contact.html`, run
@@ -34,9 +34,11 @@ folder unrenamed.
 
 ## Source and license
 
-Written for CIS133 by the course author. The PC Computer Club, its
-events, and its email address are fictional and use the reserved
-example.org domain, so the address cannot deliver mail. The two
+Written for CIS133 by the course author. Copperwind IT Services is
+a fictional company created for this textbook. All names, clients,
+and records are synthetic. Any resemblance to a real company or
+person is coincidental. The program's email address uses the
+reserved example.org domain, so the address cannot deliver mail. The two
 Learn More links point at real government resources: the EPA
 electronics recycling page and the City of Phoenix official
 website.

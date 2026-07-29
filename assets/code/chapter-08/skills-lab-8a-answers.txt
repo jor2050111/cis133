@@ -1,5 +1,5 @@
 =====================================================================
-CIS133 SKILLS LAB 8A: THE CLUB SITE MEETS EVERY SCREEN
+CIS133 SKILLS LAB 8A: THE COPPERWIND SITE MEETS EVERY SCREEN
 Written Answers
 =====================================================================
 
@@ -7,7 +7,7 @@ Name:
 Date:
 
 This file travels inside your submission folder along with your
-three HTML pages, your images folder, and club-styles.css. Type
+three HTML pages, your images folder, and copperwind-styles.css. Type
 your answers directly below each numbered prompt. Keep the headings
 and numbering in place so your grader can follow your work.
 
@@ -47,7 +47,7 @@ PART 2: APPLICATION (the small-screen query)
      evidence from your Part 1 diagnosis: what stops fitting at
      that width, and what arithmetic or observation produced the
      number. Then copy your query block exactly as it appears in
-     club-styles.css, including its comment.
+     copperwind-styles.css, including its comment.
 
      Your breakpoint, and the content evidence behind it:
      The query block:
@@ -67,14 +67,14 @@ PART 3: EXTENSION (your own query and the verification pass)
 
 3.B  Log your validator results: the HTML validator's final message
      count for each page, and the CSS validator's final result for
-     club-styles.css. Then confirm your three-width verification
+     copperwind-styles.css. Then confirm your three-width verification
      pass: name the three widths and one thing you checked on every
      page at each width.
 
      recycling-guide.html:
      drive-gallery.html:
      contact.html:
-     club-styles.css:
+     copperwind-styles.css:
      The three widths, and what you checked at each:
 
      Part III milestone check, the responsive leg. Each page should

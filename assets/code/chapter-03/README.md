@@ -1,8 +1,8 @@
 # Chapter 3 Data Pack: Skills Lab 3A Files
 
-Starter files for Skills Lab 3A: Give the Club's Site Structure and
+Starter files for Skills Lab 3A: Give Copperwind's Site Structure and
 Pictures. Students retrofit two finished pages with semantic
-landmarks, place the club's images with alt text they write
+landmarks, place the Copperwind images with alt text they write
 themselves, and build a new gallery page. They never retype
 provided content.
 
@@ -18,22 +18,21 @@ provided content.
 
 ## Image files
 
-All images are PNG and share one flat-illustration style: the
-fictional club's matching design set. Look at each image before
+All images are PNG and share one flat-illustration style: the fictional Copperwind design set. Look at each image before
 writing its alt text. The table describes contents so you can find
 the right file, not so you can copy descriptions into alt values.
 
 | File | Pixels | Contents |
 | ---- | ------ | -------- |
-| `club-logo.png` | 240 x 240 | Club logo: a monitor circled by recycling arrows on a teal disk. Transparent background |
-| `cactus-garden.png` | 400 x 400 | Practice image for the chapter's Try It Yourself exercises. Three cacti in a gravel garden |
-| `recycling-drive.png` | 800 x 450 | Outdoor collection table scene with labeled bins and students |
+| `copperwind-logo.png` | 240 x 240 | Copperwind logo: a saguaro, mountains, and a copper wind ribbon in a teal ring. Transparent background |
+| `cactus-garden.png` | 400 x 400 | Practice image for the chapter's Try It Yourself exercises. A saguaro, prickly pear, and barrel cacti before desert mountains |
+| `recycling-drive.png` | 800 x 450 | Outdoor collection drive: a canopy table, a volunteer, neighbors carrying devices, icon-marked bins |
 | `devices-collected-chart.png` | 640 x 400 | Bar chart of items collected at the spring drive, five categories |
-| `membership-chart.png` | 640 x 400 | Practice chart for the chapter's figure example. Club membership across four semesters |
-| `desert-divider.png` | 800 x 24 | Thin decorative strip of alternating diamonds |
-| `sorting-station.png` | 640 x 360 | Volunteer sorting donations into three labeled bins |
-| `donation-boxes.png` | 640 x 360 | Three cardboard boxes filled with coiled cables |
-| `volunteer-crew.png` | 640 x 360 | Four volunteers behind the drive's welcome table |
+| `workshop-signups-chart.png` | 640 x 400 | Practice chart for the chapter's figure example. Workshop signups across four months |
+| `desert-divider.png` | 800 x 24 | Thin desert horizon strip: mountain silhouettes and tiny saguaros |
+| `sorting-station.png` | 640 x 360 | A volunteer sorting phones, laptops, and cables into bins, seen from above |
+| `donation-boxes.png` | 640 x 360 | Open cardboard boxes filled with donated electronics |
+| `volunteer-crew.png` | 640 x 360 | Six volunteers, one using a wheelchair, standing near the collection bins |
 
 ## File details
 
@@ -41,7 +40,7 @@ the right file, not so you can copy descriptions into alt values.
 page: valid markup, working links, headings, and lists, with no
 semantic landmarks and no images. Students copy it into their lab
 folder as `recycling-guide.html`, wrap its regions in landmark
-elements, and add the club's images.
+elements, and add the Copperwind images.
 
 **contact-start.html** is the repaired Skills Lab 2A contact page.
 In Part 3 students copy it in as `contact.html` and give it the
@@ -59,13 +58,14 @@ the submission folder unrenamed.
 
 ## Source and license
 
-Written for CIS133 by the course author. The PC Computer Club and
-its events are fictional, and the club's email address uses the
-reserved example.org domain. All nine images are original
-illustrations rendered by the course's seeded generator script
-(`assets/code/_generators/generate_chapter03_images.py`), so they
-carry no third-party license. The chart's numbers are fictional and
-match the figures cited in the chapter.
+Written for CIS133 by the course author. Copperwind IT Services is a fictional company created for this textbook. All names, clients, and records are synthetic. Any resemblance to a real company or person is coincidental. The program's email address uses the reserved example.org domain. All nine images are original
+course artwork: the two charts render from the seeded generator
+script (`assets/code/_generators/generate_chart_images.py`), and the
+seven illustrations were generated for this course with an AI image
+model (provenance and checksums in
+`assets/code/_generators/IMAGE-MANIFEST.md`). None carries a
+third-party license. The chart's numbers are fictional and match
+the figures cited in the chapter.
 
 Copyright 2026 Jorge Vega, Phoenix College. Provided to enrolled
 students for coursework.

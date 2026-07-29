@@ -3,7 +3,7 @@ CIS133 CHAPTER 9: CONTRAST PREDICTION CARDS
 =====================================================================
 
 Three text-on-background pairings, fresh for this exercise. None of
-them comes from the club's palette. For each card, predict whether
+them comes from the Copperwind palette. For each card, predict whether
 the pairing passes the WCAG AA minimum for body text (4.5 to 1).
 Commit to the prediction before you check anything. Then run both
 hex values through the WebAIM contrast checker and record the ratio

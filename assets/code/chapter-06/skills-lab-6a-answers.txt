@@ -1,5 +1,5 @@
 =====================================================================
-CIS133 SKILLS LAB 6A: THE CLUB SITE GETS ITS LAYOUT
+CIS133 SKILLS LAB 6A: THE COPPERWIND SITE GETS ITS LAYOUT
 Written Answers
 =====================================================================
 
@@ -7,7 +7,7 @@ Name:
 Date:
 
 This file travels inside your submission folder along with your
-three HTML pages, your images folder, and club-styles.css. Type
+three HTML pages, your images folder, and copperwind-styles.css. Type
 your answers directly below each numbered prompt. Keep the headings
 and numbering in place so your grader can follow your work.
 
@@ -15,9 +15,9 @@ and numbering in place so your grader can follow your work.
 PART 1: FOUNDATION (the header row and the gallery row)
 ---------------------------------------------------------------------
 
-1.A  Your header row puts the club logo and the page title on one
+1.A  Your header row puts the Copperwind logo and the page title on one
      flex line. Copy the rule that did it exactly as it appears in
-     club-styles.css. Then name the container's main axis and its
+     copperwind-styles.css. Then name the container's main axis and its
      cross axis, and state which of your declarations works along
      each axis.
 
@@ -42,7 +42,7 @@ PART 2: APPLICATION (smarter selectors and accessible states)
 ---------------------------------------------------------------------
 
 2.A  The footer fix. Copy the rule that repaints the footer's
-     links, exactly as it appears in club-styles.css. State which
+     links, exactly as it appears in copperwind-styles.css. State which
      links it reaches and which it leaves alone. Then explain why
      the selector footer a is the right tool here and what a bare
      a rule would have done to the rest of the site.
@@ -77,7 +77,7 @@ PART 3: EXTENSION (the navigation bar and the milestone)
 
 3.B  Log your validator results: the HTML validator's final
      message count for each page, and the CSS validator's final
-     result for club-styles.css. Then name one thing either
+     result for copperwind-styles.css. Then name one thing either
      validator caught along the way and what you changed. If both
      stayed clean the whole time, say so. Finish with the critique
      no validator can make: one thing about your layout that
@@ -87,7 +87,7 @@ PART 3: EXTENSION (the navigation bar and the milestone)
      recycling-guide.html:
      drive-gallery.html:
      contact.html:
-     club-styles.css:
+     copperwind-styles.css:
      One thing a validator caught:
      One thing you would still improve, and why:
 

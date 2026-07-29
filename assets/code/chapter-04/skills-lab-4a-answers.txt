@@ -1,5 +1,5 @@
 =====================================================================
-CIS133 SKILLS LAB 4A: DRESS THE CLUB'S SITE IN ITS OWN COLORS
+CIS133 SKILLS LAB 4A: DRESS COPPERWIND'S SITE IN ITS OWN COLORS
 Written Answers
 =====================================================================
 
@@ -7,7 +7,7 @@ Name:
 Date:
 
 This file travels inside your submission folder along with your
-three HTML pages, your images folder, and club-styles.css. Type
+three HTML pages, your images folder, and copperwind-styles.css. Type
 your answers directly below each numbered prompt. Keep the headings
 and numbering in place so your grader can follow your work.
 
@@ -23,7 +23,7 @@ PART 1: FOUNDATION (connecting the stylesheet)
      Your link element:
      Where it sits and why:
 
-1.B  After you wrote the body rule in club-styles.css, you
+1.B  After you wrote the body rule in copperwind-styles.css, you
      refreshed all three pages. Describe what changed on each
      page, and state how many files you edited to cause it.
 
@@ -34,7 +34,7 @@ PART 2: APPLICATION (selector log)
 ---------------------------------------------------------------------
 
 2.A  Fill in one line for each rule you wrote in Part 2. Copy each
-     selector exactly as it appears in club-styles.css, name its
+     selector exactly as it appears in copperwind-styles.css, name its
      kind (element, class, or id), and give the reason that kind
      fits the job.
      Example form:
@@ -56,7 +56,7 @@ PART 3: EXTENSION (the hunt and the validators)
 
 3.A  Record the leftover inline style you found. Name the file and
      the element that carried it, copy the exact style attribute
-     text, and name the selector in club-styles.css where the
+     text, and name the selector in copperwind-styles.css where the
      declaration lives now.
 
      File and element:
@@ -65,7 +65,7 @@ PART 3: EXTENSION (the hunt and the validators)
 
 3.B  Log your validator results: the HTML validator's final
      message count for each page, and the CSS validator's final
-     result for club-styles.css. Then name one thing either
+     result for copperwind-styles.css. Then name one thing either
      validator caught along the way and what you changed. If both
      stayed clean the whole time, say so. Finish with the critique
      no validator can make: one thing about your styling that
@@ -75,7 +75,7 @@ PART 3: EXTENSION (the hunt and the validators)
      recycling-guide.html:
      drive-gallery.html:
      contact.html:
-     club-styles.css:
+     copperwind-styles.css:
      One thing a validator caught:
      One thing you would still improve, and why:
 
@@ -83,7 +83,7 @@ PART 3: EXTENSION (the hunt and the validators)
 QUESTIONS & ANALYSIS
 ---------------------------------------------------------------------
 
-Q1.  Cite the moment one edit to club-styles.css changed all three
+Q1.  Cite the moment one edit to copperwind-styles.css changed all three
      pages at once: what did you edit, and what changed where?
      Then estimate what the same site-wide change would have cost
      on a site styled with inline styles on every element. Ground

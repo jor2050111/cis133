@@ -1,5 +1,5 @@
 =====================================================================
-CIS133 SKILLS LAB 7A: THE CLUB SITE GROWS UP
+CIS133 SKILLS LAB 7A: THE COPPERWIND SITE GROWS UP
 Written Answers
 =====================================================================
 
@@ -17,14 +17,14 @@ PART 1: FOUNDATION (the brief and the audit)
 ---------------------------------------------------------------------
 
 1.A  Restate the brief in your own words: the site's goals and its
-     two audiences. Do not copy the officers' sentences. Prove you
+     two audiences. Do not copy the team's sentences. Prove you
      understood them.
 
      The goals, restated:
      Audience one, and what they need:
      Audience two, and what they need:
 
-1.B  Summarize your five-principles audit of the provided club
+1.B  Summarize your five-principles audit of the provided Copperwind
      site. Your full findings live in the worksheet. Here, name the
      strongest strength and the costliest gap you found, each tied
      to its principle, and say which audience each one affects most.
