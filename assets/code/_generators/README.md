@@ -33,15 +33,17 @@ pack. Follow the pattern the existing textbooks use:
 
 ## Rebuilding the student data pack zip
 
-From the parent of the repo root (the zip's internal root is
-`cis133`, the folder name the published chapters tell
-students to work in):
+Do not zip `assets/code` by hand. This folder is author-facing and
+must not ship to students, and ten chapter READMEs cite paths inside
+it. The build tool drops the folder, rewrites those citations, and
+reflows `IMAGE-MANIFEST.md` into a student-facing `PROVENANCE.md` at
+the pack root:
 
 ```bash
-cd /Users/vega/Documents/code/textbooks && \
-zip -r cis133/build/cis133-data-pack.zip \
-    cis133/assets/code \
-    -x '*.DS_Store' -x '*__pycache__*'
+python3 /Users/vega/Documents/code/textbooks/shared/tools/build_student_packs.py
 ```
 
-The zip lands in `build/` (gitignored) and uploads to Canvas.
+It verifies that every data file stays byte-identical and refuses to
+write a zip if a check fails. The zip lands in the GitHub Pages repo
+at `jor2050111.github.io/data-packs/`, which is the one place the
+student pack lives. Pushing that repo publishes it.
