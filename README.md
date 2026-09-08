@@ -8,7 +8,7 @@ This project is the OER textbook for CIS133 (Internet/Web Development Level I) a
 Phoenix College. It publishes as a static website built with Zensical and
 deployed to GitHub Pages. The book follows the shared textbook-family
 structure: QM-aligned chapters, Predict-Run-Explain exercises, Quick
-Checks, and a Skills Lab with a locked 16-point rubric in every chapter.
+Checks, and a Skills Lab with a locked universal rubric in every chapter.
 
 ### Target Audience
 
@@ -48,7 +48,7 @@ cis133/
 ├── templates/
 │   ├── chapter-template.md            # Standard chapter structure
 │   ├── exercise-template.md           # Exercise format reference
-│   ├── skills-lab-rubric-template.md  # Locked 16-point rubric
+│   ├── skills-lab-rubric-template.md  # Locked universal rubric
 │   └── try-it-yourself-template.md    # Predict-Run-Explain template
 ├── tools/                             # QA scripts (synced from ../shared/)
 ├── docs/                              # Authoring references (NOT published)
@@ -143,7 +143,7 @@ Before finalizing a chapter:
 * [ ] Heading hierarchy correct (no skipped levels)
 * [ ] Prerequisite concepts referenced, not retaught
 * [ ] Datasets ship in the course data pack (assets/code/chapter-NN/)
-* [ ] Skills Lab with 3 parts, Questions & Analysis, and the locked 16-point rubric
+* [ ] Skills Lab with 3 parts, Questions & Analysis, and the locked universal rubric
 * [ ] Quick Checks and Try It Yourself exercises included
 
 The full checklist lives in [CLAUDE.md](CLAUDE.md).

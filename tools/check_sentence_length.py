@@ -23,7 +23,14 @@ from pathlib import Path
 
 THRESHOLD = 35
 
-FENCE_RE = re.compile(r"^(```|~~~)")
+# An opening fence is three or more backticks or tildes, optionally
+# followed by an info string (```python, ~~~text). A closing fence
+# must be a pure run of the SAME character, at least as long as the
+# opener, with nothing else on the line. Anything weaker lets content
+# inside a fence toggle the state: a Python 3.12 traceback caret line
+# ("~~~~~^^^^^") pasted into a text fence corrupted parsing for the
+# rest of the file before this rule existed (2026-07-28).
+FENCE_OPEN_RE = re.compile(r"^(`{3,}|~{3,})")
 ABBREV = ("vs.", "e.g.", "i.e.", "Mr.", "Dr.", "St.", "No.", "U.S.")
 # A sentence may end at .!? or at .!? followed by a closing quote,
 # parenthesis, or bracket; the next one starts with a capital-ish char.
@@ -39,13 +46,21 @@ def paragraphs(lines):
     numbered tasks never merge into one false mega-sentence.
     """
     buf, start = [], None
-    in_fence = False
+    fence_char, fence_len = None, 0
     for n, raw in enumerate(lines, 1):
         line = raw.rstrip()
-        if FENCE_RE.match(line.strip()):
-            in_fence = not in_fence
+        stripped = line.strip()
+        if fence_char is None:
+            fence_open = FENCE_OPEN_RE.match(stripped)
+            if fence_open:
+                fence_char = fence_open.group(1)[0]
+                fence_len = len(fence_open.group(1))
+                line = ""
+        elif (stripped == fence_char * len(stripped)
+                and len(stripped) >= fence_len):
+            fence_char, fence_len = None, 0
             line = ""
-        skip = (in_fence or not line.strip()
+        skip = (fence_char is not None or not line.strip()
                 or line.lstrip().startswith(("|", "#", "<!--", "-->")))
         if skip:
             if buf:

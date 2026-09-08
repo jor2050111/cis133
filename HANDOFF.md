@@ -1,9 +1,123 @@
 # CIS133 Textbook: HANDOFF
 
-**Last updated:** 2026-07-29 (pedagogy upgrade merged and deployed)
+**Last updated:** 2026-09-08 (rubric point-scale sweep)
 **Repo:** https://github.com/jor2050111/cis133
 **Live site:** https://jor2050111.github.io/cis133/
 **Task list:** cis133-fall26 (`export CLAUDE_CODE_TASK_LIST_ID=cis133-fall26`)
+
+## What was done (2026-09-08): rubric point-scale sweep
+
+Students read "16 points" in the book and "40 points" in Canvas and
+asked which was right. Mr. Vega ruled on 2026-09-08 that no chapter or
+rubric page states a point total. The four criteria and five levels
+stay, the 4 to 0 numbers stay as a reference scale, and the syllabus
+plus the Canvas rubric carry the values for each course section.
+Sweep ran as one scripted pass with per-file asserts across cis105,
+cis111, cis133, cis215, and cis360 (HQ task recDLw2lWgyihbzLZ).
+
+* `book/skills-lab-rubric.md` (synced from `../shared/`): the intro
+  drops "4 points each, 16 points total" and the Scoring line is gone.
+  "A note on points", rewritten without example totals, now sits
+  inside the snippet block BEFORE the table. Chapter 1 shows the note
+  first.
+* `book/chapters/chapter-01.md`: "the same 16-point rubric" is now
+  "the same rubric".
+* `book/chapters/chapter-02.md` through `chapter-12.md`: the link
+  block names no scale and points students to the syllabus and the
+  Canvas rubric attached to the lab. Still byte-identical across all
+  five books.
+* Law and templates match the new rule: `CLAUDE.md`, `README.md`,
+  `templates/skills-lab-rubric-template.md`, and the one-phrase
+  "locked 16-point rubric" mentions elsewhere.
+* Side effect of the sync: `tools/check_sentence_length.py` picked up
+  the shared copy's 2026-07-28 fence-handling fix (cis215 already had
+  it).
+* Checkers green after the sweep: sentence length on every changed
+  chapter and the rubric page, readability unchanged at the book
+  level, CIS215 structure contract (rubric hash matches the master).
+
+Files touched in this repo:
+
+* `CLAUDE.md`
+* `README.md`
+* `book/chapters/chapter-01.md`
+* `book/chapters/chapter-02.md`
+* `book/chapters/chapter-03.md`
+* `book/chapters/chapter-04.md`
+* `book/chapters/chapter-05.md`
+* `book/chapters/chapter-06.md`
+* `book/chapters/chapter-07.md`
+* `book/chapters/chapter-08.md`
+* `book/chapters/chapter-09.md`
+* `book/chapters/chapter-10.md`
+* `book/chapters/chapter-11.md`
+* `book/chapters/chapter-12.md`
+* `book/skills-lab-rubric.md`
+* `templates/chapter-template.md`
+* `templates/exercise-template.md`
+* `templates/skills-lab-rubric-template.md`
+* `tools/check_sentence_length.py`
+
+## What was done (2026-08-04): Canvas course build, all 12 modules
+
+The Fall 2026 dev shell (`pc.dev.cis133da.vega`, course **1438876**) is
+filled from this textbook. Full record:
+`canvas-pages/CANVAS-BUILD.md`, plus a generated `README.md` in each
+`canvas-pages/m-NN-*/` folder. Workflow:
+`../CANVAS-COURSE-BUILD-PLAYBOOK-V2.md`.
+
+| | |
+|---|---|
+| Modules | 12, all unpublished, 11 items each |
+| Pages | 114 course-wide |
+| Skills Labs | 12, 40 points, `CIS133 Skills Lab` rubric (id 2862923) |
+| Verification | `verify_course.py` reports ALL CLEAN |
+
+Everything round-trips **byte-identical** against Canvas, and a
+course-wide sweep finds zero leftover placeholders and zero old footers.
+
+**What the section pages do.** They highlight the reading, they do not
+restate it. Every topic block ends with a bolded "Carry forward:" bullet
+naming what has to survive past the chapter, usually pointing at the
+Skills Lab step or later chapter that uses it. Quick Check questions and
+Retrieval Practice prompts are quoted from the chapter verbatim, and every
+Key Terminology definition is looked up from `book/glossary.md` at build
+time so no invented definition can ship.
+
+**What the build found and fixed in the course.**
+
+* Module 1's section pages had held **CIS215 content** (data science,
+  pandas) pushed in by mistake. Confirmed through page revision history.
+* The two Skills Labs carried a `CIS111 Skills Lab` rubric. Replaced with
+  a CIS133 rubric whose criteria are quoted verbatim from
+  `book/skills-lab-rubric.md`, scaled to 10 points per criterion.
+* **Two Need Help footers existed.** 29 of 34 pages carried the newer one
+  with the screen reader note. All 34 now do.
+* The glossary's markdown backticks were shipping as literal backticks.
+  Now `<code>` spans.
+* The course alignment map had six defects. Corrected in the `.docx` and
+  re-exported, **not yet committed**.
+
+**Toolchain:** `canvas-pages/tools/`. Chrome in `canvas_template.py`,
+content in `content_mNN.py`, generated HTML never hand-edited. The loop is
+`build_module.py N` then `push_module.py N <assignment_id>` then
+`verify_course.py`. `chapter_digest.py` is what makes writing a content
+spec cheap.
+
+**Open items.**
+
+* Nothing is committed. The toolchain, twelve content specs, and generated
+  records are staged.
+* The corrected alignment map is staged in `jor2050111.github.io`, which
+  serves `main` directly, so committing publishes it to students.
+* `2.7 Question & Discuss: M2 - Professional Business Ethics`
+  (id 18776709, 16 pts, published) is still not a module item anywhere.
+  Mr. Vega is handling discussions separately.
+* The alignment map's Module 0 objective 0.3 ("Compose a reflective
+  learning plan") has no matching Canvas assessment.
+* The per-section CLO citation is a judgment call: each page cites the CLO
+  that section actually serves rather than walking the chapter's CLO list
+  in order. Every module's mapping is in its `README.md`.
 
 ## What was done (2026-07-28): pedagogy upgrade (Copperwind spine)
 

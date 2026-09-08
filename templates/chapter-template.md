@@ -267,7 +267,7 @@ STRUCTURE CHECKLIST:
 * [ ] Try It Yourself in each section (Predict-Run-Explain)
 * [ ] Quick Check after each section
 * [ ] Section order: N.5 Summary, N.6 Skills Lab, N.7 Review Questions
-* [ ] Skills Lab with 3 parts, Questions & Analysis, and the locked 16-point rubric
+* [ ] Skills Lab with 3 parts, Questions & Analysis, and the locked universal rubric
 * [ ] Summary with Key Concepts, Key Terms, Retrieval Practice
 * [ ] 4 Review Questions spanning Bloom's levels matched to the course
 * [ ] 3-6 Further Reading resources

@@ -186,7 +186,7 @@ Every chapter MUST follow this structure:
    - **Try It Yourself** exercises (Predict-Run-Explain pattern)
    - **Quick Checks** (2-3 retrieval questions after each major section)
 6. **Summary and Retrieval** - Key concepts + Key Terms list + Retrieval Practice prompts
-7. **Skills Lab** - Single multi-part project with the shared 16-point rubric
+7. **Skills Lab** - Single multi-part project with the shared universal rubric
 8. **Review Questions** - 4 questions at varying cognitive levels
 9. **Further Reading** - 3-6 external resources
 10. **Looking Ahead** - 2-3 sentences previewing next chapter (the final chapter instead ends with "Course Conclusion: Where You Go from Here", no icon)
@@ -326,8 +326,9 @@ Every chapter must include a Module Overview section immediately after the narra
 
 **Rubric (single-source, shared by every textbook in the family):**
 
-Every Skills Lab uses ONE universal rubric: a 4-criterion, 16-point
-table (4 points per criterion, scored from 4 down to 0). The canonical
+Every Skills Lab uses ONE universal rubric: a 4-criterion, 5-level
+table (levels scored 4 down to 0 as a reference scale, never as a
+course point total). The canonical
 master is `../shared/skills-lab-rubric.md`. The sync script
 (`../shared/tools/sync-shared.sh`) copies it to
 `book/skills-lab-rubric.md`, a published page in the site nav. Never
@@ -352,10 +353,13 @@ The four criteria, in order:
 - **Analysis, Interpretation, and Response to QUESTION(s)**
 
 Levels are Mastery (4), Proficiency (3), Developing (2), Emerging (1),
-Not Evident (0), and the table ends with the line
-`**Scoring:** 16 points total, 4 points per criterion (8 points
-technical execution, 8 points transferable skills)` followed by a
-short note that instructors may rescale point weights per course.
+Not Evident (0). "A note on points" sits inside the snippet block
+BEFORE the table. It says the numbers are a reference scale, the
+instructor sets point values per course, and students read the
+syllabus and the Canvas rubric for their values. No chapter or rubric
+page states a point total (no "16 points", no "40 points"). Mr. Vega
+ruled this on 2026-09-08 after students asked why Canvas showed 40
+points.
 
 **Key principles:**
 

@@ -10,7 +10,7 @@ See `/templates/chapter-template.md` Section N.6 for the Skills Lab format with:
 * Part 2: Application
 * Part 3: Extension
 * Questions & Analysis (2 questions)
-* The locked 16-point rubric
+* The locked universal rubric
 
 ## Standalone Exercise Format (Supplementary Only)
 

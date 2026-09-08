@@ -457,12 +457,13 @@ Answer both questions in the answers file. These answers carry significant rubri
 ### Rubric: Skills Lab 3A
 
 This lab is graded with the standard
-[Skills Lab Rubric](../skills-lab-rubric.md): four criteria at
-4 points each, 16 points total. The criteria are Technical Accuracy
-and Efficiency, Output Quality, Documentation Quality, and Analysis,
-Interpretation, and Response to QUESTION(s). Your instructor sets
-the point weights in your course. The criteria and levels are the
-same everywhere.
+[Skills Lab Rubric](../skills-lab-rubric.md): four criteria, five
+levels from Mastery to Not Evident. The criteria are Technical
+Accuracy and Efficiency, Output Quality, Documentation Quality, and
+Analysis, Interpretation, and Response to QUESTION(s). The criteria
+and levels are the same everywhere. Your instructor sets the point
+values in your course. Check the syllabus and the Canvas rubric
+attached to this lab for the values that apply to you.
 
 ---
 
