@@ -523,7 +523,12 @@ The lab walks the chapter's own path. Part 1 connects one stylesheet to the whol
 
 1. Copy the whole `starter-site` folder to your `cis133` root and rename the copy `skills-lab-4a-lastname`. Copy `skills-lab-4a-answers.txt` into it.
 2. Create `copperwind-styles.css` at the folder's top level, beside the three pages. Start the file with a CSS comment carrying the lab number, your name, and the date.
-3. Connect the stylesheet to all three pages: one `<link rel="stylesheet" href="copperwind-styles.css">` in each page's head.
+3. Connect the stylesheet to all three pages. Add this one line to each page's head:
+
+    ```html
+    <link rel="stylesheet" href="copperwind-styles.css">
+    ```
+
 4. Write the site's base: a `body` rule setting a background color and text color from the palette, as a pairing on the palette file's passing list. Save, then refresh all three pages and watch one file style the whole site.
 5. Record your link element and why it belongs in the head in answer 1.A, and describe the three-page refresh in answer 1.B.
 

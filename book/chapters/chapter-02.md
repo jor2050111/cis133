@@ -411,14 +411,23 @@ From line 10, column 8; to line 11, column 47
 
 The second message names the likely cause: a matching quote missing somewhere earlier. Line 10's `href` value opens a quote and never closes it. The browser reads everything up to the next quote, half of line 11 included, as one long address. The third message even shows the swallowed sentence sitting inside the `href` value.
 
-**Repair:** Close the quote. On line 10, change `<a href="contact.html>` to `<a href="contact.html">`.
+**Repair:** Close the quote. On line 10, add the missing `"` after `contact.html` so the opening tag reads:
+
+```html
+<a href="contact.html">
+```
 
 **Verify:** Validate again: the report comes back with no messages. Refresh the page: the contact sentence returns, and both links work.
 
 ### Quick Check 2.4 ✅
 
 1. Your site's `index.html` needs two links: one to your own `contact.html` in the same folder, and one to the college's home page. Write the `href` value for each and name the address form you chose.
-2. Rewrite this link so its text works for a screen reader user hearing it out of context: `<a href="drop-off.html">here</a>`.
+2. Rewrite this link so its text works for a screen reader user hearing it out of context:
+
+    ```html
+    <a href="drop-off.html">here</a>
+    ```
+
 3. A validator report shows six errors, but your classmate swears they only changed one line. Using this section's two report-reading habits, what do you advise before they start rewriting six spots?
 
 ---
