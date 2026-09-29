@@ -1,9 +1,19 @@
 # CIS133 Textbook: HANDOFF
 
-**Last updated:** 2026-09-08 (rubric point-scale sweep)
+**Last updated:** 2026-09-29 (Canvas build moved to co-professor)
 **Repo:** https://github.com/jor2050111/cis133
 **Live site:** https://jor2050111.github.io/cis133/
 **Task list:** cis133-fall26 (`export CLAUDE_CODE_TASK_LIST_ID=cis133-fall26`)
+
+## What was done (2026-09-29): Canvas build moved to co-professor
+
+The Canvas build (`canvas-pages/`: toolchain, content specs, build
+records) now lives in the private co-professor repo at
+`01-teaching/05-cis133-web-development/canvas-pages/`. The hand-authored `demo-dns-in-action.html` for Module 1 moved with it. The book stays
+here. The toolchain reads chapters and the glossary from this clone
+through `tools/paths.py` (override with `CIS133_BOOK_REPO`).
+`CANVAS-BUILD.md` is now `canvas-build.md` there. Older sections below
+that name `canvas-pages/` describe the build before the move.
 
 ## What was done (2026-09-08): rubric point-scale sweep
 
