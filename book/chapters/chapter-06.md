@@ -478,9 +478,15 @@ Answer from memory before checking back through the chapter.
 
 **Dataset:** Provided files in `assets/code/chapter-06/` from the course data pack. `starter-site/` holds Copperwind's three pages, the `images` folder, and `copperwind-styles.css` exactly as Skills Lab 5A finished them: spaced, typeset, and validating with zero messages. The footer-link defect is still in place, documented in the folder's README. `copperwind-palette.txt` travels with every CSS chapter, copied unchanged from the Chapter 5 pack. `flex-playground.html` and `flex-playground.css` are the chapter's practice pair. `skills-lab-6a-answers.txt` is your written answers file. Work at the extracted `cis133` root and copy every hex value from the palette file.
 
+**Start here even if Lab 5A is unfinished.** The starter folder is the finished Lab 5A site, so every student begins this lab from the same place. Build 6A on the starter now. Go back to your own 5A when you have time.
+
+**Pacing:** This lab is built for two sittings. Finish Part 1 in the first week, when the header row and the gallery row teach you the axes. Parts 2 and 3 go faster once that first row works.
+
 The lab walks the chapter's own path. Part 1 arranges the header and the gallery into flex lines. Part 2 fixes the inherited footer defect and gives every link region accessible states. Part 3 builds the bar and closes the Part II milestone.
 
 ### Part 1: Foundation (Aligns with Objective 6.1)
+
+Arrange the header and the gallery into flex lines.
 
 1. Copy the whole `starter-site` folder to your `cis133` root and rename the copy `skills-lab-6a-lastname`. Copy `skills-lab-6a-answers.txt` into it.
 2. Build the header row: one `header` rule that puts the logo and the page title on a flex line, centered against each other on the cross axis, with a gap between them. Let the rule wrap, so each intro paragraph keeps its own full-width line. One rule serves all three pages. Record the rule and its axis reasoning in answer 1.A.
@@ -489,11 +495,15 @@ The lab walks the chapter's own path. Part 1 arranges the header and the gallery
 
 ### Part 2: Application (Aligns with Objective 6.2)
 
+Fix the inherited defect and give every link region accessible states.
+
 1. Fix the inherited defect. Repaint the footer's links with a descendant combinator and a pairing from the palette's passing list, leaving every other link untouched. Log the rule, its reach, and why `footer a` beats a bare `a` for this job in answer 2.A.
 2. Give every link region its states: `:hover` and `:focus` twins for the nav's links and the footer's links, every pairing from the passing list, and no outline removed anywhere. Then put the mouse away, Tab through each page, and log the pass in answer 2.B.
 3. Audit your new rules for reach. If any state or color rule catches links you never meant (the guide's source links in `main` are the easy ones to catch by accident), retarget it with a combinator.
 
 ### Part 3: Extension (Aligns with Objective 6.3)
+
+Build the bar and close the Part II milestone.
 
 1. Build the full navigation bar on all three pages. Strip the markers with `list-style`, zero the list's default spacing, lay the items on a gapped flex line, and pad each link into an underline-free block. The hover and focus states are already wired from Part 2. Scope every rule through `nav`.
 2. Make one layout decision of your own: your bar's `justify-content` choice, or a footer or figure arrangement. Copy the declaration into answer 3.A and defend it with the axis vocabulary.
@@ -501,23 +511,23 @@ The lab walks the chapter's own path. Part 1 arranges the header and the gallery
 
 ### Questions & Analysis 🤔
 
-Answer both questions in the answers file. These answers carry significant rubric weight.
+Answer both questions in the answers file, under the labels Q1 and Q2, in full sentences. These answers carry significant rubric weight. A blank or missing Q&A block scores Emerging on the Analysis criterion no matter how good the code is.
 
-1. Pick one flex container you built in this lab. Name its main axis and its cross axis. Then explain what one `justify-content` or `align-items` change did to its items, citing what you observed in the browser. Contrast that with what the same value on the other property would have done, and why the axes make those outcomes differ.
-2. The accessibility case for `:focus`. Tab through your own nav bar by keyboard alone and describe the experience with your focus styles, then without them. Who does the focus style serve? Devon's screen reader travels the same links without a mouse, and so does every visitor who cannot steer one. What would removing focus outlines without a replacement cost those visitors?
 
-**Submission:** Zip your `skills-lab-6a-lastname` folder containing your three HTML pages, your `images` folder, `copperwind-styles.css`, and `skills-lab-6a-answers.txt`, and submit it as `skills-lab-6a-lastname.zip`. All three pages and the stylesheet must validate with zero messages, and every answer must sit under its numbered prompt.
+**Q1.** Pick one flex container you built in this lab. Name its main axis and its cross axis. Then explain what one `justify-content` or `align-items` change did to its items, citing what you observed in the browser. Contrast that with what the same value on the other property would have done, and why the axes make those outcomes differ.
+
+**Q2.** The accessibility case for `:focus`. Tab through your own nav bar by keyboard alone and describe the experience with your focus styles, then without them. Who does the focus style serve? Devon's screen reader travels the same links without a mouse, and so does every visitor who cannot steer one. What would removing focus outlines without a replacement cost those visitors?
+
+**Submission:** Zip your `skills-lab-6a-lastname` folder containing your three HTML pages, your `images` folder, `copperwind-styles.css`, and `skills-lab-6a-answers.txt`, and submit it as `skills-lab-6a-lastname.zip`. Check before you submit:
+
+* All three pages and the stylesheet validate with zero messages.
+* Every answer sits under its numbered prompt, and Q1 and Q2 carry their labels.
+* The zip opens to one folder holding the three pages, the `images` folder, the stylesheet, and the answers file. An empty zip, another lab's files, or a blank answers template cannot be graded.
+* You reviewed the rubric before submitting.
 
 ### Rubric: Skills Lab 6A
 
-This lab is graded with the standard
-[Skills Lab Rubric](../skills-lab-rubric.md): four criteria, five
-levels from Mastery to Not Evident. The criteria are Technical
-Accuracy and Efficiency, Output Quality, Documentation Quality, and
-Analysis, Interpretation, and Response to QUESTION(s). The criteria
-and levels are the same everywhere. Your instructor sets the point
-values in your course. Check the syllabus and the Canvas rubric
-attached to this lab for the values that apply to you.
+This lab is graded with the standard [Skills Lab Rubric](../skills-lab-rubric.md): four criteria, five levels from Mastery to Not Evident. The criteria are Technical Accuracy and Efficiency, Output Quality, Documentation Quality, and Analysis, Interpretation, and Response to QUESTION(s). The criteria and levels are the same everywhere. Your instructor sets the point values in your course. Check the syllabus and the Canvas rubric attached to this lab for the values that apply to you.
 
 ---
 

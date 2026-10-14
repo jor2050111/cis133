@@ -5,6 +5,21 @@
 **Live site:** https://jor2050111.github.io/cis133/
 **Task list:** cis133-fall26 (`export CLAUDE_CODE_TASK_LIST_ID=cis133-fall26`)
 
+## What was done (2026-10-14): Skills Lab 6A unified with the Canvas body
+
+Section 6.6 of chapter-06.md now matches the Canvas 6.6 assignment body
+built from co-professor `canvas-pages/tools/content_m06.py`. Restored the
+column arithmetic and milestone detail the Canvas spec had dropped, kept
+the Canvas part intros and submission checklist, labeled the two
+questions Q1 and Q2 (Mr. Vega's rubric ruling), and added two evergreen
+paragraphs: start from the starter even if 5A is unfinished, and
+two-sitting pacing. Course policy lines (the Canvas Q&A box, the
+Mastery-carries-back checkpoint) live only in the Canvas build, not here.
+Draft and source map: co-professor
+`01-teaching/05-cis133-web-development/canvas-pages/m-06-layout-with-flexbox/skills-lab-6a-unified-draft.md`.
+Checkers: structure OK, sentence length 0 flagged (the sentence checker
+reads only `*` bullets as list items, so lab checklists use `*`).
+
 ## What was done (2026-09-29): Canvas build moved to co-professor
 
 The Canvas build (`canvas-pages/`: toolchain, content specs, build
