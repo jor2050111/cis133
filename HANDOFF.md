@@ -1,9 +1,32 @@
 # CIS133 Textbook: HANDOFF
 
-**Last updated:** 2026-09-29 (Canvas build moved to co-professor)
+**Last updated:** 2026-11-09 (Skills Lab 9A aligned with the Canvas body)
 **Repo:** https://github.com/jor2050111/cis133
 **Live site:** https://jor2050111.github.io/cis133/
 **Task list:** cis133-fall26 (`export CLAUDE_CODE_TASK_LIST_ID=cis133-fall26`)
+
+## What was done (2026-11-09): Skills Lab 9A reviewed against Labs 2A-8A and the Canvas body
+
+Reviewed the live 9.6 Skills Lab page (course 1438511, section 21443)
+against this chapter and the Labs 2A-8A thread, with the first 9A
+submissions six days out. The three sources already matched. Verified
+the pack's claims against the files: the flyer fails the W3C HTML checker
+with exactly 2 messages (missing alt, h1 to h3 skip), `flyer-styles.css`
+validates clean, and one flyer pairing fails contrast (tan `#c99b66` on
+sand `#fdeecd`, 2.19 to 1). Section 9.6 gained: a document-as-you-repair
+paragraph (a WHY comment above every changed rule, a Lab 9A line in the
+stylesheet's top comment), three self-checks (the validator drops to one
+message after Part 1 and to zero after the alt repairs, and the site
+looks unchanged at the default root after the rem conversion), the
+contact page's missing footer named as a Lab 3A decision rather than a
+finding, and the milestone step pointing at the Lab 7A submission for
+the plan leg. Section 9.2's claim that every Copperwind page carries all
+four landmarks was corrected: the contact page skips the footer on
+purpose (Lab 3A, Part 3). The pack files did not change, because
+students already hold the pack. Canvas-only scaffolding (start-here,
+pacing, the Q&A box, the criteria map) lives in co-professor
+`canvas-pages/tools/content_m09.py`. Checkers: structure OK, sentence
+length 0 flagged.
 
 ## What was done (2026-10-14): Skills Lab 6A unified with the Canvas body
 

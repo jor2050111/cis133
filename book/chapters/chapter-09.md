@@ -124,7 +124,7 @@ Chapter 3 built the landmark skeleton and admitted its payoff was real but invis
 * A single keystroke jumps to `<main>`, skipping the banner and menu that repeat on every page. That jump was the whole ask in Devon's Chapter 3 email.
 * `<footer>` is announced as content info, where every tool expects contact lines and fine print to live.
 
-Copperwind's pages have carried all four since Lab 3A. That is why the exercises below are confirmation walks, not repair jobs.
+Copperwind's pages have carried their landmarks since Lab 3A. The contact page skips the footer on purpose, a Lab 3A decision, because it has no closing content to hold. That is why the exercises below are confirmation walks, not repair jobs.
 
 ### Links That Name Their Destination
 
@@ -451,25 +451,27 @@ Answer from memory before checking back through the chapter.
 
 The lab walks the chapter's own path. Part 1 audits the flyer and repairs its structure. Part 2 repairs what perceivability demands: color, type, and images. Part 3 brings in the evaluator and the checklist, proves the whole site, and closes Part III.
 
+Document as you repair. Above every rule you change, in either stylesheet, write a comment naming the barrier it repairs and who the repair serves, and add a Lab 9A line to the top comment of `copperwind-styles.css`. A colleague should be able to read the repaired files and know why each change was made.
+
 ### Part 1: Foundation (Aligns with Objective 9.1)
 
 1. Create a folder named `skills-lab-9a-lastname` at your `cis133` root. Copy in `drive-day-flyer.html`, `flyer-styles.css`, the whole `flyer-images` folder, the whole `starter-site` folder, `skills-lab-9a-answers.txt`, and `accessibility-checklist.txt`. Keep the `starter-site` name unchanged, because the flyer's links resolve into it.
 2. Audit before you fix anything. Make a checklist copy for the flyer and run its structure checks: the heading outline read, the landmark check, the link text read, and the Tab walk. The flyer holds 8 barriers in all, counting a barrier once even where it strikes twice, and this pass surfaces the structural share. Log each finding in answer 1.A with the POUR principle it violates, and write "clean" where a check finds nothing.
-3. Repair the structure: correct any heading level that skips, rewrite any link whose text fails the out-of-sentence read, and restore the focus visibility the stylesheet took away. Then re-run the same four checks and confirm they read clean. Record each fix in answer 1.B: the element or rule you changed, what it says now, and who the new version serves that the old one failed.
+3. Repair the structure: correct any heading level that skips, rewrite any link whose text fails the out-of-sentence read, and restore the focus visibility the stylesheet took away. Then re-run the same four checks and confirm they read clean, and run the HTML validator again: the heading message should be gone, leaving one message for Part 2 to clear. Record each fix in answer 1.B: the element or rule you changed, what it says now, and who the new version serves that the old one failed.
 
 ### Part 2: Application (Aligns with Objective 9.2)
 
 1. Run the contrast spot checks: measure the flyer's text-on-background pairings with the WebAIM checker until you find the pairing that fails, and log the ratio it reports. Repair it with a pairing from the palette's passing list, and record the before and after ratios in answer 2.A.
 2. Find the message the flyer carries in color alone, and give it a text label that survives without the color. Log the finding and the fix in answer 2.A.
-3. Run the alt honesty read and make both calls the four-jobs table demands: write the missing alt text yourself, and empty the alt that decoration never needed. Log both decisions in answer 2.A with the image job that justifies each.
-4. Convert the type. In `flyer-styles.css`, replace the hard px body size with a rem value that restores readable body text (the Copperwind site's own body size is a fine model). In `copperwind-styles.css`, convert the body and heading sizes to rem with the divide-by-16 math, in the base rules and in the query block. Record the px values found, the rem values shipped, the base your math used, and who the conversion serves in answer 2.B.
+3. Run the alt honesty read and make both calls the four-jobs table demands: write the missing alt text yourself, and empty the alt that decoration never needed. Log both decisions in answer 2.A with the image job that justifies each. Validate the flyer again: it should now report zero messages.
+4. Convert the type. In `flyer-styles.css`, replace the hard px body size with a rem value that restores readable body text (the Copperwind site's own body size is a fine model). In `copperwind-styles.css`, convert the body and heading sizes to rem with the divide-by-16 math, in the base rules and in the query block. At the default setting, the Copperwind pages should look exactly as they did before the conversion, and the flyer's body text should look larger. If a Copperwind size changed, a division is off. Record the px values found, the rem values shipped, the base your math used, and who the conversion serves in answer 2.B.
 
 ### Part 3: Extension (Aligns with Objective 9.3)
 
 1. Run WAVE on the repaired flyer and on one Copperwind page: the browser extension for local files, or `wave.webaim.org` if you have a hosted copy. Log the tool, the pages, and every flag in answer 3.A. Then name at least one problem you repaired that no tool flagged, and the human check that caught it.
-2. Run the full seven-check checklist on each of the Copperwind site's three pages, one checklist copy per page. Repair anything a check surfaces, and log the human-check results in answer 3.B.
+2. Run the full seven-check checklist on each of the Copperwind site's three pages, one checklist copy per page. The contact page has no footer by design (a Lab 3A decision), so a landmark check that notes only that reads clean. Repair anything else a check surfaces, and log the human-check results in answer 3.B.
 3. Validate everything: the flyer and all three Copperwind pages through the HTML validator, both stylesheets through the CSS validator, repairing until every report shows zero messages. Log the final counts in answer 3.B.
-4. Close the Part III milestone in answer 3.B. Name where a grader sees each leg: the site plan from Lab 7A, the responsive behavior from Lab 8A, and this lab's WCAG evaluation. Then hand down your triage call: of your 8 repairs, the one you would ship first if you could ship only one, defended in two or three sentences.
+4. Close the Part III milestone in answer 3.B. Name where a grader sees each leg. The site plan lives in your Lab 7A submission. The responsive behavior lives in `starter-site`: name the page and the width where its query block fires. This lab's WCAG evaluation lives in answers 3.A and 3.B. If Lab 7A is still unsubmitted, say so and name the plan as the leg still owed. Then hand down your triage call: of your 8 repairs, the one you would ship first if you could ship only one, defended in two or three sentences.
 
 ### Questions & Analysis 🤔
 
@@ -478,7 +480,7 @@ Answer both questions in the answers file. These answers carry significant rubri
 1. Every page in this course has validated with zero messages since Chapter 2, yet the flyer held 8 barriers, and the HTML validator caught exactly 2 of them. Lay out the five-layer stack (HTML validator, CSS validator, contrast checker, accessibility evaluator, human checks) and assign each of your 8 findings to the first layer that could have caught it. State what the finished assignment proves about relying on any single tool.
 2. Pick two of your repairs. For each, name the POUR principle it serves, one visitor beyond Devon who benefits and how, and whether a tool or a human check caught the original defect.
 
-**Submission:** Zip your `skills-lab-9a-lastname` folder containing the repaired `drive-day-flyer.html` and `flyer-styles.css`, the `flyer-images` folder, the updated `starter-site` folder, your completed checklist copies, and `skills-lab-9a-answers.txt`, and submit it as `skills-lab-9a-lastname.zip`. Every page and stylesheet must validate with zero messages, and every answer must sit under its numbered prompt.
+**Submission:** Zip your `skills-lab-9a-lastname` folder containing the repaired `drive-day-flyer.html` and `flyer-styles.css`, the `flyer-images` folder, the updated `starter-site` folder, your completed checklist copies, and `skills-lab-9a-answers.txt`, and submit it as `skills-lab-9a-lastname.zip`. Every page and stylesheet must validate with zero messages, every changed rule must carry its comment, and every answer must sit under its numbered prompt.
 
 ### Rubric: Skills Lab 9A
 
