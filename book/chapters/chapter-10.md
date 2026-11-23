@@ -483,7 +483,7 @@ The lab walks the chapter's own path. Part 1 builds the page and its table and w
 
 1. Run the phone test on the finished events page in device mode at a phone width. Walk the whole page and log everything that breaks the no-sideways-scroll law, top to bottom, before you fix anything: Chapter 9's audit-first habit. Then repair each finding with the tool that owns it, and know that not every repair is new this chapter. Record the findings, the fixes, and which element scrolls now in answer 3.A.
 2. Run the Chapter 9 habit on the new page: copy `accessibility-checklist.txt` from the Chapter 9 pack, run all seven checks on `events.html`, and repair anything they surface. Then validate all four pages and the stylesheet to zero messages. Log the findings and counts in answer 3.B.
-3. Close answer 3.B with two hand-downs. First, the right-tool defense: why the schedule earned a table while the recycling guide's preparation steps stayed a list. Second, the Independent Project Milestone 2 hand-off: name the draft pages of your own site that will follow this page's pattern.
+3. Close answer 3.B with two hand-downs. First, the right-tool defense: why the schedule earned a table while the recycling guide's preparation steps stayed a list. Second, the hand-off to your own work: name two or three pages you would build for a site of your own that would follow this page's pattern.
 
 ### Questions & Analysis 🤔
 
