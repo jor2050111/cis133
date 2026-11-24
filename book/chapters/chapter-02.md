@@ -476,8 +476,9 @@ Copperwind IT Services is a managed IT company in Phoenix. It runs a free commun
 1. Create a folder named `skills-lab-2a-lastname` at your `cis133` root, and copy `skills-lab-2a-answers.txt` into it.
 2. In VS Code, create `recycling-guide.html` inside that folder. Write the full skeleton: doctype, `html` with a `lang` attribute, a head holding `<meta charset="UTF-8">` and the [BROWSER TAB TITLE] from the content file, and an empty body.
 3. At the top of the body, add an HTML comment with the lab number, your name, and the date.
-4. Add the [MAIN HEADING] and the two intro paragraphs from the content file. Save, open the page in your browser, and confirm all three appear.
-5. Prove your edit-save-refresh cycle: change your title element's text, save, refresh, and watch the tab. Record your file's path in answer 1.A and what changed in answer 1.B.
+4. Add the [MAIN HEADING] and the two intro paragraphs from the content file.
+5. Save, open the page in your browser, and confirm all three appear.
+6. Prove your edit-save-refresh cycle: change your title element's text, save, refresh, and watch the tab. Record your file's path in answer 1.A and what changed in answer 1.B.
 
 ### Part 2: Application (Aligns with Objective 2.2)
 
